@@ -1,0 +1,266 @@
+{
+    "profile": {
+        "sex": "male",
+        "birth_year": 1988,
+        "height": {
+            "entered": 180.0,
+            "unit": "cm",
+            "cm": 180.0
+        },
+        "training_months_consistent": 18,
+        "layoff_months": 0,
+        "months_retrained_since_layoff": 0,
+        "goal": "hypertrophy",
+        "days_per_week": 4,
+        "session_minutes": 60,
+        "preferred_weekdays": [],
+        "limitations": [
+            {
+                "id": "lim-knee",
+                "region": "knee",
+                "side": "both",
+                "pain_0_10": 5,
+                "since": "2026-08-08",
+                "active": true,
+                "limited_range": false,
+                "notes": ""
+            }
+        ],
+        "medical_flags": [],
+        "priority_muscles": [],
+        "liked_exercise_ids": [],
+        "disliked_exercise_ids": [],
+        "known_loads_kg": {
+            "barbell_bench_press": 80.0,
+            "back_squat": 110.0,
+            "romanian_deadlift": 100.0,
+            "conventional_deadlift": 140.0,
+            "overhead_press_barbell": 50.0,
+            "barbell_row": 70.0,
+            "hip_thrust": 120.0,
+            "bulgarian_split_squat": 22.0,
+            "goblet_squat": 24.0
+        },
+        "allow_advanced_exercises": false,
+        "physical_job": false,
+        "has_hr_monitor": false,
+        "wake_time_local": "06:30",
+        "bedtime_local": "23:00",
+        "usual_session_time": "evening",
+        "cardio_inside_session_minutes": false,
+        "updated_at": "2026-09-07T05:00:00Z"
+    },
+    "gyms": [
+        {
+            "id": "gym-base",
+            "name": "base_gym",
+            "preset_origin": "base_gym",
+            "items": [
+                {
+                    "equipment_id": "barbell",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "ez_bar",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "trap_bar",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "fixed_weight_barbells",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "plates",
+                    "params": {
+                        "smallest_plate_kg": 1.25
+                    }
+                },
+                {
+                    "equipment_id": "dumbbells",
+                    "params": {
+                        "max_kg": 50,
+                        "step_kg": 2
+                    }
+                },
+                {
+                    "equipment_id": "kettlebells",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "flat_bench",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "adjustable_bench",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "power_rack",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "smith_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "preacher_bench",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "cable_dual",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "lat_pulldown_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "seated_cable_row_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "cable_rope",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "chest_press_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "pec_deck_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "shoulder_press_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "chest_supported_row_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "assisted_pullup_dip_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "leg_press_45",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "hack_squat_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "leg_extension_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "seated_leg_curl_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "hip_abduction_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "hip_adduction_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "standing_calf_raise_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "seated_calf_raise_machine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "pull_up_bar",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "dip_station",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "back_extension_45",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "plyo_box",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "landmine",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "mat",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "treadmill",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "stationary_bike",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "rower",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "elliptical",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "resistance_bands",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "foam_roller",
+                    "params": {}
+                }
+            ],
+            "default_session_minutes": 60,
+            "color_index": 0,
+            "travel_kit_merged": false,
+            "notes": "",
+            "is_default": false,
+            "archived": false,
+            "created_at": "2026-09-07T05:00:00Z",
+            "schema_version": 1
+        }
+    ],
+    "default_gym_id": "gym-base",
+    "overrides": [],
+    "progression_states": [],
+    "recent_sessions": [],
+    "recent_sets": [],
+    "body_metrics": [
+        {
+            "id": "bm-2026-09-06",
+            "date": "2026-09-06",
+            "weight": {
+                "entered": 84.0,
+                "unit": "kg",
+                "kg": 84.0
+            },
+            "note": "",
+            "logged_at": "2026-09-07T05:00:00Z"
+        }
+    ],
+    "weekly_checkins": [],
+    "readiness_history": [],
+    "mesocycle_anchor": "2026-09-07",
+    "travel_weeks": [],
+    "week_starts_on_monday": true,
+    "mesocycles_completed": 0,
+    "deload_triggers_proposed": [],
+    "deload_triggers_active": [],
+    "pattern_last_trained": {}
+}

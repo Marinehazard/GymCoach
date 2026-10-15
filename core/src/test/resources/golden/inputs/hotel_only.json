@@ -1,0 +1,114 @@
+{
+    "profile": {
+        "sex": "male",
+        "birth_year": 1988,
+        "height": {
+            "entered": 180.0,
+            "unit": "cm",
+            "cm": 180.0
+        },
+        "training_months_consistent": 18,
+        "layoff_months": 0,
+        "months_retrained_since_layoff": 0,
+        "goal": "hypertrophy",
+        "days_per_week": 4,
+        "session_minutes": 45,
+        "preferred_weekdays": [],
+        "limitations": [],
+        "medical_flags": [],
+        "priority_muscles": [],
+        "liked_exercise_ids": [],
+        "disliked_exercise_ids": [],
+        "known_loads_kg": {
+            "barbell_bench_press": 80.0,
+            "back_squat": 110.0,
+            "romanian_deadlift": 100.0,
+            "conventional_deadlift": 140.0,
+            "overhead_press_barbell": 50.0,
+            "barbell_row": 70.0,
+            "hip_thrust": 120.0,
+            "bulgarian_split_squat": 22.0,
+            "goblet_squat": 24.0
+        },
+        "allow_advanced_exercises": false,
+        "physical_job": false,
+        "has_hr_monitor": false,
+        "wake_time_local": "06:30",
+        "bedtime_local": "23:00",
+        "usual_session_time": "evening",
+        "cardio_inside_session_minutes": false,
+        "updated_at": "2026-09-07T05:00:00Z"
+    },
+    "gyms": [
+        {
+            "id": "gym-hotel",
+            "name": "hotel_gym",
+            "preset_origin": "hotel_gym",
+            "items": [
+                {
+                    "equipment_id": "dumbbells",
+                    "params": {
+                        "max_kg": 20,
+                        "min_kg": 2,
+                        "step_kg": 2
+                    }
+                },
+                {
+                    "equipment_id": "adjustable_bench",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "mat",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "treadmill",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "stationary_bike",
+                    "params": {}
+                },
+                {
+                    "equipment_id": "elliptical",
+                    "params": {}
+                }
+            ],
+            "default_session_minutes": 45,
+            "color_index": 0,
+            "travel_kit_merged": false,
+            "notes": "",
+            "is_default": false,
+            "archived": false,
+            "created_at": "2026-09-07T05:00:00Z",
+            "schema_version": 1
+        }
+    ],
+    "default_gym_id": "gym-hotel",
+    "overrides": [],
+    "progression_states": [],
+    "recent_sessions": [],
+    "recent_sets": [],
+    "body_metrics": [
+        {
+            "id": "bm-2026-09-06",
+            "date": "2026-09-06",
+            "weight": {
+                "entered": 84.0,
+                "unit": "kg",
+                "kg": 84.0
+            },
+            "note": "",
+            "logged_at": "2026-09-07T05:00:00Z"
+        }
+    ],
+    "weekly_checkins": [],
+    "readiness_history": [],
+    "mesocycle_anchor": "2026-09-07",
+    "travel_weeks": [],
+    "week_starts_on_monday": true,
+    "mesocycles_completed": 0,
+    "deload_triggers_proposed": [],
+    "deload_triggers_active": [],
+    "pattern_last_trained": {}
+}
