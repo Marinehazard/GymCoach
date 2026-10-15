@@ -34,7 +34,8 @@ class RuleCoverageTest {
         "com/gymcoach/core/nutrition", "com/gymcoach/core/coach",
     )
 
-    private val constRef = Regex("RuleIds\\.([A-Z][A-Z0-9_]*)")
+    // `RuleIds.ALL` is the list of every id, not a rule-id constant, so it is excluded from the matches.
+    private val constRef = Regex("RuleIds\\.(?!ALL\\b)([A-Z][A-Z0-9_]*)")
     private val literalId = Regex("\"((?:[A-Z][A-Z0-9]*-(?:[0-9]{2}|L[1-7]|CAP))|R4-[0-9]\\.[0-9]|SEL|SUB|REBAL|TIER|ROUNDING|OVERRIDE)\"")
     private val testName = Regex("fun\\s+`?([A-Za-z0-9_ ]+)`?\\s*\\(")
 
