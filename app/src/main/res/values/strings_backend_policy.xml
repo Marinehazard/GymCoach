@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- R1 section 2.5 / SPEC section 6.1: rendered verbatim on the Backend screen. Do not reword without re-reviewing against R1. -->
+<resources>
+    <string name="backend_title">Coach chat backend</string>
+    <string name="backend_api_title">Anthropic API key (recommended)</string>
+    <string name="backend_api_body">GymCoach calls Anthropic directly with a key from your Claude Console account. Billed per token at API rates (typically a few cents per message — see Usage). This is the only method Anthropic documents for third-party apps. Your key is stored in this device\'s hardware-backed keystore and never leaves the device except to api.anthropic.com.</string>
+    <string name="backend_bridge_title">Home bridge (experimental)</string>
+    <string name="backend_bridge_body">GymCoach talks to a small server on your own PC, which runs Anthropic\'s unmodified Claude Code signed in with your Claude subscription. Nothing is billed per token; usage counts against your plan\'s limits. Anthropic currently states that `claude -p` and third-party-app usage \"still draw from your subscription\'s usage limits\", but its policy restricts subscription logins to \"ordinary use of Claude Code and other native Anthropic applications\" and it may enforce that \"without prior notice\" (it did so in April 2026). Use this only for yourself, keep the PC reachable only via your VPN, and expect it to stop working someday. Requires the PC to be on and online.</string>
+    <string name="backend_never">GymCoach will never ask for, store, or use a claude.ai login or Claude Code OAuth token on this phone; Anthropic prohibits apps from handling those credentials.</string>
+    <string name="backend_key_rejected">Only Claude Console API keys (sk-ant-api…) can be used. GymCoach cannot use claude.ai or Claude Code login tokens.</string>
+    <string name="backend_cost_line">≈ $20–45 per month on Opus 5, ≈ $8–17 on Sonnet 5 at 30 messages/day (Anthropic list prices read on 2026-09-04) — in addition to your Max subscription. Changing model or effort starts a new conversation (cache).</string>
+</resources>
