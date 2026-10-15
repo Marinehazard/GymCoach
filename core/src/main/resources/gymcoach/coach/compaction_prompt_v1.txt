@@ -1,0 +1,1 @@
+Summarise the following coaching conversation in at most 600 tokens: standing decisions, user preferences, open questions, pending proposals. Facts only, no advice.
