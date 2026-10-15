@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Platform theme, no AppCompat (§1.7). Compose applies Material 3 colours on top (ui/theme/Theme.kt). -->
+    <style name="Theme.GymCoach" parent="android:Theme.Material.NoActionBar" />
+</resources>

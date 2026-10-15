@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- API < 31 auto-backup rules (§7.4): the Keystore-wrapped secrets store never leaves the device. -->
+<full-backup-content>
+    <exclude domain="file" path="datastore/secrets.preferences_pb" />
+</full-backup-content>

@@ -1,0 +1,19 @@
+.gradle/
+build/
+*/build/
+local.properties
+.idea/
+*.iml
+.kotlin/
+# --- additions beyond SPEC §1.7 (pre-existing on this machine; kept as a superset) ---
+captures/
+.externalNativeBuild/
+.cxx/
+.DS_Store
+Thumbs.db
+# Secrets (never commit)
+*.keystore
+*.jks
+keys.properties
+# Tooling
+.toolchain/

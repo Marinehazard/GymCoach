@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "batch": 2,
+  "entries": {
+    "overhead_press_barbell": {
+      "description": "The standing barbell overhead press trains the front delts with the side delts, triceps and upper back as helpers, and it is the heaviest vertical push in the library. It anchors the vertical_push pattern in strength and hypertrophy plans and doubles as full-range overhead mobility work (R3 MOB-03). A good rep starts with the bar on the front of the shoulders, travels in a straight line past the face and finishes locked out over the mid-foot with the head pushed slightly through.",
+      "setup": [
+        "Set the rack hooks so the bar sits just below shoulder height; unrack it onto the upper chest and step back one pace.",
+        "Grip just outside shoulder width, wrists stacked over the forearms, elbows slightly in front of the bar.",
+        "Feet hip width, glutes and abs braced so the ribs stay down before the first press.",
+        "Clean-from-the-floor option (no rack) is for lifters who already clean; otherwise use a rack."
+      ],
+      "cues": [
+        "Tuck the chin and press the bar straight up; move the head back, not the bar forward.",
+        "Once the bar passes the forehead, push the head through so the bar finishes over the mid-foot.",
+        "Squeeze the glutes and keep the ribs down; the torso stays vertical.",
+        "Lock the elbows out fully and shrug the shoulders up into the bar at the top.",
+        "Lower under control to the upper chest; do not bounce off the collarbones."
+      ],
+      "mistakes": [
+        "Bar drifts forward around the face, leaving the shoulders and lower back to catch it.",
+        "Lower back arches and the ribs flare as the load gets heavy (the press turns into a standing incline press).",
+        "Elbows behind the bar at the start, so the bar rolls onto the fingers.",
+        "Half lockout with the head still behind the bar.",
+        "Wrists bent back with the bar sitting low in the palm."
+      ],
+      "safety": [
+        "Spinal loading: the bar loads the spine from above; brace the abs, keep the ribs down and never finish a rep in lumbar hyperextension. With a logged back limitation the planner offers the seated or landmine substitutions.",
+        "Shoulder-sensitive: a full overhead lockout needs shoulder flexion and thoracic extension; if you cannot reach a straight vertical line without arching the back, work up with wall slides and pass-throughs first and press within the pain-free arc (R3 INJ-02).",
+        "Upper-body barbell class: stop at RIR 1 or more (R3 RIR-03); a missed rep is lowered back to the front of the shoulders and walked into the rack, never tipped behind the head.",
+        "Clip the plates and clear the area overhead (racks, low ceilings) before unracking."
+      ],
+      "substitution_rationale": {
+        "seated_dumbbell_shoulder_press": "same vertical push, back-supported so no spinal loading, freer path for the shoulders",
+        "machine_shoulder_press": "same pattern, fixed path and seat support, no balance or bracing demand",
+        "landmine_press": "angled press stays in front of the face; the shoulder-friendly option with a logged limitation",
+        "smith_shoulder_press": "same pattern on a guided bar, seated, no unracking or balance demand"
+      },
+      "sources": [
+        "ExRx.net Barbell Military Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 15 exercise technique (shoulder press)",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips",
+        "Kolber et al. 2010, shoulder injuries attributed to resistance training (R3 INJ-02)"
+      ]
+    },
+    "seated_dumbbell_shoulder_press": {
+      "description": "The seated dumbbell shoulder press works the front delts with the side delts and triceps, and each arm has to stabilise its own load. It is the default vertical push for beginners and for dumbbell-only gyms because the hands can rotate to a comfortable angle and nothing has to travel around the face. A good rep starts with the dumbbells at ear height, presses them up and slightly together to a full lockout over the shoulders, and lowers them under control.",
+      "setup": [
+        "Set the bench one or two notches below vertical (about 75-85 degrees) and sit with the lower back lightly against the pad, feet planted.",
+        "Kick the dumbbells up one at a time with the knees; start with them at ear height, palms forward or slightly turned in.",
+        "Standing option: feet hip width, glutes and abs braced, same start position."
+      ],
+      "cues": [
+        "Press up and slightly in so the dumbbells finish over the shoulders, not out wide.",
+        "Lock the elbows out at the top without banging the dumbbells together.",
+        "Lower until the upper arms are just below parallel to the floor, then press again.",
+        "Keep the ribs down and the upper back against the pad; the head stays neutral.",
+        "Move both dumbbells at the same speed; the weaker arm sets the pace."
+      ],
+      "mistakes": [
+        "Bottom position with the elbows dropped far below the shoulders and the dumbbells at chest level (the shoulder takes the stretch).",
+        "Lower back pulled off the pad into an arch as the load rises.",
+        "Elbows flared straight out to the sides with the palms fully forward at every rep.",
+        "Dumbbells swung up from the lap with a jerk instead of a controlled kick-up.",
+        "Shortened reps that stop well short of lockout."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the low point with the elbows well below shoulder height puts the joint at end range under load; stop the descent when the upper arms reach parallel and keep the palms slightly turned in if the shoulder is irritable (R3 INJ-02).",
+        "Get the dumbbells into position with a knee kick-up and set them down onto the thighs, not dropped behind the bench.",
+        "Dumbbell compound class: RIR 1-2 is the working target; the last rep should still lock out cleanly."
+      ],
+      "substitution_rationale": {
+        "machine_shoulder_press": "same pattern, fixed path, no dumbbell handling",
+        "overhead_press_barbell": "same pattern with a bar, heavier and standing; needs a rack and a healthy back",
+        "arnold_press": "same pattern with a rotating hand path; more front-delt range, same equipment",
+        "landmine_press": "angled press that stays in front of the face; shoulder-friendly, needs a landmine"
+      },
+      "sources": [
+        "ExRx.net Lever Shoulder Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 15 exercise technique (shoulder press)",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips"
+      ]
+    },
+    "machine_shoulder_press": {
+      "description": "The machine shoulder press trains the front delts with the side delts and triceps on a fixed path with the back supported. It is in the plan when the session budget is tight, the user is new to overhead work, or a spotter-free way to press close to failure is wanted. A good rep presses the handles from ear height to a full lockout and returns them without the plates touching the stack.",
+      "setup": [
+        "Set the seat so the handles start level with the ears or the top of the shoulders, not below.",
+        "Pick the neutral (palms facing) handles if the machine offers them; otherwise the wide handles with palms forward.",
+        "Sit tall with the lower back on the pad and the feet flat."
+      ],
+      "cues": [
+        "Press to a full lockout and pause briefly with the shoulders pushed up into the handles.",
+        "Lower under control until the hands are level with the ears; the stack stays off the bottom.",
+        "Keep the head neutral and the shoulders down away from the ears at the start of each rep.",
+        "Drive both handles evenly; the machine hides a lagging side."
+      ],
+      "mistakes": [
+        "Seat too low, so the start position drops the elbows far below the shoulders.",
+        "Plates slammed onto the stack between reps to rest.",
+        "Lower back arched off the pad to squeeze out a rep.",
+        "Shrugging the shoulders to the ears at the top instead of pressing through the arms."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the fixed path cannot adapt to your joint, so the seat height decides the depth; never start with the handles below shoulder height and use the neutral grip if the shoulder is sensitive (R3 INJ-02).",
+        "Machine compound class: RIR 1-2, with the last set occasionally taken closer to failure to recalibrate RIR (no bar to be trapped under).",
+        "Set the seat pin fully before loading; check the pin is in the stack, not resting on it."
+      ],
+      "substitution_rationale": {
+        "seated_dumbbell_shoulder_press": "same pattern with free dumbbells and a free hand path",
+        "smith_shoulder_press": "same pattern on a guided bar, seated",
+        "landmine_press": "angled press in front of the face; shoulder-friendly when the machine is not available"
+      },
+      "sources": [
+        "ExRx.net Lever Shoulder Press",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips"
+      ]
+    },
+    "smith_shoulder_press": {
+      "description": "The Smith machine shoulder press trains the front delts with the side delts and triceps on a guided bar, so the lifter can focus on pushing without balancing. It fills the vertical_push slot when no shoulder-press machine exists or when the user wants barbell loading without the bracing demand of a standing press. A good rep lowers the bar to just below the chin and presses it to a full lockout with the bar hooks off.",
+      "setup": [
+        "Place an incline bench under the bar at about 80-85 degrees and sit so the bar comes down just in front of the face, not behind the head.",
+        "Set the bar hooks so the bar starts at ear or upper-chest height; set the Smith safety stops just below the lowest point you press from.",
+        "Grip just outside shoulder width, wrists stacked; unhook with a twist of the wrists and hold the bar before the first rep."
+      ],
+      "cues": [
+        "Press the bar straight up to lockout and re-hook only at the end of the set.",
+        "Lower until the bar is level with the chin or upper chest, then press again.",
+        "Keep the upper back and head against the pad; look forward, not up.",
+        "Push the shoulders up into the bar at the top without lifting the hips."
+      ],
+      "mistakes": [
+        "Bench placed so the bar travels behind the head (behind-the-neck press).",
+        "Bar lowered well below the chin so the elbows dip deep at every rep.",
+        "Rehooking the bar mid-set and resting on the hooks.",
+        "Lower back pulled off the pad to add leverage."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the bar path is fixed, so the bench position decides whether the bar runs in front of the face or behind the neck; behind-the-neck pressing is the position the flag warns about (R3 INJ-02). Set the bench first, then test with the empty bar.",
+        "Set the Smith safety stops below the bottom of your rep so a failed press can be hooked or dropped onto the stops; with them set the machine can be worked to RIR 1.",
+        "Check the counterbalance: the empty bar may weigh 0-10 kg, so log the bar weight the gym lists."
+      ],
+      "substitution_rationale": {
+        "machine_shoulder_press": "same pattern, fixed path, no unhooking",
+        "seated_dumbbell_shoulder_press": "same pattern with free dumbbells and a free hand path",
+        "overhead_press_barbell": "same pattern with a free bar, standing, needs a rack and bracing"
+      },
+      "sources": [
+        "ExRx.net Lever Shoulder Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 15 exercise technique (shoulder press)"
+      ]
+    },
+    "arnold_press": {
+      "description": "The Arnold press is a seated dumbbell press that starts with the palms facing you and rotates them forward as the dumbbells go up, so the front delts work through a longer range than in a plain press. It sits in hypertrophy plans as a front-delt variation when a second vertical push is wanted without more barbell work. A good rep starts with the dumbbells in front of the chin, opens the elbows as it presses, and finishes locked out with the palms forward.",
+      "setup": [
+        "Bench at about 75-85 degrees, feet planted, lower back lightly on the pad.",
+        "Kick the dumbbells up and hold them in front of the shoulders at chin height with the palms facing you and the elbows in front of the body.",
+        "Standing option: same start, glutes and abs braced."
+      ],
+      "cues": [
+        "Press and rotate at the same time so the palms face forward when the dumbbells pass the forehead.",
+        "Finish locked out over the shoulders; do not let the dumbbells drift forward.",
+        "Reverse the rotation on the way down and bring the elbows back in front of the chest.",
+        "Keep the rotation smooth; the dumbbells never stop moving up while the hands turn.",
+        "Choose a load lighter than the plain seated press; the rotation is the point."
+      ],
+      "mistakes": [
+        "Rotating the hands first and then pressing (turns it into a plain press with an extra pause).",
+        "Elbows dropped far below the shoulders at the bottom with the wrists rolled back.",
+        "Back arched off the pad as fatigue sets in.",
+        "Dumbbells finishing wide with the elbows bent."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the low, internally rotated start plus the rotation under load stresses the front of the shoulder; keep the bottom position at chin height, not chest height, and skip the rotation (plain press) on any day the shoulder is sore (R3 INJ-02).",
+        "Intermediate exercise: learn the rhythm with light dumbbells for a session before loading.",
+        "Dumbbell compound class: RIR 1-2; the rotation gets sloppy first, so end the set when it does."
+      ],
+      "substitution_rationale": {
+        "seated_dumbbell_shoulder_press": "same pattern without the rotation; simpler and loads heavier",
+        "machine_shoulder_press": "same pattern on a fixed path, no dumbbell handling"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Arnold Press",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips"
+      ]
+    },
+    "landmine_press": {
+      "description": "The landmine press is a one-arm press on a bar anchored at one end, so the load moves up and forward on an arc instead of straight overhead. It trains the front delts with the upper chest and triceps and is the pressing option the planner reaches for when overhead work is limited by shoulder or back tolerance (R3 INJ-02). A good rep starts with the bar end at the shoulder, presses it up and away until the elbow is straight, and returns it under control without the bar drifting sideways.",
+      "setup": [
+        "Anchor one end of the bar in a landmine sleeve or a padded corner; load plates on the free end and clip them.",
+        "Stand (or half-kneel) facing the bar with the end held at the front of the shoulder in one hand, the same-side foot slightly back.",
+        "Brace the abs and set the shoulders down before the first press; start with the weaker arm."
+      ],
+      "cues": [
+        "Press up and forward along the bar's arc until the elbow locks out.",
+        "Let the shoulder blade glide forward and up at the top; it is meant to move.",
+        "Lower until the bar end touches the front of the shoulder, then press again.",
+        "Keep the hips square and the free hand off the bar.",
+        "Half-kneeling if the trunk twists or the lower back arches when standing."
+      ],
+      "mistakes": [
+        "Leaning the whole body into the bar so the press becomes a push with the legs.",
+        "Elbow flared out wide with the wrist bent back.",
+        "Bar end drifting across the body toward the other shoulder.",
+        "Shortened range that never reaches a straight elbow."
+      ],
+      "safety": [
+        "Check that the anchored end cannot slip: a bar in a bare corner needs a towel or mat behind it, and the sleeve pin should be seated before loading.",
+        "Clip the plates: the free end tilts and can shed an unclipped plate.",
+        "Unilateral: log both sides; the increment is one small plate on the bar end, which feels smaller at the hand because of the lever."
+      ],
+      "substitution_rationale": {
+        "machine_shoulder_press": "same pressing muscles on a fixed path when no landmine is available",
+        "seated_dumbbell_shoulder_press": "same vertical push with dumbbells, fully overhead",
+        "pike_push_up": "same muscles with body weight only; no equipment needed",
+        "incline_dumbbell_press": "closest free-weight angle (upper chest and front delts), shoulder-friendly"
+      },
+      "sources": [
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips",
+        "R3 INJ-02 and MOB-07 (landmine press as the shoulder-friendly press substitute)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 16 alternative modes and nontraditional implements"
+      ]
+    },
+    "push_press": {
+      "description": "The push press is an overhead press started with a short dip and drive of the legs, so a heavier bar can be locked out overhead and lowered under control. It trains the front delts, side delts and triceps at higher loads and speed than the strict press and sits in strength and power blocks as the library's upper-body power lift. A good rep dips 10-15 cm with a vertical torso, drives the bar off the shoulders with the legs, and finishes the lockout with the arms before the bar is lowered to the shoulders.",
+      "setup": [
+        "Unrack the bar from a rack set just below shoulder height; bar on the front of the shoulders, elbows slightly in front, grip just outside shoulder width.",
+        "Feet hip width, weight mid-foot, abs braced and ribs down.",
+        "Advanced: learn the dip-drive with an empty bar first; the planner only offers this lift after opt-in."
+      ],
+      "cues": [
+        "Dip straight down a hand's width with the knees, torso vertical, heels down.",
+        "Drive the legs hard and let the bar leave the shoulders; then press it out with the arms.",
+        "Push the head through and lock the elbows over the mid-foot.",
+        "Lower the bar to the shoulders and bend the knees to absorb it before the next rep.",
+        "Stop the set when the bar slows down noticeably."
+      ],
+      "mistakes": [
+        "Dipping forward from the hips so the bar rolls off the shoulders.",
+        "Slow, deep dip that turns into a front squat.",
+        "Catching the lockout with an arched lower back and the ribs flared.",
+        "Pressing before the leg drive has finished (a strict press with a stutter).",
+        "Catching the bar on the shoulders with straight legs."
+      ],
+      "safety": [
+        "Spinal loading: the bar loads the spine from above at speed; the dip is vertical and short, the abs stay braced, and the lockout must not be caught in lumbar hyperextension. With a logged back limitation the planner offers the strict or landmine substitutions.",
+        "Shoulder-sensitive: the fast lockout ends at full overhead flexion; without a clean strict-press overhead position do not push press (R3 INJ-02).",
+        "Advanced, power profile: work at RIR 3 or more in effort terms and end the set when bar speed drops (R4 5.2); never grind a push press rep.",
+        "Lower the bar to the shoulders with bent knees; do not drop it behind you. Clip the plates and clear the overhead space."
+      ],
+      "substitution_rationale": {
+        "overhead_press_barbell": "same bar and pattern without the leg drive; strict and slower",
+        "seated_dumbbell_shoulder_press": "same muscles, seated, no spinal loading or leg drive",
+        "landmine_press": "angled press in front of the face; shoulder- and back-friendly"
+      },
+      "sources": [
+        "ExRx.net Barbell Push Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 15 exercise technique (push press)",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips"
+      ]
+    },
+    "pike_push_up": {
+      "description": "The pike push-up is a push-up done with the hips high, so the body's weight is pressed at an angle close to overhead and the front and side delts and triceps do the work. It is the no-equipment vertical push for travel and home training, and raising the feet onto a step makes it harder. A good rep lowers the top of the head toward the floor between the hands and presses back to straight arms with the hips kept high.",
+      "setup": [
+        "Hands shoulder width on the floor, walk the feet in until the hips are the highest point and the torso is close to vertical.",
+        "Look at the floor between the hands; keep the heels down or on the toes, whichever keeps the hips high.",
+        "Feet-elevated option: feet on a bench or box for a steeper angle."
+      ],
+      "cues": [
+        "Bend the elbows and lower the head toward the floor just in front of the hands.",
+        "Press back up along the same line until the elbows lock out.",
+        "Keep the hips high and the back flat the whole set; the angle is the load.",
+        "Elbows track back at about 45 degrees, not out to the sides.",
+        "Progress by moving the feet closer, then onto a step; regress by walking them out."
+      ],
+      "mistakes": [
+        "Hips sag toward the floor so it turns into a decline push-up.",
+        "Head pushed forward past the hands with the elbows flared.",
+        "Range cut short well above the floor.",
+        "Feet elevated before a full-range floor version is solid."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the head-down position loads the shoulders in near-full flexion with body weight; keep the elbows tracking back, stop above the point where the shoulder pinches, and build the range with wall slides before elevating the feet (R3 INJ-02).",
+        "The head goes toward the floor: lower with control and keep a hand's width of space so a failed rep ends on the forehead, not the crown.",
+        "Bodyweight class: RIR 1-2; the hips sagging is the sign the set is over."
+      ],
+      "substitution_rationale": {
+        "seated_dumbbell_shoulder_press": "same muscles with dumbbells, seated, load easier to adjust",
+        "machine_shoulder_press": "same muscles on a fixed path with a stack",
+        "landmine_press": "same angled pressing line with an external load"
+      },
+      "sources": [
+        "ExRx.net Pike Push-up",
+        "Renaissance Periodization, Front Delt Hypertrophy Training Tips",
+        "R3 TRV-02 (bodyweight travel template: pike push-up)"
+      ]
+    },
+    "dumbbell_lateral_raise": {
+      "description": "The dumbbell lateral raise isolates the side delts, the muscle that gives the shoulders width and that pressing alone does not fully cover (R3 MIX-01). It is in nearly every hypertrophy plan because the side delts tolerate high frequency and high reps. A good rep lifts the dumbbells out to the sides with soft elbows until the upper arms are level with the shoulders, then lowers them under control.",
+      "setup": [
+        "Stand with the dumbbells at the sides, elbows slightly bent, a light forward lean from the hips.",
+        "Shoulders down away from the ears before the first rep.",
+        "Pick a load you can control for 12-20 clean reps; this is an isolation_light exercise."
+      ],
+      "cues": [
+        "Lead with the elbows out to the sides; the hands follow.",
+        "Stop when the upper arms are level with the shoulders and pause briefly.",
+        "Lower in two to three seconds; the descent is half the exercise.",
+        "Keep the thumbs level with or slightly above the pinkies; no pouring motion at the top.",
+        "Keep the torso still; if you have to swing, drop the load."
+      ],
+      "mistakes": [
+        "Shrugging the shoulders up so the traps do the lifting.",
+        "Swinging the torso and dumbbells up from the knees.",
+        "Raising well above shoulder height with the thumbs pointed down.",
+        "Elbows locked straight so the wrists take the strain.",
+        "Dumbbells dropped rather than lowered."
+      ],
+      "safety": [
+        "Shoulder-sensitive: raising above shoulder height with the hands turned thumb-down narrows the space under the acromion; keep the range at or below shoulder level and the thumbs level with the pinkies (R3 INJ-02).",
+        "Isolation class: sets can go to RIR 0-1 safely; the last set is a good place to recalibrate RIR (R3 RIR-05)."
+      ],
+      "substitution_rationale": {
+        "cable_lateral_raise": "same movement with constant tension through the whole range",
+        "machine_lateral_raise": "same movement with the path fixed by pads, easier to load",
+        "band_lateral_raise": "same movement with a band; travel and home option"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Lateral Raise",
+        "Renaissance Periodization, Side Delt Hypertrophy Training Tips"
+      ]
+    },
+    "cable_lateral_raise": {
+      "description": "The cable lateral raise isolates the side delt one arm at a time with tension that stays on the muscle at the bottom of the rep, where a dumbbell gives none. It is used as the main side-delt exercise in cable-equipped gyms and as a second angle beside the dumbbell version. A good rep pulls the handle across and up to shoulder height with a soft elbow and lowers it slowly across the body.",
+      "setup": [
+        "Set the pulley at the lowest position or just above knee height; stand side-on and grab the handle with the far hand.",
+        "Hold the frame with the free hand and lean slightly away so the cable runs across the body at the start.",
+        "Start with the handle in front of the hips, not at the side."
+      ],
+      "cues": [
+        "Lead with the elbow out and up until the upper arm is level with the shoulder.",
+        "Keep a slight bend in the elbow the whole rep.",
+        "Lower slowly until the handle crosses in front of the body again.",
+        "Keep the shoulder down; the trap should not take over at the top.",
+        "Do both sides with the same load and reps; the weaker side sets the load."
+      ],
+      "mistakes": [
+        "Shrugging or leaning into the raise to move a heavy stack.",
+        "Raising above shoulder height with the thumb down.",
+        "Starting from the side instead of in front of the hips, losing the bottom tension.",
+        "Swinging the handle with the torso."
+      ],
+      "safety": [
+        "Shoulder-sensitive: same mechanism as the dumbbell version: end the rep at shoulder height and keep the hand level; the cable makes the top of the rep heavy, so it tempts an over-raise (R3 INJ-02).",
+        "Unilateral: log both sides; if 2.5 kg is too big a jump, progress reps first (double progression).",
+        "Isolation class: RIR 0-1 is acceptable; keep the free hand on the frame for balance."
+      ],
+      "substitution_rationale": {
+        "dumbbell_lateral_raise": "same movement with dumbbells; both arms at once, no cable needed",
+        "machine_lateral_raise": "same movement on pads with a stack, bilateral",
+        "band_lateral_raise": "same movement with a band; travel option"
+      },
+      "sources": [
+        "ExRx.net Cable Lateral Raise",
+        "Renaissance Periodization, Side Delt Hypertrophy Training Tips"
+      ]
+    },
+    "machine_lateral_raise": {
+      "description": "The lateral raise machine isolates the side delts with pads under or against the upper arms, so the path is fixed and the load is a stack pin. It is the easiest way to do side-delt work close to failure in a busy gym and suits high-rep, short-rest sets. A good rep raises the pads until the upper arms are level with the shoulders and lowers them without letting the stack rest.",
+      "setup": [
+        "Set the seat so the shoulder joint lines up with the machine's pivot; the pads sit just above the elbows.",
+        "Sit tall with the chest up and the feet flat; hold the handles lightly if the machine has them.",
+        "Pick a load that allows 12-20 controlled reps."
+      ],
+      "cues": [
+        "Push out through the elbows, not the hands, until the upper arms reach shoulder height.",
+        "Pause briefly at the top, then lower in two to three seconds.",
+        "Keep the shoulders down and the neck long.",
+        "Keep the stack moving; do not rest the plates at the bottom."
+      ],
+      "mistakes": [
+        "Seat set so the pivot is above or below the shoulder, forcing the elbows to lead wrong.",
+        "Shrugging into the pads to move the stack.",
+        "Raising far above shoulder height because the machine allows it.",
+        "Leaning back and heaving with the torso."
+      ],
+      "safety": [
+        "Align the pivot with the shoulder before loading and keep the range at shoulder height: the machine allows a higher raise, but the same over-raise mechanism as with dumbbells applies.",
+        "Isolation class: RIR 0-1 sets are fine here; there is nothing to drop.",
+        "Half steps (2.5 kg) or an add-on plate keep the jumps sensible; otherwise progress reps first."
+      ],
+      "substitution_rationale": {
+        "dumbbell_lateral_raise": "same movement with free dumbbells",
+        "cable_lateral_raise": "same movement with a cable, one arm at a time"
+      },
+      "sources": [
+        "ExRx.net Lever Lateral Raise",
+        "Renaissance Periodization, Side Delt Hypertrophy Training Tips"
+      ]
+    },
+    "band_lateral_raise": {
+      "description": "The band lateral raise isolates the side delts with a resistance band held under the feet, so it can be done anywhere. It replaces the dumbbell version on travel days and in hotel rooms, and the band's rising tension makes the top of the rep the hardest part. A good rep raises the hands to shoulder height with soft elbows and lowers slowly against the band.",
+      "setup": [
+        "Stand on the middle of a long band with both feet hip width; hold an end in each hand at the sides, or double the band for more tension.",
+        "Shoulders down, slight forward lean, palms facing the thighs.",
+        "Choose the band level that gives 15-25 controlled reps; move the feet apart to make it harder."
+      ],
+      "cues": [
+        "Raise the elbows out to the sides until the upper arms are level with the shoulders.",
+        "Pause at the top against the band's peak tension, then lower slowly.",
+        "Keep the elbows soft and the wrists straight.",
+        "Keep the torso still; the band will pull you into a swing if it is too heavy."
+      ],
+      "mistakes": [
+        "Shrugging the shoulders to beat the band at the top.",
+        "Letting the band snap the arms down instead of lowering them.",
+        "Band stepped on off-centre so one side is heavier.",
+        "Bending the elbows to shorten the lever as fatigue sets in."
+      ],
+      "safety": [
+        "Inspect the band for nicks before every set and keep it under the arches of the feet, not the toes, so it cannot slip out.",
+        "Keep the range at shoulder height with the hands level; the same over-raise mechanism as with dumbbells applies.",
+        "Isolation class: RIR 0-1 is fine; progress by band level or foot width."
+      ],
+      "substitution_rationale": {
+        "dumbbell_lateral_raise": "same movement with dumbbells; loads more precisely",
+        "cable_lateral_raise": "same movement with constant cable tension, one arm at a time"
+      },
+      "sources": [
+        "ExRx.net Band Lateral Raise",
+        "Renaissance Periodization, Side Delt Hypertrophy Training Tips",
+        "R3 TRV-02 (bodyweight + band travel template)"
+      ]
+    },
+    "face_pull": {
+      "description": "The face pull draws a rope toward the face while the hands rotate outward, so the rear delts, mid and lower traps and the rotator cuff all work together. It is the planner's default shoulder-health accessory (R3 INJ-02 and MOB-07) and balances the pressing volume of a plan. A good rep pulls the rope to eye level with the elbows high and wide, the knuckles finishing beside the ears, and returns under control.",
+      "setup": [
+        "Set the pulley at face height or a little above; attach the rope and grip it with the thumbs pointing back toward you.",
+        "Step back until the arms are straight under tension; stand square or in a split stance for balance.",
+        "Band option: loop the band around a rack upright or door anchor at face height and grip both ends the same way."
+      ],
+      "cues": [
+        "Pull the rope toward the eyes, elbows high and travelling out to the sides.",
+        "As the hands reach the face, rotate the forearms back so the knuckles point up and finish beside the ears.",
+        "Squeeze the shoulder blades together at the end position for a moment.",
+        "Return slowly until the arms are straight; keep the shoulders down.",
+        "Light load, high reps; this is a control exercise, not a row."
+      ],
+      "mistakes": [
+        "Pulling the rope to the chest with the elbows down (a row, not a face pull).",
+        "Leaning back hard to move a heavy stack.",
+        "Hands finishing in front of the face without the outward rotation.",
+        "Shrugging up into the pull.",
+        "Yanking the rope and letting it snap back."
+      ],
+      "safety": [
+        "Keep the load light enough that the torso stays still and the hands rotate fully; if you must lean back to finish, the stack is too heavy.",
+        "Isolation_light class: sets to RIR 0-1 are fine; 15-25 reps per set is normal.",
+        "With a band, anchor it above eye height on a fixed upright and check it before each set."
+      ],
+      "substitution_rationale": {
+        "band_pull_apart": "same muscles with a band, no anchor needed; travel option",
+        "reverse_pec_deck": "same rear-delt and upper-back work on a machine, no rotation",
+        "cable_rear_delt_fly": "same muscles with cables in a fly path",
+        "dumbbell_rear_delt_fly": "same muscles with dumbbells, chest-supported or bent-over"
+      },
+      "sources": [
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips",
+        "R3 INJ-02 and MOB-07 (face pulls 3 x 15 as shoulder-health accessory)",
+        "Kolber et al. 2010, shoulder injuries attributed to resistance training"
+      ]
+    },
+    "reverse_pec_deck": {
+      "description": "The reverse pec deck isolates the rear delts and mid-back on a machine with the chest against the pad, so no balance or back position has to be managed. It is the go-to rear-delt exercise when high reps and short rests are wanted and the user has a logged back limitation. A good rep sweeps the handles back until the arms are in line with the body and returns them under control without the stack resting.",
+      "setup": [
+        "Move the handles to the rear-delt setting (arms start in front of the chest) and set the seat so the handles are at shoulder height.",
+        "Sit facing the pad with the chest against it, feet flat, and grip the handles with a neutral or palms-down grip.",
+        "Pick a load that allows 12-20 controlled reps."
+      ],
+      "cues": [
+        "Sweep the arms back with a slight elbow bend, leading with the elbows.",
+        "Stop when the arms are level with the torso and squeeze the shoulder blades for a moment.",
+        "Return slowly until the handles nearly meet in front of the chest.",
+        "Keep the chest on the pad and the shoulders down the whole set."
+      ],
+      "mistakes": [
+        "Bending the elbows more and more so the rear delts drop out and the arms row.",
+        "Pulling the arms far behind the body plane under load.",
+        "Chest lifting off the pad and the torso rocking back to move the stack.",
+        "Seat too low, so the handles pull the arms up into the traps."
+      ],
+      "safety": [
+        "End the sweep when the arms are level with the torso; the machine allows the arms further back, which loads the front of the shoulder capsule for no extra rear-delt work.",
+        "Isolation class: RIR 0-1 sets are fine; nothing can be dropped.",
+        "Set the handle position and seat pin before loading the stack."
+      ],
+      "substitution_rationale": {
+        "face_pull": "same muscles plus external rotation, cable or band",
+        "dumbbell_rear_delt_fly": "same fly path with dumbbells, chest-supported",
+        "cable_rear_delt_fly": "same fly path with cables",
+        "band_pull_apart": "same muscles with a band; travel option"
+      },
+      "sources": [
+        "ExRx.net Lever Rear Delt Fly (reverse fly)",
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips"
+      ]
+    },
+    "dumbbell_rear_delt_fly": {
+      "description": "The dumbbell rear delt fly raises the dumbbells out to the sides with the torso close to horizontal, so the rear delts and mid-back lift the load. It gives rear-delt volume in any gym with dumbbells; the chest-supported version on an incline bench is the default because it removes the lower back from the exercise. A good rep raises the dumbbells to shoulder level with soft elbows and lowers them slowly without the torso moving.",
+      "setup": [
+        "Chest-supported: set the bench to 30-45 degrees, lie chest-down with the dumbbells hanging straight under the shoulders.",
+        "Bent-over: hinge at the hips with a flat back until the torso is near horizontal, knees soft, dumbbells hanging under the shoulders.",
+        "Pick light dumbbells; 12-20 clean reps per set is the target."
+      ],
+      "cues": [
+        "Raise the dumbbells out to the sides, elbows slightly bent, until the upper arms are level with the back.",
+        "Lead with the elbows and point the pinkies slightly up; the hands stay in line with the shoulders.",
+        "Pause for a moment at the top and lower in two to three seconds.",
+        "Keep the neck long and the eyes on the floor.",
+        "Bent-over: keep the hips back and the spine neutral; the chest does not rise between reps."
+      ],
+      "mistakes": [
+        "Torso rising with each rep so the exercise becomes a lateral raise.",
+        "Elbows bending hard to shorten the lever (a rear-delt row).",
+        "Dumbbells swung with a bounce from the bottom.",
+        "Rounded lower back in the bent-over version.",
+        "Shrugging the shoulders toward the ears at the top."
+      ],
+      "safety": [
+        "Low-back-sensitive (bent-over option): holding the trunk near horizontal without support loads the lumbar erectors for the whole set; with a logged back limitation use the chest-supported option, and otherwise hinge with a neutral spine and rest the forehead on a bench if the back fatigues (R3 INJ-03).",
+        "Isolation class: RIR 0-1 is fine; the torso rising is the sign the set is over."
+      ],
+      "substitution_rationale": {
+        "reverse_pec_deck": "same fly path on a machine, chest-supported, no back demand",
+        "face_pull": "same muscles plus external rotation with a cable or band",
+        "cable_rear_delt_fly": "same fly path with cable tension, standing",
+        "band_pull_apart": "same muscles with a band, standing; travel option"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Rear Lateral Raise",
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips",
+        "R3 INJ-03 (chest-supported over bent-over positions with a low-back limitation)"
+      ]
+    },
+    "cable_rear_delt_fly": {
+      "description": "The cable rear delt fly pulls two crossed cables apart at shoulder height, so the rear delts and mid-back work against tension that stays on through the whole range. It is the standing rear-delt option in cable gyms and pairs well with pressing as an antagonist superset (R3 REST-03). A good rep sweeps the arms out and back until they are level with the shoulders and returns them slowly to crossed in front.",
+      "setup": [
+        "Set both pulleys at shoulder height; take the left handle (or cable end) in the right hand and the right one in the left hand so the cables cross.",
+        "Step back until the arms are straight in front of the chest under tension; feet staggered or square.",
+        "Single-arm option on one pulley: stand side-on and pull the handle across and out with the far hand."
+      ],
+      "cues": [
+        "Sweep the arms out and back with a slight elbow bend until they are in line with the shoulders.",
+        "Lead with the elbows and keep the hands at shoulder height.",
+        "Squeeze the shoulder blades briefly at the end, then return slowly to crossed.",
+        "Keep the torso still and the shoulders down; only the arms move."
+      ],
+      "mistakes": [
+        "Bending the elbows into a row as the stack gets heavy.",
+        "Leaning back and using body weight to pull.",
+        "Hands dropping below shoulder height so the lats take over.",
+        "Shrugging into the pull at the end position."
+      ],
+      "safety": [
+        "Keep the load light enough that the torso stays upright and the hands stay at shoulder height; end the sweep level with the shoulders rather than behind them.",
+        "Isolation_light class: RIR 0-1 sets are fine; 15-25 reps per set is normal.",
+        "Check the cable ends and pins before stepping back under tension."
+      ],
+      "substitution_rationale": {
+        "face_pull": "same muscles plus external rotation on one pulley with a rope",
+        "reverse_pec_deck": "same fly path on a machine with chest support",
+        "dumbbell_rear_delt_fly": "same fly path with dumbbells, chest-supported or bent-over"
+      },
+      "sources": [
+        "ExRx.net Cable Rear Delt Fly",
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips"
+      ]
+    },
+    "band_pull_apart": {
+      "description": "The band pull-apart stretches a band held at arm's length across the chest, so the rear delts, mid-back and rotator cuff pull the shoulder blades together. It is both a warm-up drill for pressing days (R3 MOB-07) and a high-rep rear-delt exercise for travel and home training. A good rep pulls the band to the chest with straight arms and shoulder blades squeezed, then returns slowly with the tension kept on.",
+      "setup": [
+        "Hold a long band in front of the chest with straight arms, hands shoulder width or a little wider, palms down or facing each other.",
+        "Shoulders down, ribs down, a slight bend in the elbows.",
+        "Pick a band level that gives 15-25 clean reps as work, or 2 x 10-15 easy reps as warm-up."
+      ],
+      "cues": [
+        "Pull the hands apart until the band touches the chest and the shoulder blades are squeezed together.",
+        "Keep the arms straight and the hands at shoulder height throughout.",
+        "Return in two to three seconds; do not let the band snap the hands back together.",
+        "Keep the neck long and the chin tucked; no reaching forward with the head."
+      ],
+      "mistakes": [
+        "Elbows bending so the pull becomes a row.",
+        "Shrugging the shoulders to the ears at the end position.",
+        "Hands dropping below shoulder height as the set goes on.",
+        "Arching the lower back to push the chest into the band."
+      ],
+      "safety": [
+        "Inspect the band for nicks before each set and keep the hands on the band, not wrapped around it, so a snap cannot catch the fingers.",
+        "Keep the pull at shoulder height and the arms straight; there is no flag on this exercise and the load stays light by design.",
+        "Isolation_light class: work sets to RIR 0-1 are fine; warm-up sets stay easy (R3 WU-03)."
+      ],
+      "substitution_rationale": {
+        "face_pull": "same muscles with a cable or anchored band and more external rotation",
+        "reverse_pec_deck": "same muscles on a machine, easier to load progressively",
+        "dumbbell_rear_delt_fly": "same muscles with dumbbells when no band is available"
+      },
+      "sources": [
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips",
+        "R3 MOB-07 (band pull-aparts as pre-session shoulder drill) and TRV-02",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 16 alternative modes and nontraditional implements"
+      ]
+    },
+    "barbell_shrug": {
+      "description": "The barbell shrug lifts the shoulders straight up toward the ears with a loaded bar in the hands, isolating the upper traps. It is in the plan when the traps need direct work beyond what deadlifts and carries give, and the trap-bar version keeps the load beside the body instead of in front. A good rep shrugs the shoulders as high as they go, pauses, and lowers them fully under control.",
+      "setup": [
+        "Take the bar from rack hooks at hip height (or a trap bar from the floor with a hinge) with a shoulder-width, palms-down grip.",
+        "Stand tall, feet hip width, arms straight, shoulders let down fully before the first rep.",
+        "Straps are fine on heavy sets so the grip does not end the set first."
+      ],
+      "cues": [
+        "Shrug straight up toward the ears, keeping the arms straight and the chin neutral.",
+        "Pause for a moment at the top, then lower fully until the shoulders hang.",
+        "Keep the ribs down and the knees soft; no leg drive.",
+        "Move in a straight vertical line; there is no need to roll the shoulders."
+      ],
+      "mistakes": [
+        "Rolling the shoulders forward or back at the top.",
+        "Bending the elbows so the arms lift the bar.",
+        "Bouncing at the bottom with a dip of the knees.",
+        "Pushing the head forward or chin up under the load.",
+        "Half range with a heavy bar (a static hold, not a shrug)."
+      ],
+      "safety": [
+        "Take heavy bars from rack hooks at hip height rather than the floor, so the pick-up is not a heavy deadlift; keep the spine neutral and braced while the load hangs.",
+        "Clip the plates; a loaded bar in front of the thighs rolls if it tilts.",
+        "Isolation class: RIR 1-2 is enough; grinding a shrug with the neck strained gives nothing extra."
+      ],
+      "substitution_rationale": {
+        "dumbbell_shrug": "same movement with the load beside the body, any gym with dumbbells",
+        "trap_bar_deadlift": "heavy trap work as a by-product of a hinge; a compound that covers the traps",
+        "farmers_carry": "loaded carry that works the traps isometrically with the grip and core"
+      },
+      "sources": [
+        "ExRx.net Barbell Shrug",
+        "Renaissance Periodization, Trap Hypertrophy Training Tips"
+      ],
+      "review_notes": "Flags: barbell_shrug carries no spinal_loading flag although the barbell and trap-bar options hold loads at or above deadlift-lockout level through the arms, which is axial compression of the spine; if the planner uses SL to gate users with a logged back limitation, consider SL for this row (dumbbell_shrug would then be the offered substitution). Numbers left unchanged."
+    },
+    "dumbbell_shrug": {
+      "description": "The dumbbell shrug isolates the upper traps with the load hanging beside the body, so the shoulders can travel straight up without a bar in the way. It is the shrug for dumbbell-only gyms and for lifters who find a bar in front of the thighs awkward. A good rep shrugs the shoulders straight up, pauses, and lowers them fully.",
+      "setup": [
+        "Stand tall with a dumbbell in each hand at the sides, palms facing the thighs, feet hip width.",
+        "Let the shoulders hang fully; arms straight, chin neutral.",
+        "Straps are fine once the grip limits the set before the traps do."
+      ],
+      "cues": [
+        "Shrug straight up toward the ears and pause at the top.",
+        "Lower fully and slowly; the stretch at the bottom is part of the rep.",
+        "Keep the arms straight and the elbows soft; no bending.",
+        "Keep the torso still; no leg drive or leaning."
+      ],
+      "mistakes": [
+        "Rolling the shoulders in a circle at the top.",
+        "Bending the elbows to help the dumbbells up.",
+        "Dumbbells swinging forward and back with a rocking torso.",
+        "Range shrinking as the set goes on."
+      ],
+      "safety": [
+        "Pick the dumbbells up with a hinge and neutral spine, and set them down the same way; the shrug itself is upright and unflagged.",
+        "Isolation class: RIR 1-2; stop when the shoulders no longer reach full height."
+      ],
+      "substitution_rationale": {
+        "barbell_shrug": "same movement with a bar or trap bar; loads heavier",
+        "farmers_carry": "loaded carry that works the traps isometrically with the grip and core"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Shrug",
+        "Renaissance Periodization, Trap Hypertrophy Training Tips"
+      ]
+    },
+    "cable_external_rotation": {
+      "description": "The cable external rotation turns the forearm outward against a low cable with the elbow pinned at the side, isolating the rotator cuff (infraspinatus and teres minor) with a little rear delt. It is the direct cuff exercise the planner adds beside pressing volume or with a logged shoulder limitation (R3 INJ-02), and the tension stays constant through the range. A good rep rotates the forearm out as far as it goes without the elbow leaving the ribs and returns slowly.",
+      "setup": [
+        "Set the pulley at elbow height and stand side-on with the working arm away from the stack; grab the handle with the far hand across the body.",
+        "Elbow bent to 90 degrees and pinned to the side; a rolled towel between the elbow and the ribs keeps it there.",
+        "Start with the forearm across the belly; pick a load for 15-25 clean reps."
+      ],
+      "cues": [
+        "Rotate the forearm outward like opening a door, elbow glued to the ribs.",
+        "Stop where the range ends naturally; do not force the last few degrees.",
+        "Return slowly across the belly; the cable should never pull the hand back.",
+        "Keep the wrist straight and the shoulder down.",
+        "Same load and reps on both sides."
+      ],
+      "mistakes": [
+        "Elbow drifting away from the side so the rear delt and lats do the work.",
+        "Torso twisting to add range.",
+        "Wrist flicking instead of forearm rotating.",
+        "Load so heavy the range shrinks to a few degrees."
+      ],
+      "safety": [
+        "Light loads only: the cuff muscles are small and the stack's 2.5 kg step is coarse, so progress reps first and switch to a band when the next step is too big (R4 5.7 note).",
+        "Pain-free range only; a pinch at the end of the rotation means stop short of it (R3 INJ-00).",
+        "Unilateral, isolation_light class: RIR 0-1 sets are fine."
+      ],
+      "substitution_rationale": {
+        "band_external_rotation": "same movement with a band; finer load steps, travel option",
+        "side_lying_dumbbell_external_rotation": "same movement lying on the side with a light dumbbell",
+        "face_pull": "external rotation combined with rear-delt and upper-back work"
+      },
+      "sources": [
+        "ExRx.net Cable External Rotation",
+        "R3 INJ-02 and MOB-07 (external rotation 2 x 15 as shoulder-health accessory)",
+        "Kolber et al. 2010, shoulder injuries attributed to resistance training"
+      ]
+    },
+    "side_lying_dumbbell_external_rotation": {
+      "description": "The side-lying external rotation lifts a light dumbbell by rotating the top forearm upward with the elbow on the hip, isolating the rotator cuff with gravity as the resistance. It needs only a very light dumbbell and a place to lie down, so it works in any gym and at home. A good rep rotates the forearm up until it points at the ceiling or the range ends, pauses, and lowers slowly.",
+      "setup": [
+        "Lie on one side with the head supported, knees bent for balance.",
+        "Top arm: elbow bent to 90 degrees and resting on the hip, forearm across the belly holding a 1-5 kg dumbbell.",
+        "A rolled towel under the elbow keeps the upper arm parallel to the floor."
+      ],
+      "cues": [
+        "Rotate the forearm up, keeping the elbow on the hip, until the range ends.",
+        "Pause at the top, then lower in two to three seconds.",
+        "Keep the wrist straight; the dumbbell is a lever, not something to lift with the hand.",
+        "Keep the shoulder down and the torso still; only the forearm moves."
+      ],
+      "mistakes": [
+        "Elbow lifting off the hip so the whole arm rises (a lateral raise on the side).",
+        "Rolling the torso back to add range.",
+        "Too heavy a dumbbell: the range shrinks and the rep gets jerky.",
+        "Dropping the dumbbell back down instead of lowering it."
+      ],
+      "safety": [
+        "Use the lightest dumbbells in the gym; 1-5 kg is normal and a 1 kg jump is a large step for this muscle, so progress reps first.",
+        "Pain-free range only; stop short of any pinch at the top (R3 INJ-00).",
+        "Unilateral, isolation_light class: sets to RIR 0-1 are fine."
+      ],
+      "substitution_rationale": {
+        "band_external_rotation": "same movement standing with a band; travel option",
+        "cable_external_rotation": "same movement standing with constant cable tension"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Lying External Rotation",
+        "R3 INJ-02 and MOB-07 (external rotation 2 x 15 as shoulder-health accessory)"
+      ],
+      "review_notes": "Increment 1.0 / 0.5 kg needs dumbbells below the presets' dumbbells.min_kg (base and home default 2 kg, hotel 2 kg) and 0.5-1 kg rack steps that the presets do not model (step_kg 2). As written, IncrementResolver cannot realise this increment in any default preset and progression will fall back to reps; either the equipment option needs a light-dumbbell note the resolver can check or the increment should read 'reps; +1.0 kg where 1 kg steps exist'. Same issue for prone_y_raise (dumbbell option). Numbers left unchanged."
+    },
+    "band_external_rotation": {
+      "description": "The band external rotation turns the forearm outward against a band with the elbow pinned at the side, isolating the rotator cuff with a load that can be adjusted in tiny steps. It is the cuff exercise for travel, warm-ups (R3 MOB-07) and gyms where the cable stack's smallest step is too coarse. A good rep rotates the forearm out as far as the range allows without the elbow moving and returns slowly against the band.",
+      "setup": [
+        "Anchored: loop the band around an upright or door anchor at elbow height; stand side-on with the working arm away from the anchor and hold the band with the far hand across the belly.",
+        "No anchor: hold the band in both hands in front of the belly, elbows at the sides; the free hand stays fixed at the navel and only the working forearm moves.",
+        "Elbow bent to 90 degrees and glued to the ribs; pick a band level for 15-25 clean reps."
+      ],
+      "cues": [
+        "Rotate the forearm outward, elbow pinned, until the range ends.",
+        "Pause briefly, then return slowly against the band's pull.",
+        "Keep the wrist straight and the shoulder down.",
+        "Move the feet closer to the anchor to make it lighter, further to make it heavier.",
+        "Same band and reps on both sides."
+      ],
+      "mistakes": [
+        "Elbow floating away from the side so the rear delt takes over.",
+        "Torso twisting toward the band to add range.",
+        "Letting the band snap the hand back to the start.",
+        "Band anchored too high or too low, pulling the elbow off the ribs."
+      ],
+      "safety": [
+        "Inspect the band before each set and anchor it on something fixed; a band that slips off an upright snaps toward the face.",
+        "Pain-free range only; stop short of a pinch (R3 INJ-00).",
+        "Unilateral, isolation_light class: RIR 0-1 sets are fine as work; 2 x 10-15 easy reps as warm-up."
+      ],
+      "substitution_rationale": {
+        "cable_external_rotation": "same movement with constant cable tension and a stack",
+        "side_lying_dumbbell_external_rotation": "same movement lying down with a light dumbbell",
+        "band_pull_apart": "same band, rear delts and cuff together with straight arms"
+      },
+      "sources": [
+        "ExRx.net Band External Rotation",
+        "R3 INJ-02 and MOB-07 (external rotation 2 x 15; band drills as pre-session shoulder warm-up)",
+        "Kolber et al. 2010, shoulder injuries attributed to resistance training"
+      ]
+    },
+    "prone_y_raise": {
+      "description": "The prone Y-raise lifts the arms forward and out into a Y with the chest on an incline bench, so the lower traps and the rest of the upper back raise the arms against gravity with the rear delts helping. It trains the muscles that keep the shoulder blades down and back during overhead work, which is why the planner pairs it with pressing plans and overhead mobility. A good rep raises straight arms with thumbs up until they are in line with the torso, pauses, and lowers slowly.",
+      "setup": [
+        "Set a bench to 30-45 degrees and lie chest-down with the arms hanging straight toward the floor.",
+        "Turn the thumbs up and set the shoulders down away from the ears before the first rep.",
+        "Start with no load; add the lightest dumbbells (1-2 kg) only once 15-20 clean reps are easy."
+      ],
+      "cues": [
+        "Raise the arms forward and out at about 30 degrees from the head line, into a Y.",
+        "Lead with the thumbs and keep the arms straight.",
+        "Pull the shoulder blades down and in as the arms rise; pause at the top.",
+        "Lower in two to three seconds; keep the neck long and the eyes on the floor."
+      ],
+      "mistakes": [
+        "Shrugging the shoulders up toward the ears as the arms rise.",
+        "Bending the elbows to make the lever shorter.",
+        "Lifting the chest off the bench to gain height.",
+        "Arms straight forward (an I) or straight out (a T) instead of a Y."
+      ],
+      "safety": [
+        "Load is body weight first: the lever is long and the lower traps are small; a dumbbell of 1-2 kg is a big step, so progress reps before adding load.",
+        "Pain-free range only; if the top of the rep pinches, stop lower and work the range up with wall slides.",
+        "Isolation_light class: sets to RIR 0-1 are fine."
+      ],
+      "substitution_rationale": {
+        "face_pull": "same scapular muscles pulled with a cable or band, standing",
+        "band_pull_apart": "same upper-back work with a band, standing; travel option",
+        "wall_slide": "same scapular control pattern as an unloaded drill"
+      },
+      "sources": [
+        "Renaissance Periodization, Rear Delt Hypertrophy Training Tips",
+        "R3 MOB-07 (scapular control work for overhead position) and INJ-02",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 16 alternative modes and nontraditional implements"
+      ],
+      "review_notes": "Increment 1.0 / 0.5 kg with the dumbbell option needs dumbbells lighter than the presets' dumbbells.min_kg (2 kg) and 0.5-1 kg steps the presets do not model; the default load type is bodyweight, so progression should probably be 'reps; then +1.0 kg where available' as for the calf/bodyweight rows. Numbers left unchanged."
+    },
+    "shoulder_pass_through": {
+      "description": "The shoulder pass-through takes a band, stick or towel from the thighs over the head to the lower back and back again with straight arms, moving the shoulders through their full arc of flexion and extension. It is a warm-up and mobility drill for overhead pressing and for anyone with a limited overhead position (R3 MOB-07), not a strength exercise. A good rep is slow, symmetric, and passes overhead without the elbows bending or the ribs flaring.",
+      "setup": [
+        "Hold a light band, stick or towel in front of the thighs with a wide overhand grip, arms straight.",
+        "Stand tall, ribs down, feet hip width; the grip is wide enough that the first rep passes over the head without strain.",
+        "Warm-up dose: 2 x 8-10 slow reps (R3 MOB-01); no load beyond a light band."
+      ],
+      "cues": [
+        "Raise the arms forward and over the head, then continue behind you toward the lower back.",
+        "Keep the elbows straight and both hands moving at the same speed.",
+        "Keep the ribs down; the shoulders move, the lower back does not arch.",
+        "Widen the grip if the pass-over sticks; narrow it slowly over weeks as the range improves.",
+        "Pause briefly at the sticking point if it is stiff but not painful."
+      ],
+      "mistakes": [
+        "Bending one elbow to get the band over (uneven range, usually the stiffer side).",
+        "Arching the lower back and pushing the head forward at the overhead point.",
+        "Grip narrowed too fast, forcing the shoulders through with momentum.",
+        "Rushing the reps; the drill is about slow control."
+      ],
+      "safety": [
+        "Pain-free range only: widen the grip or stop the arc short of the point that pinches; never force the pass-over or add load beyond a light band (R3 MOB-07, INJ-00).",
+        "Mobility profile: no RIR, no failure; stop when the range gets worse rather than better within a set."
+      ],
+      "substitution_rationale": {
+        "wall_slide": "same overhead-position drill with the back supported, no band needed",
+        "thoracic_rotation": "opens the upper back that limits the overhead position; floor drill"
+      },
+      "sources": [
+        "R3 MOB-07 (band dislocates, slow, wide grip) and MOB-01 pre-session dose",
+        "Behm et al. 2016, dynamic stretching and warm-up review (R3 WU-04)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 14 warm-up and flexibility training"
+      ]
+    },
+    "wall_slide": {
+      "description": "The wall slide is a scapular control drill: with the back, forearms and hands against a wall, the arms slide up overhead and back down while the ribs stay down and the shoulder blades rotate up. It teaches the overhead position needed for pressing and is the planner's default pre-session drill for a rounded upper back or a limited overhead reach (R3 MOB-07). A good rep keeps the forearms on the wall the whole way, ends with the arms straight overhead, and comes back down without the lower back arching.",
+      "setup": [
+        "Stand with the back against a wall, feet a step away, lower back flattened toward the wall with the ribs down.",
+        "Place the forearms and backs of the hands on the wall with the elbows bent to 90 degrees at shoulder height.",
+        "Warm-up dose: 2 x 8-10 slow reps (R3 MOB-01); no equipment needed."
+      ],
+      "cues": [
+        "Slide the forearms up the wall until the arms are straight overhead, keeping wrists and elbows in contact.",
+        "Reach a little higher at the top as if pushing the wall up, then slide back down.",
+        "Keep the ribs down and the lower back against the wall the whole rep.",
+        "Keep the shoulders away from the ears; the shoulder blades rotate, they do not shrug.",
+        "Go only as high as the forearms stay on the wall; the range grows over weeks."
+      ],
+      "mistakes": [
+        "Lower back arching off the wall as the arms go up.",
+        "Elbows or wrists leaving the wall to cheat the range.",
+        "Shrugging the shoulders to the ears at the top.",
+        "Head pushed forward off the wall."
+      ],
+      "safety": [
+        "Pain-free range only: stop where the forearms start to leave the wall or the shoulder pinches; the drill builds range over sessions, not within one (R3 MOB-07, INJ-00).",
+        "Mobility profile: no RIR, no failure; done as warm-up or between sets, never loaded."
+      ],
+      "substitution_rationale": {
+        "shoulder_pass_through": "same overhead arc with a band or stick, standing free",
+        "prone_y_raise": "same scapular muscles worked against gravity on a bench"
+      },
+      "sources": [
+        "R3 MOB-07 (wall slides for the thoracic spine and overhead position) and MOB-01 pre-session dose",
+        "Behm et al. 2016, dynamic stretching and warm-up review (R3 WU-04)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed. (Haff & Triplett 2016), ch. 14 warm-up and flexibility training"
+      ]
+    }
+  },
+  "status": {
+    "overhead_press_barbell": "draft",
+    "seated_dumbbell_shoulder_press": "draft",
+    "machine_shoulder_press": "draft",
+    "smith_shoulder_press": "draft",
+    "arnold_press": "draft",
+    "landmine_press": "draft",
+    "push_press": "draft",
+    "pike_push_up": "draft",
+    "dumbbell_lateral_raise": "draft",
+    "cable_lateral_raise": "draft",
+    "machine_lateral_raise": "draft",
+    "band_lateral_raise": "draft",
+    "face_pull": "draft",
+    "reverse_pec_deck": "draft",
+    "dumbbell_rear_delt_fly": "draft",
+    "cable_rear_delt_fly": "draft",
+    "band_pull_apart": "draft",
+    "barbell_shrug": "draft",
+    "dumbbell_shrug": "draft",
+    "cable_external_rotation": "draft",
+    "side_lying_dumbbell_external_rotation": "draft",
+    "band_external_rotation": "draft",
+    "prone_y_raise": "draft",
+    "shoulder_pass_through": "draft",
+    "wall_slide": "draft"
+  }
+}

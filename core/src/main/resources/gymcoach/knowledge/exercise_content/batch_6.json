@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "batch": 6,
+  "entries": {
+    "plank": {
+      "description": "The front plank trains the abs and obliques to hold the pelvis and lumbar spine still against gravity (anti-extension). It is in the plan as low-cost core work that teaches the brace used under a bar. A good rep is a straight line from head to heels, held without shaking or sagging for the prescribed seconds.",
+      "setup": [
+        "Forearms on the floor, elbows under the shoulders, feet hip-width.",
+        "Tuck the pelvis slightly so the lower back is flat, not arched.",
+        "Squeeze the glutes and quads before you lift the hips."
+      ],
+      "cues": [
+        "Push the floor away so the upper back is broad, not sunk between the shoulders.",
+        "Breathe out hard and pull the ribs down toward the hips.",
+        "Keep the head in line with the spine; look at the floor just ahead of the hands.",
+        "Hold tension for the whole time; the set ends when the line breaks, not when the timer does."
+      ],
+      "mistakes": [
+        "Hips sag toward the floor and the lower back arches.",
+        "Hips pike up so the abs stop working.",
+        "Holding the breath and turning red instead of breathing under tension.",
+        "Chasing long holds with a poor line instead of shorter, harder holds."
+      ],
+      "safety": [
+        "No flags set: the load is body weight through a neutral spine. Stop the hold when the hips drop; a sagging plank loads the lower back, not the abs.",
+        "Progress by lever (feet elevated, one leg lifted) or a plate on the upper back rather than by ever-longer holds (R4 core_time profile)."
+      ],
+      "substitution_rationale": {
+        "dead_bug": "same anti-extension pattern lying down, the floor supports the lower back",
+        "ab_wheel_rollout": "same pattern with a moving lever, harder, needs a wheel or a bar with round plates",
+        "bird_dog": "anti-rotation on hands and knees, the easiest regression when a full plank is not yet possible"
+      },
+      "sources": [
+        "ExRx.net Front Plank",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "side_plank": {
+      "description": "The side plank trains the obliques and, with the top hip stacked, the glute medius to resist side-bending and rotation. It is in the plan because lateral-chain endurance is cheap to train and carries over to carries and single-leg work. A good rep is hips lifted and stacked, body straight from ear to ankle, held still for the prescribed seconds per side.",
+      "setup": [
+        "Lie on one side, elbow under the shoulder, forearm across the floor.",
+        "Feet stacked, or the top foot in front for balance; legs straight.",
+        "Lift the hips until shoulders, hips and ankles are in one line."
+      ],
+      "cues": [
+        "Drive the bottom hip up and forward; do not let it hang back.",
+        "Push the elbow into the floor to keep the shoulder packed.",
+        "Reach the top arm toward the ceiling or rest it on the hip; keep the chest open.",
+        "Breathe steadily; keep the same line for the whole hold."
+      ],
+      "mistakes": [
+        "Hips sagging toward the floor so the trunk bends sideways.",
+        "Rolling the chest toward the floor and turning it into a half plank.",
+        "Shoulder collapsing so the neck takes the load.",
+        "Holding one side longer than the other."
+      ],
+      "safety": [
+        "No flags set: body weight only, spine neutral. If the bottom shoulder aches, drop to the knees or use a straight arm instead of the elbow.",
+        "Do equal time on both sides; the weaker side sets the hold length."
+      ],
+      "substitution_rationale": {
+        "pallof_press": "same anti-rotation demand standing up, load set by a cable or band instead of body weight",
+        "suitcase_carry": "same one-sided load on the obliques while walking",
+        "copenhagen_plank": "same side-lying position with the adductors as the main target"
+      },
+      "sources": [
+        "ExRx.net Side Bridge",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "dead_bug": {
+      "description": "The dead bug trains the abs to keep the lower back pressed to the floor while the arms and legs move (anti-extension). It is in the plan as the safest entry to bracing and as the low-back-friendly core option. A good rep moves one arm and the opposite leg slowly toward the floor while the lower back never leaves it.",
+      "setup": [
+        "Lie on your back, hips and knees bent to 90°, arms straight up over the shoulders.",
+        "Exhale and press the lower back into the floor; keep that contact for the set.",
+        "Start with heel taps if straight legs pull the back off the floor."
+      ],
+      "cues": [
+        "Reach one arm overhead and lower the opposite leg at the same time.",
+        "Move only as far as the lower back stays flat.",
+        "Exhale on the way out, inhale on the way back.",
+        "Slow tempo: count three on the way out, one on the way back.",
+        "Alternate sides; reps are counted per side."
+      ],
+      "mistakes": [
+        "Lower back arching off the floor as the leg goes down.",
+        "Moving fast and letting momentum carry the limbs.",
+        "Holding the breath.",
+        "Lifting the head and shoulders to help."
+      ],
+      "safety": [
+        "No flags set: the floor supports the spine, so this is the core exercise the plan prefers when the lower back is a limitation (R3 INJ-03).",
+        "Shorten the range rather than let the back arch."
+      ],
+      "substitution_rationale": {
+        "plank": "same anti-extension brace as a static hold instead of moving limbs",
+        "bird_dog": "same slow opposite arm-leg pattern on hands and knees, adds the lower back and glutes",
+        "lying_leg_raise": "same lying position with more hip flexor work and a harder lever"
+      },
+      "sources": [
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)"
+      ]
+    },
+    "bird_dog": {
+      "description": "The bird dog trains the abs, lower-back muscles and glutes to keep the trunk still while one arm and the opposite leg extend (anti-rotation). It is in the plan as a warm-up drill and as the lower-back-friendly core option. A good rep reaches long, not high: hips level, spine unchanged, no wobble.",
+      "setup": [
+        "Hands under the shoulders, knees under the hips, spine neutral.",
+        "Brace lightly, as if about to take a light tap to the stomach.",
+        "Pick a spot on the floor to keep the head still."
+      ],
+      "cues": [
+        "Reach the arm forward and the opposite heel back at the same time.",
+        "Keep the hips square; a glass of water on the lower back should not spill.",
+        "Pause one second at full reach, then return under control.",
+        "Squeeze the glute of the extended leg.",
+        "Alternate sides; reps are counted per side."
+      ],
+      "mistakes": [
+        "Lifting the leg above hip height so the lower back arches.",
+        "Hip of the moving leg rotating open.",
+        "Sagging between the shoulder blades.",
+        "Rushing the reps and swinging the limbs."
+      ],
+      "safety": [
+        "No flags set: body weight, neutral spine, hands and knees supported. Lower the range if the back wants to arch; the goal is a still trunk, not a high leg.",
+        "Use a mat or folded towel under the knees if the floor is hard."
+      ],
+      "substitution_rationale": {
+        "dead_bug": "same opposite arm-leg pattern lying on the back, the floor supports the spine",
+        "plank": "same brace as a static hold on the forearms",
+        "pallof_press": "same anti-rotation demand standing, load from a cable or band"
+      },
+      "sources": [
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)"
+      ]
+    },
+    "ab_wheel_rollout": {
+      "description": "The rollout trains the abs and obliques to resist extension while the lever gets longer, with the lats controlling the arms. It is in the plan as the hardest anti-extension progression that needs almost no equipment. A good rep rolls out as far as the lower back stays flat, pauses, and pulls back with the abs, not the hips.",
+      "setup": [
+        "Kneel on a mat with the wheel, or a bar with round plates, under the shoulders.",
+        "Round the upper back slightly, tuck the pelvis, squeeze the glutes.",
+        "Set a stopping point on the floor for the range you can hold flat."
+      ],
+      "cues": [
+        "Roll out by reaching the arms forward, hips and shoulders moving together.",
+        "Keep the ribs pulled down; the lower back must not arch.",
+        "Stop before the hips drop, pause, then pull the wheel back with the abs.",
+        "Exhale on the way back.",
+        "Progress the range first; go to standing only when kneeling full range is easy."
+      ],
+      "mistakes": [
+        "Hips sagging and lower back arching at the far point.",
+        "Hips folding back first so the rollout becomes a hip hinge.",
+        "Range so long that the return needs a jerk.",
+        "Head dropping and shoulders shrugged."
+      ],
+      "safety": [
+        "low_back_sensitive: when the abs give out, the pelvis tips forward and the lumbar spine hyperextends under the lever load. Keep the range short enough to hold a flat back on every rep and end the set when you cannot.",
+        "Do not take this one to failure; the failed rep is the arched one.",
+        "Kneel on padding if the knees hurt on the floor."
+      ],
+      "substitution_rationale": {
+        "plank": "same anti-extension brace without the moving lever, easier",
+        "cable_crunch": "loaded ab work with the spine flexing instead of resisting, easier to dose",
+        "dead_bug": "same pattern lying on the floor, the safest regression when the back is a limitation"
+      },
+      "sources": [
+        "ExRx.net Wheel Rollout",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "cable_crunch": {
+      "description": "The cable crunch trains the abs through trunk flexion under adjustable load, with the obliques assisting. It is in the plan because it is the easiest way to load the abs progressively in small steps. A good rep curls the ribs toward the pelvis against the rope, pauses, and returns to a tall kneeling position under control.",
+      "setup": [
+        "Rope on a high pulley; kneel facing the stack about a metre away.",
+        "Hold the rope at the sides of the head or on the upper chest; the elbows stay fixed.",
+        "Hips stay stacked over the knees for the whole set."
+      ],
+      "cues": [
+        "Crunch the ribs toward the hips; round the spine rather than bowing at the hips.",
+        "Keep the elbows and hands where they started; the arms do not pull.",
+        "Exhale hard at the bottom and pause a beat.",
+        "Return slowly until the abs are stretched, without losing tension."
+      ],
+      "mistakes": [
+        "Hips hinging back and forth so the hip flexors do the work.",
+        "Pulling the rope down with the arms and lats.",
+        "Load so heavy that the range shrinks to a nod.",
+        "Bouncing out of the bottom."
+      ],
+      "safety": [
+        "No flags set: the spine flexes under load, but the range is short and the load sits on a stack you control. Add one stack plate (R4 default 5 kg, 2.5 kg with an add-on) only when every rep still reaches full flexion.",
+        "Keep the knees on a mat; raise the pulley rather than kneel further away."
+      ],
+      "substitution_rationale": {
+        "machine_crunch": "same loaded flexion on a fixed path, no rope needed",
+        "ab_wheel_rollout": "abs loaded by resisting extension instead of flexing, no cable needed",
+        "hanging_leg_raise": "same abs, flexion from the pelvis up while hanging from a bar",
+        "lying_leg_raise": "same abs, flexion from the pelvis up on the floor, no equipment"
+      },
+      "sources": [
+        "ExRx.net Cable Kneeling Crunch (target rectus abdominis; synergist obliques)",
+        "RP Abs Hypertrophy Training Tips (rpstrength.com)"
+      ]
+    },
+    "machine_crunch": {
+      "description": "The ab crunch machine trains the abs through trunk flexion on a fixed path with a weight stack. It is in the plan as the simplest way to load the abs when the machine is available. A good rep curls the chest toward the hips against the pad, pauses, and returns slowly without the stack touching down.",
+      "setup": [
+        "Set the seat so the pivot lines up with the lower ribs, not the hips.",
+        "Chest pad or handles against the upper chest; feet under the rollers if the machine has them.",
+        "Pick a load that allows a full curl with a pause."
+      ],
+      "cues": [
+        "Round the spine to bring the ribs to the pelvis; the hips stay planted.",
+        "Exhale at the bottom and hold a beat.",
+        "Return under control until the abs are long, stack still off the pin.",
+        "Hands rest on the handles; do not pull with the arms."
+      ],
+      "mistakes": [
+        "Hips sliding forward so the movement becomes a hip hinge.",
+        "Arms pulling the pads down.",
+        "Short, fast half reps with too much weight.",
+        "Neck craning forward at the bottom."
+      ],
+      "safety": [
+        "No flags set: guided path, seated, load on a pin. Move up one stack plate only when the top of the rep range is reached on all sets; the half plate is the smaller step if the machine has one.",
+        "Adjust the seat before adding weight; a pivot set at the hips loads the hip flexors instead of the abs."
+      ],
+      "substitution_rationale": {
+        "cable_crunch": "same loaded flexion with a rope on a cable stack",
+        "lying_leg_raise": "same abs, flexion from the pelvis up, no machine"
+      },
+      "sources": [
+        "ExRx.net Lever Crunch (ab crunch machine)",
+        "RP Abs Hypertrophy Training Tips (rpstrength.com)"
+      ]
+    },
+    "hanging_leg_raise": {
+      "description": "The hanging leg or knee raise trains the abs by curling the pelvis up toward the ribs, with the hip flexors lifting the legs and the grip holding on. It is in the plan as a bar-only core exercise with a clear progression from knees to straight legs. A good rep tucks the pelvis at the top so the abs finish the movement, then lowers without swinging.",
+      "setup": [
+        "Hang from a bar with a shoulder-width grip, shoulders pulled down away from the ears.",
+        "Feet together, body still before the first rep.",
+        "Start with knee raises; move to straight legs when knee raises are easy at the top of the range."
+      ],
+      "cues": [
+        "Lift the knees, then roll the pelvis up so the lower back rounds slightly at the top.",
+        "Lower slowly; kill the swing before the next rep.",
+        "Exhale on the way up.",
+        "Keep the shoulders active; do not hang passively in the joint.",
+        "Straight-leg version: toes up, legs to at least hip height, still no swing."
+      ],
+      "mistakes": [
+        "Swinging the legs up with momentum from the hips.",
+        "Only the hip flexors working: legs go up but the pelvis never curls.",
+        "Dropping the legs fast and swinging at the bottom.",
+        "Shoulders shrugged up to the ears."
+      ],
+      "safety": [
+        "No flags set in R4. The abs only work when the pelvis curls; a straight-leg version done with an arched lower back loads the hip flexors and lumbar spine instead, so keep the tuck at the top and shorten the lever (knees bent) if the back arches.",
+        "Grip fatigue ends the set before the abs do at first; regress to knee raises rather than adding straps."
+      ],
+      "substitution_rationale": {
+        "lying_leg_raise": "same pelvic curl lying down, no bar or grip needed",
+        "cable_crunch": "same abs flexing from the top down with a cable stack",
+        "dead_bug": "anti-extension on the floor, the easiest regression"
+      },
+      "sources": [
+        "ExRx.net Hanging Leg-Hip Raise",
+        "RP Abs Hypertrophy Training Tips (rpstrength.com)"
+      ],
+      "review_notes": "Flags: lying_leg_raise carries low_back_sensitive but hanging_leg_raise does not. The straight-leg hanging version has the same anterior-tilt mechanism (R4 §5.5: 'leg raises with anterior tilt') on a longer lever. Suggest LB on this row as well, or a table note that the knee-raise version is the LB-free regression. Not changed here."
+    },
+    "lying_leg_raise": {
+      "description": "The lying leg raise or reverse crunch trains the abs by curling the pelvis off the floor while the hip flexors control the legs. It is in the plan as the no-equipment flexion exercise and the floor regression of the hanging version. A good rep lifts the hips slightly at the top and lowers the legs only as far as the lower back stays on the floor.",
+      "setup": [
+        "Lie on your back, hands under the hips or holding a bench behind the head.",
+        "Legs straight, or knees bent for the reverse crunch; lower back pressed into the floor.",
+        "Set the lowest leg position at the point where the back would start to arch."
+      ],
+      "cues": [
+        "Raise the legs, then roll the pelvis up so the tailbone leaves the floor.",
+        "Lower slowly; stop where the lower back would lift.",
+        "Exhale as the pelvis curls up.",
+        "Bend the knees to shorten the lever when the back starts to arch.",
+        "Keep the head down and the neck relaxed."
+      ],
+      "mistakes": [
+        "Lower back arching off the floor as the legs come down.",
+        "Legs going up and down with no pelvic curl.",
+        "Momentum from swinging the legs.",
+        "Hands pushing so hard that the shoulders lift."
+      ],
+      "safety": [
+        "low_back_sensitive: as straight legs lower, the hip flexors pull the pelvis into anterior tilt and the lumbar spine arches under the leg load. Keep the lower back on the floor for every rep; bend the knees or shorten the range before the back lifts.",
+        "The reverse crunch (knees bent) is the version to use when the back is a limitation."
+      ],
+      "substitution_rationale": {
+        "hanging_leg_raise": "same pelvic curl hanging from a bar, harder",
+        "dead_bug": "same lying position, the back stays flat by design, easier",
+        "cable_crunch": "same abs flexing from the top down with a cable stack"
+      },
+      "sources": [
+        "ExRx.net Lying Leg-Hip Raise",
+        "RP Abs Hypertrophy Training Tips (rpstrength.com)"
+      ]
+    },
+    "pallof_press": {
+      "description": "The Pallof press trains the obliques and abs to resist rotation while the arms press a cable or band straight out from the chest. It is in the plan as an easy-to-load anti-rotation exercise that fits between sets of anything. A good rep presses the handle out and back on a straight line while the hips and shoulders stay square to the front.",
+      "setup": [
+        "Cable or anchored band at chest height; stand side-on to the anchor, feet shoulder-width, or half-kneeling.",
+        "Hold the handle with both hands at the sternum and step out until there is tension.",
+        "Brace, ribs down, knees soft."
+      ],
+      "cues": [
+        "Press the hands straight out to arm's length, hold two seconds, bring them back.",
+        "Do not let the anchor turn you; hips and chest stay facing forward.",
+        "Breathe out as you press.",
+        "Do all reps on one side, then face the other way.",
+        "Half-kneeling makes it stricter; standing lets you use more load."
+      ],
+      "mistakes": [
+        "Shoulders rotating toward the anchor at full reach.",
+        "Leaning away from the anchor to cheat the load.",
+        "Arms drifting sideways instead of straight out.",
+        "Load so heavy that the hands cannot reach full extension."
+      ],
+      "safety": [
+        "No flags set: standing or kneeling, no spinal loading, the load is a cable stack or band set by you. Add 2.5 kg (R4 cable increment) or the next band only when every rep reaches full reach with square hips.",
+        "Keep the shoulders down; if the front of the shoulder aches, press slightly below chest height."
+      ],
+      "substitution_rationale": {
+        "side_plank": "same anti-rotation demand as a body-weight hold, no cable needed",
+        "suitcase_carry": "same one-sided load on the obliques while walking, dumbbell or kettlebell",
+        "cable_woodchop": "same setup with controlled rotation instead of resisting it",
+        "bird_dog": "same anti-rotation task on hands and knees, no equipment"
+      },
+      "sources": [
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)"
+      ]
+    },
+    "cable_woodchop": {
+      "description": "The woodchop trains the obliques and abs through controlled rotation, high-to-low or low-to-high, against a cable or band. It is in the plan for users who want loaded rotation once anti-rotation work is solid. A good rep turns from the hips and upper back with nearly straight arms while the lower back stays neutral and the feet stay planted.",
+      "setup": [
+        "Cable or anchored band at shoulder height (high-to-low) or knee height (low-to-high); stand or half-kneel side-on.",
+        "Both hands on the handle, arms nearly straight, step away until there is tension.",
+        "Brace; keep the lower back neutral and the knees soft."
+      ],
+      "cues": [
+        "Turn the chest and hips together; the arms only follow.",
+        "Move on a diagonal across the body, finishing at the far hip or shoulder.",
+        "Pause at the end and return slowly on the same line.",
+        "Standing version: pivot the back foot so the hips can turn.",
+        "Half-kneeling version: lock the hips and rotate only from the upper back."
+      ],
+      "mistakes": [
+        "Twisting through the lower back with the hips locked and the feet flat.",
+        "Arms swinging the handle while the trunk stays still.",
+        "Speed from momentum instead of a controlled turn.",
+        "Rounding forward at the finish of a high-to-low chop."
+      ],
+      "safety": [
+        "low_back_sensitive: this is loaded rotation, and rotation that comes from the lumbar spine instead of the hips and upper back is the mechanism behind the flag. Keep the load light enough to pause at the end point, turn from the hips, and skip it during a low-back flare-up (R3 INJ-03); pallof_press is the flag-free swap.",
+        "Add 2.5 kg (R4 cable increment) or the next band only while the return is still slow and controlled."
+      ],
+      "substitution_rationale": {
+        "pallof_press": "same setup, resists rotation instead of producing it, no low-back flag",
+        "medicine_ball_slam": "same trunk drive at speed with a ball, no cable needed",
+        "side_plank": "obliques loaded as a static hold, no equipment"
+      },
+      "sources": [
+        "ExRx.net Cable Twist (target obliques)",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "farmers_carry": {
+      "description": "The farmer's carry trains the grip and forearms, the upper traps holding the shoulders up, and the abs keeping the trunk tall under load. It is in the plan as the simplest full-body loaded walk, which also builds the grip for rows and deadlifts. A good set is a brisk, upright walk over the prescribed distance with the weights still and the shoulders level.",
+      "setup": [
+        "Two dumbbells, two kettlebells or a loaded trap bar; deadlift them up with a flat back.",
+        "Stand tall, shoulders pulled slightly back and down, ribs stacked over the pelvis.",
+        "Mark the distance so the set has a clear end point."
+      ],
+      "cues": [
+        "Walk with short, quick steps, heel to toe; no shuffling.",
+        "Squeeze the handles hard the whole way.",
+        "Keep the chest up and look ahead, not at the floor.",
+        "Breathe in short, steady breaths behind the brace.",
+        "Set the weights down with a squat, not a bend."
+      ],
+      "mistakes": [
+        "Shoulders rounding forward and the weights swinging.",
+        "Leaning back or arching the lower back to hold the load.",
+        "Long, slow steps that waste the grip.",
+        "Dropping the weights at the end."
+      ],
+      "safety": [
+        "No flags set: the spine stays neutral and upright, the load is in the hands. Pick a load where the last few metres are hard but the posture never breaks (R4 carry profile); set the weights down when the shoulders start to round.",
+        "Pick up and set down with a flat back; the lift off the floor is the only hinge in the exercise.",
+        "Increase by one dumbbell step per hand (R4 default 2 kg) or the next kettlebell."
+      ],
+      "substitution_rationale": {
+        "suitcase_carry": "same carry with one weight, more oblique work, half the total load",
+        "dead_hang": "grip and traps under load without walking, needs only a bar",
+        "dumbbell_shrug": "traps and grip under load without the walk, when there is no space"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and nontraditional implement training)",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "suitcase_carry": {
+      "description": "The suitcase carry trains the obliques and glute medius to keep the trunk and pelvis level while one hand carries the load, with the grip working the whole time. It is in the plan as walking anti-lateral-flexion work that transfers to single-leg lifts. A good set is an upright walk with the shoulders level and the free hand relaxed, then the same distance on the other side.",
+      "setup": [
+        "One dumbbell or kettlebell; pick it up with a flat back and stand tall.",
+        "Free arm hangs relaxed or rests lightly on the hip.",
+        "Mark the distance; both sides get the same distance."
+      ],
+      "cues": [
+        "Stay dead upright; do not lean away from the weight.",
+        "Keep the shoulders level and the hips square.",
+        "Short, quick steps; grip hard.",
+        "Breathe steadily behind a light brace.",
+        "Switch hands at the turn and walk back."
+      ],
+      "mistakes": [
+        "Trunk leaning away from the weight to counterbalance it.",
+        "Loaded shoulder hiking up or dropping down.",
+        "Hips swaying side to side with each step.",
+        "Only carrying on the strong side."
+      ],
+      "safety": [
+        "No flags set: neutral upright spine, load in one hand. The set ends when you can no longer stay level; a lean to the far side means the load is too heavy for the obliques, not the grip.",
+        "Pick up and set down with a flat back.",
+        "Increase by one dumbbell step (R4 default 2 kg) or the next kettlebell once both sides finish the distance upright."
+      ],
+      "substitution_rationale": {
+        "farmers_carry": "same carry with both hands, more total load, less oblique work",
+        "side_plank": "same lateral-chain hold without walking, no equipment",
+        "pallof_press": "same anti-rotation demand standing still, cable or band"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and nontraditional implement training)",
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J)"
+      ]
+    },
+    "battle_ropes": {
+      "description": "Battle ropes are interval conditioning for the shoulders, upper back and trunk with the legs mostly static. They are in the plan as a HIIT-friendly cardio option that spares the legs on or near leg days. A good interval keeps the waves reaching the anchor at a steady rhythm for the whole work period, followed by a full rest.",
+      "setup": [
+        "Anchor the rope; hold the ends with a firm grip, arms slightly bent.",
+        "Stand feet shoulder-width, knees bent, hips back a little, chest up.",
+        "Pick the work-to-rest interval from the plan before the first wave."
+      ],
+      "cues": [
+        "Drive the waves from the shoulders and hips; the wrists just hold on.",
+        "Keep the knees bent and the trunk braced; do not stand up as you tire.",
+        "Alternating waves, double waves and slams are all fine; the rhythm matters, not the pattern.",
+        "Breathe out with each slam.",
+        "Rest until the next interval can match the last one."
+      ],
+      "mistakes": [
+        "Standing tall and shrugging so the waves die before the anchor.",
+        "Bending at the waist and rounding the back.",
+        "Going all-out for the first ten seconds and fading.",
+        "Grip so tight that the forearms quit before the lungs."
+      ],
+      "safety": [
+        "No flags set: feet planted, no impact, no external load beyond the rope. Intensity is set by interval length and pace; stop the interval when the wave shape breaks down rather than push through with the back.",
+        "Shoulder-sensitive users keep the arms below shoulder height."
+      ],
+      "substitution_rationale": {
+        "air_bike": "same interval intensity with arms and legs, easier to pace",
+        "ski_erg": "same upper-body-dominant conditioning with a pull pattern",
+        "medicine_ball_slam": "same overhead-to-floor drive as a power set with a ball"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and nontraditional implement training)",
+        "ACSM position stand on exercise quantity and quality (Garber 2011)"
+      ]
+    },
+    "medicine_ball_slam": {
+      "description": "The slam trains the abs and lats to accelerate the ball from overhead to the floor with the whole body. It is in the plan as a low-skill power exercise that also wakes the trunk up before lifting. A good rep reaches tall, throws the ball straight down with a fast trunk fold, and picks it up or catches it without rounding the back.",
+      "setup": [
+        "A slam ball or non-bouncing medicine ball on a floor that can take it.",
+        "Feet shoulder-width, ball at the chest, space clear around you.",
+        "Reps are few and fast; pick a ball you can throw hard, not one you can barely lift."
+      ],
+      "cues": [
+        "Rise onto the toes and reach the ball all the way overhead.",
+        "Throw it down as hard as you can, hips and abs folding together.",
+        "Follow the ball down into a squat; catch it or pick it up with a flat back.",
+        "Reset tall before every rep.",
+        "Stop the set when the throws slow down."
+      ],
+      "mistakes": [
+        "Slamming with the arms only, trunk stiff.",
+        "Rounding the back to pick the ball off the floor.",
+        "Slow, tired reps that turn a power set into cardio.",
+        "A bouncing ball hitting the face on the rebound."
+      ],
+      "safety": [
+        "No flags set: light implement, no landing impact, no bar. The speed rule of the power profile applies: end the set when the throw visibly slows (R4 power profile).",
+        "Use a ball that does not bounce and keep others out of range.",
+        "Progress to the next ball only when every rep is still fast."
+      ],
+      "substitution_rationale": {
+        "battle_ropes": "same overhead drive as conditioning intervals",
+        "kettlebell_swing": "same explosive hip drive in the hinge pattern",
+        "cable_woodchop": "same trunk drive as a controlled, loaded rotation"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 18 (plyometric training)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and nontraditional implement training)"
+      ]
+    },
+    "box_jump": {
+      "description": "The box jump trains the quads, glutes and calves to produce force fast and to absorb a landing quietly. It is in the plan as the entry-level jump for power work and for waking the legs up. A good rep swings the arms, jumps onto a box you land on softly in a quarter squat, stands up tall, and steps down.",
+      "setup": [
+        "Sturdy box at a height you can land on with a shallow knee bend, not a deep tuck.",
+        "Stand a short step back from the box, feet hip-width.",
+        "Sets are short; rest fully between them."
+      ],
+      "cues": [
+        "Dip, swing the arms back, then drive the arms up and jump.",
+        "Land with the whole foot on the box, knees over the toes, hips back.",
+        "Stand up fully on the box before stepping down.",
+        "Step down one foot at a time; never jump down.",
+        "Stop the set when the jumps stop feeling crisp."
+      ],
+      "mistakes": [
+        "Knees caving inward on the landing.",
+        "Landing in a deep squat because the box is too high.",
+        "Jumping down from the box.",
+        "Chasing box height instead of a clean landing."
+      ],
+      "safety": [
+        "knee_sensitive: the impact of landing, and above all of jumping down, is the mechanism behind the flag. Land softly with the knees tracking over the toes, always step down, and skip jumps during anterior knee pain (R3 INJ-01); kettlebell_swing is the flag-free power swap.",
+        "Raise the box height only when the current height is landed in a quarter squat on every rep.",
+        "Check that the box cannot slide before the first jump."
+      ],
+      "substitution_rationale": {
+        "kettlebell_swing": "same explosive hip drive with no landing impact",
+        "medicine_ball_slam": "power from the upper body and trunk, no jumping",
+        "sled_push": "leg drive at speed with no impact on the knees"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 18 (plyometric training)",
+        "ExRx.net Box Jump"
+      ]
+    },
+    "sled_push": {
+      "description": "The sled push or drag trains the quads, glutes and calves through a loaded walk with no lowering phase, so it leaves little soreness. It is in the plan as leg conditioning and as a knee- and back-friendly leg finisher. A good set is a steady drive with the hips low, arms straight and short powerful steps over the full distance.",
+      "setup": [
+        "Load the sled; hands on the high or low handles with straight arms.",
+        "Lean into the sled so the body makes a straight line from head to heel.",
+        "Mark the distance; heavy loads walk, light loads run."
+      ],
+      "cues": [
+        "Drive the floor back with the whole foot in short, quick steps.",
+        "Keep the hips below the shoulders and the back flat.",
+        "Push through the handles with locked arms; the legs do the work.",
+        "Breathe continuously; do not hold one brace the whole way.",
+        "Drag version: face away, strap or rope at the hips, lean forward and walk."
+      ],
+      "mistakes": [
+        "Standing up tall so the sled stalls.",
+        "Rounding the upper back and collapsing over the handles.",
+        "A long stride that lets the sled stop between steps.",
+        "Loading so heavy that the sled moves in jerks."
+      ],
+      "safety": [
+        "No flags set: no lowering phase, no bar on the back, no impact, so it is the leg option the plan reaches for around knee or back limitations. Stop the set when the hips rise and the push turns into a shove.",
+        "Increase by 10 kg, or 5 kg for the smaller step (R4 sled increment), and expect the surface to change the effort: turf and rubber pull differently."
+      ],
+      "substitution_rationale": {
+        "walking_lunge": "same leg drive while walking, body weight or dumbbells",
+        "air_bike": "same leg conditioning without a sled or floor space",
+        "stair_climber": "same continuous leg drive on a machine",
+        "leg_press_45": "same quad and glute load on a fixed path when there is no room to push"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and nontraditional implement training)"
+      ]
+    },
+    "treadmill": {
+      "description": "The treadmill covers walking, incline walking and running for steady-state or interval cardio. It is in the plan because it is the most available cardio machine and the incline walk is the easiest zone-2 option to control. A good session holds the target zone by the talk test or heart rate for the prescribed minutes.",
+      "setup": [
+        "Clip the safety key to your waist and start at a walk.",
+        "Set incline and speed to reach zone 2: full sentences possible, singing not (R3 CAR-02).",
+        "Running intervals only after a base of easy sessions and a walking warm-up."
+      ],
+      "cues": [
+        "Walk or run in the middle of the belt with a normal stride; do not hold the rails.",
+        "Incline walk: lean slightly into the slope from the ankles, arms swinging.",
+        "Run: quick, light steps under the hips, land quietly.",
+        "Check the zone every few minutes and adjust the speed, not the rails.",
+        "Finish with a couple of minutes of easy walking."
+      ],
+      "mistakes": [
+        "Holding the rails on an incline, which cancels most of the work.",
+        "Running before the body is warm.",
+        "Overstriding and landing hard on the heel.",
+        "Staring at the console and drifting to the back of the belt."
+      ],
+      "safety": [
+        "knee_sensitive (running): running is repeated impact through the knee, which is the mechanism behind the flag; walking and incline walking are not. Users with a knee limitation walk instead, and the plan prefers cycling for intervals (R3 INJ-01).",
+        "Hard running within a day before a heavy leg session costs strength (R3 CAR-06); keep runs on non-leg days or walk instead.",
+        "Use the safety clip; stop by lowering the speed, not by jumping off."
+      ],
+      "substitution_rationale": {
+        "outdoor_run_walk": "same walking or running outside, no machine",
+        "elliptical": "same zone-2 work with no impact",
+        "stationary_bike": "same zone-2 work seated, best around leg days"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)"
+      ],
+      "review_notes": "Flag 'KN (running)' is conditional in the table, but flags.knee_sensitive is a boolean. If WP-02 sets it true, knee-limited users lose incline walking, which R3 CAR-08 and INJ-01 name as the knee-friendly, leg-day-adjacent option. Suggest either separate treadmill_walk (KN false) and treadmill_run (KN true) ids, or knee_sensitive false with the running caveat carried in content. Same issue on outdoor_run_walk. Not changed here."
+    },
+    "stationary_bike": {
+      "description": "The stationary or spin bike is seated, no-impact cardio that suits steady zone-2 sessions and hard intervals equally. It is in the plan as the default cardio next to leg days because it interferes least with lifting. A good session holds the target zone for the prescribed minutes with a smooth, round pedal stroke.",
+      "setup": [
+        "Seat height so the knee is slightly bent at the bottom of the stroke.",
+        "Handlebars where the back is comfortable, elbows soft.",
+        "Pick resistance and cadence for the zone: zone 2 lets you speak in full sentences."
+      ],
+      "cues": [
+        "Pedal at a steady cadence and adjust the resistance, not your effort, to stay in zone.",
+        "Sit back on the saddle and keep the knees tracking straight over the pedals.",
+        "Relax the shoulders and hands; the legs drive.",
+        "Intervals: raise resistance or cadence for the work period, spin easy in between.",
+        "Cool down with a few easy minutes."
+      ],
+      "mistakes": [
+        "Seat too low, so the knee is deeply bent at the bottom.",
+        "Rocking the hips because the seat is too high.",
+        "Death grip on the bars and a rounded back.",
+        "Riding every session at the same medium pace."
+      ],
+      "safety": [
+        "No flags set: seated, no impact, load set by a dial. Set the seat before every session; a low seat is the usual cause of front-of-knee discomfort on a bike.",
+        "Intervals (R3 CAR-05) come after several weeks of easy riding."
+      ],
+      "substitution_rationale": {
+        "air_bike": "same seated pedalling with the arms added, better for hard intervals",
+        "elliptical": "same no-impact zone-2 work standing",
+        "treadmill": "same zone-2 work walking when there is no bike"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)"
+      ]
+    },
+    "air_bike": {
+      "description": "The air bike pairs pedalling with pushing and pulling the arms, and its fan makes resistance rise with speed, so it is hard to coast on. It is in the plan as the interval machine of choice: no impact, whole body, and easy to pace by watts or heart rate. A good interval holds a target pace for the work period and recovers fully in the rest.",
+      "setup": [
+        "Seat height so the knee stays slightly bent at the bottom.",
+        "Hands on the moving arms, feet flat on the pedals.",
+        "Decide the work and rest times before starting; the fan will not do it for you."
+      ],
+      "cues": [
+        "Drive with the legs and push-pull the arms in one rhythm.",
+        "Sit tall; do not fold over the handles as you tire.",
+        "Zone 2: keep it conversational and let the fan hum, not roar.",
+        "Intervals: reach the target pace within the first few seconds and hold it; do not sprint and fade.",
+        "Spin easy between work periods rather than stopping."
+      ],
+      "mistakes": [
+        "Arms doing everything while the legs coast.",
+        "Starting an interval too fast and fading halfway.",
+        "Rounding the back over the bars.",
+        "Treating every ride as a max effort."
+      ],
+      "safety": [
+        "No flags set: seated, no impact, resistance is self-limiting. The main risk is doing too much too soon; follow the plan's interval count and add one interval at a time (R3 CAR-09).",
+        "Sprint intervals are for healthy, trained users only (R3 CAR-05)."
+      ],
+      "substitution_rationale": {
+        "stationary_bike": "same seated pedalling without the arms, easier to hold zone 2",
+        "rowing_erg": "same whole-body intervals with a pull pattern",
+        "ski_erg": "same interval intensity with the upper body doing most of the work"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "Gibala 2006, sprint interval training (J Physiol)"
+      ]
+    },
+    "rowing_erg": {
+      "description": "The rowing ergometer trains legs, hips and back in a drive-then-pull sequence, so it is whole-body cardio that also loads the posterior chain. It is in the plan for zone-2 sessions and for short intervals paced by split time. A good stroke is legs, then back, then arms on the drive, and arms, back, then legs on the recovery, with the spine neutral throughout.",
+      "setup": [
+        "Straps over the balls of the feet; damper at a moderate setting, not the top.",
+        "Catch position: shins vertical, arms straight, chest up, shoulders in front of the hips.",
+        "Pick a split time or heart rate for the zone before the first stroke."
+      ],
+      "cues": [
+        "Drive: push with the legs first, then swing the back through, then pull the handle to the lower ribs.",
+        "Recovery: arms away, hips hinge forward, then slide up slowly, about twice as slow as the drive.",
+        "Keep the handle on a level line and the wrists flat.",
+        "Breathe out on the drive.",
+        "Zone 2 means a relaxed stroke rate; intervals raise the power per stroke, not just the rate."
+      ],
+      "mistakes": [
+        "Back rounding at the catch and pulling with the arms first.",
+        "Shooting the slide: the seat moves before the handle and the back takes the load.",
+        "Leaning back too far at the finish.",
+        "Rushing the recovery and bouncing at the catch."
+      ],
+      "safety": [
+        "low_back_sensitive (technique): a rounded lumbar spine at the catch, or a drive where the seat shoots back before the handle moves, loads the lower back on every stroke. Keep the chest up at the catch and drive legs first; if the sequence falls apart with fatigue, lower the pace or switch to the bike.",
+        "Hip and back fatigue from rowing carries into a next-day deadlift or squat session (R3 CAR-08); place hard rowing away from heavy hinge days."
+      ],
+      "substitution_rationale": {
+        "ski_erg": "same pull-and-hinge rhythm standing, lighter on the lower back",
+        "air_bike": "same whole-body intervals seated, no rowing technique needed",
+        "elliptical": "same zone-2 work with no load through the spine"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)",
+        "ACSM position stand on exercise quantity and quality (Garber 2011)"
+      ]
+    },
+    "elliptical": {
+      "description": "The elliptical or cross-trainer gives a running-like motion with the feet never leaving the pedals, so there is no impact. It is in the plan as the safest zone-2 option for users with knee or ankle limitations and around leg days. A good session holds the target zone with an upright posture and a full stride.",
+      "setup": [
+        "Feet flat on the pedals, hands on the moving or fixed handles.",
+        "Set resistance and incline to reach zone 2 at a natural stride rate.",
+        "Stand tall before the first stride."
+      ],
+      "cues": [
+        "Push through the whole foot and let the stride open fully.",
+        "Stay upright; hips over the feet, not leaning on the console.",
+        "Use the moving handles lightly or let the arms swing; the legs drive.",
+        "Adjust resistance to stay in zone rather than changing the stride rate.",
+        "Cool down with a few easy minutes."
+      ],
+      "mistakes": [
+        "Leaning on the handles and unloading the legs.",
+        "Bouncing on the toes with a short stride.",
+        "Resistance so low that the flywheel does the work.",
+        "The same medium effort every session."
+      ],
+      "safety": [
+        "No flags set: no impact, feet supported the whole time. Keep the effort in the prescribed zone; the machine's smoothness makes it easy to under-work without noticing."
+      ],
+      "substitution_rationale": {
+        "stationary_bike": "same no-impact zone-2 work seated",
+        "treadmill": "same walking motion when no elliptical is free",
+        "stair_climber": "same standing cardio with more leg work"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)"
+      ]
+    },
+    "stair_climber": {
+      "description": "The stair climber is continuous step-ups on a rotating staircase, so it is leg-heavy cardio that works the glutes and quads more than walking does. It is in the plan for zone-2 work when the user wants more leg involvement and for moderate intervals. A good session is an upright climb with full steps and only a light hand on the rails.",
+      "setup": [
+        "Start at a slow step rate and hold the rails until the rhythm is set.",
+        "Stand tall, feet fully on each step.",
+        "Set the step rate to reach zone 2 by the talk test or heart rate."
+      ],
+      "cues": [
+        "Push through the whole foot and stand up fully on each step.",
+        "Hands rest on the rails for balance only; no weight through the arms.",
+        "Keep the hips under the shoulders; do not hunch over the console.",
+        "Adjust the step rate to hold the zone.",
+        "Finish with a slower minute before stepping off."
+      ],
+      "mistakes": [
+        "Leaning on the rails and shifting the work to the arms.",
+        "Half steps on the toes.",
+        "Bending forward at the waist as you tire.",
+        "Stepping off while the stairs are still moving."
+      ],
+      "safety": [
+        "knee_sensitive (mild): every step is a loaded knee flexion, the same mechanism as a step-up, repeated for the whole session. Keep the step rate where the knees track straight and skip it during anterior knee pain (R3 INJ-01); the bike or elliptical are the flag-free swaps.",
+        "It fatigues the legs; do not use it the day before a heavy leg session (R3 CAR-08)."
+      ],
+      "substitution_rationale": {
+        "treadmill": "same walking cardio with less knee flexion; the incline walk is closest",
+        "elliptical": "same standing cardio with no impact and less knee flexion",
+        "sled_push": "same leg drive as a loaded conditioning set"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)"
+      ]
+    },
+    "ski_erg": {
+      "description": "The ski erg is a standing pull from overhead to the hips, driven by the lats, triceps and a hip hinge, with the legs helping. It is in the plan as upper-body-dominant cardio that fits next to leg days and suits intervals well. A good stroke reaches tall, pulls the handles down past the hips with a fold of the trunk, and returns tall without a pause.",
+      "setup": [
+        "Stand an arm's length from the machine, feet hip-width, knees soft.",
+        "Grip the handles high, chest tall, damper moderate.",
+        "Pick a zone or a split time before the first pull."
+      ],
+      "cues": [
+        "Reach up, then pull down with the lats and hinge at the hips as the hands pass the chest.",
+        "Finish with the hands beside the thighs and the trunk folded, then stand tall again.",
+        "Let the legs bend and extend with each stroke; it is not an arms-only exercise.",
+        "Keep the strokes long and rhythmic; power comes from the whole pull, not a fast rate.",
+        "Breathe out on the pull."
+      ],
+      "mistakes": [
+        "Pulling with bent arms only and standing stiff.",
+        "Bending the knees so much that it becomes a squat.",
+        "Short, choppy strokes at a high rate.",
+        "Rounding the lower back at the finish instead of hinging."
+      ],
+      "safety": [
+        "No flags set: standing, no impact, load set by pace. Hinge from the hips at the finish rather than rounding the lower back, and keep the shoulders relaxed at the top of the reach.",
+        "It taxes the lats and triceps; place hard sessions away from heavy pulling days."
+      ],
+      "substitution_rationale": {
+        "rowing_erg": "same pull-and-hinge rhythm seated, more leg drive",
+        "air_bike": "same interval intensity with arms and legs, seated",
+        "battle_ropes": "same upper-body conditioning with waves instead of a pull"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 20 (aerobic endurance exercise training)"
+      ]
+    },
+    "jump_rope": {
+      "description": "Jump rope is low-amplitude repeated hopping with a light calf and coordination demand. It is in the plan as a packable, interval-friendly cardio option and a general warm-up that raises the heart rate in minutes. A good bout is small, quiet hops on the balls of the feet with the wrists turning the rope, kept up for the prescribed time.",
+      "setup": [
+        "Rope length: standing on the middle, the handles reach about the armpits.",
+        "Flat, forgiving surface; shoes with some cushioning.",
+        "Start with short bouts and walk in between."
+      ],
+      "cues": [
+        "Turn the rope from the wrists; elbows close to the ribs.",
+        "Jump just high enough to clear the rope; land softly on the balls of the feet.",
+        "Keep the knees soft and the trunk tall.",
+        "Breathe steadily and find a rhythm before trying speed.",
+        "Intervals: work for the set time, rest by walking, repeat."
+      ],
+      "mistakes": [
+        "Jumping high with a tuck and landing heavily.",
+        "Arms wide and circling from the shoulders.",
+        "Landing flat-footed or on the heels.",
+        "Long bouts before the calves are used to it."
+      ],
+      "safety": [
+        "knee_sensitive (impact): every jump is a small impact through the knees and a sharp calf and Achilles load, which is the mechanism behind the flag. Build bout length gradually, land softly, and use the bike instead during anterior knee pain (R3 INJ-01).",
+        "It loads the calves; keep it off the day before a heavy leg session (R3 CAR-08)."
+      ],
+      "substitution_rationale": {
+        "treadmill": "same steady cardio walking or running when the calves need a break",
+        "air_bike": "same interval work with no impact",
+        "box_jump": "same jump-and-land pattern as low-rep power work"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)"
+      ]
+    },
+    "outdoor_run_walk": {
+      "description": "Outdoor walking and running need no equipment and cover the plan's zone-2 minutes and step count anywhere. They are in the plan as the default cardio when there is no gym and as the travel option. A good session holds the target zone by the talk test or heart rate for the prescribed minutes on a route with a known distance.",
+      "setup": [
+        "Pick a flat, familiar route and check the time or distance the plan asks for.",
+        "Walk a few minutes first; running starts only once warm.",
+        "Wear shoes that suit the surface."
+      ],
+      "cues": [
+        "Walk briskly with the arms swinging; zone 2 is a pace where you can talk in full sentences.",
+        "Run with quick, light steps under the hips; land quietly.",
+        "Hold the pace by feel and check it every few minutes.",
+        "Hills: shorten the stride and keep the effort, not the speed, constant.",
+        "Finish with a few minutes of easy walking."
+      ],
+      "mistakes": [
+        "Running every session at the same medium-hard pace.",
+        "Overstriding and landing hard on the heels.",
+        "Starting a run cold.",
+        "Adding distance fast because the weather is good."
+      ],
+      "safety": [
+        "knee_sensitive (running): running is repeated impact through the knee; walking is not. Users with a knee limitation walk, and the plan uses the bike for intervals instead (R3 INJ-01).",
+        "Running interferes more than cycling with leg training (R3 CAR-06); keep runs at least a day away from a heavy leg session.",
+        "Increase weekly minutes gradually (R3 CAR-09)."
+      ],
+      "substitution_rationale": {
+        "treadmill": "same walking or running indoors with a controlled pace and incline",
+        "stationary_bike": "same zone-2 minutes with no impact, seated",
+        "elliptical": "same zone-2 minutes with no impact, standing"
+      },
+      "sources": [
+        "ACSM position stand on exercise quantity and quality (Garber 2011)",
+        "WHO 2020 guidelines on physical activity (Bull 2020)"
+      ],
+      "review_notes": "Same as treadmill: 'KN (running)' is conditional but flags.knee_sensitive is a boolean. A true flag hides brisk walking, the plan's daily baseline for low-back-limited users (R3 INJ-03, STP-01), from knee-limited users. Suggest split ids (outdoor_walk / outdoor_run) or knee_sensitive false with the caveat in content. Not changed here."
+    },
+    "cat_cow": {
+      "description": "Cat-cow moves the whole spine through flexion and extension slowly, one segment at a time, with the hands and knees carrying the load. It is in the plan as the general spine warm-up before lifting and as a thoracic mobility drill for a rounded upper back. A good rep rounds the back fully on the exhale, then lets the chest and tailbone lift on the inhale, without pushing into any painful range.",
+      "setup": [
+        "Hands under the shoulders, knees under the hips, spine neutral.",
+        "Look at the floor; keep the arms straight the whole time.",
+        "Slow reps; no load and no bouncing."
+      ],
+      "cues": [
+        "Exhale and round: push the floor away, tuck the tailbone, drop the head.",
+        "Inhale and extend: lift the chest and tailbone, let the belly drop, look slightly forward.",
+        "Move through the whole spine, upper back included, not just the lower back.",
+        "Pain-free range only; the drill is about smooth movement, not depth.",
+        "Six to twelve slow reps is one set (R4 mobility profile)."
+      ],
+      "mistakes": [
+        "Only the lower back moving while the upper back stays flat.",
+        "Forcing the extension until the lower back pinches.",
+        "Rushing the reps.",
+        "Elbows bending and shoulders collapsing."
+      ],
+      "safety": [
+        "No flags set: body weight, hands and knees, self-limited range. Stay in the pain-free range; this is a dynamic warm-up drill, not a stretch to push (R3 MOB-01).",
+        "Skip the extension half if it pinches and do the cat half only."
+      ],
+      "substitution_rationale": {
+        "thoracic_rotation": "same upper-back mobility with rotation instead of flexion and extension",
+        "worlds_greatest_stretch": "same warm-up slot with the hips and thoracic spine in one drill"
+      },
+      "sources": [
+        "McGill 2010, Core training: evidence translating to better performance and injury prevention (Strength Cond J; cat-camel)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)"
+      ]
+    },
+    "foam_rolling": {
+      "description": "Foam rolling is slow self-massage of a muscle over a firm roller. It is in the plan as an optional pre-session drill for users who reach positions better after it, or for perceived soreness; its effect on performance and recovery is small. A good pass is slow, covers the muscle end to end with moderate pressure, and lasts 30 to 60 seconds per muscle.",
+      "setup": [
+        "Roller on the floor; body weight on the muscle to be rolled, the other limbs supporting.",
+        "Pick the muscles for today's session: quads and calves before squats, lats and upper back before pressing, glutes before hinges.",
+        "Keep it short: 30 to 60 s per muscle (R3 MOB-05)."
+      ],
+      "cues": [
+        "Roll slowly, a few centimetres per second, end to end.",
+        "Pause on a tender spot for a few breaths, then move on.",
+        "Keep the pressure at a level where you can still breathe normally.",
+        "Upper back: hands behind the head, roll from mid-back to the shoulders, extend gently over the roller.",
+        "Follow rolling with the session's dynamic drills; it does not replace them."
+      ],
+      "mistakes": [
+        "Rolling fast back and forth with no pressure.",
+        "Grinding one painful spot for minutes.",
+        "Rolling the lower back or the front of the neck.",
+        "Using rolling instead of the ramp sets."
+      ],
+      "safety": [
+        "No flags set: body weight on a roller, self-limited pressure. Roll muscle, not joints or the lumbar spine; ease off if a spot is sharply painful rather than dull.",
+        "Pre-session only if it helps you reach position; it is optional and never replaces the ramp sets (R3 MOB-05, WU-02)."
+      ],
+      "substitution_rationale": {
+        "cat_cow": "same warm-up slot for the spine with active movement instead of a roller",
+        "couch_stretch": "same target for tight hip flexors and quads as a held stretch"
+      },
+      "sources": [
+        "Wiewelhove 2019, A meta-analysis of the effects of foam rolling on performance and recovery (Front Physiol)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)"
+      ]
+    }
+  },
+  "status": {
+    "plank": "draft",
+    "side_plank": "draft",
+    "dead_bug": "draft",
+    "bird_dog": "draft",
+    "ab_wheel_rollout": "draft",
+    "cable_crunch": "draft",
+    "machine_crunch": "draft",
+    "hanging_leg_raise": "draft",
+    "lying_leg_raise": "draft",
+    "pallof_press": "draft",
+    "cable_woodchop": "draft",
+    "farmers_carry": "draft",
+    "suitcase_carry": "draft",
+    "battle_ropes": "draft",
+    "medicine_ball_slam": "draft",
+    "box_jump": "draft",
+    "sled_push": "draft",
+    "treadmill": "draft",
+    "stationary_bike": "draft",
+    "air_bike": "draft",
+    "rowing_erg": "draft",
+    "elliptical": "draft",
+    "stair_climber": "draft",
+    "ski_erg": "draft",
+    "jump_rope": "draft",
+    "outdoor_run_walk": "draft",
+    "cat_cow": "draft",
+    "foam_rolling": "draft"
+  }
+}

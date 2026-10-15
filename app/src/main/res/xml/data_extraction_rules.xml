@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- API 31+ rules (§7.4): exclude the secrets DataStore from cloud backup and device-to-device transfer. -->
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="file" path="datastore/secrets.preferences_pb" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="datastore/secrets.preferences_pb" />
+    </device-transfer>
+</data-extraction-rules>

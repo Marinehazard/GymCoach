@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Simple vector launcher icon (§1.7): a filled circle with a barbell shape; no binary asset. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="#1B5E20"
+        android:pathData="M54,54m-54,0a54,54 0,1 1,108 0a54,54 0,1 1,-108 0" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M28,50h52v8h-52z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,40h10v28h-10z M80,40h10v28h-10z" />
+</vector>

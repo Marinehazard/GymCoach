@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GymCoach</string>
+
+    <!-- Bottom bar tabs (§8.3) -->
+    <string name="tab_today">Today</string>
+    <string name="tab_plan">Plan</string>
+    <string name="tab_progress">Progress</string>
+    <string name="tab_coach">Coach</string>
+    <string name="tab_more">More</string>
+
+    <!-- Shared components (§8.4) -->
+    <string name="action_retry">Retry</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_reject">Reject</string>
+    <string name="action_later">Later</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_details">Details</string>
+    <string name="offline_banner">Offline — the coach needs a connection. Your draft is kept and sent when you are back online.</string>
+    <string name="cd_decrease">Decrease</string>
+    <string name="cd_increase">Increase</string>
+    <string name="cd_previous_month">Previous month</string>
+    <string name="cd_next_month">Next month</string>
+</resources>

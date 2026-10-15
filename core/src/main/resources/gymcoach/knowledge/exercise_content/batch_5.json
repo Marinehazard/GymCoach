@@ -1,0 +1,930 @@
+{
+  "schema_version": 1,
+  "batch": 5,
+  "entries": {
+    "conventional_deadlift": {
+      "description": "Barbell pull from the floor with a hip-width stance. Trains the whole posterior chain — glutes and spinal erectors first, hamstrings and quads next — with grip and upper back working isometrically. It anchors the hinge pattern in a plan because it loads the hips harder than any other lift. A good rep: the bar leaves the floor with hips and shoulders rising together, stays over mid-foot, and finishes at full hip extension without leaning back.",
+      "setup": [
+        "Bar over mid-foot, about 2–3 cm from the shins, feet hip-width, toes slightly out.",
+        "Grip just outside the legs; double overhand until grip limits the set, then straps or a mixed grip.",
+        "Hips above the knees and below the shoulders; shins touch the bar as you pull the slack out.",
+        "Big breath into the belly, brace, chest up, lats pulling the bar into the shins."
+      ],
+      "cues": [
+        "Push the floor away rather than pulling the bar up.",
+        "Keep the bar dragging along the shins and thighs.",
+        "Hips and shoulders rise at the same rate until the bar passes the knees.",
+        "Finish by squeezing the glutes; ribs stay down at lockout.",
+        "Lower by pushing the hips back first, then bend the knees once the bar passes them."
+      ],
+      "mistakes": [
+        "Hips shoot up first and the lift becomes a stiff-leg pull with a rounded back.",
+        "Bar drifts forward away from the shins and pulls the lower back into flexion.",
+        "Hyperextending the lower back at lockout instead of finishing with the glutes.",
+        "Jerking the bar off the floor before the slack is out.",
+        "Bouncing reps off the floor instead of resetting the brace."
+      ],
+      "safety": [
+        "Spinal loading: the whole load runs through a braced, neutral spine — reset the brace every rep and stop the set when the back starts to round; never a rep at 0 RIR on this lift (R3 RIR-03).",
+        "Low-back sensitive: an unsupported hinge; with a logged back limitation use the trap-bar or a lighter Romanian deadlift and keep the load where the spine stays flat.",
+        "Multi-joint lift: fatigue shows first as form change, not as muscle burn — end the set on the last clean rep.",
+        "A failed rep is set down, never fought through; collars on and a clear floor."
+      ],
+      "substitution_rationale": {
+        "trap_bar_deadlift": "same hinge, load beside the body, more upright torso, easier on the lower back",
+        "romanian_deadlift": "same posterior-chain hinge from the hang, lighter load, no floor pull",
+        "sumo_deadlift": "same floor pull with a wider stance and more upright torso",
+        "hip_thrust": "same hip extension, no spinal loading, back supported",
+        "back_extension_45": "same hinge motion in the body-weight range, trunk supported by the pad"
+      },
+      "sources": [
+        "ExRx.net Barbell Deadlift",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)",
+        "Stronger by Science, reps-in-reserve article (RIR calibration)"
+      ]
+    },
+    "sumo_deadlift": {
+      "description": "Wide-stance barbell pull with the hands inside the knees. It shares the glute and back load of the conventional pull but shifts work to the quads and adductors and keeps the torso more upright. In a plan it is the alternative floor pull for lifters who tolerate a vertical torso better. A good rep: knees track over the toes, hips stay close to the bar, and the bar rises straight without drifting.",
+      "setup": [
+        "Feet wide, toes turned out 30–45°, shins vertical and close to the bar.",
+        "Grip shoulder-width or narrower, inside the legs, arms hanging straight.",
+        "Knees pushed out over the toes, hips dropped only as far as the bar allows.",
+        "Brace before pulling; spread the floor to build tension before the bar moves."
+      ],
+      "cues": [
+        "Spread the floor apart with the feet; knees out the whole way.",
+        "Chest up and hips close to the bar as the slack comes out.",
+        "Be patient off the floor; the bar moves slowly until the knees pass it.",
+        "Lock out by driving the hips through, not by leaning back.",
+        "Descend by pushing the knees out and the hips back together."
+      ],
+      "mistakes": [
+        "Knees caving inward under load.",
+        "Hips too low, turning the pull into a wide squat that stalls at the floor.",
+        "Rounding the upper back and shrugging the bar up.",
+        "Stance so wide that the feet slip or the ankles roll.",
+        "Twisting at lockout on a mixed grip."
+      ],
+      "safety": [
+        "Spinal loading: the bar loads a braced spine from the floor — brace before every rep and stop when the back position changes; never a rep at 0 RIR on this lift (R3 RIR-03).",
+        "Low-back sensitive: unsupported hinge; keep the hips close to the bar so the trunk stays upright, and swap to the trap-bar with a logged back limitation.",
+        "Knee sensitive: the wide, turned-out stance loads the knees in rotation if they collapse inward — keep the knees over the toes and narrow the stance if they cannot.",
+        "Multi-joint, advanced lift: technical errors are the failure mode — keep loads where every rep looks the same."
+      ],
+      "substitution_rationale": {
+        "conventional_deadlift": "same floor pull, narrower stance, fewer demands on hip mobility",
+        "trap_bar_deadlift": "same hinge with a neutral grip and upright torso, easier setup",
+        "hip_thrust": "same hip extension, no spinal loading, back supported"
+      },
+      "sources": [
+        "ExRx.net Barbell Sumo Deadlift",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "trap_bar_deadlift": {
+      "description": "Deadlift standing inside a hexagonal bar with neutral handles at the sides. The load sits in line with the body, so the torso stays more upright and the quads share more of the work than in the straight-bar pull. It is the beginner-friendly entry to heavy hinging and the first swap for anyone whose back does not like the straight bar. A good rep: hips and chest rise together, handles stay level, full hip lockout with the shoulders over the hips.",
+      "setup": [
+        "Stand in the centre of the bar, feet hip-width, shins vertical.",
+        "Grip the handles at their midpoint so the bar does not tip.",
+        "Hips back and down until the arms are straight and the chest is up.",
+        "Brace, take the slack out of the bar, then drive."
+      ],
+      "cues": [
+        "Push the floor away with the whole foot.",
+        "Chest up, handles rising in a straight line.",
+        "Squeeze the glutes at the top; do not lean back.",
+        "Control the bar down with the hips moving back first."
+      ],
+      "mistakes": [
+        "Bar tipping forward or back because the grip is off-centre.",
+        "Turning it into a squat with the hips far below the knees.",
+        "Rounding the back when reaching for the handles.",
+        "Dropping the bar from the top instead of lowering under control."
+      ],
+      "safety": [
+        "Spinal loading: the load still passes through a braced spine — keep the brace tight and stop the set when the back rounds; never a rep at 0 RIR on this lift (R3 RIR-03).",
+        "Low-back sensitive: an unsupported hinge, although the upright torso shortens the lever on the lower back — the reason it is the first swap for a logged back limitation.",
+        "Multi-joint lift: end the set on the last rep that looks like the first.",
+        "Use the high handles if the low ones force a rounded start."
+      ],
+      "substitution_rationale": {
+        "conventional_deadlift": "same hinge with a straight bar in front, longer lever on the back",
+        "romanian_deadlift": "same posterior-chain hinge from the hang, no floor pull",
+        "hip_thrust": "same hip extension, no spinal loading",
+        "leg_press_45": "same lower-body load with the trunk fully supported, quads first"
+      },
+      "sources": [
+        "ExRx.net Trap Bar Deadlift",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "romanian_deadlift": {
+      "description": "Barbell hinge from standing: the bar travels down the thighs as the hips move back, then returns to lockout. It trains the hamstrings through their long-length range with the glutes and spinal erectors as partners, which makes it the default hinge for hamstring growth. A good rep: knees soft and nearly fixed, back flat, bar close to the legs, and the turnaround where the hamstrings are fully stretched — usually around mid-shin, not the floor.",
+      "setup": [
+        "Take the bar from a rack at hip height, or deadlift it up once; overhand grip, straps allowed.",
+        "Feet hip-width, knees unlocked, shoulders back, bar touching the thighs.",
+        "Set the brace and pull the bar into the body with the lats."
+      ],
+      "cues": [
+        "Push the hips back as if closing a door behind you with them.",
+        "Slide the bar down the thighs; it never leaves the legs.",
+        "Stop when the hamstrings are fully stretched, then drive the hips forward.",
+        "Finish standing tall with the glutes squeezed, ribs down.",
+        "Control the descent for two to three seconds."
+      ],
+      "mistakes": [
+        "Bending the knees more as the bar goes down, turning it into a deadlift.",
+        "Rounding the lower back to reach the floor.",
+        "Bar drifting forward away from the legs.",
+        "Leaning back at the top instead of standing tall."
+      ],
+      "safety": [
+        "Spinal loading: the bar hangs from a braced, hinged spine — the set ends when the back cannot stay flat; never a rep at 0 RIR on this lift (R3 RIR-03).",
+        "Low-back sensitive: unsupported hinge with a long lever; with a logged back limitation use dumbbells or the 45° back extension, and never chase floor depth.",
+        "Multi-joint lift: fatigue turns up as the knees bending and the back rounding, not as burn — stop there.",
+        "Kept in a moderate rep range on purpose: form drifts on this lift when sets get long."
+      ],
+      "substitution_rationale": {
+        "dumbbell_romanian_deadlift": "same hinge, lighter load, dumbbells stay closer to the legs",
+        "back_extension_45": "same hip hinge with the trunk supported, body-weight range",
+        "seated_leg_curl": "same hamstrings via the knee, no spinal loading",
+        "good_morning": "same hinge with the bar on the back, needs safeties",
+        "cable_pull_through": "same hinge against a cable, no axial load, easy to learn"
+      },
+      "sources": [
+        "ExRx.net Barbell Straight-leg Deadlift",
+        "RP hamstring hypertrophy training tips (rpstrength.com)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "dumbbell_romanian_deadlift": {
+      "description": "Hinge with a dumbbell (or kettlebell) in each hand sliding down the front of the thighs. Same hamstring and glute work as the barbell version, with lighter loads, a freer grip and a natural fit for dumbbell-only and hotel gyms. It is the first hinge most beginners learn. A good rep: hips travel back, knees stay soft, weights stay against the legs, back flat throughout.",
+      "setup": [
+        "Dumbbells in front of the thighs, palms facing the body, feet hip-width.",
+        "Knees unlocked, shoulders pulled back, chest up.",
+        "Brace before the first rep and keep the weights touching the thighs."
+      ],
+      "cues": [
+        "Hips back, chest forward, weights sliding down the legs.",
+        "Stop where the hamstrings are stretched, not where the floor is.",
+        "Drive the hips forward to stand; squeeze the glutes.",
+        "Keep the neck neutral — look at the floor a few metres ahead."
+      ],
+      "mistakes": [
+        "Rounding the back to get the weights lower.",
+        "Weights swinging out in front of the body.",
+        "Squatting the weight down by bending the knees.",
+        "Shrugging the shoulders to hold the dumbbells."
+      ],
+      "safety": [
+        "Low-back sensitive: an unsupported hinge; the flat back is the limit of the range — stop at the depth where it starts to round and keep loads where you can hold it.",
+        "Multi-joint lift: end the set when the hinge shape changes, not when the grip gives out.",
+        "Set the dumbbells down by hinging, not by bending the back."
+      ],
+      "substitution_rationale": {
+        "romanian_deadlift": "same hinge with a barbell, heavier loading",
+        "single_leg_romanian_deadlift": "same hinge one leg at a time, lighter load, balance demand",
+        "back_extension_45": "same hinge with the trunk supported",
+        "slider_leg_curl": "same hamstrings worked through the knee, no load in the hands"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Straight-leg Deadlift",
+        "RP hamstring hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "single_leg_romanian_deadlift": {
+      "description": "Hinge on one leg with the free leg reaching back as a counterweight, usually with a dumbbell or kettlebell in one or both hands. It trains the hamstrings and glutes of the standing leg and asks the glute med to keep the pelvis level. It is used for side-to-side differences, dumbbell-only gyms and for hinging with less load on the spine. A good rep: hips stay square, trunk and rear leg move as one line, and the standing knee stays soft.",
+      "setup": [
+        "Stand on one leg, knee unlocked, weight in the opposite hand (or both hands).",
+        "Free foot lightly touching the floor behind you for the first reps if balance is poor.",
+        "Brace and fix the eyes on one spot on the floor ahead."
+      ],
+      "cues": [
+        "Reach the free heel straight back as the chest lowers.",
+        "Keep both hips facing the floor; the rear hip does not open.",
+        "Weight close to the standing leg, back flat.",
+        "Drive the standing hip forward to come up; finish tall.",
+        "Do all reps on one side before switching."
+      ],
+      "mistakes": [
+        "Rear hip rotating open so the pelvis twists.",
+        "Standing knee collapsing inward.",
+        "Rounding the back to reach lower than balance allows.",
+        "Rushing the reps and using momentum to balance."
+      ],
+      "safety": [
+        "Low-back sensitive: unsupported hinge; keep the range where the back stays flat and the pelvis level, and hold a rack or wall with the free hand if balance costs form.",
+        "Multi-joint lift: the set ends when the hips start rotating or the reps get wobbly.",
+        "Use less than half the two-leg load until balance is stable."
+      ],
+      "substitution_rationale": {
+        "dumbbell_romanian_deadlift": "same hinge on two legs, more load, no balance demand",
+        "back_extension_45": "same hinge with the trunk supported",
+        "slider_leg_curl": "same hamstrings via the knee, floor-based, single-leg option"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Straight-leg Deadlift (single-leg variant)",
+        "RP hamstring hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "good_morning": {
+      "description": "Hinge with the barbell on the upper back as in a squat: bend forward until the hamstrings are fully stretched, then stand back up. It trains the hamstrings, glutes and spinal erectors with a long lever, so the useful load is far below a squat. It is an advanced accessory for lifters who want more hinge strength for squats and deadlifts. A good rep: knees soft and fixed, back flat, torso lowering only as far as the hamstrings allow — usually near parallel — and rising by driving the hips forward.",
+      "setup": [
+        "Bar in the high-bar or low-bar squat position, hands close, upper back tight.",
+        "Safeties set just below the bar's lowest position; unrack and step back one pace.",
+        "Feet hip-width, knees unlocked, brace hard before the first rep."
+      ],
+      "cues": [
+        "Hips back first; the bar moves down because the hips move back.",
+        "Chest up, bar pinned to the back with the lats.",
+        "Stop at the stretch, then drive the hips forward to stand.",
+        "Keep the shins vertical throughout."
+      ],
+      "mistakes": [
+        "Rounding the back near the bottom.",
+        "Bending the knees to get lower and turning it into a squat.",
+        "Bar rolling up the neck because the upper back is loose.",
+        "Loading it like a squat — the lever is much longer."
+      ],
+      "safety": [
+        "Needs safeties or a spotter: the bar sits on the back and can pin you forward if a rep fails — set the safeties just below the bottom position of the bar; without safeties or a spotter stop at RIR 2 (R4 §5.5).",
+        "Spinal loading: the bar loads a braced, forward-inclined spine with the longest lever of any hinge — never let the back round, keep the load light relative to the squat, and never a rep at 0 RIR (R3 RIR-03).",
+        "Low-back sensitive: an unsupported hinge at full lever; with a logged back limitation use the Romanian deadlift or the 45° back extension instead.",
+        "Multi-joint, advanced lift: opt-in only, and technical breakdown is the failure mode — end the set on the last flat-back rep."
+      ],
+      "substitution_rationale": {
+        "romanian_deadlift": "same hinge with the bar in the hands, shorter lever, no bar on the back",
+        "back_extension_45": "same hinge with the trunk supported and no bar to fail under",
+        "cable_pull_through": "same hinge against a cable, no spinal loading"
+      },
+      "sources": [
+        "ExRx.net Barbell Good-morning",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ],
+      "review_notes": "Equipment option is bb_loaded+rack_any (safeties high), but the SP flag and R4 §6.3 rule 6 require an option containing rack_or_spotter or a Smith machine; rack_any admits squat_rack, which by R4 §2.3 has no safeties. Suggest bb_loaded+rack_or_spotter so the resolver's safetiesOrSpotter result matches the flag."
+    },
+    "hip_thrust": {
+      "description": "Upper back on a bench, feet flat, barbell across the hips: drive the hips up until the body is a straight line from shoulders to knees. It loads the glutes at their strongest, shortened position with only light hamstring and quad help, so it adds glute volume without any spinal loading. In a plan it partners the hinge rather than replacing it. A good rep: shins vertical at the top, chin tucked, full hip lockout with a one-second squeeze, no lower-back arch.",
+      "setup": [
+        "Bench about knee height and fixed against a wall or rack; shoulder blades on its edge.",
+        "Bar padded and rolled over the hips; feet hip-width so the shins are vertical at the top.",
+        "Brace, chin tucked, eyes forward, hands on the bar to steady it."
+      ],
+      "cues": [
+        "Drive through the heels and squeeze the glutes to lift the bar.",
+        "Stop when hips and shoulders are level; the ribs stay down.",
+        "Hold the top for a count, then lower under control.",
+        "Keep the chin tucked so the ribs do not flare.",
+        "Knees stay over the feet, not falling in or out."
+      ],
+      "mistakes": [
+        "Arching the lower back to get higher instead of finishing with the glutes.",
+        "Feet too far away, turning it into a hamstring exercise.",
+        "Neck extended and eyes up, which pulls the ribs up.",
+        "Bouncing the bar at the bottom.",
+        "Partial reps that never reach full hip extension."
+      ],
+      "safety": [
+        "Multi-joint lift: the failure mode is the lower back arching to finish the rep — end the set when the glutes can no longer reach lockout with the ribs down.",
+        "Pad the bar and keep the bench from sliding; on the guided-bar (Smith) option the fixed path removes the balancing job.",
+        "Roll the bar off by lowering the hips fully, never by twisting out from under it."
+      ],
+      "substitution_rationale": {
+        "machine_hip_thrust": "same movement on a fixed pad and lever, faster setup",
+        "glute_bridge": "same movement from the floor with body weight or a dumbbell",
+        "cable_pull_through": "same glute-driven hip extension standing at a cable",
+        "back_extension_45": "same hip extension on a pad, hamstrings and erectors share more",
+        "kettlebell_swing": "same hip-snap extension done explosively"
+      },
+      "sources": [
+        "ExRx.net Barbell Hip Thrust",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "machine_hip_thrust": {
+      "description": "Hip thrust on a dedicated machine: back on the pad, belt or lever over the hips, feet on the platform. Same glute-focused hip extension as the barbell version with the load fixed in place, so setup takes seconds and the balancing job disappears. Good for beginners and for high-rep glute sets. A good rep: full hip lockout with a squeeze, ribs down, no arching to finish.",
+      "setup": [
+        "Set the back pad so the shoulder blades sit on its edge and the hip pad rests on the hip crease.",
+        "Feet on the platform so the shins are vertical at the top.",
+        "Chin tucked, brace, hands on the handles."
+      ],
+      "cues": [
+        "Push through the heels and squeeze the glutes to lock out.",
+        "Level hips and shoulders at the top; hold one count.",
+        "Lower under control until the glutes are stretched.",
+        "Keep the knees in line with the feet."
+      ],
+      "mistakes": [
+        "Arching the lower back to finish the rep.",
+        "Feet placed too far forward or back so the shins tilt.",
+        "Short, bouncy reps at the bottom.",
+        "Ribs flaring with the chin up."
+      ],
+      "safety": [
+        "Multi-joint lift on a fixed path: the only failure mode is the lower back arching to finish — end the set when full lockout needs it.",
+        "Set the pads before loading; a hip pad that slips onto the belly changes the lever."
+      ],
+      "substitution_rationale": {
+        "hip_thrust": "same movement with a barbell on a bench",
+        "glute_bridge": "same movement from the floor, body weight or a dumbbell",
+        "cable_glute_kickback": "same glute contraction one leg at a time at a cable"
+      },
+      "sources": [
+        "ExRx.net Barbell Hip Thrust (machine variant)",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "glute_bridge": {
+      "description": "Lying on the back with knees bent and feet flat, drive the hips up until the body forms a line from shoulders to knees. It trains the glutes with no equipment and teaches the hip-extension finish used in every hinge and thrust. It appears as a warm-up drill and, with a dumbbell on the hips or one leg at a time, as a working exercise. A good rep: full hip lockout with a squeeze, ribs down, no arching.",
+      "setup": [
+        "Lie on the floor or a mat, feet flat about hip-width and close enough that the shins are vertical at the top.",
+        "Arms by the sides; for load, hold a dumbbell across the hip crease.",
+        "Chin slightly tucked, ribs down, brace."
+      ],
+      "cues": [
+        "Push through the heels and squeeze the glutes to lift.",
+        "Stop when the hips are level with the knees and shoulders.",
+        "Hold the top for one count; lower slowly.",
+        "For single-leg reps keep the pelvis level, free knee bent."
+      ],
+      "mistakes": [
+        "Arching the lower back to lift higher.",
+        "Pushing through the toes with the feet too far out.",
+        "Knees falling in or out.",
+        "Rushing without a pause at the top."
+      ],
+      "safety": [
+        "Body-weight drill: progress by reps, then a dumbbell, then single-leg — not by arching further.",
+        "A pinch in the lower back means the ribs came up; tuck the chin and shorten the range."
+      ],
+      "substitution_rationale": {
+        "hip_thrust": "same movement with the shoulders on a bench and a barbell",
+        "machine_hip_thrust": "same movement on a machine with a fixed load",
+        "cable_pull_through": "same glute-driven hip extension standing at a cable"
+      },
+      "sources": [
+        "ExRx.net Barbell Hip Thrust (bridge family)",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "back_extension_45": {
+      "description": "On a 45° bench with the pad at the hip crease, hinge down until the hamstrings are stretched and rise until the body is straight — not beyond. Done hinge-style with the glutes leading, it trains glutes, hamstrings and spinal erectors with the trunk supported by the pad, which makes it the friendliest hinge for a tired or sensitive back. A good rep: the spine holds one shape, movement happens only at the hips, and the lockout ends with a glute squeeze.",
+      "setup": [
+        "Pad set just below the hip bones so the hips can fold over it freely.",
+        "Feet flat on the platform, heels against the stops, knees slightly bent.",
+        "Arms crossed on the chest, or a plate held against the chest for load."
+      ],
+      "cues": [
+        "Fold at the hips; keep the spine in one shape the whole rep.",
+        "Squeeze the glutes to come up to a straight line, no higher.",
+        "Turn the toes out slightly for more glute contribution.",
+        "Two to three seconds down, pause at the stretch."
+      ],
+      "mistakes": [
+        "Hyperextending past straight at the top.",
+        "Pad too high, so the movement comes from the lower back instead of the hips.",
+        "Using momentum from the arms or head.",
+        "Bending the knees to shorten the range."
+      ],
+      "safety": [
+        "Low-back sensitive: the lever runs through the lower back — hold a constant spine shape, fold only at the hips and never rise past a straight line; drop the added load if the back takes over.",
+        "Set the pad and foot stops before the first rep; a pad on the belly turns this into a lower-back exercise."
+      ],
+      "substitution_rationale": {
+        "romanian_deadlift": "same hinge standing with a barbell, heavier loading",
+        "reverse_hyperextension": "same hip extension with the trunk fixed and the legs moving",
+        "cable_pull_through": "same hinge standing at a cable, no pad needed",
+        "glute_bridge": "same glute finish from the floor, no equipment"
+      },
+      "sources": [
+        "ExRx.net Weighted Hyperextension",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "reverse_hyperextension": {
+      "description": "Trunk on the pad, legs hanging: swing the legs up to horizontal by extending the hips. It trains the glutes, hamstrings and spinal erectors with the trunk fixed and the load moving from below, which takes most of the lever off the back. It is a rare machine, so it appears in plans only where the gym has one. A good rep: legs rise level with the trunk, glutes squeezed at the top, controlled swing back.",
+      "setup": [
+        "Hip crease at the edge of the pad, hands on the handles, feet in the straps or on the roller.",
+        "Start with an empty arm or a light load; the pendulum adds momentum.",
+        "Chin down, ribs on the pad, brace."
+      ],
+      "cues": [
+        "Squeeze the glutes to raise the legs until they are level with the body.",
+        "Pause at the top; do not throw the legs past horizontal.",
+        "Let the legs swing down under control and reverse before the swing pulls you.",
+        "Keep the toes pointed slightly out."
+      ],
+      "mistakes": [
+        "Kicking the legs above horizontal and arching the lower back.",
+        "Using the swing's momentum instead of the glutes.",
+        "Lifting the chest off the pad.",
+        "Loading it like a leg press."
+      ],
+      "safety": [
+        "The pendulum builds momentum: control the down-swing so the lower back is not pulled into extension at the top, and stop each rep at horizontal.",
+        "Check that the strap or roller is secure before the first rep."
+      ],
+      "substitution_rationale": {
+        "back_extension_45": "same hip extension with the legs fixed and the trunk moving",
+        "cable_glute_kickback": "same glute extension one leg at a time at a cable",
+        "hip_thrust": "same glute-driven hip extension lying on a bench with a barbell"
+      },
+      "sources": [
+        "ExRx.net Weighted Hyperextension (reverse variant)",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ],
+      "review_notes": "Flags: reverse_hyperextension carries no LB flag while back_extension_45 does. The pendulum can drive the lumbar spine into extension under momentum at the top; either set LB, or document that the fixed trunk is why it is the gentler option — it is ranked first as the back extension's substitute, so the choice matters for users with a back limitation."
+    },
+    "glute_ham_raise": {
+      "description": "On a glute-ham developer with the feet locked and the knees on the pad: lower the torso from vertical toward horizontal by extending the knees, then curl back up with the hamstrings. It trains the hamstrings at both joints with body weight as a long lever, plus glutes and calves. It is an advanced hamstring exercise for lifters who already handle leg curls and Nordics. A good rep: hips stay extended throughout, the body moves as a straight line, and the return is driven by the hamstrings, not by a hip fold.",
+      "setup": [
+        "Knees just behind the pad's apex, feet flat against the plate, ankles locked under the rollers.",
+        "Hips fully extended, glutes tight, arms crossed on the chest.",
+        "For the first sessions use hands on the pad or a band to assist the return."
+      ],
+      "cues": [
+        "Lower slowly with the hips locked out.",
+        "Curl the heels toward the glutes to return; toes pushing into the plate.",
+        "Keep the body as one straight plank.",
+        "Add a plate on the chest only when a full set is smooth."
+      ],
+      "mistakes": [
+        "Folding at the hips to make the return easier.",
+        "Knees placed on the apex so the pad blocks the movement.",
+        "Rounding the back and pulling with the arms.",
+        "Dropping fast into the bottom."
+      ],
+      "safety": [
+        "Body-weight lever with a strong eccentric: expect soreness after the first sessions and keep the early volume low.",
+        "Assist the return with the hands until the full range is controlled; a rep that stalls at the bottom is finished with the hands, not forced.",
+        "Check that the foot plate and rollers are locked before the first rep."
+      ],
+      "substitution_rationale": {
+        "nordic_hamstring_curl": "same knee-flexion eccentric without the machine",
+        "lying_leg_curl": "same hamstrings via the knee on a machine, fixed path",
+        "seated_leg_curl": "same knee flexion seated, hamstrings at long length",
+        "slider_leg_curl": "same movement on the floor with sliders or a towel"
+      },
+      "sources": [
+        "RP hamstring hypertrophy training tips (rpstrength.com)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "nordic_hamstring_curl": {
+      "description": "Kneeling with the ankles anchored, lower the body forward as slowly as possible by resisting with the hamstrings, catch with the hands, then push back up. It is the strongest eccentric hamstring exercise available with almost no equipment and is prescribed in low reps (3–8) because every rep is near maximal. In a plan it covers the hamstrings' long-length knee-flexion work. A good rep: hips stay extended, the body lowers as one line, and the descent takes several seconds before the hands touch.",
+      "setup": [
+        "Knees on a thick pad, shins on the floor, ankles held by a partner, a loaded bar, or the knee pads of a lat-pulldown seat.",
+        "Hips extended, glutes tight, hands ready at chest height.",
+        "Start with a partial range: lower only as far as you can control, then reset."
+      ],
+      "cues": [
+        "Lower as slowly as possible with the hips locked out.",
+        "Fight the fall the whole way; catch softly with the hands.",
+        "Push off the floor just enough to return, then resist again.",
+        "Progress by lowering further before the catch, then by pushing off less."
+      ],
+      "mistakes": [
+        "Bending at the hips so the torso folds forward.",
+        "Dropping through the last third of the range.",
+        "Ankles not anchored firmly, so the feet lift.",
+        "Doing many short-range reps instead of a few slow full-range ones."
+      ],
+      "safety": [
+        "Knee sensitive: the knees carry full body weight on the pad and start the rep in deep flexion — use a thick pad and stop for knee pain, which is not the same as hamstring effort.",
+        "Near-maximal eccentric work brings heavy soreness at first: begin with 2–3 reps and partial range, and do not pair it with a heavy hinge in the same session until adapted.",
+        "An anchor that slips ends the rep on the face — check it every set."
+      ],
+      "substitution_rationale": {
+        "lying_leg_curl": "same knee flexion on a machine, adjustable load",
+        "seated_leg_curl": "same knee flexion seated with hamstrings at long length",
+        "slider_leg_curl": "same eccentric on the floor with a lighter lever",
+        "glute_ham_raise": "same movement on a developer with foot support"
+      },
+      "sources": [
+        "van Dyk 2019 (Br J Sports Med, Nordic hamstring exercise meta-analysis)",
+        "RP hamstring hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "slider_leg_curl": {
+      "description": "Lying on the back with the heels on sliders, a towel on a smooth floor, or the cradles of a suspension trainer: bridge the hips and pull the heels toward the glutes, then slide them back out. It trains the hamstrings through the knee while the glutes hold the bridge. It is the hamstring exercise for hotel rooms and home floors. A good rep: hips stay high the whole way, heels curl in fully, the slide out is slow.",
+      "setup": [
+        "Heels on sliders or a towel on tile or wood, or heels in the suspension-trainer cradles.",
+        "Lie on the back, arms flat by the sides for balance.",
+        "Bridge the hips first; that is the start position."
+      ],
+      "cues": [
+        "Keep the hips up as the heels come in.",
+        "Pull with the heels, not the toes.",
+        "Slide out slowly until the legs are nearly straight.",
+        "Progress to one leg once two legs are easy."
+      ],
+      "mistakes": [
+        "Hips dropping to the floor between reps.",
+        "Sliding out fast and losing the hamstring tension.",
+        "Only a short curl-in because the hips are too low.",
+        "Feet too close at the start, shortening the range."
+      ],
+      "safety": [
+        "Body-weight exercise: the hips sinking is the sign the set is over; do not arch the lower back to keep them up.",
+        "Check that the surface lets the heels slide smoothly before the set."
+      ],
+      "substitution_rationale": {
+        "lying_leg_curl": "same knee flexion on a machine with adjustable load",
+        "seated_leg_curl": "same knee flexion seated, easy to load",
+        "nordic_hamstring_curl": "same eccentric knee flexion with a heavier lever",
+        "dumbbell_romanian_deadlift": "same hamstrings via the hip instead of the knee"
+      },
+      "sources": [
+        "RP hamstring hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "seated_leg_curl": {
+      "description": "Machine curl with the hips flexed: thigh pad down, ankles on the roller, curl the heels under the seat. It trains the hamstrings at a longer muscle length than the lying version, which is why it tends to be preferred for hamstring size, with the calves assisting. In a plan it covers hamstring volume the hinges do not, and it is safe to take close to failure. A good rep: full curl under the seat, one-count squeeze, slow return to a straight-but-not-locked knee.",
+      "setup": [
+        "Back pad set so the knee joint lines up with the machine's pivot.",
+        "Thigh pad snug on the thighs; roller just above the heels.",
+        "Sit tall, hold the handles, toes pulled toward the shins."
+      ],
+      "cues": [
+        "Curl the heels as far under the seat as they go.",
+        "Squeeze for a count at the bottom.",
+        "Return slowly for two to three seconds.",
+        "Keep the hips glued to the seat."
+      ],
+      "mistakes": [
+        "Hips lifting off the seat to help the curl.",
+        "Short reps that skip the stretched top position.",
+        "Knee off the pivot line so the roller slides.",
+        "Using momentum to swing the load."
+      ],
+      "safety": [
+        "Machine isolation: safe to take the last set to failure now and then to recalibrate RIR; the only mechanism to watch is the hips lifting, which shifts load onto the lower back."
+      ],
+      "substitution_rationale": {
+        "lying_leg_curl": "same hamstrings via the knee, lying position",
+        "nordic_hamstring_curl": "same knee flexion eccentric with body weight",
+        "slider_leg_curl": "same movement on the floor with sliders",
+        "romanian_deadlift": "same hamstrings via the hip, barbell"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Leg Curl",
+        "RP hamstring hypertrophy training tips (rpstrength.com)",
+        "Stronger by Science, reps-in-reserve article (RIR calibration)"
+      ]
+    },
+    "lying_leg_curl": {
+      "description": "Face down on the machine with the roller at the ankles, curl the heels toward the glutes. It trains the hamstrings with the hips extended, with the calves assisting. It is the classic hamstring isolation and complements the hinge with knee-flexion work. A good rep: full curl with a squeeze, slow return, hips pressed into the pad throughout.",
+      "setup": [
+        "Knee joint in line with the machine's pivot; roller just above the heels.",
+        "Hips pressed into the pad, chest on the bench, hands on the handles.",
+        "Toes pulled toward the shins."
+      ],
+      "cues": [
+        "Curl all the way up and squeeze.",
+        "Lower slowly to a nearly straight knee.",
+        "Keep the hips down; the pad does not lift.",
+        "Drive through the heels, not the toes."
+      ],
+      "mistakes": [
+        "Hips rising off the pad to shorten the lever.",
+        "Bouncing at the bottom.",
+        "Partial reps without the squeeze at the top.",
+        "Head lifted and back arched."
+      ],
+      "safety": [
+        "Machine isolation: safe to push close to failure; the failure mode is the hips rising, which arches the lower back — stop there."
+      ],
+      "substitution_rationale": {
+        "seated_leg_curl": "same knee flexion seated, hamstrings at long length",
+        "nordic_hamstring_curl": "same eccentric knee flexion with body weight",
+        "slider_leg_curl": "same movement on the floor with sliders"
+      },
+      "sources": [
+        "ExRx.net Lever Lying Leg Curl",
+        "RP hamstring hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "kettlebell_swing": {
+      "description": "Explosive hinge: the bell swings between the legs and is snapped forward to chest height by the hips, not lifted by the arms. It trains the glutes and hamstrings for power with the trunk bracing against every swing. It is used for hip-extension speed and as conditioning in plans without a jumping option. A good rep: back flat, hips snap to full lockout, arms relaxed, and the bell floats at the top.",
+      "setup": [
+        "Bell on the floor a foot-length in front, feet just wider than hip-width.",
+        "Hinge back, grip the handle with both hands, lats tight, back flat.",
+        "Hike the bell back between the legs to start the first swing."
+      ],
+      "cues": [
+        "Hips back, then snap the hips forward; the arms are ropes.",
+        "Stand tall at the top with the glutes squeezed; the bell floats.",
+        "Let the bell fall and hinge as it passes the thighs.",
+        "Breathe out sharply on each snap.",
+        "Stop the set when the swings slow down."
+      ],
+      "mistakes": [
+        "Squatting the bell instead of hinging.",
+        "Lifting with the arms and shoulders to raise the bell.",
+        "Rounding the back at the bottom of the swing.",
+        "Leaning back at the top instead of standing tall.",
+        "Letting the bell drop below the knees."
+      ],
+      "safety": [
+        "Low-back sensitive: an unsupported hinge with momentum — keep the bell above the knees at the bottom and the back flat; a rounding back at the bottom ends the set.",
+        "Multi-joint power drill: it is done for speed, so end the set when the swing slows (RIR 3 or more in effort terms), not when the muscles burn.",
+        "Park the bell with a last swing back and a hinge to the floor, and keep the space in front of you clear."
+      ],
+      "substitution_rationale": {
+        "cable_pull_through": "same hinge against a cable, slow and controlled",
+        "hip_thrust": "same hip extension with the back supported, heavy and slow",
+        "romanian_deadlift": "same hinge with a barbell, no momentum",
+        "box_jump": "same explosive hip extension, jumping"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implements)",
+        "ExRx.net Kettlebell Swing"
+      ]
+    },
+    "cable_pull_through": {
+      "description": "Facing away from a low pulley with a rope between the legs, hinge forward as the cable pulls back, then drive the hips through to stand. It trains the glutes and hamstrings in a hinge with no load on the spine, which makes it the easiest hinge to learn and a good choice for a sensitive back. A good rep: rope stays close to the body, the hips do all the work, full lockout with a glute squeeze.",
+      "setup": [
+        "Rope on the lowest pulley; step forward until the stack is lifted with straight arms.",
+        "Feet just wider than the hips, knees soft, rope held between the legs with the palms facing in.",
+        "Brace and set the shoulders back."
+      ],
+      "cues": [
+        "Push the hips back and let the cable pull the hands between the legs.",
+        "Keep the back flat and the arms straight.",
+        "Drive the hips forward to stand; squeeze the glutes at the top.",
+        "Do not pull with the arms."
+      ],
+      "mistakes": [
+        "Standing too close so the cable goes slack at the top.",
+        "Squatting instead of hinging.",
+        "Rounding the back to reach further.",
+        "Pulling the rope up with the arms and shoulders."
+      ],
+      "safety": [
+        "Cable isolation: no axial load, so it is safe to take close to failure; the only mechanism to watch is losing the flat back at the stretch."
+      ],
+      "substitution_rationale": {
+        "hip_thrust": "same glute extension lying on a bench with a barbell",
+        "romanian_deadlift": "same hinge with a barbell, heavier loading",
+        "kettlebell_swing": "same hinge done explosively",
+        "glute_bridge": "same glute finish from the floor, no equipment"
+      },
+      "sources": [
+        "ExRx.net Cable Pull Through",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "cable_glute_kickback": {
+      "description": "Ankle strap on a low pulley (or the pad of a kickback machine): extend one leg back from the hip against the resistance. It trains the glute of the moving leg with the hamstrings helping, one side at a time. It is a light finisher that adds glute volume without loading the back. A good rep: the hip extends fully with the knee only slightly bent, the pelvis stays square, and the trunk does not arch.",
+      "setup": [
+        "Strap on the ankle, pulley at its lowest setting, hands on the frame.",
+        "Trunk leaned forward slightly, standing leg soft, working leg slightly bent.",
+        "Choose a load you can hold for one second at full extension."
+      ],
+      "cues": [
+        "Drive the heel back and up with the glute; squeeze at the end.",
+        "Keep the hips square and the ribs down.",
+        "Return slowly until the knee passes the standing leg.",
+        "Finish all reps on one side, then switch."
+      ],
+      "mistakes": [
+        "Arching the lower back to kick higher.",
+        "Swinging the leg with momentum.",
+        "Opening the hip to the side instead of extending straight back.",
+        "Leaning the whole body forward to add range."
+      ],
+      "safety": [
+        "Cable isolation: safe to take close to failure; the mechanism to watch is the lower back arching to extend the leg further — keep the ribs down and drop the load if it does."
+      ],
+      "substitution_rationale": {
+        "hip_thrust": "same glute extension with both legs and heavy load",
+        "glute_bridge": "same glute extension from the floor, no equipment",
+        "machine_hip_thrust": "same glute extension on a fixed pad with both legs",
+        "reverse_hyperextension": "same hip extension with the trunk fixed, both legs"
+      },
+      "sources": [
+        "ExRx.net Cable Glute Kickback"
+      ]
+    },
+    "hip_abduction_machine": {
+      "description": "Seated with the pads outside the knees, push the legs apart against the stack. It trains the glute med and the other abductors, with the gluteus maximus helping when the trunk leans forward. It covers the side-of-hip muscles that squats and hinges leave under-trained. A good rep: full sweep out against the pads, one-count squeeze, slow return without the stack touching down.",
+      "setup": [
+        "Pads just above the knees; start position with the legs together or at a comfortable width.",
+        "Sit upright, or lean the chest forward for more glute contribution.",
+        "Hold the handles; feet flat on the footrests."
+      ],
+      "cues": [
+        "Push the knees apart in one smooth motion.",
+        "Squeeze at the widest point for a count.",
+        "Return slowly until the plates almost touch.",
+        "Keep the trunk still; the legs do the work."
+      ],
+      "mistakes": [
+        "Rocking the trunk to swing the load.",
+        "Letting the plates bounce at the bottom of each rep.",
+        "Short reps with no squeeze.",
+        "Pads set on the shins so the knees take the load."
+      ],
+      "safety": [
+        "Machine isolation: safe to take close to failure; set the range stop so the start position is not a forced stretch."
+      ],
+      "substitution_rationale": {
+        "band_lateral_walk": "same glute med work standing with a band",
+        "cable_glute_kickback": "same glute work one leg at a time at a cable, extension instead of abduction"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Hip Abduction"
+      ]
+    },
+    "hip_adduction_machine": {
+      "description": "Seated with the pads inside the knees, squeeze the legs together against the stack. It trains the adductors, which are strong helpers in squats and sumo pulls and get little direct work elsewhere. In a plan it appears as a light accessory for hip strength. A good rep: legs close fully, one-count squeeze, slow return to a comfortable stretch.",
+      "setup": [
+        "Set the start width to a comfortable stretch, not the maximum.",
+        "Pads just above the knees, feet flat on the footrests, hands on the handles.",
+        "Sit tall with the hips back in the seat."
+      ],
+      "cues": [
+        "Squeeze the knees together in one smooth motion.",
+        "Hold for a count with the legs closed.",
+        "Open slowly and stop before the stretch becomes a pull.",
+        "Keep the trunk still."
+      ],
+      "mistakes": [
+        "Starting too wide and yanking from a deep stretch.",
+        "Letting the plates slam at the open position.",
+        "Leaning back and using the trunk.",
+        "Rushing the reps."
+      ],
+      "safety": [
+        "Machine isolation: safe to take close to failure; the mechanism to watch is the open position — set the range stop so every rep starts from a comfortable stretch, because the adductors tolerate a forced stretch under load poorly."
+      ],
+      "substitution_rationale": {
+        "copenhagen_plank": "same adductors worked isometrically with body weight",
+        "sumo_deadlift": "same adductors as helpers in a heavy hinge",
+        "goblet_squat": "same adductors as helpers in a deep squat"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Hip Adduction"
+      ],
+      "review_notes": "Substitutions: sumo_deadlift (advanced; SL, LB, KN flags) and goblet_squat are compound swaps for a beginner isolation machine and cover the adductors only as secondary muscles. If the planner offers them on a machine-less day, the difficulty gate (R4 §5.3) and the flags should still apply; the cable option already inside this exercise is the closer like-for-like swap."
+    },
+    "copenhagen_plank": {
+      "description": "Side plank with the top foot on a bench or box and the bottom leg free: the top leg's adductors hold the body up. It trains the adductors hard with the obliques stabilising, using only a bench. It is the body-weight adductor exercise and is measured in seconds per side. A good hold: body in a straight line from head to top foot, hips high, bottom leg lifted toward the bench.",
+      "setup": [
+        "Lie on one side, elbow under the shoulder, top foot (or knee for the easier version) on a knee-high bench.",
+        "Bottom leg under the bench, hips down; brace before lifting.",
+        "Lift the hips until the body is straight; hold."
+      ],
+      "cues": [
+        "Squeeze the top leg into the bench and lift the hips.",
+        "Keep the shoulders and hips stacked, no rotation.",
+        "Draw the bottom knee up toward the bench for extra work.",
+        "Breathe steadily through the hold.",
+        "Same time on both sides."
+      ],
+      "mistakes": [
+        "Hips sagging toward the floor.",
+        "Trunk rotating forward or back.",
+        "Elbow ahead of or behind the shoulder.",
+        "Holding the breath."
+      ],
+      "safety": [
+        "Timed body-weight hold: the top leg's adductors are loaded at length — start with the knee on the bench and short holds, and stop when the hips drop, not at a target time.",
+        "A sharp pull on the inside of the thigh ends the set; progress the lever slowly."
+      ],
+      "substitution_rationale": {
+        "hip_adduction_machine": "same adductors on a machine with adjustable load",
+        "side_plank": "same side hold without the adductor load"
+      },
+      "sources": [
+        "Serner 2014 (Br J Sports Med, EMG evaluation of hip adduction exercises incl. Copenhagen adduction)",
+        "Harøy 2019 (Am J Sports Med, adductor strengthening programme trial)"
+      ]
+    },
+    "band_lateral_walk": {
+      "description": "A loop band around the knees or ankles, quarter-squat stance, step sideways while keeping tension on the band. It trains the glute med and the other abductors and wakes up the hips before squats and hinges, which is why it is tagged as a warm-up drill. It is counted in steps (15–25 per direction). A good step: feet keep pointing forward, the band never goes slack, and the trunk stays level.",
+      "setup": [
+        "Band above the knees (easier) or around the ankles (harder), feet hip-width so the band is already taut.",
+        "Slight knee bend, hips back, chest up.",
+        "Hands at the hips or in front of the chest."
+      ],
+      "cues": [
+        "Step out with the lead foot, then follow without letting the feet touch.",
+        "Keep the toes pointing forward and the knees over the feet.",
+        "Stay low the whole way; no bobbing up and down.",
+        "Walk one direction, then back the other way."
+      ],
+      "mistakes": [
+        "Feet turning out and the knees rolling in.",
+        "Standing up tall so the band goes slack.",
+        "Leaning the trunk away from the stepping leg.",
+        "Dragging the trailing foot and letting the band pull it in."
+      ],
+      "safety": [
+        "Band drill: the only mechanism to watch is the knees collapsing inward under the band — shorten the step or use a lighter band if they do."
+      ],
+      "substitution_rationale": {
+        "hip_abduction_machine": "same glute med work seated with a stack",
+        "cable_glute_kickback": "same glute work one leg at a time at a cable"
+      },
+      "sources": [
+        "Cambridge 2012 (Clin Biomech, band placement and gluteal activation during band walks)",
+        "RP glute hypertrophy training tips (rpstrength.com)"
+      ]
+    },
+    "worlds_greatest_stretch": {
+      "description": "A flowing lunge drill: step into a long lunge, drop the inside hand to the floor, rotate the other arm to the ceiling, then straighten the front knee for a hamstring stretch before stepping through. It opens the rear leg's hip flexors, the front leg's hamstrings and adductors, and the upper back in one sequence, which makes it the standard pre-hinge and pre-squat mobility drill. Done for slow reps per side in the warm-up. A good rep: rear knee off the floor, front foot flat, rotation from the upper back with the eyes following the top hand.",
+      "setup": [
+        "Start standing; step one foot forward into a long lunge, rear leg straight, rear heel up.",
+        "Place the hand on the same side as the rear leg flat on the floor inside the front foot.",
+        "Keep the front knee over the ankle and the trunk long."
+      ],
+      "cues": [
+        "Drop the elbow toward the instep of the front foot, then rotate the other arm to the ceiling.",
+        "Follow the top hand with the eyes; the rotation comes from the upper back.",
+        "Return the hand, push the hips back and straighten the front knee for two breaths.",
+        "Step through to the other side and repeat.",
+        "Move slowly; each position gets one or two breaths."
+      ],
+      "mistakes": [
+        "Front knee collapsing inward during the rotation.",
+        "Rotating from the lower back with the hips twisting.",
+        "Rear knee dropping to the floor so the hip flexor stretch disappears.",
+        "Rushing through the positions without breathing."
+      ],
+      "safety": [
+        "Mobility drill: pain-free range only, no forcing the rotation or the hamstring position; the hand on the floor takes the balance so the front knee does not have to."
+      ],
+      "substitution_rationale": {
+        "hip_90_90": "same hip rotation work seated, no balance demand",
+        "couch_stretch": "same hip flexor stretch held statically",
+        "cat_cow": "same spinal mobility on all fours, no lunge"
+      },
+      "sources": [
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)",
+        "Behm 2016 (Appl Physiol Nutr Metab, acute effects of stretching on performance)"
+      ]
+    },
+    "ankle_dorsiflexion_rock": {
+      "description": "Half-kneeling or standing with the toes a hand-width from a wall, rock the knee forward over the toes toward the wall while the heel stays down. It trains ankle dorsiflexion — the range that lets the knee travel forward in squats, lunges and the bottom of a deadlift. It doubles as a quick test: the distance from the wall at which the knee still touches shows how much range each ankle has. A good rep: heel flat, knee tracking over the second toe, slow rock and return.",
+      "setup": [
+        "Front foot flat, toes a hand-width from the wall; rear knee on a pad, or stand and hold the wall.",
+        "Knee aimed at the wall over the second toe.",
+        "Hands on the wall or the front knee for balance."
+      ],
+      "cues": [
+        "Rock the knee forward until it touches the wall or the heel wants to lift.",
+        "Keep the heel glued to the floor.",
+        "Pause a second at the end, rock back, repeat.",
+        "Move the foot back a thumb-width once the knee touches easily.",
+        "Same reps on both ankles; note the side that is shorter."
+      ],
+      "mistakes": [
+        "Heel lifting off the floor.",
+        "Knee drifting inward or outward instead of over the toes.",
+        "Arch collapsing so the foot rolls in.",
+        "Bouncing at the end of the range."
+      ],
+      "safety": [
+        "Mobility drill: pain-free range only; a pinch at the front of the ankle means the rock is being forced — shorten the range instead of pushing through."
+      ],
+      "substitution_rationale": {
+        "couch_stretch": "same warm-up slot for hip and lower leg, static hip-flexor hold",
+        "single_leg_calf_raise": "same ankle range trained through a full-range calf raise"
+      },
+      "sources": [
+        "Bennell 1998 (Aust J Physiother, weight-bearing lunge test for ankle dorsiflexion)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)"
+      ],
+      "review_notes": "Substitutions: couch_stretch targets the hip flexors and quads, not ankle dorsiflexion; a wall calf stretch or heel-elevated squat (R3 MOB-07 ankle row) would be the closer swap, with single_leg_calf_raise a fair second. R3 MOB-07 also names a 10 cm knee-to-wall threshold; if the app ever reports the test result, that number belongs in exercises.json, not in this text."
+    }
+  },
+  "status": {
+    "conventional_deadlift": "draft",
+    "sumo_deadlift": "draft",
+    "trap_bar_deadlift": "draft",
+    "romanian_deadlift": "draft",
+    "dumbbell_romanian_deadlift": "draft",
+    "single_leg_romanian_deadlift": "draft",
+    "good_morning": "draft",
+    "hip_thrust": "draft",
+    "machine_hip_thrust": "draft",
+    "glute_bridge": "draft",
+    "back_extension_45": "draft",
+    "reverse_hyperextension": "draft",
+    "glute_ham_raise": "draft",
+    "nordic_hamstring_curl": "draft",
+    "slider_leg_curl": "draft",
+    "seated_leg_curl": "draft",
+    "lying_leg_curl": "draft",
+    "kettlebell_swing": "draft",
+    "cable_pull_through": "draft",
+    "cable_glute_kickback": "draft",
+    "hip_abduction_machine": "draft",
+    "hip_adduction_machine": "draft",
+    "copenhagen_plank": "draft",
+    "band_lateral_walk": "draft",
+    "worlds_greatest_stretch": "draft",
+    "ankle_dorsiflexion_rock": "draft"
+  }
+}

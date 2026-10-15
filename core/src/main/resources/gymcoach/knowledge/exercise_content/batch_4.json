@@ -1,0 +1,949 @@
+{
+  "schema_version": 1,
+  "batch": 4,
+  "entries": {
+    "back_squat": {
+      "description": "Barbell squat with the bar on the upper back. It is the main knee-dominant lift: quads first, glutes and adductors carry the hips, hamstrings and lower back stabilise. It is in the plan because it loads more leg muscle per set than any other exercise and progresses in small, trackable jumps (5.0 kg early, then 2.5 kg, 1.0 kg with microplates). A good rep: hips and knees break together, thighs reach at least parallel, the torso angle stays constant and the bar travels a straight vertical line over the mid-foot.",
+      "setup": [
+        "Rack the bar at mid-chest height so you unrack with a small leg drive, not a calf raise.",
+        "Safeties a hand's width below your bottom position; without safeties, have a spotter behind you.",
+        "Bar on the traps (high bar) or across the rear delts (low bar), hands as close as the shoulders allow, elbows under the bar.",
+        "Feet about shoulder width, toes turned out 15-30°; two short steps back, then set the feet and brace."
+      ],
+      "cues": [
+        "Big breath into the belly, brace as if about to be pushed, then sit down between the knees.",
+        "Knees track over the toes; push them out on the way down.",
+        "Keep the bar over the mid-foot the whole rep: chest up, weight not on the toes.",
+        "Drive the floor away; hips and shoulders rise at the same rate.",
+        "Depth: hip crease at or below the top of the knee unless the plan says otherwise."
+      ],
+      "mistakes": [
+        "Hips shoot up first out of the bottom and the squat turns into a good morning (the lower back takes the load).",
+        "Knees caving inward on the way up.",
+        "Heels lifting or the weight drifting onto the toes.",
+        "Cutting depth as the set gets hard.",
+        "Bouncing out of the bottom instead of controlling the last few centimetres."
+      ],
+      "safety": [
+        "Spotter/safeties flag: a failed rep leaves the bar on your back, so squat inside a rack with the safeties just below your bottom position; without safeties or a spotter stop every set at RIR 2 (R4 §5.5, R3 RIR-03).",
+        "Spinal loading: the bar loads the spine through the braced trunk; brace before every rep, keep the spine neutral and never round or twist under the bar.",
+        "Low-back sensitive: a pelvis that tucks at the bottom or hips that shoot up early shift the load from the legs to the lumbar spine; squat only as deep as the pelvis stays stable and drop the load when the form drifts.",
+        "Knee sensitive: knee joint load rises steadily with flexion depth under a heavy bar (R3 INJ-01); with an irritable knee use a box or reduce depth and load rather than pushing through. Multi-joint (compound) lift: fatigue shows up as technique drift first, so end the set when the rep pattern changes, not when the bar grinds."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same squat pattern on a fixed sled, no bar on the spine, no spotter needed",
+        "leg_press_45": "quad-dominant leg push with the back supported and no spinal loading",
+        "smith_machine_squat": "same bar position on a guided path with built-in catches",
+        "safety_bar_squat": "same pattern with the load carried by padded yokes, no shoulder or wrist demand",
+        "goblet_squat": "same movement with a light front load, for warm-ups, home gyms or technique days",
+        "belt_squat": "squat pattern loaded at the hips, nothing on the spine"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: back squat, spotting)",
+        "Stronger by Science, How to Squat: The Definitive Guide",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)"
+      ]
+    },
+    "front_squat": {
+      "description": "Barbell squat with the bar racked on the front of the shoulders. The upright torso puts more of the work on the quads and asks the upper back and abs to hold the bar up. It is in the plan as the most quad-biased barbell squat and as the squat that keeps the lower back out of the picture. A good rep: elbows high, torso nearly vertical, full depth, and the bar never drifts forward off the shoulders.",
+      "setup": [
+        "Rack height mid-chest, safeties just below your bottom position.",
+        "Bar rests on the front delts against the throat; fingertips under the bar with the elbows pointing forward (clean grip), or arms crossed over the bar.",
+        "Feet shoulder width, toes out slightly; step back and lift the elbows high before the first rep.",
+        "Wrist or ankle range is the usual blocker: lifting shoes or a heel plate and straps looped around the bar are acceptable fixes."
+      ],
+      "cues": [
+        "Elbows up and forward the entire rep; the bar rides on the shoulders, not in the hands.",
+        "Sit straight down between the heels, knees forward and out.",
+        "Big breath, brace the abs, chest tall.",
+        "Drive up with the elbows leading; if the elbows drop the bar follows.",
+        "Take full depth: this squat is built for it."
+      ],
+      "mistakes": [
+        "Elbows dropping at the bottom and the bar rolling forward onto the fingers.",
+        "Upper back rounding under the bar.",
+        "Heels rising because the ankles run out of range.",
+        "Knees collapsing inward on the drive up."
+      ],
+      "safety": [
+        "Spotter/safeties flag: a missed rep is dumped forward off the shoulders onto the safeties, so set them just below your bottom position and squat inside the rack; without safeties or a spotter stop at RIR 2 (R4 §5.5). Never try to save a front squat with the arms.",
+        "Spinal loading: the bar loads the spine through a braced, upright trunk; brace before every rep and keep the upper back tall, because a rounded back drops the bar.",
+        "Knee sensitive: the upright position sends the knees far forward and deep, which raises knee joint load (R3 INJ-01); reduce depth or load with an irritable knee instead of pushing through.",
+        "Compound lift with high technical demand (advanced): a failed rep costs more than in most lifts, so ramp up over several warm-up sets and end the set at the first ugly rep."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same quad-biased squat on a fixed sled, no bar on the shoulders, no rack needed",
+        "safety_bar_squat": "same upright squat with the load on padded yokes, no wrist or shoulder demand",
+        "goblet_squat": "same front-loaded pattern at light load, good for technique work and warm-ups",
+        "back_squat": "same pattern with more load, less quad bias and more lower-back involvement"
+      },
+      "sources": [
+        "ExRx.net Barbell Front Squat (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: front squat)",
+        "Stronger by Science, How to Squat: The Definitive Guide"
+      ]
+    },
+    "safety_bar_squat": {
+      "description": "Squat with a safety squat bar: a padded yoke sits on the shoulders and the handles are held in front, so no shoulder or wrist range is needed. The forward-set camber pushes you toward a more upright squat that loads quads, glutes and adductors while the upper back fights the forward lean. It is in the plan as the back-squat option for lifters with shoulder, elbow or wrist complaints. A good rep looks like a back squat with a taller torso: constant torso angle, full depth, bar steady over the mid-foot.",
+      "setup": [
+        "Rack at mid-chest; safeties just below your bottom position.",
+        "Centre the yoke on the traps with the pads on the shoulders; hold the handles without pulling them down.",
+        "Log the bar's own weight as the gym reports it: many safety bars are heavier than a standard bar.",
+        "Feet shoulder width, toes out slightly; step back and settle before descending."
+      ],
+      "cues": [
+        "Brace, then sit down and slightly back, knees out.",
+        "Fight the bar's forward pull: chest up, upper back tight the whole rep.",
+        "Keep the handles still; the bar moves with your torso, not with your hands.",
+        "Drive up with hips and shoulders rising together."
+      ],
+      "mistakes": [
+        "Letting the camber fold you forward at the bottom.",
+        "Pulling on the handles to muscle the rep up.",
+        "Hips rising early so the lower back finishes the lift.",
+        "Cutting depth as the set gets heavy."
+      ],
+      "safety": [
+        "Spotter/safeties flag: a failed rep leaves the bar on your shoulders, so squat inside the rack with the safeties just below your bottom position; without safeties or a spotter stop at RIR 2 (R4 §5.5).",
+        "Spinal loading: the load goes through the braced spine; brace before every rep and keep the trunk neutral against the bar's forward pull.",
+        "Low-back sensitive: the camber adds to the forward-lean moment, so when the upper back gives way the lumbar spine takes the load; keep the load where you can hold the torso angle for every rep.",
+        "Knee sensitive: deep, upright squatting raises knee joint load (R3 INJ-01); with a sore knee reduce depth and load. Compound lift: end the set on technique, not on grinding."
+      ],
+      "substitution_rationale": {
+        "back_squat": "same squat with a standard bar when shoulders and wrists allow",
+        "hack_squat": "same squat pattern on a fixed sled with no bar on the spine",
+        "front_squat": "same upright, quad-biased squat with a standard bar (needs front-rack range)"
+      },
+      "sources": [
+        "Stronger by Science, How to Squat: The Definitive Guide",
+        "ExRx.net Barbell Squat (same joint actions and muscle listing)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: back squat)"
+      ]
+    },
+    "goblet_squat": {
+      "description": "Squat holding one dumbbell or kettlebell against the chest. The front load works as a counterweight, which makes full depth and an upright torso easy to find; quads and glutes do the work while the abs hold the weight up. It is in the plan as the beginner squat, a warm-up squat and a home or hotel-gym leg exercise. A good rep: elbows inside the knees at the bottom, heels down, chest tall, the weight steady against the chest.",
+      "setup": [
+        "Hold the dumbbell vertically by the top head, or the kettlebell by the horns, tight against the sternum.",
+        "Feet shoulder width or slightly wider, toes turned out a little.",
+        "Elbows point down, not out."
+      ],
+      "cues": [
+        "Sit straight down between the heels, knees out over the toes.",
+        "Keep the weight glued to the chest; if it drifts away, the torso is falling forward.",
+        "Go as deep as you can with heels down and back flat.",
+        "Stand up by pushing the floor away, hips and chest rising together."
+      ],
+      "mistakes": [
+        "Weight held out in front of the chest so the arms and upper back give out first.",
+        "Heels rising at the bottom.",
+        "Knees caving inward.",
+        "Stopping well above parallel although the load is light."
+      ],
+      "safety": [
+        "Knee sensitive: knee joint load rises with squat depth (R3 INJ-01); with an irritable knee use a box or a shorter range rather than pushing through.",
+        "Compound lift with a light front load: the arms and upper back usually give out before the legs, so move to a hack squat or leg press once the heaviest dumbbell is reached, and set the weight down between sets instead of dropping it."
+      ],
+      "substitution_rationale": {
+        "leg_press_45": "same knee-dominant push with more load available and the back supported",
+        "hack_squat": "same squat pattern on a machine once the dumbbells run out",
+        "bodyweight_squat": "same movement without the weight, for warm-ups or when nothing is available",
+        "split_squat": "unilateral leg exercise that reaches a hard set with light dumbbells"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (same joint actions; goblet loading changes only the counterbalance)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)"
+      ],
+      "review_notes": "Increment 2.0 / 2.0 fits the dumbbell option only; the kettlebell option steps in 4.0 kg (2.0 where available) per R4 §5.4. If IncrementResolver reads the exercise-level increment for the kettlebell option, kettlebell progression will be prescribed in jumps the rack cannot deliver. Consider a per-option increment note. Numbers left unchanged."
+    },
+    "smith_machine_squat": {
+      "description": "Squat with the bar on the back on a guided Smith machine. The fixed vertical path removes the balance demand, so the feet can sit slightly forward and the quads take the load with an upright torso. It is in the plan as the beginner-friendly barbell-style squat and as a back-squat stand-in with built-in catches. A good rep: feet planted a little in front of the bar line, hips and knees bending together, and the bar hooked back in cleanly at the top of the last rep.",
+      "setup": [
+        "Set the hooks so you unrack with a small leg push; set the catches (stops) just below your bottom position.",
+        "Bar on the upper traps, hands slightly wider than the shoulders.",
+        "Feet shoulder width, placed a few centimetres in front of the bar's line so the shins stay close to vertical at the bottom.",
+        "Check which way the hooks release before loading the bar."
+      ],
+      "cues": [
+        "Unrack, twist the bar off the hooks, then brace before the first rep.",
+        "Sit straight down; the machine holds the line, you hold the depth.",
+        "Knees out, heels down, chest up.",
+        "Control the bottom and drive up without bouncing off the catches."
+      ],
+      "mistakes": [
+        "Feet directly under the bar, forcing the torso forward against the fixed path.",
+        "Feet so far forward that the exercise becomes a leaning leg press.",
+        "Rounding the lower back at the bottom.",
+        "Re-hooking at the top with a half-turn while off balance."
+      ],
+      "safety": [
+        "Spinal loading: the bar sits on the back and loads the spine through the braced trunk, so brace every rep and keep the spine neutral; the fixed path does not brace for you.",
+        "Knee sensitive: depth and forward knee travel raise knee joint load (R3 INJ-01); shorten the range or reduce the load with an irritable knee.",
+        "Compound lift on a machine: the catches let you take sets closer to failure than a free squat, but only when they are set; set the stops before every session and re-hook the bar at the top, never at the bottom."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same guided squat with the load on a sled instead of on the spine",
+        "leg_press_45": "same knee-dominant push with the back fully supported",
+        "back_squat": "same pattern with a free bar once balance and technique allow it"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (same joint actions on a guided bar)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ]
+    },
+    "hack_squat": {
+      "description": "Squat on an angled sled with the back against a pad and the shoulders under the yoke. The support removes the balance and bracing limits, so the quads can be taken close to failure through a deep, controlled range. It is in the plan as the main machine squat and the first substitute when a barbell squat is unavailable or unwanted. A good rep: heels down, knees tracking over the toes, full depth without the hips lifting off the pad, and a smooth drive up short of a hard lockout.",
+      "setup": [
+        "Set the safety stops so the sled cannot travel below your controllable depth.",
+        "Shoulders under the pads, back and hips flat on the back pad, feet mid-platform at shoulder width.",
+        "Feet higher on the platform shift work toward the glutes; lower shifts work toward the quads and the knees.",
+        "Release the handles only after you are braced and standing tall."
+      ],
+      "cues": [
+        "Lower slowly, knees out over the toes.",
+        "Keep the whole foot pressing; do not let the heels peel off.",
+        "Go as deep as the hips stay on the pad.",
+        "Drive up through the mid-foot and stop just short of locking the knees.",
+        "Re-engage the handles before you step off."
+      ],
+      "mistakes": [
+        "Hips lifting off the pad at the bottom (the lower back rounds against the pad).",
+        "Heels rising as the depth increases.",
+        "Locking the knees hard at the top with plates on the sled.",
+        "Bouncing out of the bottom."
+      ],
+      "safety": [
+        "Knee sensitive: a fixed sled with the feet low and the back pinned produces a lot of forward knee travel under load, so knee joint load is high in the deepest range (R3 INJ-01); move the feet higher and shorten the range with an irritable knee.",
+        "Compound machine lift: sets may go close to failure because the stops catch the sled, so set the stops every time and never release the handles mid-set; add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "leg_press_45": "same supported knee-dominant push on a sled with more depth control",
+        "pendulum_squat": "same machine squat with a curved path and a similar quad emphasis",
+        "smith_machine_squat": "guided squat with a bar on the back when no sled machine is available",
+        "back_squat": "same pattern with a free bar for lifters who squat"
+      },
+      "sources": [
+        "ExRx.net Sled Hack Squat (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)"
+      ]
+    },
+    "pendulum_squat": {
+      "description": "Machine squat in which the yoke swings on an arm, so the load path curves and stays over the feet through the whole rep. It keeps the torso upright and the knees forward, which loads the quads through a long range with almost nothing to balance. It is in the plan as a hack-squat alternative where the gym has one. A good rep: full depth with the heels down and the hips on the pad, then a controlled drive to just short of lockout.",
+      "setup": [
+        "Adjust the shoulder pads and the safety stop for your height; the stop must catch the arm below your bottom position.",
+        "Feet mid-platform at shoulder width; back and hips against the pad.",
+        "Check the machine's starting resistance or counterweight and log the load the way the gym reports it."
+      ],
+      "cues": [
+        "Sit down into the machine, knees over the toes, chest against the pad.",
+        "Heels stay down; press through the whole foot.",
+        "Control the bottom, no bounce.",
+        "Drive up smoothly and stop just short of knee lockout."
+      ],
+      "mistakes": [
+        "Hips coming off the pad at the bottom.",
+        "Heels lifting because the feet are too low on the platform.",
+        "Half reps because the load is set for the top of the movement."
+      ],
+      "safety": [
+        "Knee sensitive: the curved path keeps the knees far forward under load, so knee joint load is high deep in the rep (R3 INJ-01); shorten the range and reduce the load with an irritable knee.",
+        "Compound machine lift: sets can go close to failure because the arm is caught by the stop, provided the stop is set; check it before the first rep."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same supported machine squat on a straight sled",
+        "leg_press_45": "same knee-dominant push with the back supported when no squat machine is free",
+        "belt_squat": "upright squat pattern loaded at the hips, also nothing on the spine"
+      },
+      "sources": [
+        "ExRx.net Sled Hack Squat (same joint actions and muscle listing)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ]
+    },
+    "belt_squat": {
+      "description": "Squat with the load hung from a belt around the hips on a belt-squat machine. The spine and shoulders carry nothing, so it trains quads, glutes and adductors through a full range without spinal loading. It is in the plan as the leg exercise for days when the back needs a rest and as a high-rep quad option. A good rep: upright torso, knees out, full depth, a smooth stand-up without leaning on the handles.",
+      "setup": [
+        "Belt snug on the hips, chain or lever attached; stand with the feet shoulder width on the platform.",
+        "Release the load with the lever or handles only after you are standing tall and braced.",
+        "The handles are for balance, not for pulling yourself up."
+      ],
+      "cues": [
+        "Sit straight down between the knees; let the load pull the hips down.",
+        "Knees out over the toes, heels down.",
+        "Chest tall and lightly braced; no need to strain.",
+        "Drive up through the mid-foot and stop short of a hard lockout."
+      ],
+      "mistakes": [
+        "Pulling on the handles to finish reps.",
+        "Leaning forward and turning the squat into a hinge.",
+        "Belt sitting on the waist instead of the hips so it rides up.",
+        "Cutting depth because the belt digs in: adjust the belt instead."
+      ],
+      "safety": [
+        "Knee sensitive: deep squatting under load raises knee joint load (R3 INJ-01); reduce depth and load with an irritable knee.",
+        "Compound lift without spinal loading: a good choice when a back limitation is logged (R3 INJ-03), but keep a hand near the handles so a failed rep ends with you standing, not falling."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same supported squat pattern on a sled, also no bar on the spine",
+        "leg_press_45": "same knee-dominant push with the back supported",
+        "goblet_squat": "same upright squat with a light front load when no machine is available"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (same joint actions; load applied at the hips)",
+        "Stronger by Science, How to Squat: The Definitive Guide",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ]
+    },
+    "leg_press_45": {
+      "description": "Pressing a sled up an incline while seated with the back against a pad. It trains quads and glutes with no balance demand and no load on the spine, which makes it the easiest leg exercise to load heavily and to take close to failure. It is in the plan as the main machine substitute for squats and as a high-volume quad exercise. A good rep: the sled lowered under control until the thighs approach the chest with the hips still on the pad, then a drive to just short of lockout.",
+      "setup": [
+        "Set the safety stops so the sled cannot come lower than your controlled depth.",
+        "Hips and lower back flat on the pad, head resting; feet mid-platform at shoulder width.",
+        "Higher feet shift work toward glutes and hamstrings; lower feet toward the quads.",
+        "Unlock the handles only when the legs are extended and braced."
+      ],
+      "cues": [
+        "Lower slowly, knees tracking over the toes.",
+        "Stop where the hips start to lift; that is your depth.",
+        "Whole foot pressing; the heels never leave the platform.",
+        "Press through the mid-foot and stop short of locking the knees.",
+        "Re-engage the safety handles before releasing the pressure."
+      ],
+      "mistakes": [
+        "Hips rolling off the pad at the bottom (the lower back rounds under load).",
+        "Locking the knees out hard under a heavy sled.",
+        "Hands pushing on the knees to finish reps.",
+        "Short bouncing reps at the top."
+      ],
+      "safety": [
+        "Low-back sensitive: when the sled comes too deep the pelvis tucks and the lumbar spine flexes under load (R4 §5.5); stop the descent the moment the hips start to lift and set the stops there.",
+        "Knee sensitive: knee joint load rises with depth and forward knee travel (R3 INJ-01); with an irritable knee use a higher foot placement and a shorter range.",
+        "Compound machine lift: sets may go close to failure because the stops catch the sled, so set the stops and never unlock the handles unless the legs are extended; add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "hack_squat": "same supported knee-dominant push, standing on a sled",
+        "leg_press_horizontal": "same press with a more upright seat, easier on the lower back",
+        "smith_machine_squat": "guided squat with a bar on the back when no press is free",
+        "goblet_squat": "same pattern with a light front load when no machine is available"
+      },
+      "sources": [
+        "ExRx.net Sled 45° Leg Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: leg press)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ]
+    },
+    "leg_press_horizontal": {
+      "description": "Seated leg press with the sled or the seat moving horizontally. The upright seat and shorter hip range keep the pelvis stable, so it loads quads and glutes with less lower-back involvement than the incline press, usually at lower loads. It is in the plan as the most beginner-friendly leg press and as the press for lifters with a logged back limitation. A good rep: knees bent to about 90°, or as deep as the hips stay on the seat, then a smooth press to just short of lockout.",
+      "setup": [
+        "Set the seat so the knees reach about 90° at the start without the hips lifting.",
+        "Back and head against the pad, hands on the grips, feet mid-platform at shoulder width.",
+        "Set the range stop, where fitted, so the sled cannot come deeper than your controlled range."
+      ],
+      "cues": [
+        "Press through the whole foot, knees over the toes.",
+        "Stop just short of lockout, then lower under control.",
+        "Keep the hips glued to the seat; the legs move, the torso does not.",
+        "Hold the grips lightly; they are for stability, not for pulling."
+      ],
+      "mistakes": [
+        "Seat set too close, so the hips lift and the lower back rounds at the start.",
+        "Knees drifting inward.",
+        "Locking the knees hard against a heavy stack.",
+        "Fast partial reps at the top."
+      ],
+      "safety": [
+        "Knee sensitive: knee joint load increases with flexion depth under load (R3 INJ-01); keep the start position pain-free and move the feet higher on the platform.",
+        "Compound machine lift: sets can go close to failure because the stack cannot trap you, but set the seat so the pelvis stays on the pad; add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "leg_press_45": "same press on an incline sled with more load available and more depth",
+        "hack_squat": "same supported squat pattern on a standing sled",
+        "goblet_squat": "same pattern with a light front load when no machine is available"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Leg Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: leg press)"
+      ],
+      "review_notes": "Flags: leg_press_horizontal carries KN only, while leg_press_45 carries KN LB. A seat set too close produces the same pelvic tuck and lumbar flexion under load as the incline press at depth, so LB may belong here too (low priority; the mechanism is milder because the hip range is shorter). Numbers left unchanged."
+    },
+    "bulgarian_split_squat": {
+      "description": "Rear-foot-elevated split squat: the back foot rests on a bench or box while the front leg squats. Nearly all the load goes through the front leg, so it trains quads and glutes hard with light dumbbells and exposes side-to-side differences. It is in the plan as the main unilateral leg exercise and as the squat replacement in dumbbell-only gyms. A good rep: front shin vertical to slightly forward, torso leaning a little forward, back knee dropping straight down, front foot flat.",
+      "setup": [
+        "Bench or box at about knee height behind you; rest the laces or the ball of the rear foot on it.",
+        "Hop the front foot forward until the front knee stays over the mid-foot at the bottom; mark the spot for the second side.",
+        "Dumbbells at the sides, or hands free for bodyweight; shoulders square.",
+        "Smith option: bar on the back, front foot slightly ahead of the bar line, catches set below the bottom position."
+      ],
+      "cues": [
+        "Drop the back knee straight down; do not push it backward.",
+        "Front foot flat, big toe pressing, knee tracking over the toes.",
+        "A slight forward lean from the hips loads the glute, an upright torso loads the quad: pick one and hold it.",
+        "Push through the front foot; the back leg only balances.",
+        "Same reps on both sides, weaker side first."
+      ],
+      "mistakes": [
+        "Front foot too close to the bench, so the heel rises and the knee dives forward.",
+        "Bouncing the back knee off the floor.",
+        "Hips rotating open toward the back leg.",
+        "Twisting or hopping to keep balance instead of ending the set."
+      ],
+      "safety": [
+        "Knee sensitive: the front knee travels forward under most of your bodyweight plus the dumbbells, so knee joint load is high at the bottom (R3 INJ-01); with an irritable knee lengthen the stance and shorten the depth, or swap to a reverse lunge.",
+        "Compound unilateral lift: balance fails before the muscle does when the set goes too close to failure; the dumbbells can be dropped to the sides at any time, so keep the floor around you clear. Smith option: the bar is on the back, so brace the trunk and set the catches."
+      ],
+      "substitution_rationale": {
+        "split_squat": "same movement with the back foot on the floor, easier balance and less knee travel",
+        "reverse_lunge": "same single-leg pattern with a more vertical shin, kinder to the front knee",
+        "walking_lunge": "same pattern moving forward, more balance and glute demand",
+        "step_up": "unilateral knee-dominant push with a vertical shin and a lower knee load",
+        "leg_press_45": "bilateral machine push when balance or the knee limit the unilateral version"
+      },
+      "sources": [
+        "ExRx.net Barbell Split Squat (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: lunge)"
+      ],
+      "review_notes": "Flags: the smith option (step_any+smith_machine) puts a bar on the back, which is the R4 §5.5 definition of spinal_loading, yet the row carries no SL flag (smith_machine_squat does). If SL gates users with a logged back limitation, the smith option should either carry SL or be dropped. Same pattern in walking_lunge (bb_loaded option) and reverse_lunge (bb_loaded+rack_any option). Numbers left unchanged."
+    },
+    "split_squat": {
+      "description": "Stationary lunge: one foot forward, one back, both on the floor, and you lower and rise in place. It trains quads and glutes of the front leg from a stable base, which makes it the easiest single-leg exercise to learn. It is in the plan as the beginner unilateral leg exercise, a warm-up drill and a hotel-gym option. A good rep: back knee lowers straight toward the floor, front knee stays over the mid-foot, torso stays tall, no wobble.",
+      "setup": [
+        "Take a long step forward; at the bottom both knees should be near 90° with the front shin roughly vertical.",
+        "Dumbbells at the sides, or hands on the hips for bodyweight.",
+        "Rear heel up, weight on the ball of the back foot."
+      ],
+      "cues": [
+        "Drop straight down, not forward.",
+        "Front foot flat; push through the whole foot to stand.",
+        "Keep the hips square and the torso upright.",
+        "Touch the back knee lightly to the floor or a pad, then come up."
+      ],
+      "mistakes": [
+        "Stance too short, so the front knee shoots past the toes and the heel lifts.",
+        "Leaning forward and pushing off the back leg.",
+        "Back knee slamming into the floor.",
+        "Hips drifting sideways over the front foot."
+      ],
+      "safety": [
+        "Knee sensitive: the front knee is loaded through a deep bend; a longer stance keeps the shin more vertical and the knee load lower (R3 INJ-01), so lengthen the stance or shorten the range with an irritable knee.",
+        "Compound unilateral lift: stop the set when balance goes rather than when the leg gives out, and set the dumbbells down between sides."
+      ],
+      "substitution_rationale": {
+        "bulgarian_split_squat": "same movement with the rear foot elevated for more load on the front leg",
+        "reverse_lunge": "same pattern with a step back each rep, slightly more balance and glute work",
+        "step_up": "unilateral push with a vertical shin, the lowest knee load of the lunge family"
+      },
+      "sources": [
+        "ExRx.net Barbell Split Squat (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: lunge)"
+      ]
+    },
+    "walking_lunge": {
+      "description": "Alternating forward lunges that travel across the floor. Each step loads the lead leg through quads and glutes while the trailing leg controls the descent, so it trains legs and balance together and accumulates volume fast. It is in the plan as the moving version of the lunge family, usually with dumbbells. A good rep: a long step, back knee lowering straight down to a light touch, front foot flat, then a drive through the front foot into the next step.",
+      "setup": [
+        "Clear 10-15 m of floor; hold dumbbells at the sides, or a bar on the back for the barbell option.",
+        "Stand tall, feet hip width, eyes ahead.",
+        "Choose the step length so the front shin is near vertical at the bottom."
+      ],
+      "cues": [
+        "Step long, land heel first, lower straight down.",
+        "Front knee over the mid-foot, not past the toes.",
+        "Push through the front foot to bring the back leg through; do not push off the back toes.",
+        "Torso upright, shoulders over the hips.",
+        "Count steps per leg, not total steps."
+      ],
+      "mistakes": [
+        "Short, choppy steps with the knee diving forward.",
+        "Torso pitched forward and the rear leg doing the work.",
+        "Knee collapsing inward on landing.",
+        "Rushing so the back knee hits the floor."
+      ],
+      "safety": [
+        "Knee sensitive: the lead knee decelerates the body under load with forward travel on every step (R3 INJ-01); with an irritable knee use reverse lunges (less forward knee travel) or shorten the walk.",
+        "Compound unilateral lift: fatigue shows up as wobbly landings, so end the set at the first unstable step. With the barbell option the bar loads the spine: brace the trunk, keep the load modest and never walk lunges near failure."
+      ],
+      "substitution_rationale": {
+        "reverse_lunge": "same lunge with a step back instead of forward, easier on the knee and the balance",
+        "bulgarian_split_squat": "same single-leg loading in place, no floor space needed",
+        "step_up": "unilateral push with a vertical shin and less knee load"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Lunge (target quadriceps; synergists gluteus maximus, adductor magnus, soleus)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: lunge)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ],
+      "review_notes": "Flags: the bb_loaded (barbell) option puts a bar on the back (R4 §5.5 spinal_loading) but the row carries no SL flag; see the bulgarian_split_squat note. Numbers left unchanged."
+    },
+    "reverse_lunge": {
+      "description": "Lunge in which you step backward, lower, then push through the front foot to return. The front shin stays more vertical than in a forward lunge, so the quads and glutes of the front leg are loaded with less forward knee travel. It is in the plan as the knee-friendlier lunge and the go-to unilateral exercise with dumbbells, a kettlebell or a barbell. A good rep: a controlled step back, back knee lowered to a light touch, front foot flat, then a single push back to standing.",
+      "setup": [
+        "Stand tall with dumbbells at the sides, a kettlebell held at the chest, or a bar on the back unracked from a rack.",
+        "Feet hip width; pick a spot on the floor for the rear foot and use it every rep.",
+        "Barbell option: unrack, take one step back from the rack and lunge in place, no walking."
+      ],
+      "cues": [
+        "Step back far enough that the front shin stays near vertical.",
+        "Lower the back knee straight down toward the floor.",
+        "Front foot flat; drive through the whole foot to stand.",
+        "Bring the back foot forward to hip width and reset before the next rep.",
+        "Alternate or finish one side first, but keep the reps equal."
+      ],
+      "mistakes": [
+        "Short step back with the front knee sliding forward.",
+        "Pushing off the rear foot instead of driving with the front leg.",
+        "Torso collapsing forward over the dumbbells.",
+        "Landing on the toes of the rear foot with an unstable ankle."
+      ],
+      "safety": [
+        "Knee sensitive: the front knee still carries most of the load through a deep bend, although the backward step reduces forward knee travel (R3 INJ-01 lists reverse lunges as the preferred lunge with knee complaints); shorten the depth if the knee is irritable.",
+        "Compound unilateral lift: keep the rep count equal on both sides and stop at the first unstable rep. The barbell option loads the spine, so brace the trunk and keep the bar load well below squat loads."
+      ],
+      "substitution_rationale": {
+        "split_squat": "same pattern with both feet stationary, the simplest balance demand",
+        "bulgarian_split_squat": "same pattern with the rear foot elevated for more load on the front leg",
+        "step_up": "unilateral push with a vertical shin and the least knee load",
+        "walking_lunge": "same lunge moving forward for more balance and glute demand"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Rear Lunge",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips"
+      ],
+      "review_notes": "Flags: the bb_loaded+rack_any (barbell) option puts a bar on the back (R4 §5.5 spinal_loading) but the row carries no SL flag; see the bulgarian_split_squat note. Numbers left unchanged."
+    },
+    "step_up": {
+      "description": "Stepping onto a knee-high box or bench with one leg and standing up on it. The leading leg does the work through quads and glutes with a vertical shin, so the knee sees less forward travel than in squats or lunges. It is in the plan as the unilateral exercise with the lowest knee demand and as a hotel-gym leg option. A good rep: whole foot on the box, stand up through that leg without pushing off the floor, then lower under control.",
+      "setup": [
+        "Box or bench at knee height; lower for beginners or cranky knees, never above hip height.",
+        "Place the whole foot on the box; dumbbells at the sides or hands free.",
+        "Stand close enough that the shin is near vertical when the foot is on the box."
+      ],
+      "cues": [
+        "Push through the top foot; the bottom foot only lifts off, it does not jump.",
+        "Stand tall on the box with the hip fully extended, then lower slowly.",
+        "Knee tracks over the toes, not inward.",
+        "Control the way down: touch the floor softly, no plop.",
+        "Finish all reps on one leg, then switch."
+      ],
+      "mistakes": [
+        "Pushing off the floor foot so the box leg does half the work.",
+        "Leaning the torso far forward to get momentum.",
+        "Heel hanging off the edge of the box.",
+        "Dropping down onto a straight leg."
+      ],
+      "safety": [
+        "Knee sensitive: the exercise is chosen for its low knee load (vertical shin, no deep flexion), but a box that is too high forces deep flexion under load (R3 INJ-01); lower the box rather than pushing through.",
+        "Compound unilateral lift: a slipping box is the real hazard, so use a stable box or bench and stop the set at the first wobbly rep; dumbbells can be dropped to the sides at any time."
+      ],
+      "substitution_rationale": {
+        "reverse_lunge": "same single-leg pattern on the floor when no stable box is available",
+        "bulgarian_split_squat": "same unilateral loading with more range and knee travel",
+        "split_squat": "same stationary single-leg pattern, the simplest balance demand"
+      },
+      "sources": [
+        "ExRx.net Step-up (target quadriceps; synergists gluteus maximus, adductor magnus, soleus, gastrocnemius)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: step-up)"
+      ],
+      "review_notes": "Muscles: the step_up row (dagger-verified) lists quads 1.0, glutes 0.5, hamstrings 0.25 with no adductors, while R4 §4.4 shows the ExRx step-up page listing adductor magnus as a synergist exactly like the lunge and split-squat pages, whose rows carry adductors 0.25. For consistency with §4.3 mapping, adductors 0.25 may be missing here. Numbers left unchanged."
+    },
+    "leg_extension": {
+      "description": "Knee extension on a lever machine: the pad on the shins is lifted by straightening the knees. It isolates the quads, including the rectus femoris that squats do not fully load, with no demand on the back or balance. It is in the plan to top up quad volume after the compounds and as a safe exercise for the occasional set to failure that recalibrates RIR. A good rep: a full, controlled extension with a short squeeze at the top and a slow lowering, hips staying in the seat.",
+      "setup": [
+        "Back against the pad with the knee joint in line with the machine's pivot.",
+        "Shin pad just above the ankles; hold the handles to keep the hips down.",
+        "Set the start angle at a comfortable range; a deeper start gives more stretch."
+      ],
+      "cues": [
+        "Extend fully and pause briefly at the top.",
+        "Lower in 2-3 s; the lowering is half the exercise.",
+        "Toes pointing slightly up, knees tracking straight.",
+        "Keep the hips and lower back on the pad; no rocking."
+      ],
+      "mistakes": [
+        "Swinging the weight up with a hip thrust off the seat.",
+        "Dropping the stack on the way down.",
+        "Partial reps that skip the top or the bottom of the range.",
+        "Pivot set wrongly so the pad slides up the shin during the rep."
+      ],
+      "safety": [
+        "Knee sensitive: the whole load acts on the knee alone through a long lever (open chain), so joint stress is high near full extension and in a deep start position; keep the pad low on the shin, choose a pain-free start angle and add load slowly (R3 INJ-01).",
+        "Machine isolation: taking the last set to failure now and then is acceptable and useful for RIR calibration (R3 RIR-05); add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "spanish_squat": "same knee-extension emphasis with a band, no machine needed",
+        "sissy_squat": "same quad isolation with bodyweight and a deeper stretch, harder on the knees",
+        "hack_squat": "quad-dominant compound when no isolation machine is available",
+        "step_up": "unilateral quad work with a low knee load when the extension irritates the knee"
+      },
+      "sources": [
+        "ExRx.net Lever Leg Extension (target quadriceps; no synergists)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "Pedrosa 2022, partial range of motion at long muscle length in the knee extension (Eur J Sport Sci)"
+      ]
+    },
+    "sissy_squat": {
+      "description": "Bodyweight quad exercise: holding a support, you lean back from the knees while they travel far forward and the hips stay extended, then pull yourself back up with the quads. It puts the quads under a long stretch with no equipment at all. It is in the plan as the travel-kit quad isolation for experienced lifters and as a leg-extension stand-in. A good rep: a straight line from knees to shoulders, heels up, knees forward, a slow descent to a depth you control, 8-15 reps per set.",
+      "setup": [
+        "Stand next to a rack, door frame or wall and hold it lightly with one hand for balance.",
+        "Feet hip width, heels raised on a plate or on the balls of the feet.",
+        "Squeeze the glutes so the hips stay open; the body moves as one plank from the knees."
+      ],
+      "cues": [
+        "Push the knees forward and lean the torso back at the same time.",
+        "Keep the hips extended; do not sit back.",
+        "Lower slowly over 2-3 s to a depth you can reverse.",
+        "Pull back up with the quads, using the hand only for balance."
+      ],
+      "mistakes": [
+        "Bending at the hips, which turns it into a squat.",
+        "Pulling yourself up with the arm.",
+        "Dropping into the bottom instead of controlling it.",
+        "Going deeper than you can return from."
+      ],
+      "safety": [
+        "Knee sensitive: the knees travel far forward under a long lever, which produces very high knee joint load at depth (R3 INJ-01); this is the exercise's mechanism, not a mistake, so build depth over weeks, stop at any knee pain and skip it entirely with a logged knee limitation.",
+        "Advanced bodyweight isolation: hold a fixed support the whole set so a lost rep ends standing, and progress by reps and depth before adding a plate held to the chest."
+      ],
+      "substitution_rationale": {
+        "leg_extension": "same quad isolation on a machine with adjustable load and a lower knee demand",
+        "spanish_squat": "same knee-forward emphasis with a band, far kinder to the knees",
+        "hack_squat": "quad-dominant compound on a machine when a lower knee load is needed"
+      },
+      "sources": [
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)"
+      ]
+    },
+    "spanish_squat": {
+      "description": "Squat with a thick band looped behind the knees and anchored in front, pulling the shins backward. The band lets you sit straight down with vertical shins, so the quads are loaded through knee extension while the knee stays stable. It is in the plan as the band-only quad isolation, a warm-up drill and a knee-friendly option. A good rep: shins vertical, torso upright, a controlled descent to thigh-parallel or lower, then a stand-up against the band.",
+      "setup": [
+        "Anchor a heavy loop band at knee height around a rack post or a door anchor.",
+        "Step inside the band so it sits in the crease behind the knees; walk back until it is tight.",
+        "Feet hip to shoulder width, toes forward."
+      ],
+      "cues": [
+        "Lean back into the band and squat straight down.",
+        "Keep the shins vertical; the band holds the knees back.",
+        "Torso upright, arms forward for balance.",
+        "Stand up by driving the knees back into the band and squeeze the quads at the top.",
+        "Isometric option: hold the bottom for 30-45 s (R3 INJ-01)."
+      ],
+      "mistakes": [
+        "Band too low or too high on the leg so it slides during the rep.",
+        "Sitting back into a hip hinge instead of straight down.",
+        "Standing too close to the anchor so the band goes slack at the top.",
+        "Rounding the back to counterbalance."
+      ],
+      "safety": [
+        "No sensitivity flags: the band keeps the shin vertical, which is why this is the knee-friendly quad option (R3 INJ-01); still keep the range pain-free.",
+        "Band isolation: check the band for nicks before every set and keep the anchor solid, because a snapping band is the only real hazard; progress by reps, then to the next band level."
+      ],
+      "substitution_rationale": {
+        "leg_extension": "same knee-extension isolation on a machine with finer load steps",
+        "goblet_squat": "same upright squat pattern with a dumbbell when no band is available",
+        "split_squat": "unilateral leg exercise with a stable base when no band is available"
+      },
+      "sources": [
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)"
+      ]
+    },
+    "bodyweight_squat": {
+      "description": "Squat with no external load. It grooves the squat pattern, warms up hips, knees and ankles, and trains quads and glutes for beginners, high-rep sets and travel days. It is in the plan mostly as a warm-up drill and as the always-available leg exercise. A good rep: heels down, knees over the toes, hips to at least parallel, chest up, arms forward for balance.",
+      "setup": [
+        "Feet shoulder width, toes turned out slightly; arms forward or hands on the chest.",
+        "Flat soles or barefoot on a stable floor; no soft, tall-heeled shoes.",
+        "Warm-up use: 2 sets of 8-10 slow reps before leg sessions (R3 MOB-01)."
+      ],
+      "cues": [
+        "Sit down between the heels, knees out.",
+        "Keep the whole foot planted.",
+        "Go as deep as the back stays flat.",
+        "Stand up fast, lower slowly."
+      ],
+      "mistakes": [
+        "Heels lifting and knees rolling in.",
+        "Bending forward at the hips and staying high.",
+        "Fast bouncing reps with no control at the bottom."
+      ],
+      "safety": [
+        "Compound bodyweight movement with no sensitivity flags: the only rule is pain-free depth; progress by reps and slower lowering, then move to the goblet squat once sets pass the top of the range (R4 bodyweight_progression)."
+      ],
+      "substitution_rationale": {
+        "goblet_squat": "same movement with a front load once bodyweight is too easy",
+        "split_squat": "unilateral alternative that is hard enough without load",
+        "step_up": "unilateral alternative with a low knee load"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (same joint actions, unloaded)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique: squat)"
+      ]
+    },
+    "pistol_squat": {
+      "description": "Single-leg squat to full depth with the free leg held out in front. It loads the quads and glutes of the working leg with bodyweight alone and demands balance, ankle range and hip strength at the same time. It is in the plan as the advanced travel-kit leg exercise. A good rep: heel down, knee tracking over the toes, a controlled descent until the hamstring touches the calf, and a stand-up without a bounce or a hand on anything.",
+      "setup": [
+        "Stand on one leg with the other leg straight in front and the arms forward; a light dumbbell held out in front makes balancing easier (counterweight option).",
+        "Start with a box or bench behind you at a height you can control and lower the box over weeks.",
+        "Flat shoes; a small heel plate is acceptable if ankle range limits depth."
+      ],
+      "cues": [
+        "Sit down slowly, knee forward and over the toes, chest up.",
+        "Keep the free leg off the floor and stop the hip of the working leg from dropping.",
+        "Bottom position: hamstring on the calf, heel loaded, then drive up.",
+        "Reach forward with the arms or the dumbbell to hold the balance.",
+        "Same reps on both legs, weaker leg first."
+      ],
+      "mistakes": [
+        "Heel lifting and the knee collapsing inward at the bottom.",
+        "Dropping into the bottom and bouncing off the calf.",
+        "Rounding the back to reach depth.",
+        "Free-leg foot touching the floor to save the rep."
+      ],
+      "safety": [
+        "Knee sensitive: the knee bends fully under the whole body's weight with a lot of forward travel, so knee joint load is at its highest (R3 INJ-01); progress from box pistols and skip it with a logged knee limitation.",
+        "Advanced compound bodyweight lift: balance failure is the usual way a rep ends, so keep a box or rack within reach and never take these to failure; progress by reps, then a lower box, then the counterweight dumbbell."
+      ],
+      "substitution_rationale": {
+        "bulgarian_split_squat": "same single-leg loading with the back foot supported, much easier balance",
+        "step_up": "unilateral push with a vertical shin and a low knee load",
+        "split_squat": "stationary single-leg pattern, the simplest to learn"
+      },
+      "sources": [
+        "ExRx.net Barbell Squat (same joint actions, single-leg)",
+        "Renaissance Periodization, Quad Hypertrophy Training Tips",
+        "Escamilla 2001, Knee biomechanics of the dynamic squat exercise (Med Sci Sports Exerc)"
+      ],
+      "review_notes": "Progression: the equipment option note says dumbbells act as a counterweight (held out in front, which makes the pistol easier), while the increment column reads 'reps; +DB', which implies the dumbbell adds load. Both cannot be true for the same object; either the option is an assistance regression (increment kind reps, dumbbell as regression) or the dumbbell is held at the chest as load. Numbers left unchanged."
+    },
+    "standing_calf_raise": {
+      "description": "Calf raise with straight knees, standing on a step under a machine yoke, a Smith bar or holding dumbbells. With the knee straight the gastrocnemius does most of the work with the soleus assisting, and the deep stretch at the bottom is the part that grows calves. It is in the plan as the main calf exercise. A good rep: heels dropped below the step to a full stretch with a 1-2 s pause, then a rise onto the toes with a squeeze at the top, no bounce.",
+      "setup": [
+        "Balls of the feet on the edge of the step, heels free; feet hip width, toes forward.",
+        "Machine: pads on the shoulders, stand tall, then unlock the safety. Smith: bar on the traps with the catches set below the bottom. Dumbbell: one hand on a support, dumbbell in the other, one leg at a time.",
+        "Knees straight but not locked hard."
+      ],
+      "cues": [
+        "Lower slowly to a full stretch and pause 1-2 s at the bottom.",
+        "Rise as high as possible and squeeze at the top for a second.",
+        "Press through the big toe; keep the ankles from rolling outward.",
+        "Tempo about 2 s down, pause, 1 s up."
+      ],
+      "mistakes": [
+        "Short bouncing reps that use the tendon, not the muscle.",
+        "Bending the knees to help the rep.",
+        "Ankles rolling out so the weight sits on the little toes.",
+        "Feet flat on the floor with no stretch."
+      ],
+      "safety": [
+        "No sensitivity flags: the hazards are a slipping step and an unlocked yoke, so use a fixed step and the machine's safety lock; with the Smith option set the catches below your bottom position.",
+        "Isolation that tolerates failure well: use the last set for the occasional RIR-calibration set (R3 RIR-05); add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "leg_press_calf_raise": "same straight-knee calf raise on a leg press sled, no balance demand",
+        "single_leg_calf_raise": "same movement one leg at a time with bodyweight or a dumbbell, no machine needed",
+        "seated_calf_raise": "calf raise with bent knees, which shifts the work to the soleus"
+      },
+      "sources": [
+        "ExRx.net Barbell Standing Calf Raise (target gastrocnemius; synergist soleus)",
+        "Renaissance Periodization, Calf Hypertrophy Training Tips",
+        "Kassiano 2023, calf raise range of motion and muscle growth (J Strength Cond Res)"
+      ],
+      "review_notes": "Options: the third option dumbbells+step_any is annotated 'single-leg' while the row has unilateral = false and increment 5.0 / 2.5 (machine). Performed as annotated it is the same exercise as single_leg_calf_raise (bodyweight_progression, +2.0 dumbbell). Suggest either dropping that option here or letting the option carry its own unilateral flag and increment. Numbers left unchanged."
+    },
+    "seated_calf_raise": {
+      "description": "Calf raise with the knees bent at 90° under a padded lever. With the knee bent the gastrocnemius is slack, so the soleus does most of the work; it complements the standing raise rather than replacing it. It is in the plan when calf volume is high or as the calf exercise with the least balance and knee-lock demand. A good rep: heels dropped to a full stretch with a pause, then a rise onto the toes with a squeeze, no bounce.",
+      "setup": [
+        "Balls of the feet on the platform edge, knees under the pads at 90°, pads snug on the lower thighs, not on the kneecap.",
+        "Release the safety lever only when the calves are already holding the weight.",
+        "Hands on the pad or handles, torso upright."
+      ],
+      "cues": [
+        "Lower slowly to a full stretch and pause 1-2 s.",
+        "Rise all the way onto the toes and squeeze.",
+        "Press through the big toe; keep the ankles straight.",
+        "No help from the hands or the hips."
+      ],
+      "mistakes": [
+        "Bouncing out of the bottom.",
+        "Pad on the kneecap instead of the thigh.",
+        "Short reps that never reach the stretch.",
+        "Rocking the torso to lift the pad."
+      ],
+      "safety": [
+        "No sensitivity flags: the only hazard is the pad dropping onto the thighs when the safety lever is released early, so take the weight first and re-engage the lever before letting go.",
+        "Isolation that tolerates failure: suitable for the occasional last set to failure (R3 RIR-05); add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "standing_calf_raise": "straight-knee calf raise that shifts the work to the gastrocnemius",
+        "leg_press_calf_raise": "straight-knee calf raise on a sled, no dedicated machine needed",
+        "single_leg_calf_raise": "bodyweight or dumbbell calf raise, no machine needed"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Calf Raise (target soleus; synergist gastrocnemius)",
+        "Renaissance Periodization, Calf Hypertrophy Training Tips"
+      ]
+    },
+    "leg_press_calf_raise": {
+      "description": "Calf raise on a leg press: the balls of the feet on the bottom edge of the platform, knees straight, and the sled moved only by the ankles. It trains the gastrocnemius with the soleus assisting, with the back fully supported and heavy loads available. It is in the plan when no calf machine exists or as a straight-knee calf raise without a yoke on the shoulders. A good rep: the sled lowered until the calves are fully stretched, a pause, then a full push onto the toes.",
+      "setup": [
+        "Press the sled up with the legs almost straight, then slide the feet down so only the balls of the feet are on the platform edge.",
+        "Safety stops set so the sled cannot drop onto you if the feet slip; keep the handle lock within reach.",
+        "Feet hip width, toes forward, heels free to drop below the platform."
+      ],
+      "cues": [
+        "Let the heels drop slowly to a full stretch and hold 1-2 s.",
+        "Push the sled up onto the toes and squeeze.",
+        "Knees stay straight; only the ankles move.",
+        "Keep the whole ball of the foot in contact; no rolling onto the little toes."
+      ],
+      "mistakes": [
+        "Bending and straightening the knees to move the sled.",
+        "Feet too far up the platform so the range is tiny.",
+        "Bouncing in the stretch.",
+        "Toes creeping off the edge of the platform."
+      ],
+      "safety": [
+        "No sensitivity flags, but a foot slipping off the platform lets the sled drop, so keep the safety stops set, wear grippy soles and stop the set as soon as the feet start to slide.",
+        "Isolation that tolerates failure well: suited for the occasional last set to failure (R3 RIR-05); add 5.0 kg (2.5 kg minimum) when the top of the rep range is reached."
+      ],
+      "substitution_rationale": {
+        "standing_calf_raise": "same straight-knee calf raise on a dedicated machine with a bigger stretch",
+        "seated_calf_raise": "bent-knee raise that shifts the work to the soleus",
+        "single_leg_calf_raise": "same movement with bodyweight or a dumbbell, no machine needed"
+      },
+      "sources": [
+        "ExRx.net Sled 45° Calf Press",
+        "ExRx.net Barbell Standing Calf Raise (same joint action and muscle listing)",
+        "Renaissance Periodization, Calf Hypertrophy Training Tips"
+      ]
+    },
+    "single_leg_calf_raise": {
+      "description": "Calf raise on one leg, standing on the floor or on a step, holding a support with one hand. Bodyweight on one leg is enough to work the gastrocnemius hard, and a dumbbell in the free hand adds load in 2.0 kg steps. It is in the plan as the travel and home-gym calf exercise and as the fix for a weaker side. A good rep: heel dropped below the step to a full stretch with a pause, then a full rise onto the toes, 15-25 reps per set.",
+      "setup": [
+        "Ball of one foot on the edge of a step (deficit option) or on the floor; the other foot hooked behind the ankle.",
+        "One hand on a wall, rack or rail for balance; dumbbell in the other hand for load.",
+        "Knee straight, hips level, weight over the big toe."
+      ],
+      "cues": [
+        "Lower slowly to a full stretch and pause 1-2 s.",
+        "Rise as high as you can and squeeze at the top.",
+        "Keep the ankle straight; do not roll onto the outer edge of the foot.",
+        "Use the hand for balance only, not to pull yourself up.",
+        "Same reps on both sides, weaker side first."
+      ],
+      "mistakes": [
+        "Bouncing short reps.",
+        "Ankle rolling outward at the top.",
+        "Pulling on the support.",
+        "Bending the knee to help."
+      ],
+      "safety": [
+        "No sensitivity flags: keep a firm hand on a support so a balance loss ends in a step, not a fall, and use a stable step for the deficit option. Progress by reps to the top of the range, then add a 2.0 kg dumbbell and start again (R4 bodyweight_progression)."
+      ],
+      "substitution_rationale": {
+        "standing_calf_raise": "same straight-knee raise with both legs under a machine load",
+        "leg_press_calf_raise": "same movement on a sled with heavier load and no balance demand"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Single Leg Calf Raise",
+        "Renaissance Periodization, Calf Hypertrophy Training Tips",
+        "Kassiano 2023, calf raise range of motion and muscle growth (J Strength Cond Res)"
+      ]
+    },
+    "hip_90_90": {
+      "description": "Seated hip drill: both knees bent to 90°, one hip in external rotation and the other in internal rotation, and you switch sides by rotating the hips without using the hands. It moves the hips through the internal and external rotation that limits squat depth and lunge position. It is in the plan as a pre-session hip drill and as a chronic mobility hold. A good rep: a slow, controlled switch with the torso tall, both knees reaching toward the floor, no pain.",
+      "setup": [
+        "Sit on the floor with the front shin parallel to the hips and the rear shin pointing behind you, both knees at about 90°.",
+        "Hands lightly on the floor behind you at first; progress to hands off the floor.",
+        "Pre-session: 2 sets of 8-10 slow switches (R3 MOB-01). Chronic: hold each side 30-60 s (R3 MOB-02)."
+      ],
+      "cues": [
+        "Sit tall, chest up, then rotate both knees together toward the other side.",
+        "Let the knees lead; the feet follow.",
+        "Pause at each end and breathe out into the stretch.",
+        "Keep both sit bones as close to the floor as they will go."
+      ],
+      "mistakes": [
+        "Slumping the spine to get the knees down.",
+        "Pushing off the hands for the switch.",
+        "Swinging fast through the transition.",
+        "Forcing the rear knee to the floor through pain."
+      ],
+      "safety": [
+        "Mobility drill, no flags: pain-free range only, no RIR (R4 mobility profile); with a hip that pinches, raise the hips on a pad and shorten the range. Keep static holds under 60 s per side right before heavy squats (R3 WU-04)."
+      ],
+      "substitution_rationale": {
+        "couch_stretch": "targets the hip flexors and quads instead of hip rotation, for the front of the hip",
+        "worlds_greatest_stretch": "standing dynamic drill covering hip flexor, rotation and thoracic spine in one move"
+      },
+      "sources": [
+        "Thomas 2018, stretching typology and duration versus range of motion (Int J Sports Med)",
+        "Behm 2016, acute effects of stretching on performance and range of motion (Appl Physiol Nutr Metab)"
+      ]
+    },
+    "couch_stretch": {
+      "description": "Static stretch for the hip flexors and rectus femoris: kneeling with the rear shin up a wall or bench, front foot forward in a lunge, hips pushed forward with the glute of the rear leg squeezed. It targets the front of the hip that shortens with sitting and limits hip extension in lunges and squats. It is in the plan as a chronic mobility hold after sessions or on rest days. A good rep: rear knee against the wall, torso tall, rear glute tight, a steady stretch felt in the front of the hip and thigh, not in the knee or the lower back.",
+      "setup": [
+        "Pad under the rear knee; kneel with the rear knee in the corner where floor meets wall, shin vertical up the wall, foot pointing up.",
+        "Step the other foot forward so the front knee is over the ankle.",
+        "Start with the hands on the floor or the front knee; progress to an upright torso.",
+        "Dose: 30-60 s per side, 2-4 holds a day, most days of the week (R3 MOB-02); after training, not before heavy sets (R3 WU-04)."
+      ],
+      "cues": [
+        "Squeeze the rear glute and tuck the pelvis slightly before rising up.",
+        "Rise only as far as the stretch stays in the hip and thigh.",
+        "Breathe slowly and let the stretch settle over the hold.",
+        "Keep the ribs down; do not arch the lower back to feel more."
+      ],
+      "mistakes": [
+        "Arching the lower back instead of extending the hip.",
+        "Rear knee far from the wall so the quad is barely stretched.",
+        "Kneecap bearing weight on a hard floor.",
+        "Bouncing into the stretch."
+      ],
+      "safety": [
+        "Knee sensitive: the rear knee kneels in deep flexion on the floor, which compresses the kneecap; always use a pad, keep the knee slightly out of the wall corner if it pinches and stop at any knee pain (R4 flag note: kneeling, use a pad).",
+        "Mobility drill: pain-free range only, no RIR (R4 mobility profile); holds of 60 s or more go after the session, never right before heavy squats (R3 WU-04). Unilateral: do both sides."
+      ],
+      "substitution_rationale": {
+        "hip_90_90": "hip rotation drill instead of a hip-flexor stretch, for when kneeling is not possible",
+        "worlds_greatest_stretch": "dynamic standing drill that also opens the hip flexors, suitable pre-session"
+      },
+      "sources": [
+        "Thomas 2018, stretching typology and duration versus range of motion (Int J Sports Med)",
+        "Behm 2016, acute effects of stretching on performance and range of motion (Appl Physiol Nutr Metab)",
+        "Kay & Blazevich 2012, effect of acute static stretch on maximal muscle performance (Med Sci Sports Exerc)"
+      ]
+    }
+  },
+  "status": {
+    "back_squat": "draft",
+    "front_squat": "draft",
+    "safety_bar_squat": "draft",
+    "goblet_squat": "draft",
+    "smith_machine_squat": "draft",
+    "hack_squat": "draft",
+    "pendulum_squat": "draft",
+    "belt_squat": "draft",
+    "leg_press_45": "draft",
+    "leg_press_horizontal": "draft",
+    "bulgarian_split_squat": "draft",
+    "split_squat": "draft",
+    "walking_lunge": "draft",
+    "reverse_lunge": "draft",
+    "step_up": "draft",
+    "leg_extension": "draft",
+    "sissy_squat": "draft",
+    "spanish_squat": "draft",
+    "bodyweight_squat": "draft",
+    "pistol_squat": "draft",
+    "standing_calf_raise": "draft",
+    "seated_calf_raise": "draft",
+    "leg_press_calf_raise": "draft",
+    "single_leg_calf_raise": "draft",
+    "hip_90_90": "draft",
+    "couch_stretch": "draft"
+  }
+}

@@ -1,0 +1,919 @@
+{
+  "schema_version": 1,
+  "batch": 3,
+  "entries": {
+    "pull_up": {
+      "description": "Bodyweight vertical pull: the lats do most of the work, with the upper back, biceps and rear delts assisting. It is the vertical-pull anchor of the plan and a full-range overhead position that also earns thoracic and shoulder mobility credit. A good rep starts from a full hang with straight arms, finishes with the chin clearly over the bar and the chest toward the bar, and is lowered under control.",
+      "setup": [
+        "Overhand grip a little wider than shoulder width; thumbs around or over the bar as preferred.",
+        "Start from a dead hang: arms straight, shoulders pulled slightly down so the shoulder blades are not shrugged to the ears.",
+        "Add load with a dip belt and plates only once you clear the rep target on every set; assisted and band variations cover the other direction."
+      ],
+      "cues": [
+        "Pull the elbows down and back toward the ribs, not the chin toward the bar.",
+        "Lead with the chest; think about driving the bar down to the collarbones.",
+        "Finish with the chin over the bar and the shoulder blades pulled down.",
+        "Lower under control to a full hang before the next rep.",
+        "Keep the legs quiet: slightly in front or crossed, no swing."
+      ],
+      "mistakes": [
+        "Half reps: no full hang at the bottom, chin never over the bar at the top.",
+        "Kipping or swinging the hips to generate momentum.",
+        "Shrugging toward the ears at the top instead of depressing the shoulder blades.",
+        "Rounding the upper back and craning the neck to get the chin over.",
+        "Dropping into the bottom with relaxed arms instead of lowering under control."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): grip, biceps or lats can be the weak link on a given day, so end the set when rep speed stalls or the range shortens, not when the grip slips.",
+        "Weighted sets: check the dip belt is closed and the plates are secured before hanging; unload the belt before climbing down.",
+        "Nothing can fall on you here, so an occasional last set to failure to recalibrate RIR is acceptable (R3 RIR-05)."
+      ],
+      "substitution_rationale": {
+        "chin_up": "same pattern, supinated grip, more biceps, usually a stronger position",
+        "lat_pulldown": "same pattern with adjustable load, no bodyweight minimum",
+        "assisted_pull_up": "same pattern with the machine removing part of bodyweight",
+        "band_assisted_pull_up": "same bar and pattern, band removes load at the bottom where it is hardest"
+      },
+      "sources": [
+        "ExRx.net Pull-up",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)",
+        "Stronger by Science, How To Perfect Your Ability To Predict Repetitions In Reserve (RIR guide)"
+      ]
+    },
+    "chin_up": {
+      "description": "Supinated-grip pull-up: the lats remain the target, with the biceps and upper back sharing more of the work than in the overhand version. It gives a vertical pull plus meaningful biceps volume in one exercise, and most people manage more reps with it than with pull-ups. A good rep goes from a straight-arm hang to chin over the bar, elbows finishing close to the ribs, then a controlled lowering.",
+      "setup": [
+        "Underhand grip at about shoulder width, palms facing you.",
+        "Dead-hang start with straight arms, shoulders pulled slightly down away from the ears.",
+        "Load with a dip belt and plates once the rep target is met on all sets; use the assisted variants below bodyweight."
+      ],
+      "cues": [
+        "Drive the elbows down toward the hips.",
+        "Keep the chest up and slightly toward the bar.",
+        "Finish with the chin over the bar and the upper back tight.",
+        "Lower under control all the way to straight arms.",
+        "Squeeze the biceps at the top without curling the wrists."
+      ],
+      "mistakes": [
+        "Stopping short of straight arms at the bottom.",
+        "Swinging the hips or kicking to start the rep.",
+        "Curling the wrists and pulling with the forearms at the top.",
+        "Head jutting forward to get the chin over instead of pulling the body higher.",
+        "Shrugging up at the top rather than pulling the shoulder blades down."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the biceps tend to fatigue before the lats on this grip, so stop the set when the elbows stop rising rather than grinding with the shoulders.",
+        "The supinated grip puts the elbow flexors at full stretch at the bottom: lower under control, never drop into the hang.",
+        "Check the dip belt and plates before loaded sets; unload before dismounting."
+      ],
+      "substitution_rationale": {
+        "pull_up": "same pattern, overhand grip, less biceps, more upper back and rear delts",
+        "lat_pulldown": "same pattern with adjustable load; a supinated handle keeps the grip",
+        "assisted_pull_up": "same pattern with part of bodyweight removed by the machine",
+        "band_assisted_pull_up": "same bar and grip, band assists at the bottom"
+      },
+      "sources": [
+        "ExRx.net Chin-up",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "assisted_pull_up": {
+      "description": "Pull-up on a counterweight machine: the stack pushes up under the knees or feet and removes part of your bodyweight, so the same lat, upper-back and biceps pattern is trained with an adjustable load. It is the entry point to vertical pulling for anyone below one full pull-up and a clean way to progress toward it. A good rep uses the full range, straight arms at the bottom and chin over the handles at the top, without bouncing off the knee pad.",
+      "setup": [
+        "Set the assistance: more weight on the stack means more help; reduce it over time (the increment on this machine runs downward).",
+        "Kneel or stand on the platform as the machine intends, both knees or both feet loaded evenly.",
+        "Grip the overhand handles a little wider than shoulder width; arms straight before the first rep."
+      ],
+      "cues": [
+        "Pull the elbows down and back; chest toward the handles.",
+        "Chin over the handles at the top, shoulder blades pulled down.",
+        "Lower under control until the arms are straight.",
+        "Keep the hips still; do not push off the pad to start the rep."
+      ],
+      "mistakes": [
+        "Bouncing off the knee pad at the bottom to get momentum.",
+        "Cutting the range short at the bottom because the assistance is set too low.",
+        "Shrugging the shoulders to the ears at the top.",
+        "Keeping the assistance unchanged for weeks; the help has to go down for progress."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): when the elbows stall or the range shortens the set is over; add assistance rather than grinding partial reps.",
+        "Step on and off the platform only when the pad has settled at its rest position, and keep fingers away from the stack.",
+        "Machine path with bodyweight partly supported and nothing over you: an occasional last set to failure to check RIR is fine."
+      ],
+      "substitution_rationale": {
+        "lat_pulldown": "same pattern with load on a stack instead of assistance",
+        "band_assisted_pull_up": "same assisted idea on a plain bar with a band",
+        "pull_up": "same pattern at full bodyweight once assistance reaches zero"
+      },
+      "sources": [
+        "ExRx.net Assisted Pull-up (machine)",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "band_assisted_pull_up": {
+      "description": "Pull-up with a loop band anchored to the bar and under one knee or foot; the band gives the most help at the bottom, where the pull-up is hardest, and almost none at the top. It keeps the real bar and grip in the plan while you build toward unassisted reps, and it travels in a bag. A good rep is a full hang to chin over the bar with no swing and the band under tension the whole way.",
+      "setup": [
+        "Loop the band over the bar, pull one end through the other, and place a knee or foot in it; a thicker band gives more help, a thinner band makes it harder.",
+        "Overhand grip a bit wider than shoulder width; get into position with the band already under tension.",
+        "Straight arms at the bottom before the first rep."
+      ],
+      "cues": [
+        "Elbows down and back, chest toward the bar.",
+        "Chin over the bar, shoulder blades pulled down at the top.",
+        "Lower under control against the band to straight arms.",
+        "Keep the free leg still; no kicking."
+      ],
+      "mistakes": [
+        "Letting the band spring the body up from the bottom instead of pulling through it.",
+        "Half reps at the top once the band stops helping.",
+        "Swinging the free leg to create momentum.",
+        "Using the same thick band for months without stepping down."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the band hides fatigue at the bottom, so end the set when you can no longer reach the top instead of accumulating short reps.",
+        "Hold the band with one hand while placing the foot or knee; a band slipping off the foot under tension can strike the face or shins.",
+        "Inspect the band for nicks before each session and never anchor it on a sharp edge."
+      ],
+      "substitution_rationale": {
+        "assisted_pull_up": "same assisted pull-up on a machine with exact assistance steps",
+        "lat_pulldown": "same pattern with a stack instead of a band",
+        "pull_up": "same movement without assistance once a thin band is easy"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implement training)"
+      ]
+    },
+    "lat_pulldown": {
+      "description": "Cable vertical pull with a wide or medium overhand grip; the lats are the target with the upper back, biceps and rear delts assisting. It is the loadable, spotter-free vertical pull for every level and the usual first step before pull-ups. A good rep pulls the bar to the upper chest with the torso only slightly reclined and returns to fully stretched arms without the stack slamming.",
+      "setup": [
+        "Set the thigh pad so the knees are locked under it and the feet are flat.",
+        "Grip the bar a little wider than shoulder width, overhand; sit with the arms fully extended before the first rep.",
+        "Lean back slightly from the hips and lift the chest; keep that angle for the whole set.",
+        "Without a pulldown station, a single cable set high with a kneeling or half-kneeling stance works the same way."
+      ],
+      "cues": [
+        "Pull the elbows down toward the back pockets.",
+        "Bring the bar to the upper chest, not behind the neck.",
+        "Squeeze the shoulder blades down at the bottom.",
+        "Let the arms extend fully and the shoulders stretch up at the top, under control.",
+        "Keep the torso angle fixed; the bar moves, the body does not."
+      ],
+      "mistakes": [
+        "Leaning far back and rowing the bar to the stomach.",
+        "Pulling behind the neck.",
+        "Using momentum from the hips and letting the stack slam on the return.",
+        "Curling the wrists and pulling with the hands rather than the elbows.",
+        "Stopping short of full arm extension at the top."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): when the torso starts rocking to move the stack the lats are done; stop the set or reduce the load.",
+        "Set the thigh pad so the load cannot lift you off the seat.",
+        "Fixed cable path with no bar over the body: taking the last set close to failure is safe."
+      ],
+      "substitution_rationale": {
+        "pull_up": "same pattern at bodyweight, no machine needed",
+        "assisted_pull_up": "same pattern with machine assistance for those below one pull-up",
+        "band_lat_pulldown": "same pattern with a band when no cable is available",
+        "straight_arm_pulldown": "same lat action with straight arms when the biceps or grip are the limit"
+      },
+      "sources": [
+        "ExRx.net Cable Pulldown",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "band_lat_pulldown": {
+      "description": "Vertical pull with a resistance band anchored overhead; the band loads the lats, upper back and biceps in the same path as a cable pulldown, with tension rising toward the bottom. It keeps a vertical pull in travel and home sessions when there is nothing to hang from. A good rep goes from fully stretched arms to elbows tucked at the ribs, with a deliberate slow return.",
+      "setup": [
+        "Anchor the band overhead: a door anchor at the top of the door, or the top of a rack or pull-up bar.",
+        "Kneel, half-kneel or sit facing the anchor so the arms are fully extended overhead with the band already under light tension.",
+        "Grip the band or its handles overhand about shoulder width; sit tall with the chest up.",
+        "Use a band level that reaches the 12-20 rep range with control; step up a level when the top of the range is easy."
+      ],
+      "cues": [
+        "Pull the elbows down and back toward the hips.",
+        "Hands finish near the upper chest, shoulder blades pulled down.",
+        "Return slowly to full stretch; the band wants to pull you back, resist it.",
+        "Keep the torso still; no rocking."
+      ],
+      "mistakes": [
+        "Kneeling too close to the anchor so the band goes slack at the top.",
+        "Letting the band snap back instead of controlling the return.",
+        "Rounding the back and pulling the head forward.",
+        "Using a band so light that even the top of the range feels easy."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag) whose tension drops off at the stretch: count only reps that reach the full bottom position, and stop when the elbows no longer get there.",
+        "Check the anchor and the door before loading; an anchor pulling free under tension sends the band at your face.",
+        "Inspect bands for nicks and do not overstretch them."
+      ],
+      "substitution_rationale": {
+        "lat_pulldown": "same pattern on a cable with exact load steps",
+        "band_assisted_pull_up": "same band and bar, moves the load to bodyweight pulling",
+        "straight_arm_pulldown": "same lat action with straight arms on a cable"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implement training)"
+      ],
+      "review_notes": "Carries the compound flag but the isolation profile (12-20 override); the other pulldown entries list rear_delts 0.25 and this one does not. Both may be intentional; flagged for the integration pass, numbers unchanged."
+    },
+    "straight_arm_pulldown": {
+      "description": "Cable shoulder extension with nearly straight arms: the lats are the target and the biceps are out of the picture, so it isolates the lat work that pull-ups and rows often hand to the arms. It adds lat volume without grip or biceps fatigue and doubles as a light activation drill before pulling. A good rep sweeps the bar from overhead to the thighs in an arc, elbow angle constant and torso fixed.",
+      "setup": [
+        "High pulley with a straight bar or rope; stand one to two steps back so the arms are stretched overhead at the start.",
+        "Hinge slightly at the hips, chest up, soft knees, elbows unlocked but fixed for the set.",
+        "Overhand grip about shoulder width."
+      ],
+      "cues": [
+        "Push the hands down in an arc to the thighs; the elbows stay nearly straight.",
+        "Feel the lats pull the upper arms toward the hips.",
+        "Return slowly until the arms are overhead and the lats are stretched.",
+        "Keep the elbow angle constant; this is not a pushdown."
+      ],
+      "mistakes": [
+        "Bending and straightening the elbows so it turns into a triceps pushdown.",
+        "Rounding the back and bowing the torso to move the stack.",
+        "Cutting the top of the range short and losing the stretch.",
+        "Loading it so heavy that the shoulders roll forward at the bottom."
+      ],
+      "safety": [
+        "Isolation move with no flags and nothing over the body: an occasional last set to failure to recalibrate RIR is acceptable.",
+        "Keep the elbows soft, not hyperextended, in the stretched top position."
+      ],
+      "substitution_rationale": {
+        "lat_pulldown": "same lat action with elbow flexion, heavier loads",
+        "band_lat_pulldown": "same pulldown idea with a band when no cable is available",
+        "pull_up": "same lat action at bodyweight with bent arms"
+      },
+      "sources": [
+        "ExRx.net Cable Straight Arm Pulldown",
+        "Renaissance Periodization, Back Hypertrophy Training Tips"
+      ]
+    },
+    "barbell_row": {
+      "description": "Bent-over barbell row: the lats and upper back share the work, the biceps and rear delts assist and the lower back holds the hinge. It is the heaviest horizontal pull in the plan and the barbell counterpart of the bench press. A good rep starts with the torso near parallel to the floor, pulls the bar to the lower ribs without the torso rising, and lowers under control.",
+      "setup": [
+        "Bar on the floor or on low blocks; overhand grip just wider than shoulder width.",
+        "Hinge at the hips with a neutral spine until the torso is roughly parallel to the floor, knees slightly bent, bar hanging under the shoulders.",
+        "Brace the trunk before the first rep and keep the head in line with the spine.",
+        "Straps are fine when the grip limits the set before the back does."
+      ],
+      "cues": [
+        "Pull the elbows up and back; the bar touches the lower ribs.",
+        "Chest stays down; the bar comes to you, you do not come to the bar.",
+        "Squeeze the shoulder blades together at the top.",
+        "Lower under control to straight arms; the plates may touch the floor between reps.",
+        "Re-brace before every rep."
+      ],
+      "mistakes": [
+        "Torso rising toward upright during the set, turning the row into a shrug with hip extension.",
+        "Rounding the lower back at the bottom.",
+        "Jerking the bar with the hips and bouncing it off the floor.",
+        "Pulling to the chest with flared elbows and a short range.",
+        "Looking up and craning the neck."
+      ],
+      "safety": [
+        "Spinal loading flag: the whole load hangs from a braced, hinged spine; set a neutral back first, brace, and end the set when the back starts to round or the torso rises to finish reps.",
+        "Low-back-sensitive flag: the erectors hold the torso against gravity for every rep and often fatigue before the lats; with a logged back limitation use a chest-supported or machine row instead (R3 INJ-03).",
+        "Multi-joint lift (compound flag): one lighter ramp set before the first working set, and small load jumps, because form breaks before the back gives a warning.",
+        "Clip the plates; on blocks make sure they cannot roll."
+      ],
+      "substitution_rationale": {
+        "chest_supported_dumbbell_row": "same pattern with the chest on a bench, no spinal loading, no low-back hold",
+        "seated_cable_row": "same pattern seated, minimal spinal loading",
+        "machine_row": "same pattern on a chest pad with a fixed path, no spinal loading",
+        "t_bar_row": "same bent-over pattern on a fixed pivot, still spinal and low-back loaded",
+        "dumbbell_row": "same pattern one arm at a time with a hand on a bench for support"
+      },
+      "sources": [
+        "ExRx.net Barbell Bent-over Row",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "dumbbell_row": {
+      "description": "Single-arm dumbbell row with the free hand on a bench: the lats and upper back are the targets, the rear delts and biceps assist. It gives a heavy horizontal pull with the torso propped on the free arm, so the lower back is not the limit, and it exposes side-to-side differences. A good rep pulls the dumbbell from a full stretch to the hip with the elbow close to the body and the torso still.",
+      "setup": [
+        "Same-side knee and hand on a flat bench, or a split stance with the free hand on the bench; back flat, torso close to parallel.",
+        "Dumbbell hanging straight down under the shoulder, arm long, shoulder blade allowed to reach toward the floor.",
+        "Without a bench, brace the free forearm on the same-side thigh in a wide split stance and keep the load lighter.",
+        "Do both sides; start with the weaker side and match its reps on the stronger side."
+      ],
+      "cues": [
+        "Drive the elbow up and back toward the hip, not out to the side.",
+        "Let the shoulder blade move: reach at the bottom, pull it back at the top.",
+        "Keep the hips and shoulders square to the floor; no twisting to lift the weight.",
+        "Lower under control to a full stretch."
+      ],
+      "mistakes": [
+        "Rotating the torso and shrugging to lift a dumbbell that is too heavy.",
+        "Short range: no stretch at the bottom, elbow stopping level with the torso.",
+        "Pulling the dumbbell toward the shoulder with a flared elbow.",
+        "Rounding the back when the supporting hand is on the thigh instead of a bench."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the grip usually fails first at heavy loads; straps are fine, and the set is over when the torso starts twisting to finish reps.",
+        "The bench option supports the trunk; the no-bench option leaves the low back unsupported in a hinge, so keep the spine neutral and the load moderate there.",
+        "Set the dumbbell down under control; do not drop it beside the bench."
+      ],
+      "substitution_rationale": {
+        "chest_supported_dumbbell_row": "same pattern with the chest on a bench, both arms, no supporting-arm fatigue",
+        "seated_cable_row": "same pattern on a cable, both arms, seated",
+        "machine_row": "same pattern on a chest pad with a fixed path",
+        "inverted_row": "same pattern at bodyweight when no dumbbells are available"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Bent-over Row",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ],
+      "review_notes": "The second equipment option (dumbbells only, hand on the thigh) is an unsupported bent-over position; R4 section 5.5 lists unsupported rows under low_back_sensitive, yet the exercise carries no LB flag. Consider a per-option note or the flag. Flags left unchanged."
+    },
+    "chest_supported_dumbbell_row": {
+      "description": "Row with the chest on an incline bench: the lats and upper back are the targets with the biceps and rear delts assisting, and the bench carries the torso so nothing is asked of the lower back. It is the default horizontal pull for anyone with a logged back limitation and a clean way to row heavy without form drift. A good rep pulls both dumbbells to the hips from a full stretch with the chest glued to the pad.",
+      "setup": [
+        "Bench at a moderate incline; lie chest-down with the pad supporting the sternum and the feet planted on the floor or footrests.",
+        "Dumbbells hanging straight down under the shoulders with the arms fully extended.",
+        "Head neutral, looking at the floor just ahead of the bench."
+      ],
+      "cues": [
+        "Pull the elbows back and up toward the hips.",
+        "Squeeze the shoulder blades together at the top and hold for a moment.",
+        "Lower under control until the shoulder blades reach toward the floor.",
+        "Keep the chest on the pad for the whole set."
+      ],
+      "mistakes": [
+        "Chest lifting off the pad to finish reps.",
+        "Shrugging the dumbbells toward the ears with flared elbows.",
+        "Short range at the bottom, no stretch.",
+        "Jerking both dumbbells up together with a bounce."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the pad removes the low-back limit, so the lats and biceps are the honest limit; the set ends when the elbows stop reaching the hip.",
+        "Getting on and off with heavy dumbbells is the risky part: pick them up from the floor after lying down and set them down before sitting up."
+      ],
+      "substitution_rationale": {
+        "machine_row": "same supported pattern on a machine with a stack",
+        "seated_cable_row": "same pattern on a cable, seated, torso self-supported",
+        "dumbbell_row": "same pattern one arm at a time with a hand on a bench"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "seated_cable_row": {
+      "description": "Seated horizontal pull on a low cable: the lats and upper back are the targets, with the biceps, rear delts and a share for the lower back, which holds the torso upright against the load. It is the loadable, spotter-free horizontal pull for every level and easy to progress in small steps. A good rep starts stretched with the shoulder blades forward, pulls the handle to the lower ribs with the torso nearly still, and returns under control.",
+      "setup": [
+        "Feet on the platform, knees slightly bent, torso upright or very slightly reclined.",
+        "Neutral-grip V-handle or a bar; grab it with the arms extended and the shoulder blades allowed forward.",
+        "Without a row station, use a low pulley on any cable with a bench or the floor as the seat."
+      ],
+      "cues": [
+        "Drive the elbows back past the torso; handle to the lower ribs.",
+        "Chest up, shoulder blades squeezed together at the end.",
+        "Let the shoulder blades glide forward on the return without collapsing the spine.",
+        "Keep the torso angle fixed; a little hip movement is fine, rocking is not."
+      ],
+      "mistakes": [
+        "Rocking the torso back and forth to move the stack.",
+        "Rounding the lower back to reach forward at the stretch.",
+        "Shrugging and pulling the handle to the chest with flared elbows.",
+        "Letting the stack slam by releasing the handle fast."
+      ],
+      "safety": [
+        "Low-back-sensitive flag: the torso is unsupported and the erectors hold it upright under load; the risky moment is reaching forward with a rounded lower back at the stretch, so keep the spine neutral there and stop when the back starts rocking to finish reps (R3 INJ-03: chest-supported or machine rows if the back is a limitation).",
+        "Multi-joint pull (compound flag): one lighter ramp set before the first working set; straps are fine if the grip limits the set.",
+        "Cable path only, nothing over the body: a last set close to failure is acceptable."
+      ],
+      "substitution_rationale": {
+        "machine_row": "same pattern with a chest pad, no low-back hold",
+        "chest_supported_dumbbell_row": "same pattern on a bench, no low-back hold",
+        "dumbbell_row": "same pattern one arm at a time with dumbbells",
+        "inverted_row": "same pattern at bodyweight when no cable is available"
+      },
+      "sources": [
+        "ExRx.net Cable Seated Row",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "machine_row": {
+      "description": "Chest-supported row on a selectorized or plate-loaded machine: the lats and upper back are the targets with the biceps and rear delts assisting; the chest pad carries the torso. It is the most stable horizontal pull in the plan and the recommended swap for bent-over rows when the back is a limitation. A good rep pulls the handles to the sides of the ribs from a full stretch with the chest on the pad and a controlled return.",
+      "setup": [
+        "Set the seat so the handles line up with the lower chest and the pad supports the sternum, not the throat.",
+        "Choose the grip: neutral handles bias the lats, wide overhand handles bias the upper back.",
+        "Arms fully extended and shoulder blades forward at the start."
+      ],
+      "cues": [
+        "Elbows back and down; handles to the sides of the ribs.",
+        "Squeeze the shoulder blades together, then let them glide forward on the return.",
+        "Chest stays on the pad.",
+        "Control the return; no slamming of the stack or plates."
+      ],
+      "mistakes": [
+        "Chest coming off the pad to finish reps.",
+        "Seat too low so the handles pull toward the shoulders with flared elbows.",
+        "Short range, especially at the stretch.",
+        "Yanking the handles with the whole body."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the pad removes the low-back limit, so the arms and lats are the honest limit; when the elbows stop reaching full retraction the set is over.",
+        "Fixed path and full support: a suitable exercise for an occasional last set to failure to recalibrate RIR.",
+        "On a plate-loaded arm check that both sides are loaded evenly and the plates are seated."
+      ],
+      "substitution_rationale": {
+        "seated_cable_row": "same pattern on a cable, torso self-supported",
+        "chest_supported_dumbbell_row": "same supported pattern with dumbbells on a bench",
+        "t_bar_row": "same horizontal pull on a barbell pivot, bent-over, more back demand"
+      },
+      "sources": [
+        "ExRx.net Lever Seated Row",
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "t_bar_row": {
+      "description": "Bent-over row on a pivoting bar: the lats and upper back share the work, the biceps and rear delts assist and the lower back holds the hinge. The pivot fixes the bar path, which allows heavier loads and a neutral grip that many find easier on the shoulders than a straight bar. A good rep keeps the torso at a fixed forward angle and pulls the handle to the chest or lower ribs with the shoulder blades finishing together.",
+      "setup": [
+        "Straddle the bar on a T-bar station or a landmine with a handle attachment; feet about shoulder width, knees soft.",
+        "Hinge until the torso is well forward, back neutral, and take the handle with both hands.",
+        "Lift the handle off its rest with straight arms, brace, and fix the torso angle before the first rep.",
+        "Load the sleeve end only; smaller plates allow a deeper stretch."
+      ],
+      "cues": [
+        "Pull the elbows back; handle to the chest or lower ribs depending on the grip.",
+        "Squeeze the shoulder blades together at the top.",
+        "Torso angle stays fixed; only the arms and shoulder blades move.",
+        "Lower under control to a full stretch without letting the plates touch the floor."
+      ],
+      "mistakes": [
+        "Torso rising with each rep to finish with the hips.",
+        "Rounding the lower back at the bottom.",
+        "Bouncing the plates off the floor.",
+        "Large plates blocking the range so the stretch is lost."
+      ],
+      "safety": [
+        "Spinal loading flag: the load pulls a braced, hinged spine downward on every rep; set a neutral back before the first rep, brace, and stop when the back rounds or the hips take over.",
+        "Low-back-sensitive flag: the erectors hold the torso for the whole set; with a logged back limitation take the machine or chest-supported row instead (R3 INJ-03).",
+        "Multi-joint lift (compound flag): one lighter ramp set first; return the bar to its rest under control rather than dropping it.",
+        "Make sure the pivot end is anchored and the plates are clipped; a loose end can kick up."
+      ],
+      "substitution_rationale": {
+        "machine_row": "same horizontal pull with a chest pad, no spinal or low-back loading",
+        "barbell_row": "same bent-over pattern with a free bar",
+        "seated_cable_row": "same pattern seated, minimal spinal loading",
+        "landmine_row": "same pivot, one arm at a time"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ],
+      "review_notes": "Increment 5.0 / 2.5 follows the plate-loaded-machine row of R4 section 5.4, but both listed options (T-bar station, landmine) load a single sleeve, so single-plate steps of 2.5 / 1.25 as on landmine_row are physically available. Consider aligning. Numbers unchanged."
+    },
+    "high_row_machine": {
+      "description": "Machine row pulled from above and in front toward the upper chest: the upper back is the target with the lats, rear delts and biceps assisting. It sits between a pulldown and a row, which makes it useful when the gym has the machine and the pull-up bar is busy or missing. A good rep pulls the handles down and back to the upper chest with the chest on the pad and the elbows finishing behind the torso.",
+      "setup": [
+        "Seat height so the handles start above and in front of the shoulders and the chest pad supports the sternum.",
+        "Neutral or overhand handles as available; arms fully extended at the start.",
+        "Feet flat, chest on the pad."
+      ],
+      "cues": [
+        "Pull the elbows down and back toward the hips.",
+        "Handles finish at the upper chest; shoulder blades pulled down and together.",
+        "Keep the chest on the pad and the head neutral.",
+        "Return slowly to a full stretch at the top."
+      ],
+      "mistakes": [
+        "Leaning back off the pad to pull the handles down.",
+        "Shrugging the shoulders up at the start.",
+        "Short range that never reaches the stretch.",
+        "Letting the weight yank the arms up on the return."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the pad removes the trunk limit, so stop when the handles no longer reach the chest instead of shortening the range.",
+        "Fixed machine path, nothing over the body: acceptable for an occasional last set to failure to check RIR.",
+        "Set the seat before loading; adjusting under load pinches fingers."
+      ],
+      "substitution_rationale": {
+        "machine_row": "same supported machine row at a horizontal angle",
+        "lat_pulldown": "same downward pull direction on a cable",
+        "face_pull": "same upper-back and rear-delt emphasis with a rope, lighter",
+        "seated_cable_row": "same horizontal pull on a cable"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "inverted_row": {
+      "description": "Bodyweight horizontal pull under a bar or suspension handles: the upper back is the target with the lats, biceps, rear delts and the abs, which hold the plank, assisting. It is the horizontal pull for travel and home sessions and the row that teaches a rigid torso. A good rep starts from straight arms with the body in one line, pulls the chest to the bar and lowers under control.",
+      "setup": [
+        "Bar in a rack or smith machine at about hip height, or suspension handles; overhand grip a little wider than shoulder width.",
+        "Hang under the bar with the heels on the floor, body straight from ears to ankles, glutes and abs braced.",
+        "Progress by lowering the bar or elevating the feet; regress by raising the bar or bending the knees."
+      ],
+      "cues": [
+        "Pull the chest to the bar; the elbows travel back, not out.",
+        "Squeeze the shoulder blades together at the top.",
+        "Keep the hips in line with the shoulders and knees for the whole rep.",
+        "Lower under control to straight arms; the shoulder blades glide forward at the bottom."
+      ],
+      "mistakes": [
+        "Hips sagging or piking as the set goes on.",
+        "Chin poking toward the bar instead of the chest reaching it.",
+        "Short range, especially at the top.",
+        "Shrugging the shoulders toward the ears."
+      ],
+      "safety": [
+        "Multi-joint pull (compound flag): the plank is part of the exercise; when the hips drop the set is over even if the arms could continue.",
+        "Check that the bar is seated in the hooks or safeties and cannot roll; on a smith machine lock the bar.",
+        "Nothing over the body and no fall height: safe for an occasional last set to failure."
+      ],
+      "substitution_rationale": {
+        "seated_cable_row": "same pattern on a cable with adjustable load",
+        "chest_supported_dumbbell_row": "same pattern with dumbbells and full trunk support",
+        "dumbbell_row": "same pattern with dumbbells one arm at a time"
+      },
+      "sources": [
+        "ExRx.net Inverted Row",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implement training)",
+        "Renaissance Periodization, Back Hypertrophy Training Tips"
+      ]
+    },
+    "landmine_row": {
+      "description": "Single-arm row on a landmine bar, usually in a staggered stance with the free forearm on the front thigh (Meadows row): the lats and upper back are the targets, the biceps and rear delts assist and the lower back holds the hinge. The pivot lets the elbow travel out and back, which hits the upper back hard, and the single arm exposes side-to-side differences. A good rep pulls the sleeve end to the hip from a full stretch with the torso still.",
+      "setup": [
+        "Barbell in a landmine sleeve or anchored in a corner; plates on the free end, ideally smaller plates so the bar can travel further.",
+        "Stand beside the bar in a staggered stance, hinge with a neutral back, and grip the bar behind the plates with the outside hand; free forearm on the front thigh.",
+        "Do both sides; start with the weaker side and match reps."
+      ],
+      "cues": [
+        "Pull the elbow up and out, then back toward the hip.",
+        "Keep the hips square; the torso does not rotate to lift the bar.",
+        "Squeeze the shoulder blade back at the top.",
+        "Lower under control to a full stretch; the bar does not touch the floor between reps."
+      ],
+      "mistakes": [
+        "Twisting the torso and standing up to move the weight.",
+        "Rounding the lower back at the bottom of the hinge.",
+        "Pulling the bar toward the shoulder with a shrug.",
+        "Cutting the stretch short because the plates hit the floor."
+      ],
+      "safety": [
+        "Low-back-sensitive flag: the trunk is unsupported in a hinge with an offset load on one side; brace, keep the spine neutral, use the thigh support, and stop when the back rounds or the torso rotates to finish reps.",
+        "Multi-joint pull (compound flag): straps are fine on heavy sets; the set ends at technical failure, not grip failure.",
+        "Anchor the bar end so it cannot skid; clip the plates on the loaded end."
+      ],
+      "substitution_rationale": {
+        "dumbbell_row": "same single-arm row with a dumbbell and a bench for support",
+        "t_bar_row": "same landmine pivot with both arms",
+        "chest_supported_dumbbell_row": "same pattern with the chest supported, no low-back loading"
+      },
+      "sources": [
+        "Renaissance Periodization, Back Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implement training)"
+      ]
+    },
+    "barbell_curl": {
+      "description": "Standing elbow flexion with a straight or EZ bar: the biceps are the target with the forearms assisting. It is the heaviest curl variation and the default biceps isolation when pulling volume alone is not enough. A good rep starts with straight arms, curls the bar in an arc to the front of the shoulders with the elbows near the ribs, and lowers under control.",
+      "setup": [
+        "Shoulder-width underhand grip on a straight bar; on an EZ bar use the angled grips to ease the wrists.",
+        "Stand tall, feet under the hips, elbows at the sides, bar at the thighs with straight arms.",
+        "Fixed-weight bars work the same; pick the step that keeps the reps in range."
+      ],
+      "cues": [
+        "Curl the bar in an arc; the elbows stay near the ribs and drift only slightly forward at the top.",
+        "Squeeze the biceps at the top, then lower under control to straight arms.",
+        "Wrists stay straight; the knuckles do not curl toward you.",
+        "Keep the torso still; no swing from the hips."
+      ],
+      "mistakes": [
+        "Swinging the torso and using the hips to start the bar moving.",
+        "Elbows drifting far forward so the shoulders lift the bar.",
+        "Stopping short of straight arms at the bottom.",
+        "Bending the wrists to shorten the lever.",
+        "Shrugging the shoulders at the top."
+      ],
+      "safety": [
+        "Isolation move with no flags and nothing that can trap you: an occasional last set to failure to recalibrate RIR is acceptable.",
+        "A straight bar locks the forearms in full supination; if the wrists or elbows complain, the EZ bar option or a neutral-grip curl keeps the load without that position (R3 INJ-04).",
+        "Clip the plates; on fixed-weight bars check the ends are tight."
+      ],
+      "substitution_rationale": {
+        "dumbbell_curl": "same movement with free wrist rotation, smaller steps",
+        "cable_curl": "same movement with constant tension through the range",
+        "preacher_curl": "same movement with the upper arm fixed, no cheating",
+        "hammer_curl": "same movement with a neutral grip, more forearm"
+      },
+      "sources": [
+        "ExRx.net Barbell Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)",
+        "Stronger by Science, How To Perfect Your Ability To Predict Repetitions In Reserve (RIR guide)"
+      ]
+    },
+    "dumbbell_curl": {
+      "description": "Standing or seated curl with dumbbells: the biceps are the target, the forearms assist. It allows a natural wrist rotation and independent arms, so it is the everyday curl for home and hotel gyms and the fix for a weaker side. A good rep curls the dumbbell from a straight arm to shoulder height with the palm turning up and the elbow staying at the side.",
+      "setup": [
+        "Stand tall or sit on a bench with the dumbbells hanging at the sides, arms straight.",
+        "Palms forward, or start neutral and rotate to palm-up as the dumbbell rises.",
+        "Curl both arms together or alternate; keep the same choice for the whole set."
+      ],
+      "cues": [
+        "Curl in an arc, elbow near the ribs, palm turning up as the weight rises.",
+        "Squeeze at the top, then lower slowly to a straight arm.",
+        "Keep the shoulder down and back; the upper arm does not swing forward.",
+        "Wrist straight throughout."
+      ],
+      "mistakes": [
+        "Leaning back and swinging the hips to start the rep.",
+        "Elbow drifting forward so the front delt does the lifting.",
+        "Partial reps that never reach straight arms.",
+        "Curling the wrist at the top."
+      ],
+      "safety": [
+        "Isolation move with no flags: safe to take the last set to failure occasionally to check RIR.",
+        "Set the dumbbells down under control after the set; do not drop them beside the feet."
+      ],
+      "substitution_rationale": {
+        "barbell_curl": "same movement with both hands on one bar, heavier",
+        "cable_curl": "same movement with constant cable tension",
+        "hammer_curl": "same movement with a neutral grip, more forearm",
+        "incline_dumbbell_curl": "same movement with the arm behind the body for a longer stretch"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "incline_dumbbell_curl": {
+      "description": "Curl seated on an incline bench with the arms hanging behind the torso: the biceps are the target, worked at a longer length than in a standing curl. It is chosen for the stretched-position stimulus and because the bench removes torso swing. A good rep curls from a fully straight, hanging arm to shoulder height without the upper arm swinging forward.",
+      "setup": [
+        "Bench at a moderate incline; sit back with the head and upper back on the pad and the feet flat.",
+        "Let the arms hang straight down and slightly behind the torso with the palms forward.",
+        "Choose a lighter dumbbell than for a standing curl; the stretched position is weaker."
+      ],
+      "cues": [
+        "Curl in an arc while the upper arm keeps pointing at the floor.",
+        "Turn the palm up as the dumbbell rises; squeeze at the top.",
+        "Lower slowly to a fully straight, hanging arm.",
+        "Shoulders stay back on the pad."
+      ],
+      "mistakes": [
+        "Upper arm swinging forward to shorten the lever.",
+        "Shoulders rolling forward off the pad.",
+        "Bouncing out of the bottom stretch.",
+        "Cutting the bottom of the range short."
+      ],
+      "safety": [
+        "Isolation move with no flags: safe to take the last set close to failure occasionally.",
+        "The bottom position loads the biceps at full stretch; lower under control and do not bounce there, especially on the first set."
+      ],
+      "substitution_rationale": {
+        "dumbbell_curl": "same movement standing, no bench needed",
+        "preacher_curl": "same fixed-arm curl loading the shortened rather than the stretched position",
+        "cable_curl": "same movement with cable tension, no bench"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Incline Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips"
+      ]
+    },
+    "hammer_curl": {
+      "description": "Curl with a neutral, thumbs-up grip using dumbbells or a cable rope: the biceps are the target with a larger share for the forearms than a palm-up curl. It adds arm and forearm volume and is the curl of choice when a palm-up grip bothers the wrists or elbows. A good rep curls from a straight arm to shoulder height with the thumbs up the whole way and the elbow at the side.",
+      "setup": [
+        "Dumbbells at the sides with the palms facing the thighs, or a rope on a low pulley held with a neutral grip.",
+        "Stand tall, elbows at the sides, arms straight.",
+        "Both arms together or alternating; keep it consistent within a set."
+      ],
+      "cues": [
+        "Curl with the thumbs up; the palm never turns.",
+        "Elbow stays at the ribs; only the forearm moves.",
+        "Squeeze at the top and lower slowly to a straight arm.",
+        "Keep the wrist straight in line with the forearm."
+      ],
+      "mistakes": [
+        "Swinging the torso to start heavy dumbbells.",
+        "Elbows drifting forward and up.",
+        "Half reps at the bottom.",
+        "Wrist bending toward the body at the top."
+      ],
+      "safety": [
+        "Isolation move with no flags: safe for an occasional last set to failure to recalibrate RIR.",
+        "The neutral grip is the variation that usually stays comfortable when a supinated curl irritates the elbow or wrist (R3 INJ-04); if it does not, reduce the load rather than pushing through."
+      ],
+      "substitution_rationale": {
+        "dumbbell_curl": "same movement with a palm-up grip, more biceps, less forearm",
+        "reverse_curl": "same movement with a palm-down grip, more forearm",
+        "cable_curl": "same movement on a cable with constant tension"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Hammer Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips",
+        "Renaissance Periodization, Forearm Hypertrophy Training Tips"
+      ]
+    },
+    "preacher_curl": {
+      "description": "Curl with the upper arms fixed on an angled pad, using an EZ bar, dumbbells or a preacher machine: the biceps are the target with the shoulder taken out of the movement. It is chosen when curls keep turning into swings, and it loads the bottom half of the range hard. A good rep lowers to nearly straight arms under control and curls until the forearm is just short of vertical.",
+      "setup": [
+        "Set the seat so the armpits sit at the top edge of the pad and the upper arms lie flat on it.",
+        "Grip the EZ bar at the angled positions, palms up; with dumbbells one arm at a time; on the machine follow its handle path.",
+        "Chest against the pad, shoulders down, feet flat."
+      ],
+      "cues": [
+        "Lower slowly until the elbows are almost straight.",
+        "Curl until the forearm is just short of vertical, then squeeze.",
+        "Keep the upper arms and armpits glued to the pad.",
+        "Wrists straight; do not let the bar roll into the fingers."
+      ],
+      "mistakes": [
+        "Lifting the elbows or armpits off the pad at the top.",
+        "Dropping fast into the bottom and bouncing.",
+        "Curling to a fully vertical forearm where the tension disappears.",
+        "Seat so high that the shoulders round over the pad."
+      ],
+      "safety": [
+        "Isolation move with no flags: the pad prevents cheating, so failure is honest and an occasional last set to failure is acceptable.",
+        "The straight-arm bottom position loads the biceps and the elbow at full stretch; lower under control, never drop into it, and rack the bar on the rest between sets."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_curl": "same fixed-arm idea loading the stretched position instead",
+        "cable_curl": "same movement with constant cable tension, no pad",
+        "barbell_curl": "same movement standing, heavier"
+      },
+      "sources": [
+        "ExRx.net Barbell Preacher Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique for free weight and machine training)"
+      ]
+    },
+    "cable_curl": {
+      "description": "Curl on a low pulley with a bar, rope or single handle: the biceps are the target, the forearms assist, and the cable keeps tension on the muscle at the top and bottom where free weights go slack. It is used for smooth loading in small steps and as a finisher when the arms are already tired. A good rep curls from a straight arm to the shoulder with the elbows pinned at the sides and a slow return.",
+      "setup": [
+        "Attach a straight or EZ bar, or a rope, to a low pulley; stand one step back so the cable pulls slightly forward.",
+        "Feet under the hips, knees soft, elbows at the ribs, arms straight.",
+        "Use a single handle one arm at a time on a single-column cable."
+      ],
+      "cues": [
+        "Curl in an arc against the cable; the elbows stay at the sides.",
+        "Squeeze at the top; the cable keeps pulling, so keep the biceps working.",
+        "Lower slowly to full extension without letting the stack touch down.",
+        "Torso still; no leaning back."
+      ],
+      "mistakes": [
+        "Leaning back and pulling with the shoulders.",
+        "Elbows drifting forward and up at the top.",
+        "Letting the stack slam at the bottom.",
+        "Standing too close so the cable goes slack at the bottom."
+      ],
+      "safety": [
+        "Isolation move with no flags and a fixed cable path: safe for an occasional last set to failure to check RIR.",
+        "Set the pulley to its lowest position and check the attachment clip before the first rep."
+      ],
+      "substitution_rationale": {
+        "dumbbell_curl": "same movement with dumbbells, free path",
+        "barbell_curl": "same movement with a bar, heavier",
+        "preacher_curl": "same movement with the upper arm fixed"
+      },
+      "sources": [
+        "ExRx.net Cable Curl",
+        "Renaissance Periodization, Biceps Hypertrophy Training Tips"
+      ]
+    },
+    "reverse_curl": {
+      "description": "Curl with an overhand grip on an EZ bar, straight bar, dumbbells or cable: the forearms (wrist extensors and brachioradialis) are the target with the biceps assisting. It is in the plan for forearm size and grip strength that carries over to pulls and carries. A good rep curls from straight arms to shoulder height with the knuckles up and the wrists straight the whole way.",
+      "setup": [
+        "Overhand grip at about shoulder width on an EZ or straight bar; the angled EZ grips are easier on the wrists.",
+        "Stand tall with the bar at the thighs, arms straight, elbows at the sides.",
+        "Expect to use much less load than for a normal curl."
+      ],
+      "cues": [
+        "Curl in an arc with the knuckles facing up and the wrists locked straight.",
+        "Elbows stay at the ribs.",
+        "Squeeze at the top, lower slowly to straight arms.",
+        "Torso still; the weight is light for a reason."
+      ],
+      "mistakes": [
+        "Wrists flexing so the bar rolls into the palm.",
+        "Swinging the torso because the load is too heavy.",
+        "Elbows flaring out or drifting forward.",
+        "Short reps at the bottom."
+      ],
+      "safety": [
+        "Isolation move with no flags: safe to take the last set to failure occasionally.",
+        "The overhand grip loads the wrist extensors at full stretch at the bottom; keep the wrists straight and progress slowly, because extra load shows up as forearm and elbow soreness before anything else (R3 INJ-04: slow eccentrics, thicker or neutral grips if irritated)."
+      ],
+      "substitution_rationale": {
+        "hammer_curl": "same curl with a neutral grip, more biceps, easier on the wrist",
+        "dead_hang": "same forearm and grip demand as a static hold",
+        "farmers_carry": "same grip and forearm demand while walking with load"
+      },
+      "sources": [
+        "ExRx.net Barbell Reverse Curl",
+        "Renaissance Periodization, Forearm Hypertrophy Training Tips"
+      ]
+    },
+    "dead_hang": {
+      "description": "Passive hang from a pull-up bar: the forearms and grip are the target while the lats and shoulders are stretched under bodyweight. It builds grip endurance for pull-ups and carries and doubles as an overhead mobility drill for the lats and thoracic spine. A good hold is straight arms, a relaxed neck, shoulders either relaxed or slightly packed by choice, and a still body for the set time.",
+      "setup": [
+        "Overhand grip at about shoulder width on a bar you can reach with a small step; thumbs around the bar.",
+        "Step off, let the arms straighten and let the feet hang or cross the ankles.",
+        "Decide on the version: relaxed shoulders (stretch bias) or shoulder blades pulled slightly down (active grip bias)."
+      ],
+      "cues": [
+        "Squeeze the bar hard; the grip, not the wrists, holds you.",
+        "Breathe slowly; do not hold the breath for the whole hang.",
+        "Keep the body still; no swinging.",
+        "Come down with a step, not a drop, when the time is up."
+      ],
+      "mistakes": [
+        "Swinging or twisting to distract from the grip burn.",
+        "Holding the breath and straining.",
+        "Dropping off the bar straight onto the heels.",
+        "Using straps, which removes the point of the exercise."
+      ],
+      "safety": [
+        "No flags: a static hold with nothing that can trap you; the set ends when the grip opens, so let go deliberately with the feet ready to land.",
+        "A passive hang takes the shoulder to its end overhead range under load; if that position is a logged shoulder limitation use the active version with the shoulder blades pulled down, or a shorter time.",
+        "Use a bar height you can step off from; landing from a full drop with tired forearms is where wrists get hurt."
+      ],
+      "substitution_rationale": {
+        "farmers_carry": "same grip demand with a load in the hands while walking",
+        "reverse_curl": "same forearm muscles worked dynamically"
+      },
+      "sources": [
+        "Renaissance Periodization, Forearm Hypertrophy Training Tips",
+        "R3 section 4 MOB-07 drill library (thoracic spine row)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (exercise technique for alternative modes and nontraditional implement training)"
+      ],
+      "review_notes": "A passive hang is a full end-range overhead position under bodyweight; R4 section 5.5 lists overhead positions with poor mobility under shoulder_sensitive, yet dead_hang carries no SH flag. Consider adding it or an active-hang note. Flags unchanged."
+    },
+    "thoracic_rotation": {
+      "description": "Mobility drill for rotation of the upper back, done side-lying as the open book or on all fours as the quadruped reach: the arm sweeps open while the hips stay fixed, so the movement has to come from the thoracic spine rather than the low back or shoulders. It is in warm-ups before pulling, pressing and overhead work and in the chronic mobility slot for a rounded upper back. A good rep is slow, pain-free, reaches a little further each rep and finishes with the eyes following the hand.",
+      "setup": [
+        "Open book: lie on one side with the hips and knees bent to a right angle, knees stacked and pressed down, both arms straight in front at shoulder height.",
+        "Quadruped: on hands and knees, sit the hips slightly back toward the heels, one hand behind the head.",
+        "Do both sides; work the stiffer side first or give it an extra set."
+      ],
+      "cues": [
+        "Open the top arm in a wide arc toward the floor behind you, following the hand with the eyes.",
+        "Keep the knees pressed together and the hips still; the twist comes from the upper back.",
+        "Breathe out as you open, pause for a breath at the end, then close slowly.",
+        "Quadruped: rotate the elbow toward the ceiling, then thread it under the body."
+      ],
+      "mistakes": [
+        "Top knee lifting so the twist comes from the low back and hips.",
+        "Yanking the arm with momentum and forcing the range.",
+        "Holding the breath.",
+        "Chin tucking down instead of the head turning with the arm."
+      ],
+      "safety": [
+        "Drill with no flags: no load and no RIR; move slowly in a pain-free range and stop the rep where the range ends, never push through pinching or pain.",
+        "Pre-session it is dynamic, not a long static hold: a few controlled reps per side rather than a stretch held for a minute (R3 WU-04, MOB-01)."
+      ],
+      "substitution_rationale": {
+        "cat_cow": "same thoracic mobility in flexion and extension instead of rotation",
+        "shoulder_pass_through": "same warm-up slot, works the overhead shoulder position instead"
+      },
+      "sources": [
+        "R3 section 4 MOB-07 drill library (thoracic spine row)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 14 (warm-up and flexibility training)"
+      ]
+    }
+  },
+  "status": {
+    "pull_up": "draft",
+    "chin_up": "draft",
+    "assisted_pull_up": "draft",
+    "band_assisted_pull_up": "draft",
+    "lat_pulldown": "draft",
+    "band_lat_pulldown": "draft",
+    "straight_arm_pulldown": "draft",
+    "barbell_row": "draft",
+    "dumbbell_row": "draft",
+    "chest_supported_dumbbell_row": "draft",
+    "seated_cable_row": "draft",
+    "machine_row": "draft",
+    "t_bar_row": "draft",
+    "high_row_machine": "draft",
+    "inverted_row": "draft",
+    "landmine_row": "draft",
+    "barbell_curl": "draft",
+    "dumbbell_curl": "draft",
+    "incline_dumbbell_curl": "draft",
+    "hammer_curl": "draft",
+    "preacher_curl": "draft",
+    "cable_curl": "draft",
+    "reverse_curl": "draft",
+    "dead_hang": "draft",
+    "thoracic_rotation": "draft"
+  }
+}

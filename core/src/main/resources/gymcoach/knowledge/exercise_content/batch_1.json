@@ -1,0 +1,971 @@
+{
+  "schema_version": 1,
+  "batch": 1,
+  "entries": {
+    "barbell_bench_press": {
+      "description": "The heaviest horizontal press and the main chest builder in most plans; the triceps and front delts share the work. It sits early in push sessions because it takes the most load and the most focus. A good rep: bar lowered under control to the lower chest, a brief touch, then pressed back up and slightly toward the face until the elbows lock, with the shoulder blades pinned to the bench the whole time.",
+      "setup": [
+        "Safeties set just below chest height at the bottom of the rep, or a spotter standing at the head of the bench.",
+        "Lie with the eyes under the bar; feet flat, shoulder blades pulled down and together, slight arch in the upper back, glutes on the bench.",
+        "Grip so the forearms are vertical when the bar touches the chest; wrists stacked over the elbows, bar in the heel of the palm.",
+        "Unrack by pushing the bar out over the shoulders, not by lifting it off the hooks with bent arms."
+      ],
+      "cues": [
+        "Pull the bar down to the lower chest with the elbows at about 45° to the torso.",
+        "Touch, do not bounce; then drive the feet into the floor and press.",
+        "The bar travels from the chest back up over the shoulders, a slight diagonal, not straight up.",
+        "Squeeze the bar hard and keep the wrists straight through the whole rep.",
+        "Keep the upper back tight at lockout; the shoulder blades never shrug forward."
+      ],
+      "mistakes": [
+        "Elbows flared to 90° with a wide grip, the shoulder-sensitive position.",
+        "Bouncing the bar off the chest to start the press.",
+        "Glutes leaving the bench, turning the lift into a decline press.",
+        "Bar drifting toward the neck at the top, or the shoulders rolling forward at lockout.",
+        "Unracking with bent, unlocked elbows so the first rep starts out of position."
+      ],
+      "safety": [
+        "Bar-over-body lift: a failed rep leaves the bar on your chest or neck. Safeties just below chest height or a spotter are the mechanism behind the spotter/safeties flag; without either, stop every set at RIR 2 and never take the bar to failure.",
+        "Shoulder-sensitive: a wide grip with flared elbows loads the shoulder in its stretched, externally rotated position at the bottom. Keep the grip at forearms-vertical width, the elbows tucked to about 45°, and press within a pain-free arc.",
+        "Compound lift under the highest loads of the session: end the set when the bar path or the elbow position changes, not when the bar stops moving.",
+        "Use collars; a plate sliding on one side at the bottom tips the bar."
+      ],
+      "substitution_rationale": {
+        "dumbbell_bench_press": "same pattern, no bar over the face, freer shoulder path",
+        "smith_bench_press": "same pattern on a guided bar with catch hooks, no spotter needed",
+        "machine_chest_press": "same pattern, fixed path and no bar over the body, no spotter needed",
+        "push_up": "same pattern with body weight only; travel and no-equipment fallback"
+      },
+      "sources": [
+        "ExRx.net Barbell Bench Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "Stronger by Science, reps-in-reserve (fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 RIR-03, LOAD-03 (technique breakdown under fatigue)"
+      ]
+    },
+    "dumbbell_bench_press": {
+      "description": "Flat dumbbell press: the same horizontal push as the barbell bench with each arm working on its own and a shoulder path you choose yourself. It is often the first press for beginners and the default when there is no rack or spotter. A good rep: dumbbells lowered to chest level with the elbows about 45° from the torso, then pressed up and slightly inward until the arms are straight, without clanking the weights together.",
+      "setup": [
+        "Sit on the end of the bench with the dumbbells on the thighs, then kick them up one at a time as you lie back.",
+        "Feet flat, shoulder blades pulled down and together, slight arch in the upper back.",
+        "Start with the dumbbells over the shoulders, palms forward or slightly turned in, wrists straight."
+      ],
+      "cues": [
+        "Lower until the dumbbells are level with the chest, elbows about 45° to the torso.",
+        "Press up and slightly in, finishing over the shoulders.",
+        "Keep both dumbbells moving together; the weaker side sets the pace.",
+        "Keep the wrists stacked over the elbows at the bottom."
+      ],
+      "mistakes": [
+        "Elbows flared straight out with the dumbbells dropping below chest level, the stretched shoulder position.",
+        "Dumbbells drifting apart at the top or crashing together.",
+        "Feet lifting or hips wriggling to help the press.",
+        "Dumbbells finishing over the face instead of over the shoulders."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the free path lets the dumbbells sink well past chest depth, which loads the shoulder at the end of its range. Stop the descent when the upper arms are just below parallel and keep the elbows tucked.",
+        "Compound lift: when the reps slow and one arm lags, end the set; a lopsided last rep is where control is lost.",
+        "Failed rep: bring the dumbbells to the chest and sit up, or drop them out to the sides. Never lower them past the face."
+      ],
+      "substitution_rationale": {
+        "barbell_bench_press": "same pattern, heavier loading on a two-hand bar; needs safeties or a spotter",
+        "machine_chest_press": "same pattern, fixed path, easiest to load and unload",
+        "dumbbell_floor_press": "same pattern without a bench, shorter range that spares the shoulder",
+        "push_up": "same pattern with body weight only; no equipment"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Bench Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 RIR-03"
+      ]
+    },
+    "smith_bench_press": {
+      "description": "Bench press on a guided bar: the bar runs on a fixed vertical or slightly angled track and hooks back onto the rails at any height. That removes balance and the bar-over-face risk, so it suits beginners, tired sessions and gyms without a spotter. A good rep: bar to the lower chest, a short pause, then a straight press to lockout with the shoulder blades pinned.",
+      "setup": [
+        "Place the bench so the bar touches the lower chest, not the neck, at the bottom; on an angled track the bar should move toward the head as it rises.",
+        "Set the safety stops just below chest height.",
+        "Feet flat, shoulder blades pulled down and together, grip at forearms-vertical width.",
+        "Unhook by rotating the wrists; the guided bar weighs less than a free bar, so record the machine's bar weight in the gym settings."
+      ],
+      "cues": [
+        "Lower under control to the lower chest, elbows about 45° to the torso.",
+        "Press straight along the track and lock out fully.",
+        "Keep the upper back tight; the fixed path does not brace you.",
+        "Re-hook by rotating the wrists at lockout, not mid-rep."
+      ],
+      "mistakes": [
+        "Bench placed so the bar lands on the neck or the upper chest.",
+        "Elbows flared wide because the track feels safe.",
+        "Bouncing off the chest and letting the bar carry the shoulders forward.",
+        "Skipping the stops and relying on the hooks alone."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the fixed track forces one bar path, so a bench placed too far forward drives the bar into the neck line with the elbows flared. Position the bench so the bar meets the lower chest and keep the elbows tucked.",
+        "Compound lift: stop the set when the press slows to a grind; the hooks make a failed rep recoverable, not comfortable.",
+        "Set the safety stops even though the bar hooks; a missed hook at failure is the usual mishap."
+      ],
+      "substitution_rationale": {
+        "barbell_bench_press": "same pattern on a free bar; more stabiliser work, needs safeties or a spotter",
+        "machine_chest_press": "same pattern on a seated machine, quickest to set up",
+        "dumbbell_bench_press": "same pattern, free shoulder path, no bar over the face"
+      },
+      "sources": [
+        "ExRx.net Barbell Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "machine_chest_press": {
+      "description": "Seated chest press on a machine: the same push as the bench press with the path fixed by the machine and the load on a stack or plates. It is the easiest way to train the chest hard near failure without a spotter, and a good fit for drop sets and time-short sessions. A good rep: handles start level with the mid-chest, a full push to straight arms, then a slow return without letting the stack touch down.",
+      "setup": [
+        "Adjust the seat so the handles line up with the mid-chest and the elbows sit slightly below shoulder height.",
+        "Set the start position or range limiter so the handles do not pull the elbows behind the body at the start.",
+        "Shoulder blades against the pad, feet flat, chest up."
+      ],
+      "cues": [
+        "Push the handles away and slightly together; the chest does the work, not a shrug.",
+        "Lock out without letting the shoulders roll forward off the pad.",
+        "Return slowly until the elbows are level with the body, then push again.",
+        "Keep the neck long and the head on the pad."
+      ],
+      "mistakes": [
+        "Seat too low, so the handles push from the shoulders and the elbows flare.",
+        "Shoulders rolling forward at the end of the push.",
+        "Letting the stack slam down at the bottom.",
+        "Short, bouncy reps at the top only."
+      ],
+      "safety": [
+        "Compound lift on a fixed path: the machine catches the load, so this is where near-failure sets belong; still end the set when the shoulders start to lift off the pad.",
+        "Set the start position so the handles never drag the elbows behind the torso; that range is where a press machine strains the shoulder."
+      ],
+      "substitution_rationale": {
+        "dumbbell_bench_press": "same pattern with free weights, more stabiliser work",
+        "smith_bench_press": "same pattern on a guided bar with catch hooks",
+        "push_up": "same pattern with body weight only; no equipment"
+      },
+      "sources": [
+        "ExRx.net Lever Chest Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ]
+    },
+    "incline_barbell_bench_press": {
+      "description": "Bench press on a 30–45° incline, which shifts the work toward the upper (clavicular) chest and the front delts. It covers the incline-push slot of the week and is the main upper-chest builder when a barbell and a rack are available. A good rep: bar lowered to the upper chest just below the collarbones, then pressed straight up to lockout over the shoulders.",
+      "setup": [
+        "Bench at 30–45°; safeties just below the bottom position of the bar, or a spotter at the head.",
+        "Eyes under the bar, shoulder blades pulled down and together, feet flat and glutes on the seat.",
+        "Grip at forearms-vertical width at the bottom; wrists straight."
+      ],
+      "cues": [
+        "Lower the bar to the upper chest, elbows about 45° to the torso.",
+        "Press up and slightly back so the bar finishes over the shoulders.",
+        "Keep the ribcage up and the shoulder blades pinned throughout.",
+        "Touch lightly; no bounce."
+      ],
+      "mistakes": [
+        "Bench too steep, turning the lift into a shoulder press.",
+        "Bar touching too low on the chest, forcing the elbows to flare.",
+        "Hips sliding down the seat and the back arching off the bench.",
+        "Shoulders shrugging up to the ears at lockout."
+      ],
+      "safety": [
+        "Bar-over-body lift: a failed rep pins the bar on the upper chest or neck. Safeties just below the bottom position or a spotter are the mechanism behind the spotter/safeties flag; without either, stop every set at RIR 2.",
+        "Shoulder-sensitive: the incline adds shoulder flexion to the stretched bottom position, so a wide grip or a steep bench loads the front of the shoulder. Keep the angle at 30–45°, the grip at forearms-vertical width and the elbows tucked.",
+        "Compound lift: end the set when the bar path or the elbow angle changes, not when the bar stops.",
+        "Use collars; a plate sliding on an incline tips the bar toward the face."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_press": "same pattern, no bar over the face, freer shoulder path",
+        "incline_machine_chest_press": "same pattern, fixed path and stack, no spotter needed",
+        "smith_incline_press": "same pattern on a guided bar with catch hooks",
+        "low_to_high_cable_fly": "same upper-chest target through a fly instead of a press; lighter loads, no spotter"
+      },
+      "sources": [
+        "ExRx.net Barbell Incline Bench Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "Stronger by Science, reps-in-reserve (fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 RIR-03"
+      ]
+    },
+    "incline_dumbbell_press": {
+      "description": "Incline press with dumbbells: the upper-chest and front-delt emphasis of the incline bench with each arm free to find its own path. It is the usual incline choice in dumbbell-only gyms and for anyone whose shoulders dislike a straight bar. A good rep: dumbbells lowered to the upper chest with the elbows about 45° from the torso, pressed up and slightly together until the arms are straight over the shoulders.",
+      "setup": [
+        "Bench at 30–45°; sit with the dumbbells on the thighs and kick them up one at a time as you lean back.",
+        "Shoulder blades pulled down and together, feet flat, chest up.",
+        "Start with the dumbbells over the shoulders, wrists straight, palms forward or slightly turned in."
+      ],
+      "cues": [
+        "Lower to the upper chest, elbows about 45° to the torso.",
+        "Press up and slightly inward; finish over the shoulders, not over the face.",
+        "Both dumbbells move together; the weaker side sets the pace.",
+        "Keep the ribcage up and the lower back in contact with the bench."
+      ],
+      "mistakes": [
+        "Bench too steep, so the front delts take over.",
+        "Elbows flared wide with the dumbbells sinking below the chest.",
+        "Dumbbells drifting out at the top or clanking together.",
+        "Hips sliding down the seat as the set gets hard."
+      ],
+      "safety": [
+        "Shoulder-sensitive: with a free path the dumbbells can sink well below the chest, loading the shoulder at the end of its range in flexion. Stop the descent when the upper arms are just below parallel and keep the elbows tucked.",
+        "Compound lift: end the set when one arm lags or the press slows to a grind; a failed rep is lowered to the chest and dumped outward, never over the face."
+      ],
+      "substitution_rationale": {
+        "incline_barbell_bench_press": "same pattern on a barbell for heavier loads; needs safeties or a spotter",
+        "incline_machine_chest_press": "same pattern, fixed path, no balance demand",
+        "smith_incline_press": "same pattern on a guided bar with catch hooks",
+        "push_up_feet_elevated": "same pattern with body weight and the feet on a step; no dumbbells needed"
+      },
+      "sources": [
+        "ExRx.net Barbell Incline Bench Press (family)",
+        "ExRx.net Dumbbell Bench Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "incline_machine_chest_press": {
+      "description": "Incline press on a machine: upper-chest emphasis with the path fixed and the load on a stack or plates. It fills the incline-push slot without a spotter and is the simplest way to take the upper chest close to failure. A good rep: handles start level with the upper chest, a full press to straight arms, then a slow return without resting the stack.",
+      "setup": [
+        "Seat height so the handles line up with the upper chest and the elbows sit just below shoulder height.",
+        "Start position or range limiter set so the handles do not pull the elbows behind the torso.",
+        "Shoulder blades on the pad, feet flat, chest up."
+      ],
+      "cues": [
+        "Press up and slightly together along the machine's arc.",
+        "Lock out without lifting the shoulders off the pad.",
+        "Lower slowly until the elbows are level with the body.",
+        "Keep the head on the pad and the neck relaxed."
+      ],
+      "mistakes": [
+        "Seat too low, turning it into a shoulder press with flared elbows.",
+        "Shoulders rolling forward off the pad at the top.",
+        "Stack slamming down between reps.",
+        "Half reps at the top only."
+      ],
+      "safety": [
+        "Compound lift on a fixed path: the machine holds the load, so near-failure sets are fine here; still end the set when the shoulders leave the pad.",
+        "Set the start position so the elbows never travel behind the body; that is the range that strains the shoulder on a press machine."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_press": "same pattern with free weights, more stabiliser work",
+        "smith_incline_press": "same pattern on a guided bar with catch hooks",
+        "machine_chest_press": "same movement on a flat machine; the upper chest gets less emphasis"
+      },
+      "sources": [
+        "ExRx.net Lever Chest Press (family)",
+        "ExRx.net Barbell Incline Bench Press (target: clavicular pec)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ]
+    },
+    "smith_incline_press": {
+      "description": "Incline press on a guided bar: upper-chest emphasis with the bar on a fixed track that hooks back onto the rails at any height. It gives the barbell incline's loading without the balance demand or the need for a spotter. A good rep: bar to the upper chest, a brief touch, then a straight press to lockout with the shoulder blades pinned.",
+      "setup": [
+        "Bench at 30–45°, placed so the bar meets the upper chest, not the throat.",
+        "Safety stops just below the bottom position.",
+        "Shoulder blades pulled down and together, feet flat, grip at forearms-vertical width.",
+        "Record the machine's bar weight in the gym settings; it differs from a free bar."
+      ],
+      "cues": [
+        "Lower along the track to the upper chest, elbows about 45° to the torso.",
+        "Press straight up the track to full lockout.",
+        "Keep the ribcage up and the upper back tight; the track does not brace you.",
+        "Re-hook only at lockout."
+      ],
+      "mistakes": [
+        "Bench placed so the bar comes down on the throat.",
+        "Bench too steep, making it a shoulder press.",
+        "Elbows flared wide because the track feels safe.",
+        "Relying on the hooks and skipping the stops."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the fixed track plus the incline forces one path, so a misplaced bench pushes the bar into the neck line with the elbows flared. Set the bench so the bar meets the upper chest and keep the elbows tucked.",
+        "Compound lift: stop when the press slows to a grind; set the safety stops so a missed hook at failure cannot pin you."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_press": "same pattern, free shoulder path, no bar over the face",
+        "incline_barbell_bench_press": "same pattern on a free bar; heavier, needs safeties or a spotter",
+        "incline_machine_chest_press": "same pattern on a seated machine, quickest to set up"
+      },
+      "sources": [
+        "ExRx.net Barbell Incline Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "chest_dip": {
+      "description": "Bodyweight dip between parallel bars with a forward lean: a horizontal push that trains the chest through a long range with the triceps and front delts assisting. It is the heaviest bodyweight press available and progresses by adding plates on a belt. A good rep: lower until the upper arms are about parallel to the floor with the torso leaning forward, then press back up to straight arms without shrugging.",
+      "setup": [
+        "Grip the bars with the shoulders pushed down away from the ears and the elbows locked at the top.",
+        "Lean the torso forward about 20–30° and let the knees bend or cross behind you; look slightly down.",
+        "For loaded sets, hang the belt with plates before stepping up and keep the chain from swinging."
+      ],
+      "cues": [
+        "Lower under control until the upper arms are about parallel to the floor.",
+        "Elbows track back and slightly out, not straight out to the sides.",
+        "Press up and lean into the bars; keep the forward lean through the top.",
+        "Shoulders stay down at the top, no shrug."
+      ],
+      "mistakes": [
+        "Sinking so deep that the shoulders roll forward, the shoulder-sensitive position.",
+        "Torso upright with the elbows tucked, turning it into a triceps dip.",
+        "Shrugging at the top.",
+        "Swinging the legs to bounce out of the bottom.",
+        "Dropping fast into the bottom instead of lowering."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the bottom of a dip puts the shoulder in extension under full body weight; going deeper than upper-arm parallel or letting the shoulders roll forward is the mechanism behind the flag. Stop the descent at parallel and shorten the range further if the front of the shoulder complains.",
+        "Compound lift with body weight plus belt: end the set when you cannot control the descent; failing at the bottom means a hard, uncontrolled drop.",
+        "First session: do one unloaded set stopped at RIR 3 to find your depth before adding plates."
+      ],
+      "substitution_rationale": {
+        "assisted_dip": "same movement with machine assistance for when body weight is too heavy",
+        "machine_chest_press": "same pattern on a machine; adjustable load, no depth risk",
+        "dumbbell_bench_press": "same pattern with dumbbells; easier to load in small steps",
+        "push_up": "same pattern with body weight, lower intensity, no bars needed"
+      },
+      "sources": [
+        "ExRx.net Chest Dip",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 INJ-02 (deep dips)"
+      ]
+    },
+    "assisted_dip": {
+      "description": "Dip on an assisted machine: you kneel or stand on a counterweighted platform that removes part of your body weight. It lets you practise the full dip pattern before an unassisted dip is possible and progresses by reducing the assistance. A good rep: forward lean, lower until the upper arms are about parallel, then press up to straight arms with the shoulders down.",
+      "setup": [
+        "Select the assistance: more weight on the stack means more help. Start with enough help for clean reps at the target RIR.",
+        "Kneel or stand on the platform, grip the dip handles, and let the platform take the load before lowering.",
+        "Lean forward slightly for chest emphasis; keep the shoulders down."
+      ],
+      "cues": [
+        "Lower slowly until the upper arms are about parallel to the floor.",
+        "Press up and slightly forward; elbows back, not out.",
+        "Keep the knees quiet on the platform; no kicking to help.",
+        "Finish with straight arms and the shoulders away from the ears."
+      ],
+      "mistakes": [
+        "Sinking below parallel because the machine feels safe.",
+        "Bouncing off the platform at the bottom.",
+        "Upright torso with a shrug at the top.",
+        "Assistance so high that the reps have no effort."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the bottom position loads the front of the shoulder in extension just as in a free dip; the assistance changes the load, not the position. Stop at upper-arm parallel.",
+        "Compound lift: the platform catches you, so training close to failure is acceptable here; end the set when the descent is no longer controlled."
+      ],
+      "substitution_rationale": {
+        "chest_dip": "same movement unassisted; the progression target",
+        "bench_dip": "similar push with the hands on a bench; no machine needed, more triceps",
+        "push_up": "same pattern with body weight on the floor; no machine needed",
+        "machine_chest_press": "same pattern on a press machine; adjustable load, no depth risk"
+      },
+      "sources": [
+        "ExRx.net Chest Dip (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "push_up": {
+      "description": "The basic horizontal push with body weight: chest, triceps and front delts, with the trunk held as a plank. It is in the plan as the travel and warm-up press, a finisher, and the beginner's first push. A good rep: body in one straight line from head to heels, chest lowered to a fist's height off the floor with the elbows about 45° from the torso, then pressed back to straight arms.",
+      "setup": [
+        "Hands a little wider than the shoulders, fingers forward, directly under the shoulders at the top.",
+        "Feet together or hip-width; squeeze the glutes and brace the abs so the hips do not sag.",
+        "To add load, rest a plate on the upper back or loop a band across the back and under the hands."
+      ],
+      "cues": [
+        "Lower the whole body as one unit; the chest and the hips arrive together.",
+        "Elbows about 45° to the torso, forearms vertical at the bottom.",
+        "Press the floor away and finish with the shoulder blades spread, not pinched.",
+        "Keep the neck long; look at the floor a little ahead of the hands."
+      ],
+      "mistakes": [
+        "Hips sagging or piked up.",
+        "Elbows flared straight out to the sides.",
+        "Head dropping so the chin, not the chest, reaches the floor.",
+        "Half reps at the top when the set gets hard."
+      ],
+      "safety": [
+        "Compound lift with body weight: the failure point is usually the trunk, not the arms; when the hips sag, the set is over. Regress to hands on a bench or a step rather than grinding sagging reps.",
+        "Wrists: if they hurt in extension, use push-up handles or hold dumbbells on the floor for a neutral grip."
+      ],
+      "substitution_rationale": {
+        "machine_chest_press": "same pattern on a machine with adjustable load",
+        "dumbbell_bench_press": "same pattern with dumbbells for precise loading",
+        "push_up_feet_elevated": "same movement with the feet on a step; harder, more upper chest",
+        "diamond_push_up": "same movement with a narrow hand position; more triceps"
+      },
+      "sources": [
+        "ExRx.net Barbell Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ]
+    },
+    "push_up_feet_elevated": {
+      "description": "Push-up with the feet on a step or bench: raising the feet shifts more body weight onto the hands and angles the press like an incline, so the upper chest and the front delts work harder. It is the bodyweight answer to the incline-push slot and the next step after the flat push-up. A good rep: straight body line from head to heels, chest lowered until the upper arms are about parallel to the floor, then pressed to straight arms.",
+      "setup": [
+        "Feet on a knee-high step or bench, hands on the floor a little wider than the shoulders.",
+        "Hands slightly ahead of the shoulders so the chest, not the face, comes down over the hands.",
+        "Glutes squeezed and abs braced; the higher the feet, the more the trunk has to hold."
+      ],
+      "cues": [
+        "Lower as one unit until the upper arms are about parallel to the floor.",
+        "Elbows about 45° to the torso; press the floor away.",
+        "Finish with straight arms and the shoulder blades spread.",
+        "Keep the hips on the line from shoulders to heels."
+      ],
+      "mistakes": [
+        "Hips sagging or piked as the set gets hard.",
+        "Face dropping between the hands instead of the chest coming to the hands.",
+        "Elbows flared wide with the shoulders shrugged.",
+        "Feet so high that it becomes a partial handstand push-up."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the incline angle adds shoulder flexion, and with more weight on the hands a deep, flared-elbow bottom position loads the front of the shoulder. Keep the elbows tucked, stop the descent at upper-arm parallel, and lower the step if the shoulder complains.",
+        "Compound lift with body weight: end the set when the hips sag; a failed rep is lowered to the floor, not dropped."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_press": "same pattern with dumbbells; precise loading, no step needed",
+        "push_up": "same movement flat; easier, no step needed",
+        "pike_push_up": "more vertical push emphasis with the same body weight and no equipment"
+      },
+      "sources": [
+        "ExRx.net Barbell Incline Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "dumbbell_floor_press": {
+      "description": "Dumbbell press lying on the floor: the upper arms stop on the floor, which cuts the bottom of the range and keeps the shoulder out of the deep stretched position. It is the hotel-room and home press when there is no bench and a useful press for shoulders that dislike full-depth benching; the triceps do more of the work. A good rep: upper arms lowered until the triceps touch the floor, a brief pause, then a press to straight arms.",
+      "setup": [
+        "Lie on the floor with the knees bent and the feet flat, or the legs straight if the floor is slippery.",
+        "Pull the dumbbells up to the chest with the knees, then press them to the start position over the shoulders.",
+        "Shoulder blades pulled down and together, lower back in contact with the floor."
+      ],
+      "cues": [
+        "Lower until the upper arms rest lightly on the floor, elbows about 45° to the torso.",
+        "Pause a beat, then press up and slightly inward.",
+        "Keep the wrists straight and the dumbbells over the elbows.",
+        "Keep the hips down; no bridging to help."
+      ],
+      "mistakes": [
+        "Slamming the elbows into the floor and bouncing.",
+        "Elbows flared straight out to the sides.",
+        "Hips bridging up to turn it into a decline press.",
+        "Dumbbells drifting over the face."
+      ],
+      "safety": [
+        "Compound lift: the floor stops the descent, so this press is self-limiting at the bottom; end the set when the press slows to a grind, lower a failed rep to the chest, then roll to one side to set the dumbbells down."
+      ],
+      "substitution_rationale": {
+        "dumbbell_bench_press": "same pattern with full range on a bench",
+        "push_up": "same pattern with body weight; no dumbbells",
+        "machine_chest_press": "same pattern on a machine with adjustable load",
+        "close_grip_bench_press": "same triceps-heavy press on a barbell with full range"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R3 INJ-02 (floor press as a limited-range shoulder substitution)"
+      ]
+    },
+    "cable_fly": {
+      "description": "Cable crossover fly: the arms sweep from wide to in front of the chest with the elbows nearly fixed, so the chest works through its full range with tension from the first centimetre to the last. It is in the plan to add chest volume without more pressing and to load the stretched and the squeezed positions that presses leave out. A good rep: slow opening until the hands are level with the chest, then a sweep to the midline with a squeeze.",
+      "setup": [
+        "Set both pulleys at about shoulder height for a flat fly; higher for a downward sweep, lower for an upward one.",
+        "Stand one step forward in a split stance with the cables tensioned and a slight forward lean.",
+        "Elbows slightly bent and locked at that angle for the whole set; palms facing forward or in."
+      ],
+      "cues": [
+        "Open the arms slowly until the hands are level with the chest; feel the stretch, do not force it.",
+        "Sweep the hands forward and together in a wide arc, elbows fixed.",
+        "Squeeze for a beat when the hands meet, chest up and shoulders down.",
+        "Keep the shoulder blades back; the arms move, the shoulders do not roll forward."
+      ],
+      "mistakes": [
+        "Arms drifting far behind the body at the stretch, the end-range shoulder position.",
+        "Bending and straightening the elbows so it becomes a press.",
+        "Shrugging or rolling the shoulders forward at the squeeze.",
+        "Rocking the torso to swing the load."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the stretch at the end of the fly loads the front of the shoulder with a long lever. Stop the opening when the hands reach chest level, keep the elbows slightly bent, and pick a load you can control at that point.",
+        "Failure is acceptable here as long as the weight never pulls the arms past the stopped position; if a rep stalls, bend the elbows and walk forward to unload."
+      ],
+      "substitution_rationale": {
+        "pec_deck_fly": "same fly pattern on a machine with a fixed arc",
+        "dumbbell_fly": "same fly pattern with dumbbells; tension mainly at the bottom",
+        "low_to_high_cable_fly": "same fly with an upward sweep for the upper chest",
+        "machine_chest_press": "chest through a press instead of a fly; heavier, no end-range stretch"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Fly (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "low_to_high_cable_fly": {
+      "description": "Cable fly from the low pulleys, sweeping the hands up and together to about eye level: the upward arc shifts the work toward the upper (clavicular) chest and the front delts. It is the fly that best complements a flat press when the upper chest needs more work, and a fallback for the incline slot without a spotter. A good rep: hands start low and wide, sweep up and in with the elbows nearly fixed, and meet at upper-chest height with a squeeze.",
+      "setup": [
+        "Both pulleys at the lowest setting; a handle in each hand.",
+        "Split stance, torso upright with a slight lean, arms down and slightly behind the hips with the elbows a little bent.",
+        "Shoulders down and back before the first rep."
+      ],
+      "cues": [
+        "Sweep up and forward in a scooping arc until the hands meet at upper-chest height.",
+        "Keep the elbow angle fixed; do not curl the weight up.",
+        "Squeeze the upper chest at the top, shoulders down.",
+        "Lower slowly to a stretch with the hands beside the hips, not behind the body."
+      ],
+      "mistakes": [
+        "Turning it into a front raise by lifting with the shoulders.",
+        "Bending the elbows to help the weight up.",
+        "Shrugging at the top.",
+        "Letting the handles pull the arms far behind the body at the bottom."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the bottom position stretches the front of the shoulder with the arms behind the body. Stop the descent when the hands are level with the hips and keep the elbows slightly bent.",
+        "Near-failure work is fine on the cable; if a rep stalls, bend the elbows and step forward to unload."
+      ],
+      "substitution_rationale": {
+        "incline_dumbbell_press": "upper chest through a press instead of a fly; heavier, needs a bench",
+        "cable_fly": "same fly pattern at chest height; whole chest instead of upper chest",
+        "pec_deck_fly": "same fly pattern on a machine; fixed arc, no upward sweep"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Fly (family)",
+        "ExRx.net Barbell Incline Bench Press (target: clavicular pec)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ],
+      "review_notes": "R4 §5.6 gives cable_fly an increment of 2.5 / 2.5 marked '(per side)' but low_to_high_cable_fly the same 2.5 / 2.5 without the note, although both use two stacks (cable_dual_any). If '(per side)' becomes per_hand: true in exercises.json, the two rows should agree."
+    },
+    "pec_deck_fly": {
+      "description": "Fly on the pec deck: the machine fixes the arc so the chest works through horizontal adduction with the arms supported. It is the simplest way to add chest volume close to failure and the safest fly for shoulders that dislike a free stretch. A good rep: pads or handles start level with the chest, a controlled squeeze together in front, then a slow return that stops short of the full stretch.",
+      "setup": [
+        "Seat height so the handles or pads sit at mid-chest and the upper arms are roughly level with the shoulders.",
+        "Set the start position or range limiter so the arms begin just behind the chest line, not fully open.",
+        "Back and head on the pad, feet flat, shoulders down."
+      ],
+      "cues": [
+        "Bring the arms together in a smooth arc; lead with the elbows on pads, with the hands on handles.",
+        "Squeeze for a beat when the arms meet.",
+        "Return slowly and stop when the upper arms are just behind the chest line.",
+        "Keep the shoulder blades on the pad throughout."
+      ],
+      "mistakes": [
+        "Start position so wide that the arms are far behind the body.",
+        "Shoulders rolling forward off the pad at the squeeze.",
+        "Using the rebound of the stack for momentum.",
+        "Seat too low, so the arms drive from the shoulders instead of the chest."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the open position loads the front of the shoulder at the end of its range, and the machine will pull you there if you let it. Set the range limiter or the start position so the upper arms never go far behind the body.",
+        "Failure is acceptable on the machine; end the set when the arms cannot close without the shoulders leaving the pad."
+      ],
+      "substitution_rationale": {
+        "cable_fly": "same fly pattern on cables; free arc and constant tension",
+        "dumbbell_fly": "same fly pattern with dumbbells on a bench",
+        "machine_chest_press": "chest through a press instead of a fly; heavier"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Fly (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "dumbbell_fly": {
+      "description": "Flat dumbbell fly: the arms open in a wide arc with slightly bent elbows and close over the chest. Tension is highest at the bottom, so it is the free-weight way to load the stretched chest; it needs lighter weights than a press and more care at the bottom. A good rep: slow opening until the upper arms are about level with the bench, then an arc back up with the elbows fixed and the hands meeting over the chest without touching.",
+      "setup": [
+        "Lie on a flat bench with the feet flat, shoulder blades pulled down and together.",
+        "Start with the dumbbells over the chest, palms facing each other, elbows slightly bent.",
+        "Choose a load you can control at the bottom; the fly is not a press, so it is much lighter."
+      ],
+      "cues": [
+        "Open the arms in a wide arc, elbows fixed in a soft bend.",
+        "Stop when the upper arms are level with the bench; the hands do not go below the chest.",
+        "Squeeze the chest and bring the hands back over the chest in the same arc.",
+        "Keep the wrists straight and the shoulders down on the bench."
+      ],
+      "mistakes": [
+        "Hands dropping well below the bench, the end-range shoulder position.",
+        "Elbows bending and straightening so it becomes a press.",
+        "Dumbbells clanking together at the top.",
+        "Going heavy and losing the arc at the bottom."
+      ],
+      "safety": [
+        "Shoulder-sensitive: at the bottom the load pulls the arm into the stretched, externally rotated position with a long lever and nothing to stop it but you. Stop the descent when the upper arms are level with the bench and keep the elbows bent.",
+        "Do not chase failure at the bottom of a fly; if a rep stalls, bend the elbows and press the dumbbells up as a bench press."
+      ],
+      "substitution_rationale": {
+        "cable_fly": "same fly pattern with constant tension and a safer stop point",
+        "pec_deck_fly": "same fly pattern on a machine with a range limiter",
+        "dumbbell_bench_press": "chest through a press with the same dumbbells; heavier, less end-range stretch"
+      },
+      "sources": [
+        "ExRx.net Dumbbell Fly",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP chest hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions"
+      ]
+    },
+    "close_grip_bench_press": {
+      "description": "Bench press with the hands about shoulder-width apart: the narrow grip keeps the elbows close to the body, so the triceps take the lead with the chest and front delts assisting. It is the heaviest triceps exercise in the library and doubles as a pressing variant. A good rep: bar lowered to the lower chest with the elbows tucked, then pressed to lockout with a strong finish from the triceps.",
+      "setup": [
+        "Safeties just below chest height, or a spotter at the head of the bench.",
+        "Grip so the hands are at or just inside shoulder width; wrists straight, bar in the heel of the palm.",
+        "Feet flat, shoulder blades pulled down and together, eyes under the bar.",
+        "On a guided bar, place the bench so the bar meets the lower chest and set the stops."
+      ],
+      "cues": [
+        "Lower the bar to the lower chest with the elbows brushing the ribs.",
+        "Press up and slightly back over the shoulders; lock out fully.",
+        "Keep the wrists stacked over the elbows; a very narrow grip bends them.",
+        "Keep the upper back tight and the glutes on the bench."
+      ],
+      "mistakes": [
+        "Grip so narrow that the wrists bend and the bar wobbles.",
+        "Elbows flaring out as the set gets hard, turning it into a regular bench press.",
+        "Bouncing off the chest.",
+        "Hips lifting off the bench to help the press."
+      ],
+      "safety": [
+        "Bar-over-body lift: a failed rep leaves the bar on your chest. Safeties or a spotter are the mechanism behind the spotter/safeties flag; without either, stop every set at RIR 2.",
+        "Shoulder-sensitive: a deep touch with the elbows drifting out at the bottom still loads the front of the shoulder; keep the elbows tucked and the touch point on the lower chest.",
+        "Compound lift: end the set when the elbows start to flare or the bar path changes; the triceps fail before the chest, and the bar stalls close to the face.",
+        "Use collars; the narrow grip makes an uneven bar harder to correct."
+      ],
+      "substitution_rationale": {
+        "dumbbell_floor_press": "same triceps-heavy press with dumbbells and a short range; no bar over the face",
+        "machine_triceps_extension": "triceps through a machine extension; no bar, no spotter",
+        "cable_triceps_pushdown": "triceps isolation on a cable; light, no spotter",
+        "diamond_push_up": "same triceps-heavy press with body weight; no equipment"
+      },
+      "sources": [
+        "ExRx.net Barbell Close Grip Bench Press",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "Stronger by Science, reps-in-reserve (fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 RIR-03"
+      ],
+      "review_notes": "The second equipment option (smith_machine+bench_flat_any, load type smith) inherits the exercise-level requires_spotter_or_safeties flag, yet a guided bar hooks onto its rails at any height and smith_bench_press carries no SP flag. As written, a Smith-only gym gets the RIR-2 cap and the safeties note although the mechanism is already covered. Suggest either a note on that option or letting the resolver treat a smith option as satisfying rack_or_spotter."
+    },
+    "cable_triceps_pushdown": {
+      "description": "Triceps pushdown on a high cable: the upper arms stay pinned at the sides while the forearms push the handle down to straight arms. It is the default triceps isolation because the cable keeps tension through the whole rep and the load is easy to change in small steps. A good rep: elbows still, handle pushed down until the arms are straight, a short squeeze, then a controlled return to about a right angle.",
+      "setup": [
+        "Pulley at the top; straight bar, V-handle or rope attached.",
+        "Stand a step back with the feet hip-width, a slight forward lean, elbows at the sides and bent past 90° at the start.",
+        "Shoulders down; grip with the wrists straight."
+      ],
+      "cues": [
+        "Push the handle down until the arms are fully straight; squeeze the triceps.",
+        "Elbows stay glued to the ribs; only the forearms move.",
+        "Return slowly until the forearms are just past parallel to the floor, then push again.",
+        "With a rope, split the ends apart at the bottom."
+      ],
+      "mistakes": [
+        "Elbows drifting forward and up as the weight goes up.",
+        "Leaning the whole body onto the handle to press with the chest.",
+        "Stopping short of straight arms.",
+        "Letting the stack yank the forearms up at the top."
+      ],
+      "safety": [
+        "Single-joint cable exercise with no flags: taking the last set close to or to failure is acceptable and useful for calibrating your RIR. If the elbows or wrists complain, switch to a rope or a neutral handle and slow the lowering phase."
+      ],
+      "substitution_rationale": {
+        "band_triceps_pushdown": "same movement with a band; travel and home fallback",
+        "machine_triceps_extension": "same movement on a machine with a fixed arc",
+        "overhead_cable_triceps_extension": "same triceps target with the arms overhead; stretches the long head",
+        "dumbbell_overhead_triceps_extension": "same triceps target with a dumbbell overhead; no cable needed"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R3 RIR-05 (calibration set on an isolation exercise); R3 INJ-04 (elbow tolerance)"
+      ]
+    },
+    "overhead_cable_triceps_extension": {
+      "description": "Triceps extension with the arms overhead on a rope from a low or mid pulley: the overhead position stretches the long head of the triceps, so the muscle works through its longest range. It is in the plan to pair with a pushdown and cover the stretched position. A good rep: elbows pointing forward and staying still, rope pulled overhead to straight arms, then lowered behind the head under control.",
+      "setup": [
+        "Pulley low or at hip height with the rope attached; face away from the stack, take the rope over the head in both hands and step forward into a split stance.",
+        "Torso leaned slightly forward, ribs down, abs braced; elbows beside the ears and pointing forward.",
+        "Start with the forearms folded behind the head and the elbows bent."
+      ],
+      "cues": [
+        "Extend the arms up and forward until they are straight; keep the elbows in.",
+        "Lower slowly until the hands are behind the head and the triceps are stretched.",
+        "Keep the ribcage down; the arms move, the back does not arch.",
+        "Split the rope slightly at the top."
+      ],
+      "mistakes": [
+        "Elbows flaring out to the sides as the weight goes up.",
+        "Arching the lower back to get the arms overhead.",
+        "Shoulders shrugging up to the ears.",
+        "Cutting the stretch short at the bottom."
+      ],
+      "safety": [
+        "Shoulder-sensitive: the arms are held overhead under load, which needs full overhead range; without it the back arches and the shoulder takes the strain. If you cannot hold the upper arms beside the ears with the ribs down, use a pushdown or a lying extension instead.",
+        "Single-joint cable exercise: near-failure sets are acceptable; a stalled rep is lowered behind the head and the rope released."
+      ],
+      "substitution_rationale": {
+        "dumbbell_overhead_triceps_extension": "same overhead extension with a dumbbell; no cable needed",
+        "lying_triceps_extension": "same long-head stretch lying on a bench; no overhead position",
+        "cable_triceps_pushdown": "same triceps target with the arms at the sides; no overhead range needed"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions (overhead with poor mobility); R3 INJ-02"
+      ]
+    },
+    "lying_triceps_extension": {
+      "description": "Skull crusher: lying on a flat bench with an EZ bar, a straight bar or dumbbells, the upper arms stay fixed while the forearms lower the load to the forehead or just behind the head and extend it back up. It is the heaviest triceps isolation and trains the long head in a stretched position. A good rep: elbows pointing at the ceiling and staying there, load lowered under control, arms extended fully without the elbows drifting apart.",
+      "setup": [
+        "Lie on a flat bench, feet flat, shoulder blades down; hold the bar at arm's length over the face with a shoulder-width or narrower grip.",
+        "Angle the upper arms slightly back toward the head so the triceps stay under tension at the top.",
+        "With dumbbells, palms face each other and the dumbbells travel beside the head."
+      ],
+      "cues": [
+        "Bend only at the elbows; lower the bar to the forehead or just behind the head.",
+        "Keep the elbows pointing up and shoulder-width apart.",
+        "Extend until the arms are straight, then squeeze the triceps.",
+        "Control the lowering; the descent is where the triceps grow and where the bar gets loose."
+      ],
+      "mistakes": [
+        "Elbows flaring out and the upper arms drifting toward the chest, so it becomes a press.",
+        "Lowering fast and catching the bar with the elbows.",
+        "Wrists bending back under a straight bar.",
+        "Arching the back and lifting the hips."
+      ],
+      "safety": [
+        "Single-joint lift with no flags, but the bar travels over the face: if a rep stalls, keep the elbows in, lower the bar to the chest and press it up as a close-grip bench press. Do not take barbell or EZ-bar sets to failure; keep failure work for the dumbbell version, where the weights can be dropped out to the sides.",
+        "The elbow tendons take a long lever here; keep the lowering slow and skip this exercise on days the elbows already hurt from pressing."
+      ],
+      "substitution_rationale": {
+        "overhead_cable_triceps_extension": "same long-head stretch on a cable with constant tension; no bar over the face",
+        "dumbbell_overhead_triceps_extension": "same stretch with a dumbbell overhead; no bench needed",
+        "cable_triceps_pushdown": "same triceps target with the arms at the sides; lighter on the elbows",
+        "machine_triceps_extension": "same triceps target on a machine; fixed arc, no bar"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown (family; the lying extension page was not verified, R4 §4.4)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R3 INJ-04 (elbow tolerance)"
+      ],
+      "review_notes": "No requires_spotter_or_safeties flag although the bar travels over the face. The escape is a close-grip press rather than a trapped bar, so the flag itself is defensible, but the planner should not pick the barbell or EZ option for AMRAP or failure sets (RIR-05 calibration); the dumbbell option or a cable exercise is the safe choice for those. R4 §4.4 also lists the ExRx lying-extension page as unverified, so the sources cite the family page."
+    },
+    "dumbbell_overhead_triceps_extension": {
+      "description": "Overhead extension holding one dumbbell in both hands, or one in each hand: the upper arms point up beside the ears while the forearms lower the dumbbell behind the head and extend it back up. It trains the long head of the triceps in its stretched position with nothing but a dumbbell, which makes it the travel version of the overhead cable extension. A good rep: elbows still and pointing up, dumbbell lowered until the forearms pass parallel, then a full extension without the elbows flaring.",
+      "setup": [
+        "Sit or stand with the ribs down and the abs braced; cup the top plate of one dumbbell with both hands, or hold one dumbbell in each hand with the palms facing in.",
+        "Press the dumbbell overhead, then set the upper arms beside the ears with the elbows pointing forward.",
+        "Seated with a back support is the steadier choice for heavier sets."
+      ],
+      "cues": [
+        "Lower the dumbbell behind the head by bending only the elbows.",
+        "Keep the elbows close and pointing up; do not let them drift out.",
+        "Extend fully and squeeze at the top.",
+        "Ribcage down; the lower back does not arch to help."
+      ],
+      "mistakes": [
+        "Elbows flaring wide as the set gets hard.",
+        "Arching the back to get the arms overhead.",
+        "Bouncing out of the bottom.",
+        "Shoulders shrugging up to the ears."
+      ],
+      "safety": [
+        "Shoulder-sensitive: holding a load overhead needs full overhead range; without it the lower back arches and the front of the shoulder takes the load. If the upper arms cannot sit beside the ears with the ribs down, use a pushdown or a lying extension instead.",
+        "The dumbbell is over the head and neck: use a load you can lower slowly, and if a rep stalls, lower it to the shoulder and set it down in front of you."
+      ],
+      "substitution_rationale": {
+        "overhead_cable_triceps_extension": "same overhead extension on a cable; constant tension",
+        "lying_triceps_extension": "same long-head stretch lying on a bench; no overhead position",
+        "cable_triceps_pushdown": "same triceps target with the arms at the sides; no overhead range needed"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions (overhead with poor mobility)"
+      ]
+    },
+    "machine_triceps_extension": {
+      "description": "Triceps extension or seated dip on a machine: the upper arms rest on a pad or the handles sit at the sides, and the forearms push down or forward against a stack. The fixed arc removes balance and the machine catches the load, so it is the safest place to take the triceps to failure and the easiest to load in small steps. A good rep: elbows on the pad or at the sides, a full push to straight arms, then a slow return without resting the stack.",
+      "setup": [
+        "Seat height so the elbows line up with the machine's pivot and the pad supports the upper arms (extension) or the handles sit beside the ribs (seated dip).",
+        "Shoulders down, chest up, back against the pad if there is one.",
+        "Wrists straight on the handles."
+      ],
+      "cues": [
+        "Push until the arms are fully straight; squeeze the triceps.",
+        "Return slowly to a right angle or just past it without letting the stack touch down.",
+        "Keep the elbows on the pad or against the ribs; do not let them lift.",
+        "Keep the shoulders down throughout."
+      ],
+      "mistakes": [
+        "Elbows lifting off the pad or drifting forward.",
+        "Leaning the body into the handles to press with the chest.",
+        "Half reps at the top only.",
+        "Stack slamming at the bottom."
+      ],
+      "safety": [
+        "Single-joint machine exercise with no flags: near-failure and failure sets are acceptable here, and this is a good exercise for the occasional RIR calibration set. Line the elbows up with the pivot; a mismatched pivot is what makes a machine hurt the elbows."
+      ],
+      "substitution_rationale": {
+        "cable_triceps_pushdown": "same movement on a cable; free arc, constant tension",
+        "lying_triceps_extension": "same triceps target with free weights on a bench",
+        "bench_dip": "same push with body weight on a bench; no machine needed"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 15 (exercise technique)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R3 RIR-05 (calibration set on a machine exercise)"
+      ]
+    },
+    "bench_dip": {
+      "description": "Dip with the hands on a bench behind you and the feet on the floor or a second bench: the body lowers between straight arms and the triceps push it back up. It needs only a bench, so it is a travel and home triceps exercise. A good rep: hips close to the bench, lower until the elbows reach about a right angle, then push to straight arms without shrugging.",
+      "setup": [
+        "Hands on the edge of a knee-high bench or step, fingers forward, arms straight; hips just in front of the bench.",
+        "Feet flat on the floor with the knees bent (easier) or the legs straight (harder); feet on a second bench for the hardest version.",
+        "Shoulders down and back before the first rep."
+      ],
+      "cues": [
+        "Lower straight down with the elbows pointing back until they reach about a right angle.",
+        "Push through the palms to straight arms; squeeze the triceps.",
+        "Keep the hips brushing the bench edge, not drifting forward.",
+        "Chest up, shoulders down throughout."
+      ],
+      "mistakes": [
+        "Hips drifting forward so the shoulders take the load.",
+        "Sinking well below a right angle at the elbows, the shoulder-sensitive position.",
+        "Shrugging up to the ears at the top.",
+        "Elbows flaring out to the sides."
+      ],
+      "safety": [
+        "Shoulder-sensitive: with the hands behind the body, the bottom of a bench dip puts the shoulder in extension and internal rotation under load. Stop at a right angle at the elbows and keep the hips close to the bench; if the front of the shoulder complains, switch to a pushdown.",
+        "A bench that slides or tips is the usual accident; check it before adding a plate on the lap."
+      ],
+      "substitution_rationale": {
+        "diamond_push_up": "same triceps-heavy push with body weight face down; easier on the shoulder",
+        "machine_triceps_extension": "same triceps target on a machine with adjustable load",
+        "cable_triceps_pushdown": "same triceps target on a cable; light and adjustable"
+      },
+      "sources": [
+        "ExRx.net Chest Dip (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)",
+        "R4 §5.5 flag definitions; R3 INJ-02"
+      ]
+    },
+    "diamond_push_up": {
+      "description": "Push-up with the hands close together under the chest so the elbows stay tucked and the triceps lead the press. It is the bodyweight close-grip bench: a travel and finisher triceps exercise that also keeps chest volume up. A good rep: straight body line, chest lowered to the hands with the elbows brushing the ribs, then a full press to straight arms.",
+      "setup": [
+        "Hands under the chest, thumbs and index fingers close or touching; fingers forward.",
+        "Body in one line from head to heels, glutes squeezed, abs braced.",
+        "If the wrists complain, move the hands slightly apart and turn the fingers outward a little."
+      ],
+      "cues": [
+        "Lower the chest to the hands with the elbows tracking back along the ribs.",
+        "Press the floor away and lock the elbows fully.",
+        "Hips move with the chest; no sag, no pike.",
+        "Keep the neck long; look at the floor ahead of the hands."
+      ],
+      "mistakes": [
+        "Elbows flaring out so it becomes a narrow chest push-up.",
+        "Hips sagging as the triceps tire.",
+        "Head dropping so the chin reaches the floor first.",
+        "Half reps at the top."
+      ],
+      "safety": [
+        "Compound press with body weight: the triceps tire before the trunk, so the failure signal is the elbows flaring or the hips sagging; end the set there. Regress to hands on a bench or a step; a failed rep is lowered to the floor.",
+        "Wrist extension is at its most demanding with a narrow hand position; use push-up handles if the wrists hurt."
+      ],
+      "substitution_rationale": {
+        "push_up": "same movement with wider hands; easier, more chest",
+        "bench_dip": "same triceps-heavy push with body weight on a bench",
+        "cable_triceps_pushdown": "triceps isolation on a cable; precise loading"
+      },
+      "sources": [
+        "ExRx.net Barbell Close Grip Bench Press (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ]
+    },
+    "band_triceps_pushdown": {
+      "description": "Triceps pushdown with a resistance band looped over a door anchor, a rack or a pull-up bar: the upper arms stay at the sides while the forearms push the band down to straight arms. The band gets harder toward lockout, which suits the triceps, and it packs into a bag, so it is the travel triceps exercise. A good rep: elbows still, band pushed down to straight arms, a short squeeze, then a controlled return.",
+      "setup": [
+        "Loop the band over an anchor above head height and check that the anchor holds before loading it.",
+        "Grip the band ends or a handle with the wrists straight; step back until the band is tensioned at the top of the rep.",
+        "Elbows at the sides, bent past 90° at the start; slight forward lean, shoulders down."
+      ],
+      "cues": [
+        "Push down until the arms are fully straight; squeeze the triceps.",
+        "Elbows glued to the ribs; only the forearms move.",
+        "Return slowly; the band pulls hardest near the top, so control the last part.",
+        "Move to the next band level or shorten the band when the rep range tops out."
+      ],
+      "mistakes": [
+        "Elbows drifting forward and up.",
+        "Standing too close, so the band goes slack at the start.",
+        "Leaning on the band to press with the whole body.",
+        "Letting the band snap the hands back up."
+      ],
+      "safety": [
+        "Single-joint band exercise with no flags: near-failure sets are fine, and a failed rep simply unloads. The risk is the band itself; check it for nicks and anchor it so a slip cannot send it at your face."
+      ],
+      "substitution_rationale": {
+        "cable_triceps_pushdown": "same movement on a cable; precise loading in small steps",
+        "dumbbell_overhead_triceps_extension": "same triceps target with a dumbbell; no anchor needed",
+        "diamond_push_up": "same triceps target with body weight; no equipment at all"
+      },
+      "sources": [
+        "ExRx.net Cable Pushdown (family)",
+        "NSCA Essentials of Strength Training and Conditioning, 4th ed., ch. 16 (alternative modes and implements)",
+        "RP triceps hypertrophy guide (rpstrength.com, fetched 2026-09-04)"
+      ]
+    }
+  },
+  "status": {
+    "barbell_bench_press": "draft",
+    "dumbbell_bench_press": "draft",
+    "smith_bench_press": "draft",
+    "machine_chest_press": "draft",
+    "incline_barbell_bench_press": "draft",
+    "incline_dumbbell_press": "draft",
+    "incline_machine_chest_press": "draft",
+    "smith_incline_press": "draft",
+    "chest_dip": "draft",
+    "assisted_dip": "draft",
+    "push_up": "draft",
+    "push_up_feet_elevated": "draft",
+    "dumbbell_floor_press": "draft",
+    "cable_fly": "draft",
+    "low_to_high_cable_fly": "draft",
+    "pec_deck_fly": "draft",
+    "dumbbell_fly": "draft",
+    "close_grip_bench_press": "draft",
+    "cable_triceps_pushdown": "draft",
+    "overhead_cable_triceps_extension": "draft",
+    "lying_triceps_extension": "draft",
+    "dumbbell_overhead_triceps_extension": "draft",
+    "machine_triceps_extension": "draft",
+    "bench_dip": "draft",
+    "diamond_push_up": "draft",
+    "band_triceps_pushdown": "draft"
+  }
+}
