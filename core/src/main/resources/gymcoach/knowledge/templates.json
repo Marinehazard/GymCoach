@@ -1,0 +1,2299 @@
+{
+  "schema_version": 1,
+  "session_templates": [
+    {
+      "id": "UPPER_A",
+      "name": "Upper A",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell",
+            "machine"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "vertical_pull",
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        }
+      ]
+    },
+    {
+      "id": "UPPER_B",
+      "name": "Upper B",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "incline_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "prefer_load_types": [
+            "dumbbell",
+            "machine"
+          ],
+          "target_muscles": [
+            "upper_back"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s9",
+          "role": "optional",
+          "patterns": [
+            "scapular_elevation",
+            "grip"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "LOWER_A",
+      "name": "Lower A",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_extension"
+          ],
+          "target_muscles": [
+            "abs"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "LOWER_B",
+      "name": "Lower B",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "hip_extension_isolation"
+          ],
+          "target_muscles": [
+            "glutes"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "accessory",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_anti_rotation",
+            "core_flexion"
+          ],
+          "target_muscles": [
+            "abs",
+            "obliques"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        }
+      ]
+    },
+    {
+      "id": "FULL_A",
+      "name": "Full body A",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_anti_extension",
+            "core_flexion"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "FULL_B",
+      "name": "Full body B",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "incline_push",
+            "vertical_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_anti_rotation",
+            "core_flexion"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "FULL_C",
+      "name": "Full body C",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "prefer_load_types": [
+            "dumbbell",
+            "machine"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "hip_extension_isolation",
+            "hinge"
+          ],
+          "target_muscles": [
+            "glutes"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_extension"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "UPPER_X",
+      "name": "Upper X (3-day U/L/F)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell",
+            "machine"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "vertical_pull",
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        }
+      ]
+    },
+    {
+      "id": "LOWER_X",
+      "name": "Lower X (3-day U/L/F)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_extension"
+          ],
+          "target_muscles": [
+            "abs"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "PUSH",
+      "name": "Push",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "incline_push",
+            "chest_fly"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "PULL",
+      "name": "Pull",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "optional",
+          "patterns": [
+            "grip",
+            "carry"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "LEGS",
+      "name": "Legs",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "accessory",
+          "patterns": [
+            "knee_extension_isolation",
+            "hip_extension_isolation"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_anti_extension",
+            "core_flexion"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        }
+      ]
+    },
+    {
+      "id": "TRAVEL_A",
+      "name": "Travel A",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull",
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "accessory",
+          "patterns": [
+            "horizontal_push",
+            "core_anti_extension"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "TRAVEL_B",
+      "name": "Travel B",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "lunge_split",
+            "squat"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "hip_extension_isolation",
+            "hinge"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "vertical_push",
+            "incline_push"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion",
+            "elbow_extension"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "UPPER_A_S4",
+      "name": "Upper A (strength, 4/6-day)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell",
+            "machine"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true,
+          "backoff_of": "UPPER_B_S.s3"
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "vertical_pull",
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        }
+      ]
+    },
+    {
+      "id": "UPPER_A_S5",
+      "name": "Upper A (strength, 5-day)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell",
+            "machine"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true,
+          "backoff_of": "PUSH_S.s2"
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "vertical_pull",
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        }
+      ]
+    },
+    {
+      "id": "UPPER_B_S",
+      "name": "Upper B (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true,
+          "backoff_of": "UPPER_A_S4.s1"
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "prefer_load_types": [
+            "dumbbell",
+            "machine"
+          ],
+          "target_muscles": [
+            "upper_back"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "accessory",
+          "patterns": [
+            "incline_push",
+            "chest_fly",
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "chest",
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s8"
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s9",
+          "role": "optional",
+          "patterns": [
+            "scapular_elevation",
+            "grip"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "LOWER_A_S",
+      "name": "Lower A (strength, 4/6-day)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true,
+          "backoff_of": "LOWER_B_S.s1"
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_extension"
+          ],
+          "target_muscles": [
+            "abs"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "LOWER_A_S5",
+      "name": "Lower A (strength, 5-day)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true,
+          "backoff_of": "LEGS_S.s2"
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "squat",
+            "lunge_split"
+          ],
+          "prefer_load_types": [
+            "machine",
+            "dumbbell"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_extension"
+          ],
+          "target_muscles": [
+            "abs"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "LOWER_B_S",
+      "name": "Lower B (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "squat"
+          ],
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true,
+          "backoff_of": "LOWER_A_S.s1"
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "hip_extension_isolation"
+          ],
+          "target_muscles": [
+            "glutes"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s4",
+          "role": "accessory",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_anti_rotation",
+            "core_flexion"
+          ],
+          "target_muscles": [
+            "abs",
+            "obliques"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        }
+      ]
+    },
+    {
+      "id": "PUSH_S",
+      "name": "Push (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true,
+          "backoff_of": "UPPER_A_S5.s1"
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "incline_push",
+            "chest_fly"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "target_muscles": [
+            "side_delts"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "target_muscles": [
+            "triceps"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        }
+      ]
+    },
+    {
+      "id": "PULL_S",
+      "name": "Pull (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "heavy": true,
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "target_muscles": [
+            "rear_delts"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "target_muscles": [
+            "biceps"
+          ],
+          "required": false,
+          "superset_with": "s5"
+        },
+        {
+          "slot_id": "s7",
+          "role": "optional",
+          "patterns": [
+            "grip",
+            "carry"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "id": "LEGS_S",
+      "name": "Legs (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "required": true,
+          "backoff_of": "LOWER_A_S5.s1"
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "heavy": true,
+          "prefer_load_types": [
+            "barbell"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "target_muscles": [
+            "hamstrings"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "accessory",
+          "patterns": [
+            "knee_extension_isolation",
+            "hip_extension_isolation"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "target_muscles": [
+            "calves"
+          ],
+          "required": true,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_anti_extension",
+            "core_flexion"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        }
+      ]
+    },
+    {
+      "id": "FULL_A_S",
+      "name": "Full body A (strength)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "required": true,
+          "backoff_of": "LOWER_X.s1"
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true,
+          "backoff_of": "UPPER_X.s1"
+        },
+        {
+          "slot_id": "s3",
+          "role": "primary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s4",
+          "role": "secondary",
+          "patterns": [
+            "hinge"
+          ],
+          "required": true
+        },
+        {
+          "slot_id": "s5",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": false
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s7"
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction",
+            "shoulder_er_rear_delt",
+            "elbow_flexion",
+            "elbow_extension",
+            "knee_flexion_isolation",
+            "knee_extension_isolation",
+            "calf",
+            "chest_fly",
+            "hip_extension_isolation",
+            "core_anti_extension",
+            "core_flexion",
+            "vertical_pull"
+          ],
+          "required": false,
+          "superset_with": "s6"
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_anti_extension",
+            "core_flexion"
+          ],
+          "required": false
+        }
+      ]
+    }
+  ],
+  "splits": [
+    {
+      "kind": "full_body_1",
+      "days_per_week": 1,
+      "session_template_ids": [
+        "FULL_A"
+      ],
+      "default_weekdays": [
+        3
+      ],
+      "for_goals": [],
+      "for_training_ages": []
+    },
+    {
+      "kind": "full_body_2",
+      "days_per_week": 2,
+      "session_template_ids": [
+        "FULL_A",
+        "FULL_B"
+      ],
+      "default_weekdays": [
+        1,
+        4
+      ],
+      "for_goals": [],
+      "for_training_ages": []
+    },
+    {
+      "kind": "full_body_3",
+      "days_per_week": 3,
+      "session_template_ids": [
+        "FULL_A",
+        "FULL_B",
+        "FULL_C"
+      ],
+      "default_weekdays": [
+        1,
+        3,
+        5
+      ],
+      "for_goals": [],
+      "for_training_ages": [
+        "novice"
+      ]
+    },
+    {
+      "kind": "full_body_3",
+      "days_per_week": 3,
+      "session_template_ids": [
+        "FULL_A",
+        "FULL_B",
+        "FULL_C"
+      ],
+      "default_weekdays": [
+        1,
+        3,
+        5
+      ],
+      "for_goals": [
+        "endurance_support"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "upper_lower_full_3",
+      "days_per_week": 3,
+      "session_template_ids": [
+        "UPPER_X",
+        "LOWER_X",
+        "FULL_A"
+      ],
+      "default_weekdays": [
+        1,
+        3,
+        5
+      ],
+      "for_goals": [
+        "hypertrophy",
+        "general_fitness",
+        "fat_loss",
+        "endurance_support"
+      ],
+      "for_training_ages": [
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "kind": "upper_lower_full_3",
+      "days_per_week": 3,
+      "session_template_ids": [
+        "UPPER_X",
+        "LOWER_X",
+        "FULL_A_S"
+      ],
+      "default_weekdays": [
+        1,
+        3,
+        5
+      ],
+      "for_goals": [
+        "strength"
+      ],
+      "for_training_ages": [
+        "intermediate",
+        "advanced"
+      ]
+    },
+    {
+      "kind": "upper_lower_4",
+      "days_per_week": 4,
+      "session_template_ids": [
+        "UPPER_A",
+        "LOWER_A",
+        "UPPER_B",
+        "LOWER_B"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "for_goals": [
+        "hypertrophy",
+        "general_fitness",
+        "fat_loss",
+        "endurance_support"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "upper_lower_4",
+      "days_per_week": 4,
+      "session_template_ids": [
+        "UPPER_A_S4",
+        "LOWER_A_S",
+        "UPPER_B_S",
+        "LOWER_B_S"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "for_goals": [
+        "strength"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "ul_ppl_5",
+      "days_per_week": 5,
+      "session_template_ids": [
+        "UPPER_A",
+        "LOWER_A",
+        "PUSH",
+        "PULL",
+        "LEGS"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "for_goals": [
+        "hypertrophy",
+        "general_fitness",
+        "fat_loss",
+        "endurance_support"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "ul_ppl_5",
+      "days_per_week": 5,
+      "session_template_ids": [
+        "UPPER_A_S5",
+        "LOWER_A_S5",
+        "PUSH_S",
+        "PULL_S",
+        "LEGS_S"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "for_goals": [
+        "strength"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "ppl_6",
+      "days_per_week": 6,
+      "session_template_ids": [
+        "PUSH",
+        "PULL",
+        "LEGS",
+        "PUSH",
+        "PULL",
+        "LEGS"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "for_goals": [
+        "hypertrophy",
+        "general_fitness",
+        "fat_loss",
+        "endurance_support"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "ul_6",
+      "days_per_week": 6,
+      "session_template_ids": [
+        "UPPER_A_S4",
+        "LOWER_A_S",
+        "UPPER_B_S",
+        "LOWER_B_S",
+        "UPPER_A_S4",
+        "LOWER_A_S"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "for_goals": [
+        "strength"
+      ],
+      "for_training_ages": []
+    },
+    {
+      "kind": "travel_2",
+      "days_per_week": 2,
+      "session_template_ids": [
+        "TRAVEL_A",
+        "TRAVEL_B"
+      ],
+      "default_weekdays": [
+        2,
+        4
+      ],
+      "for_goals": [],
+      "for_training_ages": []
+    }
+  ]
+}

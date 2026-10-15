@@ -1,0 +1,524 @@
+{
+  "schema_version": 1,
+  "unilateral_factor": 0.5,
+  "seeds": [
+    {
+      "from_exercise_id": "barbell_bench_press",
+      "to_exercise_id": "dumbbell_bench_press",
+      "factor": 0.35,
+      "note": "per hand"
+    },
+    {
+      "from_exercise_id": "barbell_bench_press",
+      "to_exercise_id": "incline_barbell_bench_press",
+      "factor": 0.85
+    },
+    {
+      "from_exercise_id": "barbell_bench_press",
+      "to_exercise_id": "machine_chest_press",
+      "factor": 0.9,
+      "note": "stack"
+    },
+    {
+      "from_exercise_id": "barbell_bench_press",
+      "to_exercise_id": "close_grip_bench_press",
+      "factor": 0.85
+    },
+    {
+      "from_exercise_id": "overhead_press_barbell",
+      "to_exercise_id": "seated_dumbbell_shoulder_press",
+      "factor": 0.35,
+      "note": "per hand"
+    },
+    {
+      "from_exercise_id": "overhead_press_barbell",
+      "to_exercise_id": "machine_shoulder_press",
+      "factor": 0.9
+    },
+    {
+      "from_exercise_id": "barbell_row",
+      "to_exercise_id": "dumbbell_row",
+      "factor": 0.4,
+      "note": "per hand"
+    },
+    {
+      "from_exercise_id": "lat_pulldown",
+      "to_exercise_id": "pull_up",
+      "factor": 1.0,
+      "note": "body weight: the pulldown load approximates the body weight a pull-up needs"
+    },
+    {
+      "from_exercise_id": "hip_thrust",
+      "to_exercise_id": "glute_bridge",
+      "factor": 0.5,
+      "note": "DB on hips"
+    },
+    {
+      "from_exercise_id": "hack_squat",
+      "to_exercise_id": "back_squat",
+      "factor": 0.65,
+      "note": "sled load -> back squat equivalent"
+    },
+    {
+      "from_exercise_id": "back_squat",
+      "to_exercise_id": "front_squat",
+      "factor": 0.8
+    },
+    {
+      "from_exercise_id": "back_squat",
+      "to_exercise_id": "goblet_squat",
+      "factor": 0.35,
+      "note": "single implement"
+    },
+    {
+      "from_exercise_id": "back_squat",
+      "to_exercise_id": "leg_press_45",
+      "factor": 2.0,
+      "note": "sled load"
+    },
+    {
+      "from_exercise_id": "back_squat",
+      "to_exercise_id": "hack_squat",
+      "factor": 1.5,
+      "note": "sled load"
+    },
+    {
+      "from_exercise_id": "conventional_deadlift",
+      "to_exercise_id": "trap_bar_deadlift",
+      "factor": 1.05
+    },
+    {
+      "from_exercise_id": "conventional_deadlift",
+      "to_exercise_id": "romanian_deadlift",
+      "factor": 0.7
+    },
+    {
+      "from_exercise_id": "trap_bar_deadlift",
+      "to_exercise_id": "romanian_deadlift",
+      "factor": 0.75
+    },
+    {
+      "from_exercise_id": "romanian_deadlift",
+      "to_exercise_id": "good_morning",
+      "factor": 0.5
+    },
+    {
+      "from_exercise_id": "conventional_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "sumo_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "trap_bar_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "romanian_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "dumbbell_romanian_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "single_leg_romanian_deadlift",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "good_morning",
+      "to_exercise_id": "kettlebell_swing",
+      "factor": 0.2,
+      "note": "any hinge -> kettlebell swing"
+    },
+    {
+      "from_exercise_id": "bulgarian_split_squat",
+      "to_exercise_id": "reverse_lunge",
+      "factor": 1.0
+    },
+    {
+      "from_exercise_id": "bulgarian_split_squat",
+      "to_exercise_id": "split_squat",
+      "factor": 1.0
+    },
+    {
+      "from_exercise_id": "bulgarian_split_squat",
+      "to_exercise_id": "walking_lunge",
+      "factor": 1.0
+    },
+    {
+      "from_exercise_id": "reverse_lunge",
+      "to_exercise_id": "bulgarian_split_squat",
+      "factor": 1.0
+    },
+    {
+      "from_exercise_id": "split_squat",
+      "to_exercise_id": "bulgarian_split_squat",
+      "factor": 1.0
+    },
+    {
+      "from_exercise_id": "walking_lunge",
+      "to_exercise_id": "bulgarian_split_squat",
+      "factor": 1.0
+    }
+  ],
+  "bodyweight_seeds": [
+    {
+      "pattern": "squat",
+      "load_type": "barbell",
+      "fraction": 0.5
+    },
+    {
+      "pattern": "squat",
+      "load_type": "machine",
+      "fraction": 1.0
+    },
+    {
+      "pattern": "squat",
+      "load_type": "dumbbell",
+      "fraction": 0.25
+    },
+    {
+      "pattern": "hinge",
+      "load_type": "barbell",
+      "fraction": 0.5
+    },
+    {
+      "pattern": "hinge",
+      "load_type": "dumbbell",
+      "fraction": 0.15,
+      "per_hand": true
+    },
+    {
+      "pattern": "horizontal_push",
+      "load_type": "barbell",
+      "fraction": 0.4
+    },
+    {
+      "pattern": "horizontal_push",
+      "load_type": "dumbbell",
+      "fraction": 0.15,
+      "per_hand": true
+    },
+    {
+      "pattern": "horizontal_push",
+      "load_type": "machine",
+      "fraction": 0.45
+    },
+    {
+      "pattern": "incline_push",
+      "load_type": "barbell",
+      "fraction": 0.35
+    },
+    {
+      "pattern": "incline_push",
+      "load_type": "dumbbell",
+      "fraction": 0.12,
+      "per_hand": true
+    },
+    {
+      "pattern": "vertical_push",
+      "load_type": "barbell",
+      "fraction": 0.25
+    },
+    {
+      "pattern": "vertical_push",
+      "load_type": "dumbbell",
+      "fraction": 0.1,
+      "per_hand": true
+    },
+    {
+      "pattern": "vertical_push",
+      "load_type": "machine",
+      "fraction": 0.3
+    },
+    {
+      "pattern": "horizontal_pull",
+      "load_type": "barbell",
+      "fraction": 0.4
+    },
+    {
+      "pattern": "horizontal_pull",
+      "load_type": "dumbbell",
+      "fraction": 0.15,
+      "per_hand": true
+    },
+    {
+      "pattern": "horizontal_pull",
+      "load_type": "cable",
+      "fraction": 0.45
+    },
+    {
+      "pattern": "horizontal_pull",
+      "load_type": "machine",
+      "fraction": 0.45
+    },
+    {
+      "pattern": "vertical_pull",
+      "load_type": "cable",
+      "fraction": 0.45
+    },
+    {
+      "pattern": "lunge_split",
+      "load_type": "dumbbell",
+      "fraction": 0.1,
+      "per_hand": true
+    },
+    {
+      "pattern": "hip_extension_isolation",
+      "load_type": "barbell",
+      "fraction": 0.6
+    },
+    {
+      "pattern": "calf",
+      "load_type": "machine",
+      "fraction": 0.6
+    },
+    {
+      "pattern": "core_anti_extension",
+      "load_type": "cable",
+      "fraction": 0.2
+    },
+    {
+      "pattern": "core_anti_rotation",
+      "load_type": "cable",
+      "fraction": 0.2
+    },
+    {
+      "pattern": "core_flexion",
+      "load_type": "cable",
+      "fraction": 0.2
+    },
+    {
+      "pattern": "core_rotation",
+      "load_type": "cable",
+      "fraction": 0.2
+    },
+    {
+      "pattern": "chest_fly",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "chest_fly",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "chest_fly",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "chest_fly",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_flexion",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "elbow_flexion",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_flexion",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_flexion",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_extension",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "elbow_extension",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_extension",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "elbow_extension",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_abduction",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "shoulder_abduction",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_abduction",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_abduction",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_er_rear_delt",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "shoulder_er_rear_delt",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_er_rear_delt",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "shoulder_er_rear_delt",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "scapular_elevation",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "scapular_elevation",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "scapular_elevation",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "scapular_elevation",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_flexion_isolation",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "knee_flexion_isolation",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_flexion_isolation",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_flexion_isolation",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_extension_isolation",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "knee_extension_isolation",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_extension_isolation",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "knee_extension_isolation",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_abduction",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "hip_abduction",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_abduction",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_abduction",
+      "load_type": "barbell",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_adduction",
+      "load_type": "dumbbell",
+      "fraction": 0.08,
+      "per_hand": true
+    },
+    {
+      "pattern": "hip_adduction",
+      "load_type": "machine",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_adduction",
+      "load_type": "cable",
+      "fraction": 0.08
+    },
+    {
+      "pattern": "hip_adduction",
+      "load_type": "barbell",
+      "fraction": 0.08
+    }
+  ],
+  "female_factor": 0.6,
+  "intermediate_factor": 1.4,
+  "advanced_factor": 1.7
+}

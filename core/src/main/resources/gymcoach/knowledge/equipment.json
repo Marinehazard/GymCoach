@@ -1,0 +1,1820 @@
+{
+  "schema_version": 1,
+  "renamed_ids": {},
+  "equipment": [
+    {
+      "id": "barbell",
+      "name": "Olympic barbell",
+      "category": "free_weights",
+      "aliases": [
+        "straight bar",
+        "Olympic bar",
+        "20 kg bar",
+        "Langhantel"
+      ],
+      "params": [
+        {
+          "key": "bar_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 20,
+          "min": 5,
+          "max": 30,
+          "description": "Bar weight; 15 kg women's bar exists."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "bar_kg (default 20; 15 kg women's bar exists)"
+    },
+    {
+      "id": "ez_bar",
+      "name": "EZ curl bar",
+      "category": "free_weights",
+      "aliases": [
+        "EZ bar",
+        "curl bar",
+        "SZ-Stange"
+      ],
+      "params": [
+        {
+          "key": "bar_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 10,
+          "min": 5,
+          "max": 15,
+          "description": "EZ-bar weight; varies 7-12 kg."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "bar_kg (default 10; varies 7–12); common but not default in: home_gym"
+    },
+    {
+      "id": "trap_bar",
+      "name": "Trap / hex bar",
+      "category": "free_weights",
+      "aliases": [
+        "hex bar",
+        "Hexbar"
+      ],
+      "params": [
+        {
+          "key": "bar_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 25,
+          "min": 10,
+          "max": 40,
+          "description": "Trap-bar weight."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "bar_kg (default 25; open vs closed irrelevant)"
+    },
+    {
+      "id": "safety_squat_bar",
+      "name": "Safety squat bar",
+      "category": "free_weights",
+      "aliases": [
+        "SSB",
+        "Yoke bar"
+      ],
+      "params": [
+        {
+          "key": "bar_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 25,
+          "min": 15,
+          "max": 40,
+          "description": "SSB weight; 25-32 kg depending on model."
+        }
+      ],
+      "notes": "bar_kg (default 25–32 depending on model); common but not default in: base_gym"
+    },
+    {
+      "id": "fixed_weight_barbells",
+      "name": "Fixed-weight barbells",
+      "category": "free_weights",
+      "aliases": [
+        "pre-loaded bars",
+        "fixed EZ bars",
+        "Fixhanteln"
+      ],
+      "params": [
+        {
+          "key": "max_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 40,
+          "min": 5,
+          "max": 100,
+          "description": "Heaviest fixed barbell."
+        },
+        {
+          "key": "step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 2.5,
+          "min": 1,
+          "max": 10,
+          "description": "Increment between fixed barbells (2.5 or 5)."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "max_kg (default 40), step_kg (default 2.5 or 5); common but not default in: hotel_gym"
+    },
+    {
+      "id": "plates",
+      "name": "Olympic plates",
+      "category": "free_weights",
+      "aliases": [
+        "discs",
+        "bumper plates",
+        "Hantelscheiben"
+      ],
+      "params": [
+        {
+          "key": "smallest_plate_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 1.25,
+          "min": 0.25,
+          "max": 5,
+          "description": "Smallest plate available."
+        },
+        {
+          "key": "has_microplates",
+          "type": "boolean",
+          "default": false,
+          "description": "0.5 kg (or smaller) plates available."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "smallest_plate_kg (default 1.25), has_microplates (0.5 kg or less; default false)"
+    },
+    {
+      "id": "dumbbells",
+      "name": "Dumbbells",
+      "category": "free_weights",
+      "aliases": [
+        "DBs",
+        "hex dumbbells",
+        "Kurzhanteln",
+        "adjustable dumbbells"
+      ],
+      "params": [
+        {
+          "key": "max_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 50,
+          "min": 1,
+          "max": 100,
+          "description": "Heaviest dumbbell available (per hand)."
+        },
+        {
+          "key": "min_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 2,
+          "min": 0.5,
+          "max": 20,
+          "description": "Lightest dumbbell available (default 1 or 2)."
+        },
+        {
+          "key": "step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 2,
+          "min": 0.5,
+          "max": 5,
+          "description": "Increment between consecutive dumbbells."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym",
+        "hotel_gym"
+      ],
+      "notes": "max_kg (base 50, home 32, hotel 20), step_kg (base 2, home 2, hotel 2), min_kg (default 1 or 2)"
+    },
+    {
+      "id": "kettlebells",
+      "name": "Kettlebells",
+      "category": "free_weights",
+      "aliases": [
+        "KB",
+        "Kugelhantel"
+      ],
+      "params": [
+        {
+          "key": "available_kg",
+          "type": "number_list",
+          "unit": "kg",
+          "default": [
+            8,
+            12,
+            16,
+            20,
+            24,
+            28,
+            32
+          ],
+          "description": "Kettlebell sizes available."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "available_kg list (default 8,12,16,20,24,28,32); common but not default in: hotel_gym"
+    },
+    {
+      "id": "flat_bench",
+      "name": "Flat bench",
+      "category": "racks_benches",
+      "aliases": [
+        "bench",
+        "Flachbank"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: home_gym, hotel_gym"
+    },
+    {
+      "id": "incline_bench",
+      "name": "Fixed incline bench",
+      "category": "racks_benches",
+      "aliases": [
+        "incline bench"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "decline_bench",
+      "name": "Decline bench",
+      "category": "racks_benches",
+      "aliases": [
+        "decline bench",
+        "sit-up board"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "adjustable_bench",
+      "name": "Adjustable bench",
+      "category": "racks_benches",
+      "aliases": [
+        "incline/decline bench",
+        "FID bench",
+        "verstellbare Bank"
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym",
+        "hotel_gym"
+      ],
+      "notes": "satisfies flat, incline and (usually) decline"
+    },
+    {
+      "id": "power_rack",
+      "name": "Power rack / cage",
+      "category": "racks_benches",
+      "aliases": [
+        "cage",
+        "full rack",
+        "Power-Rack"
+      ],
+      "params": [
+        {
+          "key": "has_safeties",
+          "type": "boolean",
+          "default": true,
+          "description": "Safety pins/straps present."
+        },
+        {
+          "key": "has_pullup_bar",
+          "type": "boolean",
+          "default": true,
+          "description": "Pull-up bar on top of the rack."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "has_safeties (default true), has_pullup_bar (default true)"
+    },
+    {
+      "id": "half_rack",
+      "name": "Half rack with spotter arms",
+      "category": "racks_benches",
+      "aliases": [
+        "half cage"
+      ],
+      "params": [
+        {
+          "key": "has_safeties",
+          "type": "boolean",
+          "default": true,
+          "description": "Spotter arms present."
+        }
+      ],
+      "notes": "has_safeties (default true); common but not default in: base_gym, home_gym"
+    },
+    {
+      "id": "squat_rack",
+      "name": "Squat stand / rack without safeties",
+      "category": "racks_benches",
+      "aliases": [
+        "squat stands",
+        "J-hooks only"
+      ],
+      "notes": "does not satisfy rack_or_spotter; common but not default in: base_gym"
+    },
+    {
+      "id": "smith_machine",
+      "name": "Smith machine",
+      "category": "racks_benches",
+      "aliases": [
+        "Multipresse",
+        "guided bar"
+      ],
+      "params": [
+        {
+          "key": "bar_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 10,
+          "min": 0,
+          "max": 25,
+          "description": "Effective bar weight (counterbalanced 0-10)."
+        },
+        {
+          "key": "is_angled",
+          "type": "boolean",
+          "default": false,
+          "description": "Angled (non-vertical) guide rails."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "bar_kg (counterbalanced 0–10; default 10), is_angled (default false); common but not default in: hotel_gym"
+    },
+    {
+      "id": "preacher_bench",
+      "name": "Preacher curl bench",
+      "category": "racks_benches",
+      "aliases": [
+        "Scott bench",
+        "Scott-Curl-Bank"
+      ],
+      "default_in": [
+        "base_gym"
+      ]
+    },
+    {
+      "id": "cable_single",
+      "name": "Single adjustable cable column",
+      "category": "cables",
+      "aliases": [
+        "single pulley",
+        "Kabelzug"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        }
+      ],
+      "notes": "stack_step_kg (default 5), half_step_kg (default 2.5 if add-on present); common but not default in: base_gym, hotel_gym"
+    },
+    {
+      "id": "cable_dual",
+      "name": "Dual adjustable pulleys / crossover",
+      "category": "cables",
+      "aliases": [
+        "cable crossover",
+        "dual pulley",
+        "Kabelzugstation"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "same params; common but not default in: hotel_gym"
+    },
+    {
+      "id": "functional_trainer",
+      "name": "Functional trainer (dual stack, multi-position)",
+      "category": "cables",
+      "aliases": [
+        "FT",
+        "multi-gym cable station"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        },
+        {
+          "key": "has_pullup_bar",
+          "type": "boolean",
+          "default": false,
+          "description": "Pull-up bar on the frame."
+        }
+      ],
+      "notes": "same params; has_pullup_bar (default false); common but not default in: base_gym, home_gym, hotel_gym"
+    },
+    {
+      "id": "lat_pulldown_machine",
+      "name": "Lat pulldown",
+      "category": "cables",
+      "aliases": [
+        "pulldown",
+        "Latzug"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "stack_step_kg 5 / half_step_kg 2.5; common but not default in: hotel_gym"
+    },
+    {
+      "id": "seated_cable_row_machine",
+      "name": "Seated cable row (low row)",
+      "category": "cables",
+      "aliases": [
+        "low pulley row",
+        "Ruderzug"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "same; common but not default in: hotel_gym"
+    },
+    {
+      "id": "cable_rope",
+      "name": "Rope attachment",
+      "category": "cables",
+      "aliases": [
+        "triceps rope",
+        "Seilzug-Griff"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "assumed present wherever cables are; listed so hotel FT without rope can be modelled; common but not default in: hotel_gym"
+    },
+    {
+      "id": "chest_press_machine",
+      "name": "Chest press machine",
+      "category": "machines_upper",
+      "aliases": [
+        "seated chest press",
+        "Brustpresse"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        },
+        {
+          "key": "plate_loaded",
+          "type": "boolean",
+          "default": false,
+          "description": "Plate-loaded variant."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "stack_step_kg 5 / half_step_kg 2.5; plate-loaded variants: plate_loaded true; common but not default in: hotel_gym"
+    },
+    {
+      "id": "incline_chest_press_machine",
+      "name": "Incline chest press machine",
+      "category": "machines_upper",
+      "aliases": [
+        "incline press",
+        "Schrägbankpresse"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment (one plate)."
+        },
+        {
+          "key": "half_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0.25,
+          "max": 10,
+          "description": "Add-on / half-plate increment (typically 2.5 kg); set only if the stack has one."
+        },
+        {
+          "key": "plate_loaded",
+          "type": "boolean",
+          "default": false,
+          "description": "Plate-loaded variant."
+        }
+      ],
+      "notes": "same; common but not default in: base_gym"
+    },
+    {
+      "id": "pec_deck_machine",
+      "name": "Pec deck / rear delt fly",
+      "category": "machines_upper",
+      "aliases": [
+        "butterfly",
+        "reverse fly machine",
+        "Butterfly"
+      ],
+      "params": [
+        {
+          "key": "has_rear_delt_mode",
+          "type": "boolean",
+          "default": true,
+          "description": "Handles can be set for reverse flyes."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "has_rear_delt_mode (default true)"
+    },
+    {
+      "id": "shoulder_press_machine",
+      "name": "Shoulder press machine",
+      "category": "machines_upper",
+      "aliases": [
+        "seated overhead press machine",
+        "Schulterpresse"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: hotel_gym"
+    },
+    {
+      "id": "lateral_raise_machine",
+      "name": "Lateral raise machine",
+      "category": "machines_upper",
+      "aliases": [
+        "side delt machine",
+        "Seitheben-Maschine"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "preacher_curl_machine",
+      "name": "Preacher curl machine",
+      "category": "machines_upper",
+      "aliases": [
+        "biceps machine",
+        "Bizepsmaschine"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "triceps_machine",
+      "name": "Triceps extension / seated dip machine",
+      "category": "machines_upper",
+      "aliases": [
+        "triceps press",
+        "Dip-Maschine",
+        "Trizepsmaschine"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "chest_supported_row_machine",
+      "name": "Chest-supported row machine",
+      "category": "machines_upper",
+      "aliases": [
+        "seated row machine",
+        "iso-lateral row",
+        "Rudermaschine"
+      ],
+      "params": [
+        {
+          "key": "plate_loaded",
+          "type": "boolean",
+          "default": true,
+          "description": "Plate-loaded machine."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "plate_loaded"
+    },
+    {
+      "id": "high_row_machine",
+      "name": "High row machine",
+      "category": "machines_upper",
+      "aliases": [
+        "iso-lateral high row",
+        "Hammer high row"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "t_bar_row_station",
+      "name": "T-bar row",
+      "category": "machines_upper",
+      "aliases": [
+        "T-bar",
+        "chest-supported T-bar"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "assisted_pullup_dip_machine",
+      "name": "Assisted pull-up / dip",
+      "category": "machines_upper",
+      "aliases": [
+        "Gravitron",
+        "assisted chin/dip",
+        "Klimmzug-Hilfe"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Assistance-stack increment."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "stack_step_kg 5 (assist); common but not default in: hotel_gym"
+    },
+    {
+      "id": "ab_crunch_machine",
+      "name": "Ab crunch machine",
+      "category": "machines_upper",
+      "aliases": [
+        "abdominal machine",
+        "Bauchmaschine"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "leg_press_45",
+      "name": "45° leg press",
+      "category": "machines_lower",
+      "aliases": [
+        "plate-loaded leg press",
+        "sled leg press",
+        "Beinpresse"
+      ],
+      "params": [
+        {
+          "key": "plate_loaded",
+          "type": "boolean",
+          "default": true,
+          "description": "Plate-loaded sled."
+        },
+        {
+          "key": "sled_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 0,
+          "min": 0,
+          "max": 150,
+          "description": "Sled weight (typically 40-75 kg; unknown -> 0 and noted)."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "plate_loaded true; sled_kg (default 40–75, unknown → 0 and note)"
+    },
+    {
+      "id": "leg_press_horizontal",
+      "name": "Seated / horizontal leg press",
+      "category": "machines_lower",
+      "aliases": [
+        "selectorized leg press",
+        "seated leg press"
+      ],
+      "params": [
+        {
+          "key": "stack_step_kg",
+          "type": "number",
+          "unit": "kg",
+          "default": 5,
+          "min": 0.5,
+          "max": 20,
+          "description": "Weight-stack increment."
+        }
+      ],
+      "notes": "stack_step_kg 5; common but not default in: base_gym, hotel_gym"
+    },
+    {
+      "id": "hack_squat_machine",
+      "name": "Hack squat",
+      "category": "machines_lower",
+      "aliases": [
+        "hack squat sled",
+        "Hackenschmidt"
+      ],
+      "params": [
+        {
+          "key": "plate_loaded",
+          "type": "boolean",
+          "default": true,
+          "description": "Plate-loaded sled."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "plate_loaded"
+    },
+    {
+      "id": "pendulum_squat_machine",
+      "name": "Pendulum squat",
+      "category": "machines_lower",
+      "aliases": [
+        "pendulum"
+      ],
+      "notes": "rare; user adds"
+    },
+    {
+      "id": "belt_squat_machine",
+      "name": "Belt squat",
+      "category": "machines_lower",
+      "aliases": [
+        "belt squat",
+        "hip belt squat"
+      ],
+      "notes": "rare"
+    },
+    {
+      "id": "leg_extension_machine",
+      "name": "Leg extension",
+      "category": "machines_lower",
+      "aliases": [
+        "Beinstrecker"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: hotel_gym"
+    },
+    {
+      "id": "seated_leg_curl_machine",
+      "name": "Seated leg curl",
+      "category": "machines_lower",
+      "aliases": [
+        "Beinbeuger sitzend"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: hotel_gym"
+    },
+    {
+      "id": "lying_leg_curl_machine",
+      "name": "Lying leg curl",
+      "category": "machines_lower",
+      "aliases": [
+        "prone leg curl",
+        "Beinbeuger liegend"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "hip_thrust_machine",
+      "name": "Hip thrust machine",
+      "category": "machines_lower",
+      "aliases": [
+        "glute drive",
+        "Hip-Thrust-Maschine"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "glute_kickback_machine",
+      "name": "Glute kickback machine",
+      "category": "machines_lower",
+      "aliases": [
+        "standing glute machine",
+        "Glute-Kickback"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "hip_abduction_machine",
+      "name": "Hip abduction machine",
+      "category": "machines_lower",
+      "aliases": [
+        "abductor",
+        "outer thigh",
+        "Abduktor"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "often a combined ab/adductor machine"
+    },
+    {
+      "id": "hip_adduction_machine",
+      "name": "Hip adduction machine",
+      "category": "machines_lower",
+      "aliases": [
+        "adductor",
+        "inner thigh",
+        "Adduktor"
+      ],
+      "default_in": [
+        "base_gym"
+      ]
+    },
+    {
+      "id": "standing_calf_raise_machine",
+      "name": "Standing calf raise",
+      "category": "machines_lower",
+      "aliases": [
+        "calf machine",
+        "Wadenmaschine stehend"
+      ],
+      "default_in": [
+        "base_gym"
+      ]
+    },
+    {
+      "id": "seated_calf_raise_machine",
+      "name": "Seated calf raise",
+      "category": "machines_lower",
+      "aliases": [
+        "Wadenmaschine sitzend"
+      ],
+      "default_in": [
+        "base_gym"
+      ]
+    },
+    {
+      "id": "reverse_hyper_machine",
+      "name": "Reverse hyper",
+      "category": "machines_lower",
+      "aliases": [
+        "reverse hyperextension"
+      ],
+      "notes": "rare"
+    },
+    {
+      "id": "pull_up_bar",
+      "name": "Pull-up bar",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "chin-up bar",
+        "Klimmzugstange"
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "racks with a bar satisfy pullup_bar_any via param; common but not default in: hotel_gym"
+    },
+    {
+      "id": "dip_station",
+      "name": "Dip station / parallel bars",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "dip bars",
+        "Dipstation"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: home_gym"
+    },
+    {
+      "id": "back_extension_45",
+      "name": "45° back extension bench",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "hyperextension bench",
+        "Roman chair",
+        "Rückenstrecker"
+      ],
+      "default_in": [
+        "base_gym"
+      ]
+    },
+    {
+      "id": "ghd",
+      "name": "Glute-ham developer",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "GHD",
+        "glute-ham bench"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "plyo_box",
+      "name": "Plyo box / step",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "box",
+        "step platform",
+        "Sprungbox"
+      ],
+      "params": [
+        {
+          "key": "heights_cm",
+          "type": "number_list",
+          "unit": "cm",
+          "description": "Box heights available."
+        }
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "heights_cm list; common but not default in: home_gym, hotel_gym"
+    },
+    {
+      "id": "suspension_trainer",
+      "name": "Suspension trainer",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "TRX",
+        "rings",
+        "Schlingentrainer"
+      ],
+      "packable": true,
+      "default_in": [
+        "travel_kit"
+      ],
+      "notes": "packable; common but not default in: base_gym, home_gym, hotel_gym"
+    },
+    {
+      "id": "landmine",
+      "name": "Landmine attachment",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "landmine",
+        "T-bar pivot",
+        "corner"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "a bar wedged in a corner counts; needs barbell+plates; common but not default in: home_gym"
+    },
+    {
+      "id": "sled",
+      "name": "Prowler / sled",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "prowler",
+        "push sled",
+        "turf"
+      ],
+      "params": [
+        {
+          "key": "sled_kg",
+          "type": "number",
+          "unit": "kg",
+          "min": 0,
+          "max": 150,
+          "description": "Empty sled weight."
+        }
+      ],
+      "notes": "needs plates; sled_kg; common but not default in: base_gym"
+    },
+    {
+      "id": "battle_ropes",
+      "name": "Battle ropes",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "ropes"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "medicine_balls",
+      "name": "Medicine / slam balls",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "med ball",
+        "slam ball",
+        "wall ball",
+        "Medizinball"
+      ],
+      "params": [
+        {
+          "key": "available_kg",
+          "type": "number_list",
+          "unit": "kg",
+          "description": "Ball weights available."
+        }
+      ],
+      "notes": "available_kg list; common but not default in: base_gym, hotel_gym"
+    },
+    {
+      "id": "mat",
+      "name": "Exercise mat",
+      "category": "bodyweight_stations",
+      "aliases": [
+        "yoga mat",
+        "Matte"
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym",
+        "hotel_gym"
+      ],
+      "notes": "never a hard requirement — floor works"
+    },
+    {
+      "id": "treadmill",
+      "name": "Treadmill",
+      "category": "cardio",
+      "aliases": [
+        "Laufband"
+      ],
+      "params": [
+        {
+          "key": "max_incline_pct",
+          "type": "number",
+          "unit": "pct",
+          "min": 0,
+          "max": 40,
+          "description": "Maximum incline."
+        }
+      ],
+      "default_in": [
+        "base_gym",
+        "hotel_gym"
+      ],
+      "notes": "max_incline_pct"
+    },
+    {
+      "id": "stationary_bike",
+      "name": "Stationary / spin bike",
+      "category": "cardio",
+      "aliases": [
+        "upright bike",
+        "recumbent bike",
+        "spin bike",
+        "Ergometer"
+      ],
+      "default_in": [
+        "base_gym",
+        "hotel_gym"
+      ]
+    },
+    {
+      "id": "air_bike",
+      "name": "Air bike",
+      "category": "cardio",
+      "aliases": [
+        "fan bike",
+        "Assault bike",
+        "Echo bike"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "rower",
+      "name": "Rowing ergometer",
+      "category": "cardio",
+      "aliases": [
+        "rower",
+        "Concept2",
+        "Rudergerät"
+      ],
+      "default_in": [
+        "base_gym"
+      ],
+      "notes": "common but not default in: hotel_gym"
+    },
+    {
+      "id": "elliptical",
+      "name": "Elliptical / cross-trainer",
+      "category": "cardio",
+      "aliases": [
+        "Crosstrainer"
+      ],
+      "default_in": [
+        "base_gym",
+        "hotel_gym"
+      ]
+    },
+    {
+      "id": "stair_climber",
+      "name": "Stair climber",
+      "category": "cardio",
+      "aliases": [
+        "StairMaster",
+        "stepmill",
+        "Treppensteiger"
+      ],
+      "notes": "common but not default in: base_gym, hotel_gym"
+    },
+    {
+      "id": "ski_erg",
+      "name": "Ski erg",
+      "category": "cardio",
+      "aliases": [
+        "SkiErg"
+      ],
+      "notes": "common but not default in: base_gym"
+    },
+    {
+      "id": "jump_rope",
+      "name": "Jump rope",
+      "category": "cardio",
+      "aliases": [
+        "skipping rope",
+        "speed rope",
+        "Springseil"
+      ],
+      "packable": true,
+      "default_in": [
+        "home_gym",
+        "travel_kit"
+      ],
+      "notes": "packable; common but not default in: base_gym, hotel_gym"
+    },
+    {
+      "id": "resistance_bands",
+      "name": "Resistance bands",
+      "category": "accessories",
+      "aliases": [
+        "loop bands",
+        "mini bands",
+        "long bands",
+        "Widerstandsbänder"
+      ],
+      "params": [
+        {
+          "key": "levels",
+          "type": "string_list",
+          "unit": "none",
+          "default": [
+            "light",
+            "medium",
+            "heavy",
+            "x-heavy"
+          ],
+          "description": "Band levels, lightest first."
+        }
+      ],
+      "packable": true,
+      "default_in": [
+        "base_gym",
+        "home_gym",
+        "travel_kit"
+      ],
+      "notes": "levels list (e.g. light/medium/heavy/x-heavy); common but not default in: hotel_gym"
+    },
+    {
+      "id": "band_door_anchor",
+      "name": "Band door anchor",
+      "category": "accessories",
+      "aliases": [
+        "door anchor"
+      ],
+      "packable": true,
+      "default_in": [
+        "travel_kit"
+      ],
+      "notes": "packable; enables cable-like band work in hotel rooms; common but not default in: home_gym"
+    },
+    {
+      "id": "foam_roller",
+      "name": "Foam roller",
+      "category": "accessories",
+      "aliases": [
+        "roller",
+        "Faszienrolle"
+      ],
+      "default_in": [
+        "base_gym",
+        "home_gym"
+      ],
+      "notes": "common but not default in: hotel_gym"
+    },
+    {
+      "id": "ab_wheel",
+      "name": "Ab wheel",
+      "category": "accessories",
+      "aliases": [
+        "ab roller"
+      ],
+      "notes": "common but not default in: base_gym, home_gym"
+    },
+    {
+      "id": "dip_belt",
+      "name": "Dip / weight belt",
+      "category": "accessories",
+      "aliases": [
+        "weight belt with chain"
+      ],
+      "notes": "for loading pull-ups/dips with plates; common but not default in: base_gym, home_gym"
+    },
+    {
+      "id": "ankle_strap",
+      "name": "Cable ankle strap",
+      "category": "accessories",
+      "aliases": [
+        "ankle cuff"
+      ],
+      "notes": "for cable kickbacks / abduction; common but not default in: base_gym"
+    },
+    {
+      "id": "lifting_straps",
+      "name": "Lifting straps",
+      "category": "accessories",
+      "aliases": [
+        "straps",
+        "Zughilfen"
+      ],
+      "packable": true,
+      "default_in": [
+        "travel_kit"
+      ],
+      "notes": "user's own; flag used by descriptions (grip-limited pulls)"
+    },
+    {
+      "id": "lifting_belt",
+      "name": "Lifting belt",
+      "category": "accessories",
+      "aliases": [
+        "belt",
+        "Gewichthebergürtel"
+      ],
+      "notes": "user's own; flag used by heavy-lift descriptions"
+    },
+    {
+      "id": "spotter",
+      "name": "Spotter available (session flag)",
+      "category": "accessories",
+      "aliases": [
+        "training partner"
+      ],
+      "session_flag": true,
+      "notes": "session_flag: true; satisfies rack_or_spotter"
+    }
+  ],
+  "groups": [
+    {
+      "id": "bench_flat_any",
+      "kind": "any_of",
+      "name": "Any bench usable flat",
+      "members": [
+        "flat_bench",
+        "adjustable_bench"
+      ]
+    },
+    {
+      "id": "bench_incline_any",
+      "kind": "any_of",
+      "name": "Any bench usable at 30–45°",
+      "members": [
+        "incline_bench",
+        "adjustable_bench"
+      ]
+    },
+    {
+      "id": "bench_any",
+      "kind": "any_of",
+      "name": "Any bench (support / step)",
+      "members": [
+        "flat_bench",
+        "incline_bench",
+        "decline_bench",
+        "adjustable_bench"
+      ]
+    },
+    {
+      "id": "rack_any",
+      "kind": "any_of",
+      "name": "Somewhere to unrack a bar",
+      "members": [
+        "power_rack",
+        "half_rack",
+        "squat_rack"
+      ]
+    },
+    {
+      "id": "rack_or_spotter",
+      "kind": "any_of",
+      "name": "Safeties or a human spotter for bar-over-body lifts",
+      "members": [
+        "power_rack",
+        "half_rack",
+        "spotter"
+      ],
+      "notes": "A squat_rack without safeties does not qualify; power_rack/half_rack only with has_safeties = true."
+    },
+    {
+      "id": "cable_any",
+      "kind": "any_of",
+      "name": "At least one adjustable pulley",
+      "members": [
+        "cable_single",
+        "cable_dual",
+        "functional_trainer"
+      ]
+    },
+    {
+      "id": "cable_dual_any",
+      "kind": "any_of",
+      "name": "Two pulleys (flyes, crossovers)",
+      "members": [
+        "cable_dual",
+        "functional_trainer"
+      ]
+    },
+    {
+      "id": "pullup_bar_any",
+      "kind": "any_of",
+      "name": "Something to hang from (resolver honours `power_rack.has_pullup_bar`)",
+      "members": [
+        "pull_up_bar",
+        "power_rack",
+        "assisted_pullup_dip_machine"
+      ],
+      "notes": "power_rack counts only with has_pullup_bar = true."
+    },
+    {
+      "id": "dip_any",
+      "kind": "any_of",
+      "name": "Parallel dip handles",
+      "members": [
+        "dip_station",
+        "assisted_pullup_dip_machine"
+      ]
+    },
+    {
+      "id": "leg_press_any",
+      "kind": "any_of",
+      "name": "For calf presses",
+      "members": [
+        "leg_press_45",
+        "leg_press_horizontal"
+      ]
+    },
+    {
+      "id": "hyper_any",
+      "kind": "any_of",
+      "name": "Hip-hinge back extension",
+      "members": [
+        "back_extension_45",
+        "ghd"
+      ]
+    },
+    {
+      "id": "step_any",
+      "kind": "any_of",
+      "name": "A knee-high platform",
+      "members": [
+        "plyo_box",
+        "flat_bench",
+        "adjustable_bench"
+      ]
+    },
+    {
+      "id": "band_anchor_any",
+      "kind": "any_of",
+      "name": "A fixed point to loop a band around",
+      "members": [
+        "band_door_anchor",
+        "power_rack",
+        "half_rack",
+        "squat_rack",
+        "pull_up_bar"
+      ]
+    },
+    {
+      "id": "bb_loaded",
+      "kind": "all_of",
+      "name": "Loaded straight bar",
+      "members": [
+        "barbell",
+        "plates"
+      ]
+    },
+    {
+      "id": "ez_loaded",
+      "kind": "all_of",
+      "name": "Loaded EZ bar",
+      "members": [
+        "ez_bar",
+        "plates"
+      ]
+    },
+    {
+      "id": "trap_loaded",
+      "kind": "all_of",
+      "name": "Loaded trap bar",
+      "members": [
+        "trap_bar",
+        "plates"
+      ]
+    },
+    {
+      "id": "ssb_loaded",
+      "kind": "all_of",
+      "name": "Loaded SSB",
+      "members": [
+        "safety_squat_bar",
+        "plates"
+      ]
+    },
+    {
+      "id": "landmine_loaded",
+      "kind": "all_of",
+      "name": "Landmine setup",
+      "members": [
+        "landmine",
+        "barbell",
+        "plates"
+      ]
+    },
+    {
+      "id": "sled_loaded",
+      "kind": "all_of",
+      "name": "Loadable sled",
+      "members": [
+        "sled",
+        "plates"
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "id": "base_gym",
+      "name": "Base gym",
+      "description": "Typical well-equipped commercial gym (every default item of R4 §2.3).",
+      "default_session_minutes": 60,
+      "items": [
+        {
+          "equipment_id": "barbell"
+        },
+        {
+          "equipment_id": "ez_bar"
+        },
+        {
+          "equipment_id": "trap_bar"
+        },
+        {
+          "equipment_id": "fixed_weight_barbells"
+        },
+        {
+          "equipment_id": "plates",
+          "params": {
+            "smallest_plate_kg": 1.25
+          }
+        },
+        {
+          "equipment_id": "dumbbells",
+          "params": {
+            "max_kg": 50,
+            "step_kg": 2
+          }
+        },
+        {
+          "equipment_id": "kettlebells"
+        },
+        {
+          "equipment_id": "flat_bench"
+        },
+        {
+          "equipment_id": "adjustable_bench"
+        },
+        {
+          "equipment_id": "power_rack"
+        },
+        {
+          "equipment_id": "smith_machine"
+        },
+        {
+          "equipment_id": "preacher_bench"
+        },
+        {
+          "equipment_id": "cable_dual"
+        },
+        {
+          "equipment_id": "lat_pulldown_machine"
+        },
+        {
+          "equipment_id": "seated_cable_row_machine"
+        },
+        {
+          "equipment_id": "cable_rope"
+        },
+        {
+          "equipment_id": "chest_press_machine"
+        },
+        {
+          "equipment_id": "pec_deck_machine"
+        },
+        {
+          "equipment_id": "shoulder_press_machine"
+        },
+        {
+          "equipment_id": "chest_supported_row_machine"
+        },
+        {
+          "equipment_id": "assisted_pullup_dip_machine"
+        },
+        {
+          "equipment_id": "leg_press_45"
+        },
+        {
+          "equipment_id": "hack_squat_machine"
+        },
+        {
+          "equipment_id": "leg_extension_machine"
+        },
+        {
+          "equipment_id": "seated_leg_curl_machine"
+        },
+        {
+          "equipment_id": "hip_abduction_machine"
+        },
+        {
+          "equipment_id": "hip_adduction_machine"
+        },
+        {
+          "equipment_id": "standing_calf_raise_machine"
+        },
+        {
+          "equipment_id": "seated_calf_raise_machine"
+        },
+        {
+          "equipment_id": "pull_up_bar"
+        },
+        {
+          "equipment_id": "dip_station"
+        },
+        {
+          "equipment_id": "back_extension_45"
+        },
+        {
+          "equipment_id": "plyo_box"
+        },
+        {
+          "equipment_id": "landmine"
+        },
+        {
+          "equipment_id": "mat"
+        },
+        {
+          "equipment_id": "treadmill"
+        },
+        {
+          "equipment_id": "stationary_bike"
+        },
+        {
+          "equipment_id": "rower"
+        },
+        {
+          "equipment_id": "elliptical"
+        },
+        {
+          "equipment_id": "resistance_bands"
+        },
+        {
+          "equipment_id": "foam_roller"
+        }
+      ]
+    },
+    {
+      "id": "home_gym",
+      "name": "Home gym",
+      "description": "Typical garage setup; placeholder until the real set is entered.",
+      "default_session_minutes": 60,
+      "items": [
+        {
+          "equipment_id": "barbell"
+        },
+        {
+          "equipment_id": "plates",
+          "params": {
+            "smallest_plate_kg": 1.25
+          }
+        },
+        {
+          "equipment_id": "dumbbells",
+          "params": {
+            "max_kg": 32,
+            "step_kg": 2
+          }
+        },
+        {
+          "equipment_id": "kettlebells",
+          "params": {
+            "available_kg": [
+              16,
+              24
+            ]
+          }
+        },
+        {
+          "equipment_id": "adjustable_bench"
+        },
+        {
+          "equipment_id": "power_rack",
+          "params": {
+            "has_pullup_bar": true
+          }
+        },
+        {
+          "equipment_id": "pull_up_bar"
+        },
+        {
+          "equipment_id": "mat"
+        },
+        {
+          "equipment_id": "resistance_bands"
+        },
+        {
+          "equipment_id": "foam_roller"
+        },
+        {
+          "equipment_id": "jump_rope"
+        }
+      ]
+    },
+    {
+      "id": "hotel_gym",
+      "name": "Hotel gym",
+      "description": "Typical hotel fitness room.",
+      "default_session_minutes": 45,
+      "items": [
+        {
+          "equipment_id": "dumbbells",
+          "params": {
+            "max_kg": 20,
+            "min_kg": 2,
+            "step_kg": 2
+          }
+        },
+        {
+          "equipment_id": "adjustable_bench"
+        },
+        {
+          "equipment_id": "mat"
+        },
+        {
+          "equipment_id": "treadmill"
+        },
+        {
+          "equipment_id": "stationary_bike"
+        },
+        {
+          "equipment_id": "elliptical"
+        }
+      ]
+    },
+    {
+      "id": "travel_kit",
+      "name": "Travel kit",
+      "description": "Packable items merged into any gym for the day.",
+      "items": [
+        {
+          "equipment_id": "resistance_bands"
+        },
+        {
+          "equipment_id": "band_door_anchor"
+        },
+        {
+          "equipment_id": "jump_rope"
+        },
+        {
+          "equipment_id": "suspension_trainer"
+        },
+        {
+          "equipment_id": "lifting_straps"
+        }
+      ]
+    }
+  ]
+}

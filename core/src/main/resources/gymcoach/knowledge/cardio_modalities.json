@@ -1,0 +1,101 @@
+{
+  "schema_version": 1,
+  "modalities": [
+    {
+      "exercise_id": "treadmill",
+      "zone2_control": "HR / talk test",
+      "hiit_suitability": "low",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "treadmill",
+      "zone2_control": "HR / pace",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "poor",
+      "is_running": true,
+      "knee_impact": true
+    },
+    {
+      "exercise_id": "stationary_bike",
+      "zone2_control": "HR / watts",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "air_bike",
+      "zone2_control": "HR / watts",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "rowing_erg",
+      "zone2_control": "HR / split time",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "moderate",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "elliptical",
+      "zone2_control": "HR",
+      "hiit_suitability": "moderate",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "stair_climber",
+      "zone2_control": "HR",
+      "hiit_suitability": "moderate",
+      "leg_day_adjacency": "poor",
+      "is_running": false,
+      "knee_impact": true
+    },
+    {
+      "exercise_id": "ski_erg",
+      "zone2_control": "HR / watts",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "jump_rope",
+      "zone2_control": "RPE / HR",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "poor",
+      "is_running": false,
+      "knee_impact": true
+    },
+    {
+      "exercise_id": "outdoor_run_walk",
+      "zone2_control": "HR / talk test",
+      "hiit_suitability": "low",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    },
+    {
+      "exercise_id": "outdoor_run_walk",
+      "zone2_control": "HR / talk test",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "poor",
+      "is_running": true,
+      "knee_impact": true
+    },
+    {
+      "exercise_id": "battle_ropes",
+      "zone2_control": "RPE / HR",
+      "hiit_suitability": "high",
+      "leg_day_adjacency": "good",
+      "is_running": false,
+      "knee_impact": false
+    }
+  ]
+}

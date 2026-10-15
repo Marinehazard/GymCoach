@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "questions": [
+    {
+      "id": "Q1",
+      "text": "Average sleep hours this week?",
+      "answer_type": "number",
+      "trigger_rule_ids": [
+        "SLP-03"
+      ],
+      "trigger_condition": "< 7",
+      "always_ask": true
+    },
+    {
+      "id": "Q2",
+      "text": "Sleep quality on most nights?",
+      "answer_type": "scale5",
+      "trigger_rule_ids": [
+        "SLP-03"
+      ],
+      "trigger_condition": "<= 2"
+    },
+    {
+      "id": "Q3",
+      "text": "How many days did you hit your protein target?",
+      "answer_type": "number",
+      "trigger_rule_ids": [
+        "NUT-01"
+      ],
+      "trigger_condition": "<= 4",
+      "always_ask": true
+    },
+    {
+      "id": "Q4",
+      "text": "7-day average body weight vs last week",
+      "answer_type": "number",
+      "auto_source": "weight_trend",
+      "trigger_rule_ids": [
+        "NUT-16"
+      ],
+      "trigger_condition": "outside goal band",
+      "always_ask": true
+    },
+    {
+      "id": "Q5",
+      "text": "Average daily steps?",
+      "answer_type": "number",
+      "auto_source": "steps",
+      "trigger_rule_ids": [
+        "STP-02"
+      ],
+      "trigger_condition": "< STP-01 target"
+    },
+    {
+      "id": "Q6",
+      "text": "Stress level this week?",
+      "answer_type": "scale5",
+      "trigger_rule_ids": [
+        "RDY-05"
+      ],
+      "trigger_condition": ">= 4 on two consecutive check-ins"
+    },
+    {
+      "id": "Q7",
+      "text": "Any joint pain above 3/10 during training? (which)",
+      "answer_type": "text",
+      "trigger_rule_ids": [
+        "INJ-00",
+        "RED-02"
+      ],
+      "trigger_condition": "yes -> INJ; > 10 days -> RED-02",
+      "always_ask": true
+    },
+    {
+      "id": "Q8",
+      "text": "Sessions completed vs planned",
+      "answer_type": "number",
+      "auto_source": "sessions_completed",
+      "trigger_rule_ids": [
+        "TIME-01",
+        "SPLIT-01"
+      ],
+      "trigger_condition": "< 70 %",
+      "always_ask": true
+    },
+    {
+      "id": "Q9",
+      "text": "Alcohol: standard drinks this week?",
+      "answer_type": "number",
+      "trigger_rule_ids": [
+        "NUT-13"
+      ],
+      "trigger_condition": "> 7 or any day > 3"
+    },
+    {
+      "id": "Q10",
+      "text": "Days travelling / hotel-gym days next week?",
+      "answer_type": "number",
+      "trigger_rule_ids": [
+        "TRV-01"
+      ],
+      "trigger_condition": ">= 3"
+    },
+    {
+      "id": "Q11",
+      "text": "Motivation to train next week?",
+      "answer_type": "scale5",
+      "trigger_rule_ids": [
+        "DLD-03"
+      ],
+      "trigger_condition": "<= 2"
+    },
+    {
+      "id": "Q12",
+      "text": "Soreness lasting more than 48 h after any session?",
+      "answer_type": "yesno",
+      "trigger_rule_ids": [
+        "VOL-08"
+      ],
+      "trigger_condition": "yes twice -> pause ramp"
+    },
+    {
+      "id": "Q13",
+      "text": "Caffeine after 15:00 on 3 or more days?",
+      "answer_type": "yesno",
+      "trigger_rule_ids": [
+        "SUP-02"
+      ],
+      "trigger_condition": "yes"
+    },
+    {
+      "id": "Q14",
+      "text": "Did you finish planned work sets at the target RIR most days?",
+      "answer_type": "scale5",
+      "trigger_rule_ids": [
+        "PROG-04"
+      ],
+      "trigger_condition": "<= 2"
+    },
+    {
+      "id": "Q15",
+      "text": "Appetite/hunger (1 = none, 5 = constant)",
+      "answer_type": "scale5",
+      "trigger_rule_ids": [
+        "NUT-17"
+      ],
+      "trigger_condition": ">= 4 for two weeks in a deficit",
+      "only_in_deficit": true
+    }
+  ]
+}

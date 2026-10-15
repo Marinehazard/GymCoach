@@ -1,0 +1,982 @@
+{
+  "schema_version": 1,
+  "drills": [
+    {
+      "id": "bodyweight_squat",
+      "name": "Deep bodyweight squat (heel support, hands assist, 5 s hold at the bottom)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "lunge_split"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "bodyweight_squat",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "hip_90_90",
+      "name": "90/90 hip switch",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "lunge_split"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "hip_90_90",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "knee_to_wall_pulses",
+      "name": "Knee-to-wall pulses",
+      "joint": "ankles",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "lunge_split",
+        "calf"
+      ],
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "ankle_dorsiflexion_rock",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "cat_cow",
+      "name": "Cat-camel",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "cat_cow",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "glute_bridge",
+      "name": "Glute bridge (activation)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "glute_bridge",
+      "sources": [
+        "R3 MOB-01",
+        "SPEC §5.7"
+      ]
+    },
+    {
+      "id": "band_lateral_walk",
+      "name": "Band lateral walk (activation)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "band_lateral_walk",
+      "sources": [
+        "R3 MOB-01",
+        "SPEC §5.7"
+      ]
+    },
+    {
+      "id": "worlds_greatest_stretch",
+      "name": "World's greatest stretch",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "hinge",
+        "lunge_split"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "worlds_greatest_stretch",
+      "sources": [
+        "R3 MOB-01",
+        "SPEC §5.7"
+      ]
+    },
+    {
+      "id": "band_pull_apart",
+      "name": "Band pull-aparts",
+      "joint": "shoulders",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "incline_push",
+        "horizontal_pull",
+        "vertical_pull"
+      ],
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "band_pull_apart",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "shoulder_pass_through",
+      "name": "Band dislocates (slow, wide grip)",
+      "joint": "shoulders",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "incline_push",
+        "vertical_push",
+        "chest_fly"
+      ],
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "shoulder_pass_through",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "wall_slide",
+      "name": "Wall slides",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "incline_push",
+        "vertical_push"
+      ],
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "wall_slide",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "thoracic_rotation",
+      "name": "Open-book rotations",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "patterns": [
+        "vertical_push",
+        "horizontal_pull",
+        "vertical_pull"
+      ],
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "exercise_id": "thoracic_rotation",
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "dead_hang",
+      "name": "Pull-up dead hang",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_pull",
+        "vertical_pull"
+      ],
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_seconds": [
+        20,
+        30
+      ],
+      "exercise_id": "dead_hang",
+      "sources": [
+        "R3 MOB-07",
+        "SPEC §5.7"
+      ]
+    },
+    {
+      "id": "leg_swings",
+      "name": "Leg swings (front/side)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "hinge",
+        "lunge_split"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "cossack_squat",
+      "name": "Cossack squats",
+      "joint": "hips",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "hinge",
+        "lunge_split"
+      ],
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "half_kneeling_hip_flexor_stretch",
+      "name": "Half-kneeling hip-flexor stretch (rear glute squeezed)",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "hip_90_90_hold",
+      "name": "90/90 hold",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "pigeon_stretch",
+      "name": "Pigeon / figure-4 stretch",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "adductor_rock_back",
+      "name": "Adductor rock-backs",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "couch_stretch",
+      "name": "Couch stretch (hip flexor / quad)",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "exercise_id": "couch_stretch",
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "goblet_squat_to_depth",
+      "name": "Goblet squat to depth",
+      "joint": "hips",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "hip"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "heel_elevated_squat",
+      "name": "Heel-elevated squat",
+      "joint": "hips",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "hip"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "split_squat_full_depth",
+      "name": "Split squat, full depth",
+      "joint": "hips",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "hip"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "romanian_deadlift_rom",
+      "name": "Romanian deadlift (full ROM)",
+      "joint": "hips",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "hip"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "thread_the_needle",
+      "name": "Thread-the-needle",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "patterns": [
+        "vertical_push",
+        "vertical_pull",
+        "horizontal_pull"
+      ],
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "foam_roller_thoracic_extension",
+      "name": "Foam-roller thoracic extension (hands behind head)",
+      "joint": "t_spine",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "exercise_id": "foam_rolling",
+      "sources": [
+        "R3 MOB-02",
+        "R3 MOB-05"
+      ]
+    },
+    {
+      "id": "childs_pose_side_reach",
+      "name": "Child's pose with side reach",
+      "joint": "t_spine",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "overhead_press_lockout",
+      "name": "Overhead press, full lockout",
+      "joint": "t_spine",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "front_squat_rom",
+      "name": "Front squat (full ROM)",
+      "joint": "t_spine",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder",
+        "neck"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "arm_circles",
+      "name": "Arm circles",
+      "joint": "shoulders",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "incline_push",
+        "vertical_push",
+        "chest_fly"
+      ],
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "scapular_push_up",
+      "name": "Scapular push-ups",
+      "joint": "shoulders",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "incline_push",
+        "vertical_push",
+        "chest_fly"
+      ],
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "lat_stretch_rack",
+      "name": "Lat stretch on a rack",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "doorway_pec_stretch",
+      "name": "Doorway pec stretch (at most 90° abduction)",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "sleeper_stretch",
+      "name": "Sleeper stretch (if internal rotation is limited)",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "landmine_press_rom",
+      "name": "Landmine press",
+      "joint": "shoulders",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "neutral_grip_db_press",
+      "name": "Neutral-grip dumbbell press",
+      "joint": "shoulders",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "face_pull_rom",
+      "name": "Face pulls",
+      "joint": "shoulders",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "band_external_rotation",
+      "name": "External rotation 2 x 15",
+      "joint": "shoulders",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "exercise_id": "band_external_rotation",
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "ankle_circles",
+      "name": "Ankle circles",
+      "joint": "ankles",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "lunge_split",
+        "calf"
+      ],
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "calf_raise_pause",
+      "name": "Calf raises with a pause at the bottom",
+      "joint": "ankles",
+      "kind": "dynamic",
+      "patterns": [
+        "squat",
+        "lunge_split",
+        "calf"
+      ],
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "wall_calf_stretch",
+      "name": "Wall calf stretch (knee straight and bent)",
+      "joint": "ankles",
+      "kind": "static",
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "knee_to_wall_hold",
+      "name": "Knee-to-wall hold",
+      "joint": "ankles",
+      "kind": "static",
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "heel_drop_step",
+      "name": "Heel drop on a step",
+      "joint": "ankles",
+      "kind": "static",
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "heel_elevated_squat_ankle",
+      "name": "Heel-elevated squats (workaround)",
+      "joint": "ankles",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "full_rom_calf_raise",
+      "name": "Full-ROM standing / seated calf raises",
+      "joint": "ankles",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "ankle",
+        "knee"
+      ],
+      "sources": [
+        "R3 MOB-03",
+        "R3 ROM-02"
+      ]
+    },
+    {
+      "id": "hamstring_leg_swings",
+      "name": "Leg swings (hamstrings)",
+      "joint": "hamstrings",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "low_back"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "inchworm",
+      "name": "Inchworms",
+      "joint": "hamstrings",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "low_back"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "empty_bar_rdl",
+      "name": "RDL with an empty bar",
+      "joint": "hamstrings",
+      "kind": "dynamic",
+      "patterns": [
+        "hinge"
+      ],
+      "limitation_regions": [
+        "low_back"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "supine_strap_hamstring_stretch",
+      "name": "Supine strap hamstring stretch",
+      "joint": "hamstrings",
+      "kind": "static",
+      "limitation_regions": [
+        "low_back"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "seated_straddle",
+      "name": "Seated straddle",
+      "joint": "hamstrings",
+      "kind": "static",
+      "limitation_regions": [
+        "low_back"
+      ],
+      "dose_seconds": [
+        30,
+        60
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "rdl_good_morning_full_rom",
+      "name": "RDL / good morning, full ROM",
+      "joint": "hamstrings",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "low_back"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "nordic_curl_partials",
+      "name": "Nordic curl partials",
+      "joint": "hamstrings",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "low_back"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "wrist_circles",
+      "name": "Wrist circles",
+      "joint": "wrists",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "elbow_flexion"
+      ],
+      "limitation_regions": [
+        "elbow_wrist"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "palm_rocks",
+      "name": "Palm / back-of-hand rocks",
+      "joint": "wrists",
+      "kind": "dynamic",
+      "patterns": [
+        "horizontal_push",
+        "elbow_flexion"
+      ],
+      "limitation_regions": [
+        "elbow_wrist"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "R3 MOB-07"
+      ]
+    },
+    {
+      "id": "forearm_flexor_extensor_stretch",
+      "name": "Forearm flexor / extensor stretch",
+      "joint": "wrists",
+      "kind": "static",
+      "limitation_regions": [
+        "elbow_wrist"
+      ],
+      "dose_seconds": [
+        30,
+        30
+      ],
+      "sources": [
+        "R3 MOB-02"
+      ]
+    },
+    {
+      "id": "reverse_curls_rom",
+      "name": "Reverse curls",
+      "joint": "wrists",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "elbow_wrist"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    },
+    {
+      "id": "farmer_carries_rom",
+      "name": "Farmer carries",
+      "joint": "wrists",
+      "kind": "strength_through_rom",
+      "limitation_regions": [
+        "elbow_wrist"
+      ],
+      "sources": [
+        "R3 MOB-03"
+      ]
+    }
+  ]
+}

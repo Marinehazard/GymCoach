@@ -1,0 +1,329 @@
+{
+  "schema_version": 1,
+  "source": "rpstrength.com hypertrophy guides",
+  "fetched_on": "2026-09-04",
+  "landmarks": [
+    {
+      "muscle": "chest",
+      "mv": [
+        2,
+        4
+      ],
+      "mev": [
+        4,
+        6
+      ],
+      "mav": [
+        6,
+        16
+      ],
+      "mrv": [
+        16,
+        24
+      ],
+      "sessions_per_week": [
+        2,
+        4
+      ]
+    },
+    {
+      "muscle": "lats",
+      "mv": [
+        2,
+        6
+      ],
+      "mev": [
+        6,
+        8
+      ],
+      "mav": [
+        8,
+        20
+      ],
+      "mrv": [
+        20,
+        26
+      ],
+      "sessions_per_week": [
+        2,
+        4
+      ]
+    },
+    {
+      "muscle": "quads",
+      "mv": [
+        2,
+        4
+      ],
+      "mev": [
+        4,
+        6
+      ],
+      "mav": [
+        6,
+        14
+      ],
+      "mrv": [
+        14,
+        18
+      ],
+      "sessions_per_week": [
+        2,
+        5
+      ]
+    },
+    {
+      "muscle": "hamstrings",
+      "mv": [
+        0,
+        2
+      ],
+      "mev": [
+        2,
+        4
+      ],
+      "mav": [
+        2,
+        8
+      ],
+      "mrv": [
+        8,
+        14
+      ],
+      "sessions_per_week": [
+        2,
+        3
+      ]
+    },
+    {
+      "muscle": "glutes",
+      "mv": [
+        2,
+        6
+      ],
+      "mev": [
+        6,
+        8
+      ],
+      "mav": [
+        8,
+        24
+      ],
+      "mrv": [
+        24,
+        30
+      ],
+      "sessions_per_week": [
+        2,
+        5
+      ]
+    },
+    {
+      "muscle": "biceps",
+      "mv": [
+        6,
+        8
+      ],
+      "mev": [
+        8,
+        10
+      ],
+      "mav": [
+        14,
+        20
+      ],
+      "mrv": [
+        20,
+        26
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    },
+    {
+      "muscle": "triceps",
+      "mv": [
+        0,
+        4
+      ],
+      "mev": [
+        4,
+        6
+      ],
+      "mav": [
+        6,
+        16
+      ],
+      "mrv": [
+        16,
+        20
+      ],
+      "sessions_per_week": [
+        2,
+        4
+      ]
+    },
+    {
+      "muscle": "front_delts",
+      "mv": [
+        0,
+        2
+      ],
+      "mev": [
+        0,
+        2
+      ],
+      "mav": [
+        4,
+        8
+      ],
+      "mrv": [
+        8,
+        12
+      ],
+      "sessions_per_week": [
+        2,
+        3
+      ]
+    },
+    {
+      "muscle": "side_delts",
+      "mv": [
+        2,
+        6
+      ],
+      "mev": [
+        6,
+        8
+      ],
+      "mav": [
+        8,
+        24
+      ],
+      "mrv": [
+        24,
+        30
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    },
+    {
+      "muscle": "rear_delts",
+      "mv": [
+        0,
+        4
+      ],
+      "mev": [
+        0,
+        4
+      ],
+      "mav": [
+        4,
+        12
+      ],
+      "mrv": [
+        12,
+        20
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    },
+    {
+      "muscle": "calves",
+      "mv": [
+        2,
+        4
+      ],
+      "mev": [
+        4,
+        6
+      ],
+      "mav": [
+        6,
+        16
+      ],
+      "mrv": [
+        16,
+        24
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    },
+    {
+      "muscle": "abs",
+      "mv": [
+        0,
+        4
+      ],
+      "mev": [
+        0,
+        4
+      ],
+      "mav": [
+        4,
+        12
+      ],
+      "mrv": [
+        12,
+        20
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    },
+    {
+      "muscle": "traps_upper",
+      "mv": [
+        0,
+        4
+      ],
+      "mev": [
+        0,
+        4
+      ],
+      "mav": [
+        4,
+        12
+      ],
+      "mrv": [
+        12,
+        20
+      ],
+      "sessions_per_week": [
+        2,
+        4
+      ]
+    },
+    {
+      "muscle": "forearms",
+      "mv": [
+        0,
+        4
+      ],
+      "mev": [
+        0,
+        8
+      ],
+      "mav": [
+        8,
+        24
+      ],
+      "mrv": [
+        24,
+        30
+      ],
+      "sessions_per_week": [
+        3,
+        6
+      ]
+    }
+  ]
+}

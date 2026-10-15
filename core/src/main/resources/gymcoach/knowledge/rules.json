@@ -1,0 +1,2034 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "POL-01",
+      "section": "Policy",
+      "statement": "Logged numbers are never altered; derived values show formula ID; auto-adjustments show rule + trigger",
+      "confidence": "strong",
+      "citation": "REQUIREMENTS.md",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: policy; policy statement, not an evidence claim"
+    },
+    {
+      "id": "POL-02",
+      "section": "Policy",
+      "statement": "No diagnosis; RED rules hand off to professionals",
+      "confidence": "strong",
+      "citation": "Riebe 2015",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: policy; policy statement, not an evidence claim"
+    },
+    {
+      "id": "DEF-01",
+      "section": "Definitions",
+      "statement": "novice < 6 mo (or ≥ 12 mo layoff); intermediate 6–24 mo; advanced > 24 mo",
+      "confidence": "moderate",
+      "citation": "ACSM 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "constants": {
+        "noviceMaxMonths": 6,
+        "intermediateMaxMonths": 24,
+        "layoffResetMonths": 12,
+        "retrainMonthsToLeaveNovice": 6
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "DEF-02",
+      "section": "Definitions",
+      "statement": "RPE 10/9/8/7/6 = 0/1/2/3/4 RIR",
+      "confidence": "strong",
+      "citation": "Zourdos 2016",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26049792/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "DEF-03",
+      "section": "Definitions",
+      "statement": "heavy ≤ 8 RM (≥ 80 %); moderate 9–15 RM; light 16–30 RM",
+      "confidence": "moderate",
+      "citation": "Lopez 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33433148/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "DEF-04",
+      "section": "Definitions",
+      "statement": "Working set = ≤ 4 RIR; warm-ups excluded",
+      "confidence": "moderate",
+      "citation": "Robinson 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "DEF-05",
+      "section": "Definitions",
+      "statement": "Prime mover 1.0 set credit, synergist 0.5",
+      "confidence": "moderate",
+      "citation": "Pelland 2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41343037/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "VOL-01",
+      "section": "Resistance training / Weekly volume",
+      "statement": "≥ 4 working sets/muscle/week minimum (6–15 RM)",
+      "confidence": "strong",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {
+        "minimum": 4
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "VOL-02",
+      "section": "Resistance training / Weekly volume",
+      "statement": "Strength MED: 1 set × 6–12 @ 70–85 % 1RM, 2–3×/wk, near failure",
+      "confidence": "moderate",
+      "citation": "Androulakis-Korakakis 2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31797219/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "VOL-03",
+      "section": "Resistance training / Weekly volume",
+      "statement": "More sets → more growth/strength, diminishing returns (stronger for strength)",
+      "confidence": "strong",
+      "citation": "Pelland 2025; Schoenfeld 2017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41343037/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "VOL-04",
+      "section": "Resistance training / Weekly volume",
+      "statement": "Hypertrophy sets/muscle/week: novice 8–12, intermediate 12–18, advanced 15–25",
+      "confidence": "weak",
+      "citation": "Schoenfeld 2017; Pelland 2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/",
+      "constants": {
+        "novice.lo": 8,
+        "novice.hi": 12,
+        "intermediate.lo": 12,
+        "intermediate.hi": 18,
+        "advanced.lo": 15,
+        "advanced.hi": 25
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "VOL-05",
+      "section": "Resistance training / Weekly volume",
+      "statement": "Strength: 4–10 sets/lift/week over ≥ 2 sessions",
+      "confidence": "moderate",
+      "citation": "Pelland 2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41343037/",
+      "constants": {
+        "strengthPerLift.lo": 4,
+        "strengthPerLift.hi": 10
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "VOL-06",
+      "section": "Resistance training / Weekly volume",
+      "statement": "6–10 sets/muscle/session default; hard cap 12 → add a session",
+      "confidence": "weak",
+      "citation": "secondary summaries of Pelland/Remmert",
+      "constants": {
+        "perSessionDefaultStop": 10,
+        "perSessionCap": 12
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "VOL-07",
+      "section": "Resistance training / Weekly volume",
+      "statement": "Even distribution; ≥ 2 sets per muscle per appearance",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "minSetsPerAppearance": 2
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "VOL-08",
+      "section": "Resistance training / Weekly volume",
+      "statement": "+1 (max +2) set/muscle/week when RIR at target and soreness < 3/5; stop at cap; then deload",
+      "confidence": "weak",
+      "citation": "Enes 2024",
+      "constants": {
+        "stepTier1": 1,
+        "stepTier2": 0.5,
+        "stepMax": 2,
+        "sorenessGate": 3,
+        "rirTolerance": 0.5
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "VOL-09",
+      "section": "Resistance training / Weekly volume",
+      "statement": "Deficit: keep 60–100 % of accustomed sets, never < VOL-01",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "deficitFractionLo": 0.6,
+        "deficitFractionHi": 1,
+        "noHistoryFactor": 0.8
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "FRQ-01",
+      "section": "Resistance training / Frequency",
+      "statement": "Each muscle ≥ 2×/week when ≥ 10 sets/week; frequency neutral when volume equated",
+      "confidence": "strong",
+      "citation": "Schoenfeld 2016/2019; Pelland 2025",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27102172/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "FRQ-02",
+      "section": "Resistance training / Frequency",
+      "statement": "Main lifts ≥ 2×/week for strength",
+      "confidence": "moderate",
+      "citation": "Pelland 2025; Grgic 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41343037/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "FRQ-03",
+      "section": "Resistance training / Frequency",
+      "statement": "Split valid only if ≥ 2×/muscle, per-session sets ≤ SESS-01, per-muscle ≤ VOL-06",
+      "confidence": "moderate",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "LOAD-01",
+      "section": "Resistance training / Load and rep ranges",
+      "statement": "Hypertrophy equal across ~30–85 % 1RM (5–30 reps) near failure",
+      "confidence": "strong",
+      "citation": "Schoenfeld 2017; Lopez 2021; Currier 2023",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "LOAD-02",
+      "section": "Resistance training / Load and rep ranges",
+      "statement": "Max strength: ≥ 80 % 1RM",
+      "confidence": "strong",
+      "citation": "Currier 2023",
+      "url": "https://research-information.bris.ac.uk/en/publications/resistance-training-prescription-for-muscle-strength-and-hypertro/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "LOAD-03",
+      "section": "Resistance training / Load and rep ranges",
+      "statement": "Rep-range table by goal × class (barbell 3–10, machine/DB 6–15, isolation 10–20, BW 5–20)",
+      "confidence": "weak",
+      "citation": "derived; Halperin 2022",
+      "constants": {
+        "backoffFactor": 0.85,
+        "backoffReps.lo": 4,
+        "backoffReps.hi": 8
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "LOAD-04",
+      "section": "Resistance training / Load and rep ranges",
+      "statement": "Zones: 85–95 % ×1–5; 78–85 % ×5–8; 65–78 % ×8–15; 50–65 % ×15–30; power 40–60 % fast",
+      "confidence": "moderate",
+      "citation": "Lopez 2021; ACSM 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33433148/",
+      "constants": {
+        "maxStrengthRepsMax": 5,
+        "heavyRepsMax": 8,
+        "moderateRepsMax": 15,
+        "maxStrengthPct": 0.85,
+        "heavyPct": 0.78,
+        "moderatePct": 0.65
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "RIR-01",
+      "section": "Resistance training / Proximity to failure",
+      "statement": "Hypertrophy 0–3 RIR; benefit tapers past 2 RIR; failure ES ≈ 0.19",
+      "confidence": "strong",
+      "citation": "Robinson 2024; Refalo 2023/2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "RIR-02",
+      "section": "Resistance training / Proximity to failure",
+      "statement": "Strength 2–5 RIR sufficient",
+      "confidence": "strong",
+      "citation": "Robinson 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38970765/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "RIR-03",
+      "section": "Resistance training / Proximity to failure",
+      "statement": "Class RIR: lower_barbell 2–3, upper_barbell 1–3, DB/machine/cable 1–2, isolation 0–2, BW 0–2",
+      "confidence": "moderate",
+      "citation": "derived",
+      "constants": {
+        "lowerBarbellFloor": 2,
+        "upperBarbellFloor": 1,
+        "spWithoutRackFloor": 2
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "RIR-04",
+      "section": "Resistance training / Proximity to failure",
+      "statement": "Mesocycle: wk1 target+1, mid target, last target−1, deload 4–5",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "week1Offset": 1,
+        "lastWeekOffset": -1,
+        "lastWeekCompoundFloor": 1,
+        "lastWeekIsolationFloor": 0,
+        "deloadRir": 4
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "RIR-05",
+      "section": "Resistance training / Proximity to failure",
+      "statement": "Under-prediction ≈ 1 rep; > 12-rep sets treat reported RIR as +1; AMRAP calibration every 2–3 wk",
+      "confidence": "moderate",
+      "citation": "Halperin 2022",
+      "constants": {
+        "highRepThreshold": 12,
+        "calibrationEveryWeeks": 3
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "REST-01",
+      "section": "Resistance training / Rest intervals",
+      "statement": "Hypertrophy ≥ 60–90 s min, default 90–120 s; 3 min > 1 min in trained",
+      "confidence": "moderate",
+      "citation": "Singer 2024; Schoenfeld 2016",
+      "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2024.1429789/full",
+      "constants": {
+        "hypertrophySec": 120
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "REST-02",
+      "section": "Resistance training / Rest intervals",
+      "statement": "Heavy compounds 2–5 min (3–5 for ≤ 6 RM)",
+      "confidence": "strong",
+      "citation": "ACSM 2009; Grgic 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "constants": {
+        "heavySec": 180,
+        "topSetSec": 240
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "REST-03",
+      "section": "Resistance training / Rest intervals",
+      "statement": "Isolation/machines 60–90 s; antagonist supersets allowed",
+      "confidence": "moderate",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {
+        "isolationSec": 90,
+        "supersetTransitionSec": 30
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "REST-04",
+      "section": "Resistance training / Rest intervals",
+      "statement": "Trim rest on isolation before sets; main-lift rest never < 2 min",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {
+        "cutSec": 60,
+        "mainLiftFloorSec": 120
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "ORD-01",
+      "section": "Resistance training / Exercise order",
+      "statement": "Priority exercise first; largest strength gains in first exercise",
+      "confidence": "strong",
+      "citation": "Nunes 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32077380/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "ORD-02",
+      "section": "Resistance training / Exercise order",
+      "statement": "Order irrelevant for hypertrophy (ES 0.03); compounds first by default",
+      "confidence": "strong",
+      "citation": "Nunes 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32077380/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "ORD-03",
+      "section": "Resistance training / Exercise order",
+      "statement": "Same-session cardio after lifting (+6.9 % dynamic strength)",
+      "confidence": "moderate",
+      "citation": "Eddens 2018",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22The%20Role%20of%20Intra-Session%20Exercise%20Sequence%20in%20the%20Interference%20Effect%22&resultType=core&format=json",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MIX-01",
+      "section": "Resistance training / Compound-isolation mix",
+      "statement": "Isolation adds nothing for muscles compounds already train",
+      "confidence": "strong",
+      "citation": "Gentil 2015; Rosa 2022",
+      "url": "https://cdnsciencepub.com/doi/abs/10.1139/apnm-2015-0109",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MIX-02",
+      "section": "Resistance training / Compound-isolation mix",
+      "statement": "Weekly: knee-dominant, hinge, horizontal push, vertical/incline push, horizontal pull, vertical pull",
+      "confidence": "moderate",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MIX-03",
+      "section": "Resistance training / Compound-isolation mix",
+      "statement": "60–75 % of sets from compounds",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "compoundShare.lo": 60,
+        "compoundShare.hi": 75
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "UNI-01",
+      "section": "Resistance training / Unilateral work",
+      "statement": "Unilateral = bilateral hypertrophy; strength mode-specific (ES 0.56 / −0.65)",
+      "confidence": "strong",
+      "citation": "Kassiano 2025; Liao 2022",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "UNI-02",
+      "section": "Resistance training / Unilateral work",
+      "statement": "Unilateral set = 1 set; time ×1.7",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TEMPO-01",
+      "section": "Resistance training / Tempo",
+      "statement": "0.5–8 s reps equal; > 10 s inferior; cue 1–3 s eccentric",
+      "confidence": "strong",
+      "citation": "Schoenfeld 2015; Wilk 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25601394/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "TEMPO-02",
+      "section": "Resistance training / Tempo",
+      "statement": "Tempo is not a progression variable",
+      "confidence": "moderate",
+      "citation": "same",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "ROM-01",
+      "section": "Resistance training / Range of motion",
+      "statement": "Full ROM default (strength ES 0.56; lower-limb hypertrophy ES 0.88)",
+      "confidence": "strong",
+      "citation": "Pallarés 2021",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.14006",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "ROM-02",
+      "section": "Resistance training / Range of motion",
+      "statement": "Lengthened partials ≥ full for hypertrophy; shortened partials inferior",
+      "confidence": "moderate",
+      "citation": "Wolf 2023; Kassiano 2023; Pedrosa 2022",
+      "url": "https://journal.iusca.org/index.php/Journal/article/download/182/250/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "ROM-03",
+      "section": "Resistance training / Range of motion",
+      "statement": "Use lengthened partials for pain/equipment/intensity; never shortened",
+      "confidence": "moderate",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SESS-01",
+      "section": "Resistance training / Session budget",
+      "statement": "Min per set: heavy lower 4.0, heavy upper 3.5, moderate compound 2.5, isolation 1.75; 30/45/60/90 min ≈ 8–10/14–18/20–26/30–36 sets",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {
+        "heavyLowerMin": 4,
+        "heavyUpperMin": 3.5,
+        "compoundMin": 2.5,
+        "isolationMin": 1.75,
+        "isolationRestCutMin": 1.5,
+        "supersetPairMin": 2.5,
+        "supersetFactor": 0.7,
+        "unilateralFactor": 1.7,
+        "budgetToleranceMin": 0
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "SESS-02",
+      "section": "Resistance training / Session budget",
+      "statement": "Session cap 25 sets (novice 20, advanced 32)",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "capDefault": 25,
+        "capNovice": 20,
+        "capAdvanced": 32
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "SPLIT-01",
+      "section": "Resistance training / Splits",
+      "statement": "2 d FB×2; 3 d FB×3; 4 d U/L×2; 5 d U/L/P/P/L; 6 d PPL×2 or U/L×3",
+      "confidence": "weak",
+      "citation": "FRQ-01; VOL-06",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "SPLIT-02",
+      "section": "Resistance training / Splits",
+      "statement": "≥ 48 h between heavy sessions of the same muscle",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "PROG-01",
+      "section": "Resistance training / Progression",
+      "statement": "Double progression: all sets at `hi` reps and ≤ target RIR → +increment, reps → `lo`",
+      "confidence": "strong",
+      "citation": "ACSM 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "PROG-02",
+      "section": "Resistance training / Progression",
+      "statement": "Increments: lower BB +2.5–5 kg; upper BB +1.25–2.5 kg; DB next pair ≤ 10 %; machine/cable +1 plate 5–10 % (if > 10 %, extend reps first); BW +reps then +2.5–5 kg",
+      "confidence": "moderate",
+      "citation": "ACSM 2009 (2–10 %)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "constants": {
+        "lowerBarbellKg": 5,
+        "lowerBarbellSmallKg": 2.5,
+        "lowerBarbellSmallAboveKg": 100,
+        "upperBarbellKg": 2.5,
+        "microplateKg": 1,
+        "bodyweightExternalKg": 2.5,
+        "maxJumpPct": 10,
+        "repExtension": 2
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "PROG-03",
+      "section": "Resistance training / Progression",
+      "statement": "Cadence: novice per session (linear), intermediate weekly, advanced per mesocycle undulating",
+      "confidence": "moderate",
+      "citation": "ACSM 2009",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19204579/",
+      "constants": {
+        "intermediateMinDays": 7
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "PROG-04",
+      "section": "Resistance training / Progression",
+      "statement": "RIR ≥ target+2 all sets → increment next session; first-set RIR ≤ target−2 → −5 % for remaining sets",
+      "confidence": "moderate",
+      "citation": "Graham & Cleather 2021; Helms 2018",
+      "url": "https://research.stmarys.ac.uk/id/eprint/3067/3/Graham-Cleather-Autoregulation-Repetitions-in-Reserve.pdf",
+      "constants": {
+        "easyOffset": 2,
+        "hardOffset": 2,
+        "backoffFactor": 0.95
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "PROG-05",
+      "section": "Resistance training / Progression",
+      "statement": "Novice first 2 weeks at 3–4 RIR",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "noviceRir.lo": 3,
+        "noviceRir.hi": 4,
+        "noviceWeeks": 2
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "PLAT-01",
+      "section": "Resistance training / Plateau detection and response",
+      "statement": "Plateau = no e1RM/reps gain in ≥ 3 sessions with readiness ≥ Amber",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "sessions": 3,
+        "improvementFactor": 1.005
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "PLAT-02",
+      "section": "Resistance training / Plateau detection and response",
+      "statement": "Ladder: audit sleep/nutrition → shift rep zone → variation swap → +1–2 sets → deload",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "PLAT-03",
+      "section": "Resistance training / Plateau detection and response",
+      "statement": "e1RM −5 % on 2 sessions without cause → reactive deload",
+      "confidence": "weak",
+      "citation": "Bell 2025",
+      "url": "https://shura.shu.ac.uk/35313/",
+      "constants": {
+        "dropFactor": 0.95,
+        "sessions": 2
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "DLD-01",
+      "section": "Resistance training / Deloads",
+      "statement": "Deload every 4–8 wk (practice 5.6 ± 2.3 wk, 6.4 ± 1.7 d); novice reactive only; intermediate 6–8; advanced 4–6",
+      "confidence": "moderate",
+      "citation": "Bell 2025; Rogerson 2024; Coleman 2024",
+      "url": "https://shura.shu.ac.uk/35313/",
+      "constants": {
+        "noviceWeeks": 12,
+        "intermediateWeeks": 6,
+        "advancedWeeks": 5
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "DLD-02",
+      "section": "Resistance training / Deloads",
+      "statement": "Deload week: sets −50 %, load −10–20 % (or hold), RIR 4–5, frequency unchanged",
+      "confidence": "moderate",
+      "citation": "Rogerson 2024",
+      "url": "https://link.springer.com/article/10.1186/s40798-024-00691-y",
+      "constants": {
+        "setsFactor": 0.5,
+        "compoundLoadFactor": 0.85
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "DLD-03",
+      "section": "Resistance training / Deloads",
+      "statement": "Reactive triggers: ≥ 2 of {e1RM −5 %×2, Red ≥ 3/7 d, soreness ≥ 4 > 72 h, sleep ≤ 2 ×4, motivation ≤ 2 ×4, joint ache ≥ 3/10}",
+      "confidence": "weak",
+      "citation": "Bell 2025",
+      "url": "https://shura.shu.ac.uk/35313/",
+      "constants": {
+        "minTriggers": 2,
+        "minDays": 5,
+        "redDaysOf7": 3,
+        "sorenessLevel": 4,
+        "sorenessHours": 72,
+        "sleepQualityLevel": 2,
+        "sleepQualityNights": 4,
+        "motivationLevel": 2,
+        "motivationDays": 4,
+        "jointPain": 3,
+        "minWeeksBetweenDeloads": 2
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "DLD-04",
+      "section": "Resistance training / Deloads",
+      "statement": "Re-entry at 95 % loads, lower-bound sets, RIR+1 for 1 week",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "loadFactor": 0.95,
+        "rirOffset": 1
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "E1RM-01",
+      "section": "Resistance training / Estimated 1RM",
+      "statement": "Epley w(1+r/30); Brzycki w·36/(37−r); mean of both",
+      "confidence": "strong",
+      "citation": "LeSuer 1997",
+      "url": "https://opensiuc.lib.siu.edu/cgi/viewcontent.cgi?article=1744&context=gs_rp)",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "E1RM-02",
+      "section": "Resistance training / Estimated 1RM",
+      "statement": "Valid for r ≤ 10 (best 2–6); > 10 low-confidence only",
+      "confidence": "strong",
+      "citation": "LeSuer 1997; Mayhew 2008",
+      "url": "https://opensiuc.lib.siu.edu/cgi/viewcontent.cgi?article=1744&context=gs_rp)",
+      "constants": {
+        "maxReps": 10
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "E1RM-03",
+      "section": "Resistance training / Estimated 1RM",
+      "statement": "r_eff = r + RIR (cap 10); %1RM 1:100, 2:94, 3:91, 4:88, 5:86, 6:83, 8:79, 10:75, 12:71, 15:67",
+      "confidence": "moderate",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "E1RM-04",
+      "section": "Resistance training / Estimated 1RM",
+      "statement": "Deadlift under-estimated; machines: track load×reps; 14-day rolling best",
+      "confidence": "moderate",
+      "citation": "LeSuer 1997",
+      "url": "https://opensiuc.lib.siu.edu/cgi/viewcontent.cgi?article=1744&context=gs_rp)",
+      "constants": {
+        "rollingDays": 14
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "RDY-01",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "Readiness 0–100 from sleep h/quality, soreness, stress, energy, motivation, optional RHR",
+      "confidence": "weak",
+      "citation": "Hooper 1995; Buchheit 2014",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "RDY-02",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "Green ≥ 70 as planned; Amber 45–69 +1 RIR, −1 set after first two; Red < 45 −40 % sets, +2 RIR, heavy → moderate variants; sleep < 6 h ≥ Amber",
+      "confidence": "weak",
+      "citation": "Craven 2022; Knowles 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35708888/",
+      "constants": {
+        "greenMin": 70,
+        "amberMin": 45,
+        "amberRirOffset": 1,
+        "amberSetDropAfter": 2,
+        "redSetFactor": 0.6,
+        "redRirOffset": 2
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "RDY-03",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "RHR ≥ +5 bpm ×2 d → Amber; ≥ +10 or illness → Red/skip",
+      "confidence": "weak",
+      "citation": "Buchheit 2014",
+      "url": "https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00073/full",
+      "constants": {
+        "rhrAmberDelta": 5,
+        "rhrRedDelta": 10,
+        "rhrDays": 2
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "RDY-04",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "Soreness ≥ 4/5 → move that muscle 24–48 h",
+      "confidence": "weak",
+      "citation": "Stults-Kolehmainen 2014",
+      "url": "https://journals.lww.com/nsca-jscr/fulltext/2014/07000/chronic_psychological_stress_impairs_recovery_of.26.aspx",
+      "constants": {
+        "sorenessLevel": 4
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "RDY-05",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "Stress ≥ 4/5 for 2 weeks → sets −20 %, RIR +1, hold volume progression",
+      "confidence": "moderate",
+      "citation": "Stults-Kolehmainen 2014; Bartholomew 2008",
+      "url": "https://journals.lww.com/nsca-jscr/fulltext/2014/07000/chronic_psychological_stress_impairs_recovery_of.26.aspx",
+      "constants": {
+        "stressLevel": 4,
+        "checkins": 2,
+        "setFactor": 0.8,
+        "rirOffset": 1
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "RDY-06",
+      "section": "Autoregulation / Daily readiness",
+      "statement": "sRPE × minutes weekly load; > 150 % of 4-wk mean = spike (advice only)",
+      "confidence": "contested",
+      "citation": "Foster 2001",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11708692/",
+      "constants": {
+        "spikeFactor": 1.5
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: weak/contested"
+    },
+    {
+      "id": "CHK-01",
+      "section": "Autoregulation / Weekly check-in",
+      "statement": "15-item weekly bank with triggers (Q1–Q15)",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "RED-01",
+      "section": "Autoregulation / Red flags",
+      "statement": "Stop-and-refer symptom list (chest pain, dyspnea, syncope, neuro deficits, cauda equina signs, hot swollen joint, pop, DVT signs, dark urine, fever)",
+      "confidence": "strong",
+      "citation": "Riebe 2015",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: strong (policy); policy statement, not an evidence claim"
+    },
+    {
+      "id": "RED-02",
+      "section": "Autoregulation / Red flags",
+      "statement": "Pain > 3/10 persisting > 7–10 d or night pain → professional",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "RED-03",
+      "section": "Autoregulation / Red flags",
+      "statement": "Known disease/pregnancy/meds → clearance before HIIT, max lifts, supplements",
+      "confidence": "strong",
+      "citation": "Riebe 2015",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "WU-01",
+      "section": "Warm-up",
+      "statement": "RAMP 8–12 min: raise 3–5, activate/mobilise 3–5, ramp sets",
+      "confidence": "moderate",
+      "citation": "Fradkin 2010; Abad 2011; Jeffreys 2007",
+      "url": "https://journals.lww.com/nsca-jscr/fulltext/2010/01000/effects_of_warming_up_on_physical_performance__a.21.aspx",
+      "constants": {
+        "minutes": 10
+      },
+      "user_adjustable": false,
+      "note": "R3 tag: strong/moderate"
+    },
+    {
+      "id": "WU-02",
+      "section": "Warm-up",
+      "statement": "Ramp: heavy 40 %×8, 55 %×5, 70 %×3, 80–85 %×1–2; moderate 50 %×8, 70 %×4–5; light/machine 60 %×8; isolation 1×8–10 @ 50–60 %",
+      "confidence": "moderate",
+      "citation": "Abad 2011; Ribeiro 2020",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22Combination%20of%20general%20and%20specific%20warm-ups%20improves%20leg-press%20one%20repetition%20maximum%22&resultType=core&format=json",
+      "constants": {
+        "heavyPcts.0": 0.4,
+        "heavyPcts.1": 0.55,
+        "heavyPcts.2": 0.7,
+        "heavyPcts.3": 0.825,
+        "heavyReps.0": 8,
+        "heavyReps.1": 5,
+        "heavyReps.2": 3,
+        "heavyReps.3": 2,
+        "moderatePcts.0": 0.5,
+        "moderatePcts.1": 0.7,
+        "moderateReps.0": 8,
+        "moderateReps.1": 5,
+        "lightPcts.0": 0.6,
+        "lightReps.0": 8,
+        "isolationPct": 0.55,
+        "warmPatternPct": 0.65,
+        "rampRestSec": 60
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "WU-03",
+      "section": "Warm-up",
+      "statement": "Ramp sets ≠ working volume",
+      "confidence": "strong",
+      "citation": "volume literature",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "WU-04",
+      "section": "Warm-up",
+      "statement": "No static stretch ≥ 60 s pre-lift (−4.6 %); ≤ 30 s harmless; dynamic +1.3 %",
+      "confidence": "strong",
+      "citation": "Behm 2016; Kay & Blazevich 2012",
+      "url": "https://cdnsciencepub.com/doi/10.1139/apnm-2015-0235",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "WU-05",
+      "section": "Warm-up",
+      "statement": "≤ 45 min sessions: specific ramp sets only (+2–3 min drills)",
+      "confidence": "moderate",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {
+        "trimmedMinutes": 5,
+        "trimAtOrBelowMinutes": 45
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "WU-06",
+      "section": "Warm-up",
+      "statement": "≥ 40 y, < 15 °C, or < 60 min after waking: raise 8–10 min + 1 extra ramp set",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "extraMinutes": 2,
+        "ageThreshold": 40,
+        "minutesSinceWakingThreshold": 60
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "MOB-01",
+      "section": "Mobility",
+      "statement": "Pre-session dynamic 2×8–10 per drill, 3–5 drills",
+      "confidence": "moderate",
+      "citation": "Behm 2016",
+      "url": "https://cdnsciencepub.com/doi/10.1139/apnm-2015-0235",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MOB-02",
+      "section": "Mobility",
+      "statement": "Chronic ROM: ≥ 5 min/muscle/week over ≥ 5 d; ceiling 4 min/session, 10 min/week",
+      "confidence": "strong",
+      "citation": "Thomas 2018; Ingram 2025",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MOB-03",
+      "section": "Mobility",
+      "statement": "Full-ROM strength work counts as mobility (1 set ≈ 30 s credit)",
+      "confidence": "weak",
+      "citation": "Afonso 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33917036/",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: strong/weak"
+    },
+    {
+      "id": "MOB-04",
+      "section": "Mobility",
+      "statement": "Static stretching after session or separately",
+      "confidence": "strong",
+      "citation": "Behm 2016",
+      "url": "https://cdnsciencepub.com/doi/10.1139/apnm-2015-0235",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MOB-05",
+      "section": "Mobility",
+      "statement": "Foam rolling optional 30–60 s/muscle",
+      "confidence": "weak",
+      "citation": "Wiewelhove 2019",
+      "url": "https://www.frontiersin.org/articles/10.3389/fphys.2019.00376",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "MOB-06",
+      "section": "Mobility",
+      "statement": "Cool-down optional 5–10 min",
+      "confidence": "strong",
+      "citation": "Van Hooren 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29663142/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "MOB-07",
+      "section": "Mobility",
+      "statement": "Joint drill library (hips, T-spine, shoulders, ankles, hamstrings, wrists)",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "CAR-01",
+      "section": "Cardio",
+      "statement": "150–300 min moderate or 75–150 vigorous/week + RT ≥ 2 d",
+      "confidence": "strong",
+      "citation": "WHO 2020; Garber 2011",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-02",
+      "section": "Cardio",
+      "statement": "Zone 2 = talk test + 60–70 % HRmax / 40–59 % HRR + RPE 11–13 (2 of 3)",
+      "confidence": "moderate",
+      "citation": "Garber 2011; Persinger 2004",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21694556/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-03",
+      "section": "Cardio",
+      "statement": "HRmax = 208 − 0.7·age; Karvonen HRR",
+      "confidence": "strong",
+      "citation": "Tanaka 2001",
+      "url": "https://www.jacc.org/doi/10.1016/S0735-1097(00)01054-8",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-04",
+      "section": "Cardio",
+      "statement": "Vigorous 77–95 % HRmax / 60–89 % HRR / RPE 14–17",
+      "confidence": "moderate",
+      "citation": "Garber 2011",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21694556/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-05",
+      "section": "Cardio",
+      "statement": "4×4 @ 90–95 % HRmax/3 min @ 70 %; 10×1 min @ 90 %; SIT 4–6×30 s/4 min; HIIT +1.2 mL/kg/min vs MICT",
+      "confidence": "strong",
+      "citation": "Helgerud 2007; Little 2010; Gibala 2006; Milanović 2015",
+      "constants": {
+        "hiitBaseWeeks": 4
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-06",
+      "section": "Cardio",
+      "statement": "Hypertrophy/strength not compromised; explosive −0.28; trained same-session 1RM −0.66 vs −0.10 separated; running > cycling; separate ≥ 6 h (24 h better); lift first; cap ≤ 3 sessions/≤ 150 min extra for hypertrophy goals",
+      "confidence": "moderate",
+      "citation": "Schumann 2022; Petré 2021; Wilson 2012; Robineau 2016; Eddens 2018",
+      "constants": {
+        "separationHours": 6,
+        "runBeforeLegsHours": 24,
+        "hypertrophyCapSessions": 3,
+        "hypertrophyCapMinutes": 150
+      },
+      "user_adjustable": false,
+      "note": "R3 tag: strong/moderate"
+    },
+    {
+      "id": "CAR-07",
+      "section": "Cardio",
+      "statement": "fitness: 2×30–45 Z2 + 1 HIIT; hypertrophy: 2×20–30 Z2; fat loss: 150–250 → > 250 min/wk; HIIT not superior for weight",
+      "confidence": "strong",
+      "citation": "Donnelly 2009; Jakicic 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19127177/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "CAR-08",
+      "section": "Cardio",
+      "statement": "Modality table with leg-day adjacency",
+      "confidence": "weak",
+      "citation": "Wilson 2012",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22002517/",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "CAR-09",
+      "section": "Cardio",
+      "statement": "+10 %/week duration; HIIT after 4 weeks base; add intervals before intensity",
+      "confidence": "weak",
+      "citation": "Garber 2011",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21694556/",
+      "constants": {
+        "weeklyIncreasePct": 10
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "NUT-01",
+      "section": "Nutrition",
+      "statement": "Protein 1.6–2.2 g/kg; deficit 2.3–3.1 g/kg FFM; ≥ 65 y ≥ 1.2; recomp ≥ 2.2",
+      "confidence": "strong",
+      "citation": "Morton 2018; Jäger 2017; Helms 2014; Bauer 2013",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/",
+      "constants": {
+        "defaultGPerKg": 1.8
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-02",
+      "section": "Nutrition",
+      "statement": "0.4 (0.4–0.55) g/kg/meal × ≥ 4, every 3–4 h; 30–40 g casein pre-sleep optional",
+      "confidence": "moderate",
+      "citation": "Schoenfeld & Aragon 2018; Jäger 2017; Snijders 2019",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29497353/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-03",
+      "section": "Nutrition",
+      "statement": "Meal frequency free (3–5)",
+      "confidence": "moderate",
+      "citation": "Schoenfeld 2015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25601394/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-04",
+      "section": "Nutrition",
+      "statement": "Mifflin–St Jeor REE; activity 1.2/1.375/1.55/1.725/1.9; 14-day adaptive TDEE using 7,700 kcal/kg, clamp ±150",
+      "confidence": "weak",
+      "citation": "Mifflin 1990; Frankenfield 2005; Hall 2011",
+      "url": "https://mifflinstjeor.com/mifflin-st-jeor-equation/",
+      "constants": {
+        "activityFactors.0": 1.2,
+        "activityFactors.1": 1.375,
+        "activityFactors.2": 1.55,
+        "activityFactors.3": 1.725,
+        "activityFactors.4": 1.9,
+        "kcalPerKg": 7700,
+        "clampKcal": 150,
+        "windowDays": 14,
+        "minKcalLogs": 10
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: strong/weak/moderate"
+    },
+    {
+      "id": "NUT-05",
+      "section": "Nutrition",
+      "statement": "Deficit 300–500 kcal (10–20 %); 0.5–1.0 % BW/week; lean → 0.5–0.7 %",
+      "confidence": "strong",
+      "citation": "Helms 2014; Garthe 2011; Aragon 2017; Ashtary-Larky 2020",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4033492/",
+      "constants": {
+        "deficitKcal.lo": 300,
+        "deficitKcal.hi": 500,
+        "deficitPctOfTdee": 0.2,
+        "ratePctLo": 0.5,
+        "ratePctHi": 1,
+        "leanRatePctHi": 0.7,
+        "maxRatePctPerWeek": 1.5,
+        "fastLossStepKcal": 200,
+        "kcalFloorTdeeFactor": 0.75
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-06",
+      "section": "Nutrition",
+      "statement": "Surplus 10–20 % (200–400 kcal); +0.25–0.5 % BW/week (advanced 0.1–0.25)",
+      "confidence": "moderate",
+      "citation": "Iraki 2019; Slater 2019",
+      "constants": {
+        "surplusPct.lo": 10,
+        "surplusPct.hi": 20,
+        "ratePctLo": 0.25,
+        "ratePctHi": 0.5,
+        "kcalCeilingTdeeFactor": 1.3
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-07",
+      "section": "Nutrition",
+      "statement": "Recomp: maintenance to −200 kcal, protein ≥ 2.2 g/kg for novice/returning/high-BF",
+      "confidence": "moderate",
+      "citation": "Barakat 2020",
+      "url": "https://journals.lww.com/nsca-scj/Fulltext/2020/10000/Body_Recomposition__Can_Trained_Individuals_Build.3.aspx",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-08",
+      "section": "Nutrition",
+      "statement": "Carbs ≥ 3 g/kg; 3–5 (~1 h/d); 5–7 (1–2 h/d); 6–10 endurance",
+      "confidence": "moderate",
+      "citation": "Thomas 2016; Iraki 2019",
+      "url": "https://www.jandonline.org/article/S2212-2672(15)01802-X/abstract",
+      "constants": {
+        "carbFloorGPerKg": 3
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-09",
+      "section": "Nutrition",
+      "statement": "Fat 20–35 % E or 0.5–1.5 g/kg; floor 0.5 g/kg",
+      "confidence": "moderate",
+      "citation": "Iraki 2019; IOM AMDR",
+      "constants": {
+        "fatGPerKgDefault": 1,
+        "fatGPerKgFloor": 0.5
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-10",
+      "section": "Nutrition",
+      "statement": "Fibre 14 g/1,000 kcal; 38 g men / 25 g women",
+      "confidence": "strong",
+      "citation": "IOM DRI",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-11",
+      "section": "Nutrition",
+      "statement": "Water AI 3.7 L men / 2.7 L women; < 2 % BM loss; sweat-rate formula; sodium > 1–2 h",
+      "confidence": "moderate",
+      "citation": "IOM DRI; Sawka 2007",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: strong/moderate"
+    },
+    {
+      "id": "NUT-12",
+      "section": "Nutrition",
+      "statement": "Protein meal within ~2 h pre or post; fasted → 20–40 g + carbs within 1–2 h; pre = post",
+      "confidence": "moderate",
+      "citation": "Schoenfeld 2017; Kerksick 2017",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27433992/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-13",
+      "section": "Nutrition",
+      "statement": "Alcohol ≤ 1–2 drinks training days, none < 4 h post, ≤ 7/week; 1.5 g/kg cuts MPS 24–37 %",
+      "confidence": "weak",
+      "citation": "Parr 2014",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0088384",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "NUT-14",
+      "section": "Nutrition",
+      "statement": "Travel heuristics: protein anchor 30–40 g/meal, plate rule, kit, expect +0.5–1.5 kg after sodium/weekends",
+      "confidence": "weak",
+      "citation": "Turicchi 2020",
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0232152",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: weak/moderate"
+    },
+    {
+      "id": "NUT-15",
+      "section": "Nutrition",
+      "statement": "Daily AM weigh-in; 7-day MA (or EWMA α = 0.1); noise 0.4–0.6 kg TE, 0.35 % weekly cycle; ≥ 1 %/day = noise; ≥ 14 d before adjusting",
+      "confidence": "moderate",
+      "citation": "Kutáč 2015; Turicchi 2020",
+      "constants": {
+        "noiseSingleDayPct": 1,
+        "minDays": 14
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-16",
+      "section": "Nutrition",
+      "statement": "Every 14 d: outside band → ±100–200 kcal",
+      "confidence": "moderate",
+      "citation": "derived",
+      "constants": {
+        "stepKcal.lo": 100,
+        "stepKcal.hi": 200
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-17",
+      "section": "Nutrition",
+      "statement": "Deficit > 8 wk or hunger ≥ 4/5 ×2 wk → 1 week at maintenance every 6–8 wk",
+      "confidence": "weak",
+      "citation": "Helms 2014",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4033492/",
+      "constants": {
+        "dietBreakAfterWeeks": 8
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "SUP-01",
+      "section": "Supplements",
+      "statement": "Creatine 3–5 g/d (0.1 g/kg); optional 20 g/d × 5–7 d; safe; refer if kidney disease",
+      "confidence": "strong",
+      "citation": "Kreider 2017; Antonio 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28615996/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-02",
+      "section": "Supplements",
+      "statement": "Caffeine 3–6 mg/kg (start 2–3) 60 min pre; ≤ 9 mg/kg; cut-off bedtime −9 h (≤ 100 mg) / −13 h (≥ 200 mg); ≤ 400 mg/d",
+      "confidence": "strong",
+      "citation": "Guest 2021; Gardiner 2023",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1186/s12970-020-00383-4&resultType=core&format=json",
+      "constants": {
+        "cutoffSmallHours": 9,
+        "cutoffLargeHours": 13,
+        "dayMaxMg": 400
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-03",
+      "section": "Supplements",
+      "statement": "Protein powder 20–40 g servings as food",
+      "confidence": "strong",
+      "citation": "Morton 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28698222/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-04",
+      "section": "Supplements",
+      "statement": "Vitamin D only if < 20 ng/mL or ≥ 2 risk factors; 1,000–2,000 IU/d; UL 4,000; routine testing/supplementation not recommended < 75 y",
+      "confidence": "contested",
+      "citation": "Holick 2011; Demay 2024; Owens 2018",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "SUP-05",
+      "section": "Supplements",
+      "statement": "Omega-3: no muscle benefit; 1–2 g EPA+DHA health only if low fish",
+      "confidence": "weak",
+      "citation": "Nunes 2025",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "SUP-06",
+      "section": "Supplements",
+      "statement": "Beta-alanine 4–6 g/d ≥ 2–4 wk, doses ≤ 1.6 g; 1–4 min efforts",
+      "confidence": "weak",
+      "citation": "Trexler 2015",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26175657/",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: strong (effect)/weak (relevance)"
+    },
+    {
+      "id": "SUP-07",
+      "section": "Supplements",
+      "statement": "Citrulline malate 6–8 g 60 min pre; ES ≈ 0.20 rep endurance",
+      "confidence": "moderate",
+      "citation": "Trexler 2019; Vårvik 2021",
+      "url": "https://www.strongerbyscience.com/research-spotlight-citrulline-malate/)",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-08",
+      "section": "Supplements",
+      "statement": "Melatonin 0.5–5 mg (peak ≈ 4 mg), 30 min–3 h pre-bed, travel only; legal caveat",
+      "confidence": "moderate",
+      "citation": "Ferracioli-Oda 2013; Cruz-Sanabria 2024",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23691095/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-09",
+      "section": "Supplements",
+      "statement": "Sodium 300–600 mg/h only for > 1–2 h/heat",
+      "confidence": "moderate",
+      "citation": "Sawka 2007",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17277604/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-10",
+      "section": "Supplements",
+      "statement": "Multivitamin low-dose only in restriction",
+      "confidence": "moderate",
+      "citation": "Kerksick 2018",
+      "url": "https://link.springer.com/article/10.1186/s12970-018-0242-y",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SUP-11",
+      "section": "Supplements",
+      "statement": "Do-not list: BCAA, HMB (trained), glutamine, T-boosters, stimulant fat burners, SARMs/prohormones, misc.",
+      "confidence": "moderate",
+      "citation": "Wolfe 2017; Jakubowski 2020; Clemesha 2020; Maughan 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28852372/",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: strong–moderate"
+    },
+    {
+      "id": "SUP-12",
+      "section": "Supplements",
+      "statement": "Legal/medical caveat text always shown; third-party testing; priority order protein → calories → sleep → consistency → creatine/caffeine",
+      "confidence": "strong",
+      "citation": "Maughan 2018",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "R3 tag: strong (policy); policy statement, not an evidence claim"
+    },
+    {
+      "id": "SLP-01",
+      "section": "Sleep, steps, stress / Sleep",
+      "statement": "7–9 h (≥ 65 y 7–8); floor 7 h",
+      "confidence": "strong",
+      "citation": "Hirshkowitz 2015; Watson 2015",
+      "url": "https://www.sleephealthjournal.org/article/s2352-7218(15)00015-7/fulltext",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SLP-02",
+      "section": "Sleep, steps, stress / Sleep",
+      "statement": "≤ 6 h → −7.6 % performance (PM worst); 1 night loss → MPS −18 %; multi-night → compound strength ↓",
+      "confidence": "moderate",
+      "citation": "Craven 2022; Lamon 2021; Knowles 2018",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35708888/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "SLP-03",
+      "section": "Sleep, steps, stress / Sleep",
+      "statement": "7-d avg < 7 h → sets −10–20 %, RIR +1 heavy; < 6 h → Amber, prefer AM; 2 nights < 6 h → no max-strength zone",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {
+        "weeklyAvgHours": 7,
+        "setFactor": 0.9,
+        "rirOffset": 1,
+        "nightHours": 6,
+        "twoNightsNoMaxStrength": 2
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "STP-01",
+      "section": "Sleep, steps, stress / Steps",
+      "statement": "Steps 7,000–8,000 (< 60 y), 6,000–7,000 (≥ 60); inflection 5–7k; plateau 8–10k / 6–8k",
+      "confidence": "strong",
+      "citation": "Ding 2025; Paluch 2022",
+      "url": "https://www.thelancet.com/journals/lanpub/article/PIIS2468-2667(25)00164-1/fulltext",
+      "constants": {
+        "under60.lo": 7000,
+        "under60.hi": 8000,
+        "over60.lo": 6000,
+        "over60.hi": 7000
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "STP-02",
+      "section": "Sleep, steps, stress / Steps",
+      "statement": "Fat loss: max(target, baseline + 2,000) ≤ 12,000",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "bonus": 2000,
+        "cap": 12000
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "STR-01",
+      "section": "Sleep, steps, stress / Stress",
+      "statement": "High stress → RDY-05",
+      "confidence": "moderate",
+      "citation": "Stults-Kolehmainen 2014",
+      "url": "https://journals.lww.com/nsca-jscr/fulltext/2014/07000/chronic_psychological_stress_impairs_recovery_of.26.aspx",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "STR-02",
+      "section": "Sleep, steps, stress / Stress",
+      "statement": "Stress weeks: Z2 walks, Amber modifiers, no new HIIT",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "AGE-01",
+      "section": "Special cases / Masters",
+      "statement": "40–59: standard rules + WU-06, ≥ 48 h same-muscle heavy, shorter deload cadence, upper-half protein",
+      "confidence": "weak",
+      "citation": "Fell 2008",
+      "constants": {
+        "threshold": 40,
+        "proteinGPerKg": 1.9
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "AGE-02",
+      "section": "Special cases / Masters",
+      "statement": "≥ 60: 2–3 d/wk, 2–3 sets, 7–9 reps @ 70–79 %, 60–120 s rest, single-set start, 8–10 exercises, power 40–60 % 1–2×/wk, balance 2–3 d, protein ≥ 1.2 g/kg",
+      "confidence": "moderate",
+      "citation": "Borde 2015; Fragala 2019; Garber 2011; Bauer 2013",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4656698/",
+      "constants": {
+        "threshold": 60,
+        "setsPerExercise.lo": 2,
+        "setsPerExercise.hi": 3,
+        "exercisesPerSession.lo": 8,
+        "exercisesPerSession.hi": 10,
+        "compoundReps.lo": 7,
+        "compoundReps.hi": 9,
+        "restSec.lo": 60,
+        "restSec.hi": 120,
+        "singleSetStartWeeks": 2,
+        "powerSetsPerWeek.lo": 1,
+        "powerSetsPerWeek.hi": 2,
+        "powerPctLo": 0.4,
+        "powerPctHi": 0.6,
+        "powerMinRir": 3,
+        "balanceDaysPerWeek": 2,
+        "balanceMinutes": 5
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "AGE-03",
+      "section": "Special cases / Masters",
+      "statement": "≥ 60: WU-06; machines/DB pressing if ROM limited; avoid ≤ 3 RM unless experienced",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "maxStrengthAllowed": 0
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "LAY-01",
+      "section": "Special cases / Return from layoff",
+      "statement": "Break 5–13 d: 95 % loads, −1 set; 2–4 wk: 85–90 %, −30 % sets; 4–8 wk: 75–80 %, −50 %; > 8 wk: 60–70 % or novice start; ≥ 65 y one row more conservative; regain ≈ 5 wk",
+      "confidence": "weak",
+      "citation": "Halonen 2024; Ogasawara 2013; Bosquet 2013",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.14739",
+      "constants": {
+        "minExcessDays": 5,
+        "row1Days.lo": 5,
+        "row1Days.hi": 13,
+        "row1Load": 0.95,
+        "row1SetDelta": -1,
+        "row1Rir": 1,
+        "row2Days.lo": 14,
+        "row2Days.hi": 28,
+        "row2Load": 0.875,
+        "row2SetFactor": 0.7,
+        "row2Rir": 2,
+        "row3Days.lo": 29,
+        "row3Days.hi": 56,
+        "row3Load": 0.775,
+        "row3SetFactor": 0.5,
+        "row3Rir": 2,
+        "row4Load": 0.65,
+        "row4Rir.lo": 3,
+        "row4Rir.hi": 4,
+        "conservativeAge": 65,
+        "exerciseGapDays": 14
+      },
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "LAY-02",
+      "section": "Special cases / Return from layoff",
+      "statement": "Illness: 24 h symptom-free; then 2–4-wk row; Z2 only 3 d",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {
+        "zone2OnlyDays": 3
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "LAY-03",
+      "section": "Special cases / Return from layoff",
+      "statement": "Short breaks ≤ 2 wk do not compromise long-term results (reassurance)",
+      "confidence": "moderate",
+      "citation": "Halonen 2024",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/sms.14739",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "TRV-01",
+      "section": "Special cases / Travel",
+      "statement": "Travel: 2 × 25–40 min full body, 4–6 exercises, 2–3 sets, 6–15 (to 30) reps, 0–2 RIR",
+      "confidence": "moderate",
+      "citation": "Iversen 2021; Androulakis-Korakakis 2020",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {
+        "sessions": 2,
+        "minutes.lo": 25,
+        "minutes.hi": 40,
+        "exercises.lo": 4,
+        "exercises.hi": 6,
+        "sets.lo": 2,
+        "sets.hi": 3,
+        "travelDaysThreshold": 3,
+        "enduranceReps.lo": 15,
+        "enduranceReps.hi": 30,
+        "enduranceRir": 1
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "TRV-02",
+      "section": "Special cases / Travel",
+      "statement": "DB-only / BW+band / hotel templates",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TRV-03",
+      "section": "Special cases / Travel",
+      "statement": "≈ 1/3 accustomed volume maintains for weeks if effort kept",
+      "confidence": "weak",
+      "citation": "Bickel 2011 (not fetched)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TRV-04",
+      "section": "Special cases / Travel",
+      "statement": "Gym presets map at pattern level; progression state per exercise",
+      "confidence": "weak",
+      "citation": "project convention",
+      "constants": {
+        "rampFactors.0": 1,
+        "rampFactors.1": 1.15,
+        "rampFactors.2": 1.3,
+        "rampFactors.3": 1.45,
+        "stopRirOffset": 1
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-01",
+      "section": "Special cases / Time-constrained sessions",
+      "statement": "Trim order: warm-up → isolation → supersets → rest 60 s → one exercise/pattern → 2 sets → move pattern; keep ≥ VOL-01",
+      "confidence": "moderate",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {
+        "minViableRequiredSets": 2,
+        "minViablePrioritySets": 1
+      },
+      "user_adjustable": false
+    },
+    {
+      "id": "TIME-02",
+      "section": "Special cases / Time-constrained sessions",
+      "statement": "30/45/60/90 min presets ≈ 10/14–16/20–22/up to cap sets",
+      "confidence": "weak",
+      "citation": "derived",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-03",
+      "section": "Special cases / Time-constrained sessions",
+      "statement": "Drop sets/rest-pause only on machine/isolation/cable",
+      "confidence": "moderate",
+      "citation": "Iversen 2021",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34125411/",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "INJ-00",
+      "section": "Special cases / Injury-limited substitutions",
+      "statement": "Pain ≤ 3/10 and not worse next day; > 7–10 d → RED-02",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "INJ-01",
+      "section": "Special cases / Injury-limited substitutions",
+      "statement": "Knee: 0–50° low-force range; box/partial squats, hinges, limited-depth press, step-ups, isometrics; cycle not run",
+      "confidence": "weak",
+      "citation": "Escamilla 2001",
+      "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE:%22Knee%20biomechanics%20of%20the%20dynamic%20squat%20exercise%22&resultType=core&format=json",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "INJ-02",
+      "section": "Special cases / Injury-limited substitutions",
+      "statement": "Shoulder: neutral-grip/landmine/floor press; avoid BTN, deep dips, wide bench, upright rows; ER + face pulls",
+      "confidence": "weak",
+      "citation": "Kolber 2010",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "INJ-03",
+      "section": "Special cases / Injury-limited substitutions",
+      "statement": "Low back: keep training; resistance + motor control best; hinge light neutral, hip thrust, belt squat, supported rows; no loaded flexion in flare",
+      "confidence": "weak",
+      "citation": "Owen 2020",
+      "constants": {},
+      "user_adjustable": true,
+      "note": "R3 tag: moderate/weak"
+    },
+    {
+      "id": "INJ-04",
+      "section": "Special cases / Injury-limited substitutions",
+      "statement": "Elbow/wrist: −50 % curl/pressdown volume, neutral grips, 3 s eccentrics",
+      "confidence": "weak",
+      "citation": "convention",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "POL-03",
+      "section": "Policy",
+      "statement": "Supplement advice is generic education; it always carries the legal/medical caveat in SUP-12 and never overrides a physician's instruction.",
+      "confidence": "strong",
+      "citation": "R3 §0.2",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "policy statement, not an evidence claim"
+    },
+    {
+      "id": "DEF-06",
+      "section": "Definitions",
+      "statement": "Goals enum: hypertrophy, strength, general_fitness (health + some of each), fat_loss (hypertrophy-style training in deficit), endurance_support (RT while cardio is the priority).",
+      "confidence": "moderate",
+      "citation": "R3 §0.3",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "DEF-07",
+      "section": "Definitions",
+      "statement": "Exercise classes for increments/RIR: lower_barbell (squat, deadlift, RDL, hip thrust bar), upper_barbell (bench, OHP, row), dumbbell, machine (pin/plate loaded), cable, bodyweight (pull-up, dip, push-up), isolation (any single-joint regardless of implement; if a movement is single-joint, isolation rules override implement rules for RIR, increments use the implement rule).",
+      "confidence": "moderate",
+      "citation": "R3 §0.3",
+      "constants": {},
+      "user_adjustable": false
+    },
+    {
+      "id": "NUT-18",
+      "section": "Nutrition",
+      "statement": "Weight-class or event cuts: out of scope for the planner; refer to a sports dietitian (POL-02).",
+      "confidence": "strong",
+      "citation": "R3 §6",
+      "constants": {},
+      "user_adjustable": false,
+      "note": "policy statement, not an evidence claim"
+    },
+    {
+      "id": "SEL",
+      "section": "Planner conventions",
+      "statement": "Exercise selection score per slot: pattern preference 0.35, coverage of muscle deficits 0.25, continuity 0.15, user preference 0.10, load-type preference 0.10, difficulty fit 0.05, minus repeat/variety/mild-limitation/no-rack penalties; ties broken by knowledge order (batch, id).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.6)",
+      "constants": {
+        "patternPref": 0.35,
+        "coverage": 0.25,
+        "continuity": 0.15,
+        "preference": 0.1,
+        "loadTypePref": 0.1,
+        "difficultyFit": 0.05,
+        "familyPatternScore": 0.6,
+        "repeatInSessionPenalty": 0.5,
+        "varietyPenalty": 0.2,
+        "mildLimitationPenalty": 0.3,
+        "noRackPenalty": 0.3
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "SUB",
+      "section": "Planner conventions",
+      "statement": "Substitution score: pattern 0.35, muscle-vector cosine 0.35, load fit 0.15, continuity 0.10, difficulty 0.05, plus a bonus for the author's ranked substitutions and a penalty for a different rep profile.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.12)",
+      "constants": {
+        "pattern": 0.35,
+        "cosine": 0.35,
+        "loadFit": 0.15,
+        "continuity": 0.1,
+        "difficulty": 0.05,
+        "rankBonus": 0.1,
+        "profilePenalty": 0.2,
+        "loadFitTier1": 0.85,
+        "loadFitTier2": 0.6,
+        "loadFitTier3": 0.4
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "REBAL",
+      "section": "Planner conventions",
+      "statement": "After the greedy set allocation, sets move from muscles above target (surplus >= 2) to muscles below target (deficit >= 1) at equal or lower time cost, only inside the slot's pattern list.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.6)",
+      "constants": {
+        "deficitMin": 1,
+        "surplusMin": 2,
+        "tolerance": 1
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "TIER",
+      "section": "Planner conventions",
+      "statement": "Tier-1 muscles get the VOL-04 band; tier-2 get round(0.6 x band) with floor VOL-01; tier-3 have no target and an advisory direct cap of 6.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.4)",
+      "constants": {
+        "tier2Factor": 0.6,
+        "tier3DirectCap": 6
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L1",
+      "section": "Planner conventions",
+      "statement": "Time concession level 1: trim the warm-up (WU-05); skipped when WU-05 already applies.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L2",
+      "section": "Planner conventions",
+      "statement": "Time concession level 2: drop isolation sets for muscles that already have >= VOL-01 fractional sets from compounds this week.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L3",
+      "section": "Planner conventions",
+      "statement": "Time concession level 3: antagonist / non-competing supersets for isolation and accessory slots (REST-03).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L4",
+      "section": "Planner conventions",
+      "statement": "Time concession level 4: rest cut on machine/isolation work to 60 s; main lifts never below 120 s (REST-04).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L5",
+      "section": "Planner conventions",
+      "statement": "Time concession level 5: one exercise per pattern.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L6",
+      "section": "Planner conventions",
+      "statement": "Time concession level 6: two sets per exercise (never fewer than 1 on the two priority lifts).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "TIME-L7",
+      "section": "Planner conventions",
+      "statement": "Time concession level 7: move the lowest-priority pattern's slot to another open session this week (ledger carryover).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "R4-2.6",
+      "section": "Planner conventions",
+      "statement": "When the prescribed load exceeds what the gym can load (e.g. dumbbells max_kg), keep the load at the maximum and extend the rep band by +2 with RIR -1, or offer the top substitution; the state's working load is not lowered.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {
+        "keepAtMaxThreshold": 0.6,
+        "keepAtMaxRepExtension": 2,
+        "keepAtMaxRirOffset": -1
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "R4-4.5",
+      "section": "Planner conventions",
+      "statement": "RP volume landmarks are direct-count soft caps: once direct sets reach the RP MRV lower bound, further allocation gain for that muscle is halved (novice/intermediate); never a stop condition.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.4)",
+      "constants": {
+        "softCapFactor": 0.5
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "R4-5.4",
+      "section": "Planner conventions",
+      "statement": "Load increments follow the R4 §5.4 table per load type; gym parameters (plate, rack, stack steps) override the defaults.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.9)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "R4-5.5",
+      "section": "Planner conventions",
+      "statement": "An exercise flagged requires_spotter_or_safeties whose satisfied equipment option lacks rack_or_spotter is prescribed with an RIR floor of 2 and a safety note.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "RIR-CAP",
+      "section": "Planner conventions",
+      "statement": "The stacked RIR target (profile + week offset + readiness/deload modifiers) is clamped to at most 4 (DEF-04 working-set definition).",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {
+        "capMax": 4
+      },
+      "user_adjustable": true
+    },
+    {
+      "id": "ROUNDING",
+      "section": "Planner conventions",
+      "statement": "A prescribed load is rounded to what the gym can load (bar + plate pairs, dumbbell rack, stack step); a rounding error above 5 % is shown as a modifier.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §3.9)",
+      "constants": {},
+      "user_adjustable": true
+    },
+    {
+      "id": "OVERRIDE",
+      "section": "Planner conventions",
+      "statement": "A user or coach override replaced the planner's choice.",
+      "confidence": "weak",
+      "citation": "planner convention (SPEC §4.7)",
+      "constants": {},
+      "user_adjustable": true
+    }
+  ]
+}

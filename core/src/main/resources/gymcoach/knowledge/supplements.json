@@ -1,0 +1,260 @@
+{
+  "schema_version": 1,
+  "caveat_sup12": [
+    "Not medical advice; check with a physician/pharmacist if pregnant, breastfeeding, under 18, or taking medication or having heart, kidney, liver, thyroid or psychiatric conditions.",
+    "Prefer third-party-tested products (Informed Sport, NSF Certified for Sport, Kölner Liste); contamination with prohibited substances is a known risk.",
+    "Legal status differs by country (melatonin, high-dose caffeine products, some stimulants); the app shows a country note when a locale is set.",
+    "Supplements are optional; the ranked order of impact is: total protein, calories, sleep, training consistency, then creatine and caffeine."
+  ],
+  "priority_order": "total protein, calories, sleep, training consistency, then creatine and caffeine",
+  "entries": [
+    {
+      "id": "SUP-01",
+      "name": "Creatine monohydrate",
+      "tier": "A",
+      "dose": "3-5 g/day (about 0.1 g/kg/day); optional loading 20 g/day (4 x 5 g) for 5-7 days",
+      "timing": "every day, with any meal",
+      "evidence": "strong",
+      "citation": "Kreider 2017; Antonio 2021",
+      "notes": [
+        "Expect +1-2 kg water weight in the first weeks (NUT-15).",
+        "Do not recommend with kidney disease or a single kidney: refer."
+      ],
+      "gated_by_medical": [
+        "kidney_disease",
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-02",
+      "name": "Caffeine",
+      "tier": "A",
+      "dose": "3-6 mg/kg (start 2-3 mg/kg); no benefit above 9 mg/kg; daily total <= 400 mg",
+      "timing": "60 min before the session; cut-off bedtime - 9 h (<= 100 mg) / bedtime - 13 h (>= 200 mg)",
+      "evidence": "strong",
+      "citation": "Guest 2021; Gardiner 2023",
+      "notes": [
+        "Response varies with genetics and habitual intake.",
+        "The 400 mg/day EFSA guidance value was not fetched live (R3 §12.7)."
+      ],
+      "gated_by_medical": [
+        "uncontrolled_hypertension",
+        "heart_disease",
+        "pregnancy",
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-03",
+      "name": "Protein powder (whey / casein / plant blends)",
+      "tier": "A",
+      "dose": "20-40 g servings to close the gap to NUT-01",
+      "timing": "when whole food is impractical (travel days)",
+      "evidence": "strong",
+      "citation": "Morton 2018; Jäger 2017",
+      "notes": [
+        "A food, not an ergogenic.",
+        "Plant proteins: use blends or a larger serving to reach about 2.5-3 g leucine."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-04",
+      "name": "Vitamin D (conditional)",
+      "tier": "A",
+      "dose": "1,000-2,000 IU/day only when measured low or >= 2 risk factors; upper limit 4,000 IU/day without supervision",
+      "timing": "daily, only when indicated",
+      "evidence": "contested",
+      "citation": "Holick 2011; Demay 2024; Owens 2018",
+      "notes": [
+        "Routine testing and empiric supplementation above the DRI are not recommended in healthy adults < 75 (Demay 2024).",
+        "Risk factors: little sun / indoor work, latitude > 40° in winter, darker skin, covering clothing, BMI > 30."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-09",
+      "name": "Electrolytes (conditional)",
+      "tier": "A",
+      "dose": "sodium 300-600 mg per hour of exercise in fluid",
+      "timing": "only for sessions > 1-2 h, heat, or sweat loss > 1 L/h",
+      "evidence": "moderate",
+      "citation": "Sawka 2007; Thomas 2016",
+      "notes": [
+        "Otherwise normal salted food suffices."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-06",
+      "name": "Beta-alanine",
+      "tier": "B",
+      "dose": "4-6 g/day for >= 2-4 weeks, split doses <= 1.6 g",
+      "timing": "daily, split doses",
+      "evidence": "weak",
+      "citation": "Trexler 2015",
+      "notes": [
+        "Benefits 1-4 min efforts (intervals, high-rep sets); minimal relevance to heavy lifting.",
+        "R3 tag: strong (effect)/weak (relevance)"
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-07",
+      "name": "Citrulline malate",
+      "tier": "B",
+      "dose": "6-8 g (2:1 citrulline:malate)",
+      "timing": "60 min before training",
+      "evidence": "moderate",
+      "citation": "Trexler 2019; Vårvik 2021",
+      "notes": [
+        "Small increase in repetitions to failure (ES about 0.20)."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-08",
+      "name": "Melatonin (travel / jet lag)",
+      "tier": "B",
+      "dose": "0.5-5 mg (dose-response peaks about 4 mg)",
+      "timing": "30 min to 3 h before the desired bedtime; time-zone shifts / hotel nights only",
+      "evidence": "moderate",
+      "citation": "Ferracioli-Oda 2013; Cruz-Sanabria 2024",
+      "notes": [
+        "Reduces sleep-onset latency by about 7 min."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ],
+      "legal_note": "prescription-only in several EU countries at ≥ 2 mg — check local rules; not verified live (R3 §12.13)"
+    },
+    {
+      "id": "SUP-05",
+      "name": "Omega-3 (EPA+DHA)",
+      "tier": "B",
+      "dose": "1-2 g/day EPA+DHA",
+      "timing": "daily, only when fish intake < 2 servings/week",
+      "evidence": "weak",
+      "citation": "Nunes 2025",
+      "notes": [
+        "No support for lean mass, strength or function in healthy adults; general-health rationale only."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-10",
+      "name": "Multivitamin",
+      "tier": "B",
+      "dose": "low-dose daily",
+      "timing": "only during energy restriction or restricted diets (vegan, travel with poor food access)",
+      "evidence": "moderate",
+      "citation": "Kerksick 2018",
+      "notes": [
+        "No performance effect."
+      ],
+      "gated_by_medical": [
+        "doctor_restriction"
+      ]
+    },
+    {
+      "id": "SUP-11.1",
+      "name": "BCAA (alone)",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "strong",
+      "citation": "Wolfe 2017",
+      "notes": [],
+      "do_not_reason": "Cannot stimulate MPS without the other EAAs; redundant when protein target is met"
+    },
+    {
+      "id": "SUP-11.2",
+      "name": "HMB (trained adults)",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "moderate",
+      "citation": "Jakubowski 2020",
+      "notes": [],
+      "do_not_reason": "No meaningful effect on lean mass, fat mass or strength in trained young adults"
+    },
+    {
+      "id": "SUP-11.3",
+      "name": "Glutamine",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "moderate",
+      "citation": "Kerksick 2018 (\"little to no evidence\" category — table not verified live)",
+      "notes": [],
+      "do_not_reason": "No hypertrophy/strength effect in healthy people"
+    },
+    {
+      "id": "SUP-11.4",
+      "name": "\"Testosterone boosters\" (tribulus, fenugreek blends, D-aspartic acid)",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "strong",
+      "citation": "Clemesha 2020",
+      "notes": [],
+      "do_not_reason": "Ingredients mostly unstudied or ineffective; some reduce testosterone; doses above tolerable limits"
+    },
+    {
+      "id": "SUP-11.5",
+      "name": "Stimulant \"fat burners\", DMAA/DMHA, ephedra, high-dose yohimbine",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "strong",
+      "citation": "Maughan 2018 IOC; regulatory actions — not fetched",
+      "notes": [],
+      "do_not_reason": "Cardiovascular risk, contamination, banned substances"
+    },
+    {
+      "id": "SUP-11.6",
+      "name": "SARMs, prohormones, \"legal steroids\"",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "strong",
+      "citation": "Maughan 2018",
+      "notes": [],
+      "do_not_reason": "Unregulated, hepatotoxic/endocrine harm, doping-listed"
+    },
+    {
+      "id": "SUP-11.7",
+      "name": "Arginine, ornithine, CLA, D-ribose, chromium, \"detox\"/\"cleanse\", collagen for muscle, raspberry ketones, \"test/estrogen blockers\"",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "moderate",
+      "citation": "Kerksick 2018 framework",
+      "notes": [],
+      "do_not_reason": "Little-to-no evidence"
+    },
+    {
+      "id": "SUP-11.8",
+      "name": "High-dose vitamin D without a blood test",
+      "tier": "C",
+      "dose": "not recommended",
+      "timing": "n/a",
+      "evidence": "moderate",
+      "citation": "Owens 2018; Demay 2024",
+      "notes": [],
+      "do_not_reason": "No benefit if replete; toxicity risk"
+    }
+  ]
+}

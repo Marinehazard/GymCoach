@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "tips": [
+    {
+      "id": "nut02_distribution",
+      "rule_id": "NUT-02",
+      "title": "Protein distribution",
+      "body": "0.4 g/kg (range 0.4–0.55) per meal across ≥ 4 meals, i.e. 20–40 g every 3–4 h; optional 30–40 g slow protein (casein/dairy) 30 min before sleep. Distribution is a second-order lever after total intake.",
+      "confidence": "moderate",
+      "citation": "Schoenfeld & Aragon 2018; Jäger 2017; Snijders 2019"
+    },
+    {
+      "id": "nut03_meal_frequency",
+      "rule_id": "NUT-03",
+      "title": "Meal frequency",
+      "body": "No independent effect on body composition once calories and protein are fixed. Choose 3–5 meals, whatever fits the day.",
+      "confidence": "moderate",
+      "citation": "Schoenfeld 2015"
+    },
+    {
+      "id": "nut12_peri_workout",
+      "rule_id": "NUT-12",
+      "title": "Around the session",
+      "body": "Total daily protein dominates. Eat a protein-containing meal (0.25–0.4 g/kg) within ~2 h before or ~2 h after the session; if training fasted (> 3–4 h since protein), eat 20–40 g protein + carbohydrate within 1–2 h after. Fast carb replenishment (1–1.2 g/kg/h) only when two hard sessions fall within 8 h.",
+      "confidence": "moderate",
+      "citation": "Schoenfeld 2017; Kerksick 2017"
+    },
+    {
+      "id": "nut13_alcohol",
+      "rule_id": "NUT-13",
+      "title": "Alcohol",
+      "body": "≤ 1–2 standard drinks on a training day, none within ~4 h after the session, ≤ 7 per week; ≥ 3 drinks in an evening → next-day readiness Amber and a sleep flag. 1.5 g/kg after training cut muscle protein synthesis by 24–37 %.",
+      "confidence": "weak",
+      "citation": "Parr 2014"
+    },
+    {
+      "id": "nut14_protein_anchor",
+      "rule_id": "NUT-14",
+      "title": "Travel (1): protein anchor first",
+      "body": "≥ 30–40 g protein per meal from eggs/quark/skyr/yogurt at hotel breakfast, grilled meat/fish/tofu at lunch and dinner; carry whey (25–30 g per scoop) for days with < 3 protein meals.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "nut14_plate_rule",
+      "rule_id": "NUT-14",
+      "title": "Travel (2): plate rule",
+      "body": "At restaurants and buffets: ½ vegetables, ¼ protein, ¼ starch; sauces on the side.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "nut14_petrol_station_kit",
+      "rule_id": "NUT-14",
+      "title": "Travel (3): petrol-station kit",
+      "body": "Skyr, jerky, nuts (30 g portion), fruit, protein bar with ≥ 20 g protein.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "nut14_scale_weight",
+      "rule_id": "NUT-14",
+      "title": "Travel (4): expect scale jumps",
+      "body": "Expect +0.5–1.5 kg scale weight after high-sodium restaurant days and after weekends (0.35 % within-week swing, highest Monday, lowest Friday) — do not adjust calories on those days (NUT-15).",
+      "confidence": "moderate",
+      "citation": "Turicchi 2020"
+    },
+    {
+      "id": "nut14_ordinal_tracking",
+      "rule_id": "NUT-14",
+      "title": "Travel (5): track simply",
+      "body": "When calorie logging is impossible, track \"protein hit? yes/no\" and \"meals: light/normal/heavy\"; the planner uses these as ordinal inputs.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "nut14_driving_hydration",
+      "rule_id": "NUT-14",
+      "title": "Travel (6): water while driving",
+      "body": "500 mL water per 2 h of driving; coffee counts toward the SUP-02 caffeine cut-off.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "nut14_alcohol",
+      "rule_id": "NUT-14",
+      "title": "Travel (7): alcohol",
+      "body": "Alcohol on the road follows NUT-13.",
+      "confidence": "weak",
+      "citation": "convention (R3 NUT-14)"
+    }
+  ]
+}
