@@ -107,4 +107,57 @@ class SeedProfileTest {
         assertEquals(92.5, rounder.round(92.5, bench, LoadType.BARBELL, GymParams(kb, SessionEquipment(bigger))).kg, 1e-9)
         assertEquals(0.0, rounder.round(92.5, bench, LoadType.BARBELL, GymParams(kb, SessionEquipment(home))).kg % 5.0, 1e-9)
     }
+
+    @Test
+    fun historyIsTheLogWithRpeAsRir() {
+        val sets = seed.history.sets
+        assertEquals(11, seed.history.sessions.size)
+        // 12 Oct: squat 90×3 at RPE 8 → RIR 2; back-offs 80×5/5/5.
+        val oct12 = sets.filter { it.sessionId == "seed-2026-10-12" && it.exerciseId == "back_squat" }
+        assertEquals(listOf(90.0 to 3, 80.0 to 5, 80.0 to 5, 80.0 to 5), oct12.map { it.weight!!.kg to it.reps })
+        assertEquals(2, oct12.first().rir)
+        assertEquals("RPE 8", oct12.first().note)
+        // Logged numbers are verbatim: entered value == kg, unit kg.
+        assertTrue(sets.all { it.weight == null || (it.weight!!.unit == WeightUnit.KG && it.weight!!.entered == it.weight!!.kg) })
+        val bench13 = sets.filter { it.sessionId == "seed-2026-10-13" && it.exerciseId == "barbell_bench_press" }.map { it.weight!!.kg to it.reps }
+        assertEquals(listOf(80.0 to 3, 70.0 to 6, 70.0 to 6, 70.0 to 6), bench13)
+        val ohp15 = sets.filter { it.sessionId == "seed-2026-10-15" }.map { it.weight!!.kg to it.reps }
+        assertEquals(listOf(45.0 to 6, 40.0 to 6, 45.0 to 6, 40.0 to 6), ohp15)
+        assertEquals(listOf(160.0 to 2), sets.filter { it.exerciseId == "conventional_deadlift" }.map { it.weight!!.kg to it.reps })
+    }
+
+    @Test
+    fun seededHistoryYieldsTheEstimatedMaxesOfSection2() {
+        val best = SeedProfiles.bestE1rm(seed)
+        fun near(id: String, expected: Double, pct: Double = 3.0) {
+            val kg = assertNotNull(best[id], id).kg
+            assertTrue(kotlin.math.abs(kg - expected) <= expected * pct / 100.0, "$id e1RM $kg vs ~$expected")
+        }
+        near("overhead_press_barbell", 52.0)
+        near("barbell_bench_press", 92.0)
+        near("back_squat", 103.5)                 // USER_PROFILE §2: ~102–105
+        assertTrue(best.getValue("back_squat").kg in 102.0..105.0)
+        near("conventional_deadlift", 170.0)
+    }
+
+    @Test
+    fun progressionStartsFromRealityNotFindLoad() {
+        val states = SeedProfiles.progressionStates(seed, kb)
+        fun state(id: String, variant: String? = null) = assertNotNull(states.firstOrNull { it.key == ProgressionKey(id, null, variant) }, "$id#$variant")
+        assertEquals(90.0, state("back_squat").workingLoadKg)
+        assertEquals(80.0, state("back_squat", "backoff").workingLoadKg)
+        assertEquals(80.0, state("barbell_bench_press").workingLoadKg)
+        assertEquals(70.0, state("barbell_bench_press", "backoff").workingLoadKg)
+        assertEquals(45.0, state("overhead_press_barbell").workingLoadKg)
+        assertEquals(140.0, state("conventional_deadlift").workingLoadKg)
+        assertEquals(com.gymcoach.core.model.Band(5, 7), state("back_squat", "backoff").workingReps)
+        assertEquals(com.gymcoach.core.model.Band(3, 3), state("back_squat").workingReps)
+        assertTrue(states.all { it.targetRir == 2 && it.status == com.gymcoach.core.model.ProgressionStatus.PROGRESSING })
+        // History summaries come from the log (newest first); the squat main track's best e1RM is the 12 Oct triple at RPE 8.
+        val squat = state("back_squat")
+        assertEquals(LocalDate.of(2026, 10, 12), squat.history.first().date)
+        assertEquals(103.1, squat.history.first().e1rm!!.kg)
+        assertEquals("back_squat#backoff", state("back_squat", "backoff").key.id)
+        assertEquals(LocalDate.of(2026, 10, 12), state("back_squat", "backoff").history.first().date)
+    }
 }

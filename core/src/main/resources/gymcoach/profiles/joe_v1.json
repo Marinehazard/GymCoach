@@ -271,15 +271,866 @@
   ],
   "default_gym_id": "gym-joe-home",
   "history": {
-    "sessions": [],
-    "sets": []
+    "sessions": [
+      {
+        "id": "seed-2026-09-15",
+        "date": "2026-09-15",
+        "gym_id": "gym-joe-home",
+        "status": "completed",
+        "notes": "Deadlift 160×2 (September; the exact date is not in the log — mid-September placeholder). Paused during the squat peak."
+      },
+      {
+        "id": "seed-2026-09-25",
+        "date": "2026-09-25",
+        "gym_id": "gym-joe-home",
+        "status": "completed",
+        "notes": "Squat: baseline, form OK."
+      },
+      {
+        "id": "seed-2026-09-29",
+        "date": "2026-09-29",
+        "gym_id": "gym-joe-home",
+        "status": "completed",
+        "notes": "Squat. Video: hips rise slightly first, slow mid-third, setup too long (~15–20 s)."
+      },
+      {
+        "id": "seed-2026-10-03",
+        "date": "2026-10-03",
+        "gym_id": "gym-joe-home",
+        "status": "completed",
+        "notes": "Squat. Left knee drifted in slightly, no injury."
+      },
+      {
+        "id": "seed-2026-10-04",
+        "date": "2026-10-04",
+        "gym_id": "gym-joe-home",
+        "status": "completed",
+        "notes": "Bench: turned the triple day into a max day."
+      },
+      {
+        "id": "seed-2026-10-06",
+        "date": "2026-10-06",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Squat test day: 100×1 PR, deep, easy. Machine leg volume afterwards (not logged)."
+      },
+      {
+        "id": "seed-2026-10-08",
+        "date": "2026-10-08",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Bench."
+      },
+      {
+        "id": "seed-2026-10-10",
+        "date": "2026-10-10",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Overhead press. Est. max ~52."
+      },
+      {
+        "id": "seed-2026-10-12",
+        "date": "2026-10-12",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Squat, cycle week 1."
+      },
+      {
+        "id": "seed-2026-10-13",
+        "date": "2026-10-13",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Bench: all targets hit."
+      },
+      {
+        "id": "seed-2026-10-15",
+        "date": "2026-10-15",
+        "gym_id": "gym-joe-bigger",
+        "status": "completed",
+        "notes": "Overhead press after a 12 h shift."
+      }
+    ],
+    "sets": [
+      {
+        "id": "seed-2026-09-25-1",
+        "session_id": "seed-2026-09-25",
+        "block_id": "seed-2026-09-25:top",
+        "exercise_id": "back_squat",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 90,
+          "unit": "kg",
+          "kg": 90
+        },
+        "reps": 2,
+        "logged_at": "2026-09-25T18:01:00Z",
+        "note": "90×2, RPE not logged"
+      },
+      {
+        "id": "seed-2026-09-29-1",
+        "session_id": "seed-2026-09-29",
+        "block_id": "seed-2026-09-29:top",
+        "exercise_id": "back_squat",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 95,
+          "unit": "kg",
+          "kg": 95
+        },
+        "reps": 1,
+        "rir": 1,
+        "logged_at": "2026-09-29T18:01:00Z",
+        "note": "RPE 8–8.5 (logged as RIR 1, the harder end)"
+      },
+      {
+        "id": "seed-2026-09-29-2",
+        "session_id": "seed-2026-09-29",
+        "block_id": "seed-2026-09-29:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-09-29T18:02:00Z",
+        "note": "Pause squat 4×3"
+      },
+      {
+        "id": "seed-2026-09-29-3",
+        "session_id": "seed-2026-09-29",
+        "block_id": "seed-2026-09-29:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-09-29T18:03:00Z",
+        "note": "Pause squat 4×3"
+      },
+      {
+        "id": "seed-2026-09-29-4",
+        "session_id": "seed-2026-09-29",
+        "block_id": "seed-2026-09-29:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-09-29T18:04:00Z",
+        "note": "Pause squat 4×3"
+      },
+      {
+        "id": "seed-2026-09-29-5",
+        "session_id": "seed-2026-09-29",
+        "block_id": "seed-2026-09-29:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 5,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-09-29T18:05:00Z",
+        "note": "Pause squat 4×3"
+      },
+      {
+        "id": "seed-2026-10-03-1",
+        "session_id": "seed-2026-10-03",
+        "block_id": "seed-2026-10-03:top",
+        "exercise_id": "back_squat",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 95,
+          "unit": "kg",
+          "kg": 95
+        },
+        "reps": 1,
+        "logged_at": "2026-10-03T18:01:00Z",
+        "note": "deep; RPE not logged"
+      },
+      {
+        "id": "seed-2026-10-03-2",
+        "session_id": "seed-2026-10-03",
+        "block_id": "seed-2026-10-03:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 85,
+          "unit": "kg",
+          "kg": 85
+        },
+        "reps": 2,
+        "logged_at": "2026-10-03T18:02:00Z"
+      },
+      {
+        "id": "seed-2026-10-03-3",
+        "session_id": "seed-2026-10-03",
+        "block_id": "seed-2026-10-03:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 85,
+          "unit": "kg",
+          "kg": 85
+        },
+        "reps": 2,
+        "logged_at": "2026-10-03T18:03:00Z"
+      },
+      {
+        "id": "seed-2026-10-06-1",
+        "session_id": "seed-2026-10-06",
+        "block_id": "seed-2026-10-06:top",
+        "exercise_id": "back_squat",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 100,
+          "unit": "kg",
+          "kg": 100
+        },
+        "reps": 1,
+        "logged_at": "2026-10-06T18:01:00Z",
+        "note": "PR, deep, easy; RPE not logged"
+      },
+      {
+        "id": "seed-2026-10-12-1",
+        "session_id": "seed-2026-10-12",
+        "block_id": "seed-2026-10-12:top",
+        "exercise_id": "back_squat",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 90,
+          "unit": "kg",
+          "kg": 90
+        },
+        "reps": 3,
+        "rir": 2,
+        "logged_at": "2026-10-12T18:01:00Z",
+        "note": "RPE 8"
+      },
+      {
+        "id": "seed-2026-10-12-2",
+        "session_id": "seed-2026-10-12",
+        "block_id": "seed-2026-10-12:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 5,
+        "logged_at": "2026-10-12T18:02:00Z"
+      },
+      {
+        "id": "seed-2026-10-12-3",
+        "session_id": "seed-2026-10-12",
+        "block_id": "seed-2026-10-12:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 5,
+        "logged_at": "2026-10-12T18:03:00Z"
+      },
+      {
+        "id": "seed-2026-10-12-4",
+        "session_id": "seed-2026-10-12",
+        "block_id": "seed-2026-10-12:backoff",
+        "exercise_id": "back_squat",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 5,
+        "logged_at": "2026-10-12T18:04:00Z"
+      },
+      {
+        "id": "seed-2026-10-12-5",
+        "session_id": "seed-2026-10-12",
+        "block_id": "seed-2026-10-12:acc",
+        "exercise_id": "bulgarian_split_squat",
+        "set_index": 5,
+        "kind": "working",
+        "weight": {
+          "entered": 12,
+          "unit": "kg",
+          "kg": 12
+        },
+        "per_hand": true,
+        "logged_at": "2026-10-12T18:05:00Z",
+        "note": "12 kg per hand; reps not logged"
+      },
+      {
+        "id": "seed-2026-10-04-1",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:top",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 90,
+          "unit": "kg",
+          "kg": 90
+        },
+        "reps": 1,
+        "logged_at": "2026-10-04T18:01:00Z",
+        "note": "PR"
+      },
+      {
+        "id": "seed-2026-10-04-2",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:top",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 95,
+          "unit": "kg",
+          "kg": 95
+        },
+        "reps": 0,
+        "logged_at": "2026-10-04T18:02:00Z",
+        "note": "95 missed (close)"
+      },
+      {
+        "id": "seed-2026-10-04-3",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-10-04T18:03:00Z"
+      },
+      {
+        "id": "seed-2026-10-04-4",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 6,
+        "logged_at": "2026-10-04T18:04:00Z"
+      },
+      {
+        "id": "seed-2026-10-04-5",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 5,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 6,
+        "logged_at": "2026-10-04T18:05:00Z"
+      },
+      {
+        "id": "seed-2026-10-04-6",
+        "session_id": "seed-2026-10-04",
+        "block_id": "seed-2026-10-04:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 6,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 5,
+        "logged_at": "2026-10-04T18:06:00Z"
+      },
+      {
+        "id": "seed-2026-10-08-1",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:top",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-10-08T18:01:00Z"
+      },
+      {
+        "id": "seed-2026-10-08-2",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 5,
+        "logged_at": "2026-10-08T18:02:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-08-3",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 5,
+        "logged_at": "2026-10-08T18:03:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-08-4",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 5,
+        "logged_at": "2026-10-08T18:04:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-08-5",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 5,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 8,
+        "logged_at": "2026-10-08T18:05:00Z"
+      },
+      {
+        "id": "seed-2026-10-08-6",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 6,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 8,
+        "logged_at": "2026-10-08T18:06:00Z"
+      },
+      {
+        "id": "seed-2026-10-08-7",
+        "session_id": "seed-2026-10-08",
+        "block_id": "seed-2026-10-08:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 7,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 7,
+        "logged_at": "2026-10-08T18:07:00Z"
+      },
+      {
+        "id": "seed-2026-10-13-1",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:top",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 80,
+          "unit": "kg",
+          "kg": 80
+        },
+        "reps": 3,
+        "logged_at": "2026-10-13T18:01:00Z"
+      },
+      {
+        "id": "seed-2026-10-13-2",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 6,
+        "logged_at": "2026-10-13T18:02:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-13-3",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 6,
+        "logged_at": "2026-10-13T18:03:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-13-4",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:backoff",
+        "exercise_id": "barbell_bench_press",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 70,
+          "unit": "kg",
+          "kg": 70
+        },
+        "reps": 6,
+        "logged_at": "2026-10-13T18:04:00Z",
+        "note": "paused"
+      },
+      {
+        "id": "seed-2026-10-13-5",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 5,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 8,
+        "logged_at": "2026-10-13T18:05:00Z"
+      },
+      {
+        "id": "seed-2026-10-13-6",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 6,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 8,
+        "logged_at": "2026-10-13T18:06:00Z"
+      },
+      {
+        "id": "seed-2026-10-13-7",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:acc",
+        "exercise_id": "close_grip_bench_press",
+        "set_index": 7,
+        "kind": "working",
+        "weight": {
+          "entered": 60,
+          "unit": "kg",
+          "kg": 60
+        },
+        "reps": 8,
+        "logged_at": "2026-10-13T18:07:00Z"
+      },
+      {
+        "id": "seed-2026-10-13-8",
+        "session_id": "seed-2026-10-13",
+        "block_id": "seed-2026-10-13:acc",
+        "exercise_id": "incline_dumbbell_press",
+        "set_index": 8,
+        "kind": "working",
+        "weight": {
+          "entered": 24,
+          "unit": "kg",
+          "kg": 24
+        },
+        "per_hand": true,
+        "logged_at": "2026-10-13T18:08:00Z",
+        "note": "24 kg dumbbells; reps not logged"
+      },
+      {
+        "id": "seed-2026-10-10-1",
+        "session_id": "seed-2026-10-10",
+        "block_id": "seed-2026-10-10:top",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 50,
+          "unit": "kg",
+          "kg": 50
+        },
+        "reps": 1,
+        "logged_at": "2026-10-10T18:01:00Z"
+      },
+      {
+        "id": "seed-2026-10-10-2",
+        "session_id": "seed-2026-10-10",
+        "block_id": "seed-2026-10-10:backoff",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 40,
+          "unit": "kg",
+          "kg": 40
+        },
+        "reps": 8,
+        "logged_at": "2026-10-10T18:02:00Z"
+      },
+      {
+        "id": "seed-2026-10-10-3",
+        "session_id": "seed-2026-10-10",
+        "block_id": "seed-2026-10-10:backoff",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 40,
+          "unit": "kg",
+          "kg": 40
+        },
+        "reps": 8,
+        "logged_at": "2026-10-10T18:03:00Z"
+      },
+      {
+        "id": "seed-2026-10-10-4",
+        "session_id": "seed-2026-10-10",
+        "block_id": "seed-2026-10-10:backoff",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 40,
+          "unit": "kg",
+          "kg": 40
+        },
+        "reps": 5,
+        "logged_at": "2026-10-10T18:04:00Z"
+      },
+      {
+        "id": "seed-2026-10-15-1",
+        "session_id": "seed-2026-10-15",
+        "block_id": "seed-2026-10-15:top",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 45,
+          "unit": "kg",
+          "kg": 45
+        },
+        "reps": 6,
+        "logged_at": "2026-10-15T18:01:00Z"
+      },
+      {
+        "id": "seed-2026-10-15-2",
+        "session_id": "seed-2026-10-15",
+        "block_id": "seed-2026-10-15:top",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 2,
+        "kind": "working",
+        "weight": {
+          "entered": 40,
+          "unit": "kg",
+          "kg": 40
+        },
+        "reps": 6,
+        "logged_at": "2026-10-15T18:02:00Z"
+      },
+      {
+        "id": "seed-2026-10-15-3",
+        "session_id": "seed-2026-10-15",
+        "block_id": "seed-2026-10-15:top",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 3,
+        "kind": "working",
+        "weight": {
+          "entered": 45,
+          "unit": "kg",
+          "kg": 45
+        },
+        "reps": 6,
+        "logged_at": "2026-10-15T18:03:00Z"
+      },
+      {
+        "id": "seed-2026-10-15-4",
+        "session_id": "seed-2026-10-15",
+        "block_id": "seed-2026-10-15:top",
+        "exercise_id": "overhead_press_barbell",
+        "set_index": 4,
+        "kind": "working",
+        "weight": {
+          "entered": 40,
+          "unit": "kg",
+          "kg": 40
+        },
+        "reps": 6,
+        "logged_at": "2026-10-15T18:04:00Z"
+      },
+      {
+        "id": "seed-2026-09-15-1",
+        "session_id": "seed-2026-09-15",
+        "block_id": "seed-2026-09-15:top",
+        "exercise_id": "conventional_deadlift",
+        "set_index": 1,
+        "kind": "working",
+        "weight": {
+          "entered": 160,
+          "unit": "kg",
+          "kg": 160
+        },
+        "reps": 2,
+        "logged_at": "2026-09-15T18:01:00Z",
+        "note": "date approximate"
+      }
+    ]
   },
-  "progression_seeds": [],
+  "progression_seeds": [
+    {
+      "exercise_id": "back_squat",
+      "working_load_kg": 90.0,
+      "reps": [
+        3,
+        3
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: squat top set 90×3 (95 if RPE 7)"
+    },
+    {
+      "exercise_id": "back_squat",
+      "variant": "backoff",
+      "working_load_kg": 80.0,
+      "reps": [
+        5,
+        7
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: squat back-offs 80 3×6"
+    },
+    {
+      "exercise_id": "barbell_bench_press",
+      "working_load_kg": 80.0,
+      "reps": [
+        3,
+        3
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: bench top set 80×3 (85 if RPE 7)"
+    },
+    {
+      "exercise_id": "barbell_bench_press",
+      "variant": "backoff",
+      "working_load_kg": 70.0,
+      "reps": [
+        5,
+        7
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: paused back-offs 70 3×7, then 75 3×5"
+    },
+    {
+      "exercise_id": "conventional_deadlift",
+      "working_load_kg": 140.0,
+      "reps": [
+        3,
+        3
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: work up to a triple at RPE 8 (~140)"
+    },
+    {
+      "exercise_id": "overhead_press_barbell",
+      "working_load_kg": 45.0,
+      "reps": [
+        6,
+        6
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: press 45 4×6 (all four sets)"
+    },
+    {
+      "exercise_id": "close_grip_bench_press",
+      "working_load_kg": 65.0,
+      "reps": [
+        8,
+        8
+      ],
+      "target_rir": 2,
+      "source": "USER_PROFILE §7: close-grip 65 3×8"
+    }
+  ],
   "placeholders": [
     "profile.height (180 cm is a placeholder: not in USER_PROFILE.md)",
     "body weight (not in USER_PROFILE.md: enter it on the first morning)"
   ],
   "notes": [
-    "Generated from docs/USER_PROFILE.md; every logged number is copied verbatim (RPE 8 = RIR 2; the logged RPE text is kept in the set note)."
+    "Generated from docs/USER_PROFILE.md; every logged number is copied verbatim (RPE 8 = RIR 2; the logged RPE text is kept in the set note).",
+    "The deadlift 160×2 has no exact date in the log: 15 Sep 2026 is a placeholder.",
+    "Sessions from 6 Oct on are attributed to the bigger gym (available from 6 Oct); earlier ones to the home gym."
   ]
 }
