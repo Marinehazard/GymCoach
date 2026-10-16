@@ -10,6 +10,7 @@ import com.gymcoach.core.model.LengthUnit
 import com.gymcoach.core.model.LimitationRegion
 import com.gymcoach.core.model.Mesocycle
 import com.gymcoach.core.model.Profile
+import com.gymcoach.core.seed.SeedProfile
 import com.gymcoach.core.model.TrainingAge
 import com.gymcoach.core.model.UnitSystem
 import com.gymcoach.core.model.WeightUnit
@@ -210,7 +211,17 @@ object DraftRules {
             usualSessionTime = d.usualSessionTime,
             cardioInsideSessionMinutes = previous?.cardioInsideSessionMinutes ?: false,
             updatedAt = now,
+            splitId = d.splitId,
+            strengthTargetsKg = d.strengthTargetsKg.takeIf { it.isNotEmpty() },
+            barbellRirFloor = d.barbellRirFloor?.coerceIn(0, 4),
+            coachNotes = d.coachNotes.takeIf { it.isNotEmpty() },
         )
+    }
+
+    /** Phase 2: onboarding draft from a seed profile; body weight from its newest weigh-in (empty when it has none). */
+    fun fromSeed(seed: SeedProfile): ProfileDraft {
+        val weight = seed.bodyMetrics.filter { it.weight != null }.maxByOrNull { it.date }?.weight?.kg
+        return fromProfile(seed.profile, seed.units, weight).copy(seedId = seed.id)
     }
 
     /** Profile → draft in the given unit system (Profile screen). `weightKg` comes from the latest weigh-in. */
@@ -232,6 +243,8 @@ object DraftRules {
             bodyFatPct = p.bodyFatPct?.let { Units.trim(it) } ?: "", physicalJob = p.physicalJob, hasHrMonitor = p.hasHrMonitor,
             measuredHrMax = p.measuredHrMax?.toString() ?: "", wakeTime = p.wakeTimeLocal, bedTime = p.bedtimeLocal,
             usualSessionTime = p.usualSessionTime,
+            splitId = p.splitId, seedSplitId = p.splitId, strengthTargetsKg = p.strengthTargetsKg ?: emptyMap(),
+            barbellRirFloor = p.barbellRirFloor, coachNotes = p.coachNotes ?: emptyList(),
         )
     }
 

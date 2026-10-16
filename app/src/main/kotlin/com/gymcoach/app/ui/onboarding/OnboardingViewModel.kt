@@ -21,7 +21,11 @@ import com.gymcoach.core.model.WeightUnit
 import com.gymcoach.core.repo.GymRepository
 import com.gymcoach.core.repo.MetricsRepository
 import com.gymcoach.core.repo.ProfileRepository
+import com.gymcoach.core.repo.ProgressionRepository
 import com.gymcoach.core.repo.SettingsRepository
+import com.gymcoach.core.repo.WorkoutRepository
+import com.gymcoach.core.seed.SeedProfile
+import com.gymcoach.core.seed.SeedProfiles
 import com.gymcoach.core.time.Clock
 import com.gymcoach.core.units.Units
 import com.gymcoach.core.util.IdGen
@@ -72,6 +76,13 @@ data class ProfileDraft(
     val wakeTime: String = "06:30",
     val bedTime: String = "23:00",
     val usualSessionTime: String = "evening",
+    // Phase 2 personal fields (carried through to Profile unchanged; the seed profile fills them).
+    val splitId: String? = null,                                   // §3.4.1 personal split in use (null = generic split selection)
+    val seedSplitId: String? = null,                               // the personal split offered by the seed/profile (toggle target)
+    val strengthTargetsKg: Map<String, Double> = emptyMap(),
+    val barbellRirFloor: Int? = null,
+    val coachNotes: List<String> = emptyList(),
+    val seedId: String? = null,                                    // SeedProfile.id the draft started from (null = generic path)
 )
 
 data class OnboardingUiState(
@@ -102,6 +113,8 @@ data class OnboardingExtras(
     val heightOk: Boolean,
     val weightOk: Boolean,
     val birthYearOk: Boolean,
+    val seedName: String? = null,                                  // "Joe" while the draft comes from a seed profile
+    val seedHints: List<String> = emptyList(),                     // SeedProfile.placeholders: fields the seed does not know
 )
 
 @Serializable
@@ -111,6 +124,7 @@ private data class StoredOnboarding(
     val presetId: String? = null,
     val gymId: String? = null,
     val gymName: String = "",
+    val seedDeclined: Boolean = false,
 )
 
 /**
@@ -127,6 +141,10 @@ class OnboardingViewModel(
     private val buildPlan: suspend () -> Mesocycle,
     scopeOverride: CoroutineScope? = null,
     private val computeContext: CoroutineContext = Dispatchers.Default,
+    /** Phase 2: the shipped starting profile (SeedProfiles.classpath()); null = the generic onboarding only. */
+    private val seed: SeedProfile? = null,
+    private val workouts: WorkoutRepository? = null,
+    private val progression: ProgressionRepository? = null,
 ) : ViewModel() {
 
     private val scope: CoroutineScope = scopeOverride ?: viewModelScope
@@ -146,10 +164,11 @@ class OnboardingViewModel(
     val events: Flow<OnboardingEvent> = channel.receiveAsFlow()
 
     private var lastLoggedWeight: String? = null
+    private var seedDeclined: Boolean = false
 
     init {
         scope.launch {
-            restoreDraft()
+            if (!restoreDraft()) applySeed()
             gyms.observeAll().collect { list ->
                 val id = _extras.value.gymId ?: return@collect
                 val stored = list.firstOrNull { it.id == id } ?: return@collect
@@ -159,16 +178,45 @@ class OnboardingViewModel(
         }
     }
 
-    private suspend fun restoreDraft() {
+    /** True when a stored draft was restored (then the seed is NOT re-applied: the user's edits win). */
+    private suspend fun restoreDraft(): Boolean {
         val json = settings.get().onboardingDraftJson
-        if (json.isBlank()) return
+        if (json.isBlank()) return false
         val stored = try {
             CoreJson.stored.decodeFromString(StoredOnboarding.serializer(), json)
         } catch (e: Exception) {
-            return
+            return false
         }
-        _state.update { it.copy(page = stored.page.coerceIn(1, 6), draft = stored.draft, presetId = stored.presetId) }
-        _extras.value = revalidate(stored.draft, OnboardingExtras(stored.gymId, stored.gymName, true, true, true))
+        seedDeclined = stored.seedDeclined
+        val fromSeed = seed?.takeIf { stored.draft.seedId == it.id }
+        _state.update { it.copy(page = stored.page.coerceIn(1, 6), draft = stored.draft, presetId = stored.presetId, gymDraft = if (stored.gymId == null) fromSeed?.let { s -> seedDefaultGym(s) } else null) }
+        _extras.value = revalidate(stored.draft, OnboardingExtras(stored.gymId, stored.gymName, true, true, true, fromSeed?.displayName, fromSeed?.placeholders ?: emptyList()))
+        return true
+    }
+
+    /**
+     * Phase 2: prefill every page from the seed profile (first run, no stored draft, onboarding not done). The gym page shows the
+     * seed's default gym; [ensureGymPersisted] stores all seed gyms. Body weight stays empty when the seed has none, so page 2
+     * asks for it.
+     */
+    private suspend fun applySeed() {
+        val s = seed ?: return
+        if (seedDeclined || settings.get().onboardingDone) return
+        val draft = DraftRules.fromSeed(s)
+        val gym = seedDefaultGym(s)
+        _state.update { it.copy(draft = draft, presetId = gym?.presetOrigin, gymDraft = gym) }
+        _extras.value = revalidate(draft, OnboardingExtras(null, gym?.name ?: "", true, true, true, s.displayName, s.placeholders))
+        persistDraft()
+    }
+
+    private fun seedDefaultGym(s: SeedProfile): GymSet? = s.gyms.firstOrNull { it.id == s.defaultGymId } ?: s.gyms.firstOrNull()
+
+    /** Welcome page "Start from scratch": the generic onboarding with an empty draft; the seed is not offered again. */
+    fun onUseGenericProfile() {
+        seedDeclined = true
+        _state.update { it.copy(draft = ProfileDraft(), presetId = null, gymDraft = null, error = null) }
+        _extras.value = revalidate(ProfileDraft(), OnboardingExtras(null, "", true, true, true))
+        persistDraft()
     }
 
     private fun revalidate(d: ProfileDraft, base: OnboardingExtras): OnboardingExtras =
@@ -179,7 +227,7 @@ class OnboardingViewModel(
         val x = _extras.value
         val text = CoreJson.stored.encodeToString(
             StoredOnboarding.serializer(),
-            StoredOnboarding(page = s.page, draft = s.draft, presetId = s.presetId, gymId = x.gymId, gymName = x.gymName),
+            StoredOnboarding(page = s.page, draft = s.draft, presetId = s.presetId, gymId = x.gymId, gymName = x.gymName, seedDeclined = seedDeclined),
         )
         scope.launch { settings.update { it.copy(onboardingDraftJson = text) } }
     }
@@ -192,6 +240,16 @@ class OnboardingViewModel(
 
     fun onGymName(name: String) {
         _extras.update { it.copy(gymName = name) }
+        persistDraft()
+    }
+
+    /** Phase 2 gym page: back to the seed profile's own gyms after a preset was tried. */
+    fun onSeedGymsSelected() {
+        val s = seed?.takeIf { _state.value.draft.seedId == it.id } ?: return
+        if (_extras.value.gymId != null) return          // a gym is already stored; edit it in the gym editor
+        val gym = seedDefaultGym(s) ?: return
+        _state.update { it.copy(presetId = gym.presetOrigin, gymDraft = gym) }
+        _extras.update { it.copy(gymName = gym.name) }
         persistDraft()
     }
 
@@ -255,8 +313,18 @@ class OnboardingViewModel(
         val x = _extras.value
         val existing = x.gymId?.let { gyms.get(it) }
         val name = x.gymName.ifBlank { st.gymDraft?.name ?: "" }
+        val seeded = seed?.takeIf { st.draft.seedId == it.id && st.gymDraft?.id == it.defaultGymId }
         val gym: GymSet = if (existing != null) {
             if (name.isNotBlank() && name != existing.name) existing.copy(name = name).also { gyms.upsert(it) } else existing
+        } else if (seeded != null) {
+            // Phase 2: every gym of the seed profile is created on first run (ids kept); the seed's default gym is the default.
+            val known = gyms.getAll(includeArchived = true).map { it.id }.toSet()
+            for (g in seeded.gyms) {
+                if (g.id in known) continue
+                gyms.upsert(if (g.id == seeded.defaultGymId) g.copy(name = name.ifBlank { g.name }, isDefault = true) else g.copy(isDefault = false))
+            }
+            gyms.setDefault(seeded.defaultGymId)
+            gyms.get(seeded.defaultGymId) ?: seeded.gyms.first { it.id == seeded.defaultGymId }
         } else {
             val presetId = st.presetId ?: Presets.BASE_GYM
             val base = st.gymDraft ?: Presets.gymFromPreset(knowledge, presetId, name.ifBlank { presetName(presetId) }, IdGen.newId(), clock.now())
@@ -278,6 +346,7 @@ class OnboardingViewModel(
         try {
             saveProfileAndWeight()
             ensureGymPersisted()
+            importSeedHistory()
             val meso = withContext(computeContext) { buildPlan() }
             val plan = DraftRules.summarize(meso)
             _built.value = plan
@@ -307,6 +376,26 @@ class OnboardingViewModel(
             metrics.addBodyMetric(BodyMetric(id = IdGen.newId(), date = today, weight = Units.enteredWeight(entered, unit), loggedAt = now))
             lastLoggedWeight = key
         }
+    }
+
+    /**
+     * Phase 2: the seed's logged history (sessions + sets, copied verbatim) and its progression states, so the first plan starts
+     * from the user's real loads instead of find-load. Idempotent: rows that already exist are never touched (sets are sacred).
+     */
+    private suspend fun importSeedHistory() {
+        val s = seed?.takeIf { _state.value.draft.seedId == it.id } ?: return
+        val w = workouts
+        if (w != null) {
+            for (record in s.history.sessions) {
+                if (w.getSession(record.id) != null) continue
+                w.startSession(record)
+                for (set in s.history.sets.filter { it.sessionId == record.id }.sortedBy { it.setIndex }) w.addSet(set)
+            }
+        }
+        val p = progression ?: return
+        val gymId = _extras.value.gymId ?: s.defaultGymId
+        val missing = SeedProfiles.progressionStates(s, knowledge, gymId).filter { p.get(it.key) == null }
+        if (missing.isNotEmpty()) p.saveAll(missing)
     }
 
     /** "Start": make sure the plan exists, mark onboarding done, clear the draft. */

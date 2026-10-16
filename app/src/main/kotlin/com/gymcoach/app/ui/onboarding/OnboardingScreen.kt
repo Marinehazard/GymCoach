@@ -32,6 +32,7 @@ import com.gymcoach.app.ui.more.vmFactory
 import com.gymcoach.app.ui.nav.GymEditRoute
 import com.gymcoach.app.ui.nav.OnboardingRoute
 import com.gymcoach.app.ui.nav.TodayRoute
+import com.gymcoach.core.seed.SeedProfiles
 import java.time.LocalDate
 
 /** §8.5: six pages, profile + gym + generated first week. */
@@ -47,6 +48,9 @@ fun OnboardingScreen(container: AppContainer, navController: NavHostController) 
                 knowledge = container.knowledge,
                 clock = container.clock,
                 buildPlan = { container.planCoordinator.recompute("onboarding") },
+                seed = SeedProfiles.classpath(),
+                workouts = container.workoutRepository,
+                progression = container.progressionRepository,
             )
         },
     )
@@ -55,6 +59,9 @@ fun OnboardingScreen(container: AppContainer, navController: NavHostController) 
     val built by vm.built.collectAsStateWithLifecycle()
     val today = remember { LocalDate.now() }
     val knowledge = container.knowledge
+    val seed = remember { SeedProfiles.classpath() }
+    val seedGymNames = remember(seed) { seed?.gyms?.map { it.name } ?: emptyList() }
+    val seedDefaultGymId = seed?.defaultGymId
     val presets = remember(knowledge) {
         listOf("base_gym", "home_gym", "hotel_gym", "travel_kit").mapNotNull { id -> knowledge.presets[id]?.let { id to it.name } }
     }
@@ -99,7 +106,7 @@ fun OnboardingScreen(container: AppContainer, navController: NavHostController) 
         Column(modifier = Modifier.padding(padding).fillMaxSize().verticalScroll(rememberScrollState())) {
             LinearProgressIndicator(progress = { state.page / 6f }, modifier = Modifier.fillMaxWidth())
             when (state.page) {
-                1 -> WelcomePage()
+                1 -> WelcomePage(extras.seedName, vm::onUseGenericProfile)
                 2 -> AboutPage(state.draft, extras, vm::onDraftChange)
                 3 -> GoalPage(state.draft, vm::onDraftChange)
                 4 -> ExperiencePage(state.draft, today, vm::onDraftChange)
@@ -113,6 +120,9 @@ fun OnboardingScreen(container: AppContainer, navController: NavHostController) 
                     onReview = vm::onReviewEquipment,
                     onKnownLoad = { id, text -> vm.onDraftChange(state.draft.copy(knownLoads = state.draft.knownLoads + (id to text))) },
                     exerciseName = { id -> knowledge.exercise(id)?.name ?: id },
+                    seedGyms = if (state.draft.seedId != null) seedGymNames else emptyList(),
+                    seedGymsSelected = state.draft.seedId != null && state.gymDraft?.id == seedDefaultGymId,
+                    onSeedGyms = vm::onSeedGymsSelected,
                 )
                 else -> WeekPage(state, built)
             }

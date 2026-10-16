@@ -63,6 +63,13 @@
     <string name="su_goal_endurance_support_line">Lifting supports a cardio-first week (DEF-06).</string>
     <string name="onb_days_per_week">Training days per week</string>
     <string name="onb_weekdays">Preferred weekdays</string>
+    <string name="onb_seed_title">Starting from your profile: %1$s</string>
+    <string name="onb_seed_body">Every page is prefilled from your training profile, your two gyms and your logged sets. Change anything you like.</string>
+    <string name="onb_seed_generic">Start from scratch instead</string>
+    <string name="onb_seed_check">Please check (not in your profile):</string>
+    <string name="onb_seed_gyms_title">Your gyms</string>
+    <string name="onb_own_split">Use my own split (%1$s)</string>
+    <string name="onb_own_split_hint">Your session templates with your sets, reps and rest. Off: the planner picks a split for the days above.</string>
     <string name="onb_weekdays_mismatch">The number of chosen weekdays differs from the days per week; the planner will use its default weekdays.</string>
     <string name="onb_session_minutes">Session length</string>
     <string name="su_day_mon">Mon</string>

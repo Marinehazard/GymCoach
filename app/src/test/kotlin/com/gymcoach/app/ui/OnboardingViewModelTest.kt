@@ -21,6 +21,8 @@ import com.gymcoach.core.model.SplitKind
 import com.gymcoach.core.model.TrainingAge
 import com.gymcoach.core.model.UnitSystem
 import com.gymcoach.core.model.WeekMode
+import com.gymcoach.core.seed.SeedProfile
+import com.gymcoach.core.seed.SeedProfiles
 import java.time.LocalDate
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.test.Test
@@ -63,13 +65,75 @@ class OnboardingViewModelTest {
         ),
     )
 
-    private fun TestScope.harness(repos: FakeRepositories = FakeRepositories()): Harness {
+    private fun TestScope.harness(repos: FakeRepositories = FakeRepositories(), seed: SeedProfile? = null): Harness {
         val builds = IntArray(1)
         val vm = OnboardingViewModel(
             profiles = repos.profile, gyms = repos.gyms, metrics = repos.metrics, settings = repos.settings, knowledge = kb, clock = repos.clock,
             buildPlan = { builds[0]++; meso() }, scopeOverride = scope(), computeContext = EmptyCoroutineContext,
+            seed = seed, workouts = repos.workouts, progression = repos.progression,
         )
         return Harness(repos, vm, builds)
+    }
+
+    private val joe: SeedProfile by lazy { assertNotNull(SeedProfiles.classpath()) }
+
+    @Test fun seed_prefillsEveryPage_andAsksForTheUnknownWeight() = runTest {
+        val h = harness(seed = joe)
+        val d = h.vm.state.value.draft
+        assertEquals(SeedProfiles.JOE_V1, d.seedId)
+        assertEquals(1978, d.birthYear)
+        assertEquals(Goal.HYPERTROPHY, d.goal)
+        assertEquals(5, d.daysPerWeek)
+        assertEquals(listOf(1, 2, 4, 5, 6), d.weekdays)
+        assertEquals("joe_5day", d.splitId)
+        assertEquals("joe_5day", d.seedSplitId)
+        assertEquals(120, d.trainingMonths)
+        assertEquals(3, d.limitations.size)
+        assertEquals("90", d.knownLoads["back_squat"])
+        assertEquals("", d.weightValue, "no weight in the seed: page 2 must ask")
+        assertEquals("Joe", h.vm.extras.value.seedName)
+        assertTrue(h.vm.extras.value.seedHints.isNotEmpty())
+        assertEquals("gym-joe-home", h.vm.state.value.gymDraft?.id)
+        h.vm.onNext()                                                  // 1 -> 2
+        h.vm.onNext()                                                  // blocked: weight missing
+        assertEquals(2, h.vm.state.value.page)
+    }
+
+    @Test fun seed_createsBothGymsImportsTheHistoryAndKeepsTheProfileFacts() = runTest {
+        val h = harness(seed = joe)
+        h.vm.onDraftChange(h.vm.state.value.draft.copy(weightValue = "92"))
+        repeat(3) { h.vm.onNext() }                                     // 2, 3, 4
+        h.vm.onNext()                                                  // 5
+        h.vm.onNext()                                                  // build
+        assertEquals(6, h.vm.state.value.page)
+        val gyms = h.repos.gyms.getAll()
+        assertEquals(setOf("gym-joe-home", "gym-joe-bigger"), gyms.map { it.id }.toSet())
+        assertEquals("gym-joe-home", gyms.single { it.isDefault }.id)
+        val p = assertNotNull(h.repos.profile.get())
+        assertEquals("joe_5day", p.splitId)
+        assertEquals(2, p.barbellRirFloor)
+        assertEquals(180.0, p.strengthTargetsKg?.get("conventional_deadlift"))
+        assertTrue(p.coachNotes.orEmpty().isNotEmpty())
+        assertEquals(joe.history.sets.size, h.repos.workouts.allSets.size)
+        assertEquals(90.0, h.repos.progression.get(com.gymcoach.core.model.ProgressionKey("back_squat"))?.workingLoadKg)
+        assertEquals(80.0, h.repos.progression.get(com.gymcoach.core.model.ProgressionKey("back_squat", null, "backoff"))?.workingLoadKg)
+        // Building again (back + next) never duplicates the imported rows.
+        h.vm.onBack()
+        h.vm.onNext()
+        assertEquals(joe.history.sets.size, h.repos.workouts.allSets.size)
+    }
+
+    @Test fun seed_canBeDeclinedForTheGenericPath() = runTest {
+        val h = harness(seed = joe)
+        h.vm.onUseGenericProfile()
+        assertEquals(ProfileDraft(), h.vm.state.value.draft)
+        assertNull(h.vm.extras.value.seedName)
+        val again = harness(h.repos, seed = joe)
+        assertNull(again.vm.state.value.draft.seedId, "a declined seed is not offered again")
+        // the split toggle turns the personal split off without losing it
+        val h2 = harness(seed = joe)
+        h2.vm.onDraftChange(h2.vm.state.value.draft.copy(splitId = null))
+        assertEquals("joe_5day", h2.vm.state.value.draft.seedSplitId)
     }
 
     @Test fun everyChangeIsPersistedAndRestoredByANewViewModel() = runTest {

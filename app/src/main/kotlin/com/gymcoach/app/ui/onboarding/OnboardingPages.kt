@@ -15,6 +15,7 @@ import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Slider
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -40,11 +41,20 @@ import com.gymcoach.core.util.IdGen
 import java.time.LocalDate
 
 @Composable
-fun WelcomePage() {
+fun WelcomePage(seedName: String? = null, onUseGeneric: () -> Unit = {}) {
     Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.onb_welcome_title), style = MaterialTheme.typography.headlineMedium)
         Text(stringResource(R.string.onb_welcome_body), style = MaterialTheme.typography.bodyLarge)
         Text(stringResource(R.string.onb_welcome_honest), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        if (seedName != null) {
+            Card(modifier = Modifier.fillMaxWidth(), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)) {
+                Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                    Text(stringResource(R.string.onb_seed_title, seedName), style = MaterialTheme.typography.titleMedium)
+                    Text(stringResource(R.string.onb_seed_body), style = MaterialTheme.typography.bodyMedium)
+                    TextButton(onClick = onUseGeneric) { Text(stringResource(R.string.onb_seed_generic)) }
+                }
+            }
+        }
     }
 }
 
@@ -69,6 +79,10 @@ fun AboutPage(draft: ProfileDraft, extras: OnboardingExtras, onChange: (ProfileD
         if (!extras.heightOk) Text(stringResource(R.string.onb_height_range), color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
         NumberField(draft.weightValue, { onChange(draft.copy(weightValue = it)) }, stringResource(R.string.onb_weight), if (metric) "kg" else "lb", Modifier.fillMaxWidth())
         if (!extras.weightOk) Text(stringResource(R.string.onb_weight_range), color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodySmall)
+        if (extras.seedHints.isNotEmpty()) {
+            Text(stringResource(R.string.onb_seed_check), style = MaterialTheme.typography.titleSmall)
+            for (hint in extras.seedHints) Text("• $hint", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.tertiary)
+        }
     }
 }
 
@@ -131,7 +145,12 @@ fun GoalSchedulePicker(draft: ProfileDraft, onChange: (ProfileDraft) -> Unit) {
             Text(stringResource(R.string.onb_weekdays_mismatch), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.tertiary)
         }
         Text(stringResource(R.string.onb_session_minutes), style = MaterialTheme.typography.titleSmall)
-        ChoiceChips(listOf(30, 45, 60, 90), draft.sessionMinutes, { "$it min" }) { onChange(draft.copy(sessionMinutes = it)) }
+        ChoiceChips(listOf(30, 45, 60, 75, 90), draft.sessionMinutes, { "$it min" }) { onChange(draft.copy(sessionMinutes = it)) }
+        val ownSplit = draft.seedSplitId
+        if (ownSplit != null) {
+            SwitchRow(stringResource(R.string.onb_own_split, ownSplit), draft.splitId != null, { on -> onChange(draft.copy(splitId = if (on) ownSplit else null)) })
+            Text(stringResource(R.string.onb_own_split_hint), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+        }
     }
 }
 
@@ -245,9 +264,23 @@ fun GymPage(
     onReview: () -> Unit,
     onKnownLoad: (String, String) -> Unit,
     exerciseName: (String) -> String,
+    seedGyms: List<String> = emptyList(),
+    seedGymsSelected: Boolean = false,
+    onSeedGyms: () -> Unit = {},
 ) {
     Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(stringResource(R.string.onb_gym_title), style = MaterialTheme.typography.headlineSmall)
+        if (seedGyms.isNotEmpty()) {
+            Card(
+                modifier = Modifier.fillMaxWidth().clickable { onSeedGyms() },
+                colors = CardDefaults.cardColors(containerColor = if (seedGymsSelected) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.surfaceVariant),
+            ) {
+                Column(modifier = Modifier.padding(12.dp)) {
+                    Text(stringResource(R.string.onb_seed_gyms_title), style = MaterialTheme.typography.titleMedium)
+                    Text(seedGyms.joinToString(" · "), style = MaterialTheme.typography.bodyMedium)
+                }
+            }
+        }
         for ((id, name) in presets) {
             val selected = state.presetId == id
             Card(

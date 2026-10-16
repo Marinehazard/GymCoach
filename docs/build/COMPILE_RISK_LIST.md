@@ -168,6 +168,26 @@ disk", the consistency pass has since checked it against the real `:core` API.
 - Behaviour, not compile: CoachViewModel.startTurn calls `reload()` in a `finally` block. When the turn job is cancelled (onStop), the first suspension inside reload() throws CancellationException, so that refresh is skipped. onStop() already updates state and calls publishMessages() manually, so I left it unchanged.
 - SettingsViewModelsTest.kt (outside this group) uses ConstantsModel, BackendCopy, KeyError, BackendSettingsViewModel and AdvancedConstantsViewModel from this group. Their public signatures are unchanged, so it should still compile, but I did not review it.
 
+## Phase 2 (`phase2/profile`) — onboarding from the seed profile, build files
+How it was checked: `OnboardingViewModel.kt` and `ProfileViewModel.kt` (with `DraftRules`) were compiled in a throw-away
+JVM Gradle project against the real `:core` jar of this branch (Kotlin 2.4.10, coroutines 1.11.0, serialization 1.11.0)
+with two stubs (`androidx.lifecycle.ViewModel` / `viewModelScope`, `ui.components.parseDecimal`), and
+`OnboardingViewModelTest` + `FakeRepositories` ran there: 9/9 green (6 existing tests + 3 new seed-path tests). The
+Compose files were NOT compiled.
+
+| Symbol / change | File | Why it should compile |
+|---|---|---|
+| `androidx.compose.material3.TextButton` (new import) | `onboarding/OnboardingPages.kt` | Same Material3 artifact as the `Card`, `OutlinedButton` and `RadioButton` already imported in that file; `TextButton` is already used in `OnboardingScreen.kt`. |
+| `SwitchRow(label, checked, onChange)` | `onboarding/OnboardingPages.kt` | Existing project composable (`ui/more`); already imported and called with the same three positional arguments in `LimitationEditor`. |
+| `stringResource(R.string.onb_seed_title, seedName)` and `onb_own_split` with one `%1$s` argument | `OnboardingPages.kt`, `res/values/strings_setup.xml` | Same overload as the existing `stringResource(R.string.onb_pain, lim.pain0to10)`. Seven new string resources were added to `strings_setup.xml`. |
+| `WelcomePage(seedName, onUseGeneric)`, `GymPage(…, seedGyms, seedGymsSelected, onSeedGyms)` | `OnboardingPages.kt` / `OnboardingScreen.kt` | The new parameters have defaults, so other callers (none known) keep compiling. |
+| `SeedProfiles.classpath()` inside the ViewModel factory lambda and in `remember { }` | `OnboardingScreen.kt` | A plain `:core` function. It reads `/gymcoach/profiles/joe_v1.json` from the `:core` jar's Java resources, which AGP merges into the APK the same way as the knowledge files that `ClasspathKnowledgeSource` reads. Runtime risk: if the APK drops jar resources (R8 or packaging options), `classpath()` returns null and onboarding falls back to the generic path; it does not crash. |
+| `container.workoutRepository`, `container.progressionRepository` | `OnboardingScreen.kt` | Existing `AppContainer` lazies (lines 92–93). |
+| New `ProfileDraft` fields (`splitId`, `seedSplitId`, `strengthTargetsKg`, `barbellRirFloor`, `coachNotes`, `seedId`) | `OnboardingViewModel.kt` | `@Serializable` data class with defaults, so stored onboarding drafts from Phase 1 still decode (`CoreJson.stored` ignores unknown keys and fills defaults). |
+| `Profile(… splitId, strengthTargetsKg, barbellRirFloor, coachNotes)` | `profile/ProfileViewModel.kt` | New nullable `:core` fields with defaults. Profile is stored as one JSON document (`RoomProfileRepository`), so there is no Room schema change. |
+| `ProgressionKey.variant` | (`:core`) | Room stores `key.id` (now `back_squat#backoff` for back-off tracks) plus the JSON, so there is no schema change. Phase-1 rows keep their ids because `variant == null` produces the old id. |
+| Root `build.gradle.kts` `buildscript { … classpath(libs.android.gradle.plugin) }` and `app/build.gradle.kts` `id("com.android.application")` | build files | See `docs/build/FIRST_BUILD_CHECKLIST.md` §2 for the two-line revert if the first sync rejects it. |
+
 ## `:core` packages (compiled and tested here — listed for completeness)
 
 - WP-02: No :app files were written; all WP-02 code is :core (pure Kotlin/JVM) and compiles and tests green with Kotlin 2.4.10 / kotlinx.serialization 1.11.0.
