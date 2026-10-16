@@ -219,10 +219,45 @@ data class SlotTemplate(
     val required: Boolean = true,
     @SerialName("superset_with") val supersetWith: String? = null,
     @SerialName("backoff_of") val backoffOf: String? = null,          // STRENGTH variants (§3.4): "<templateId>.<slotId>" of the heavy slot this slot backs off; templateId must be listed in the SAME split row (KnowledgeValidator rule 10)
+    // ---- §3.4.1 personal-template fields (Phase 2, all optional; generic templates leave them unset) ----
+    @SerialName("exercise_ids") val exerciseIds: List<String>? = null,   // preference list: the first available, not excluded id takes the slot; none → normal SEL scoring
+    val sets: Int? = null,                                                // fixed working sets: the allocator neither adds nor rebalances them
+    val reps: Band? = null,                                               // fixed rep band (replaces the rep profile band)
+    val rir: Int? = null,                                                 // fixed target RIR (replaces the RIR-04 week offsets; floors still apply)
+    @SerialName("rest_seconds") val restSeconds: Int? = null,             // fixed rest between working sets
+    @SerialName("progression_variant") val progressionVariant: String? = null,   // separate ProgressionKey.variant, e.g. "backoff" for top-set + back-off slots
+    @SerialName("load_factor") val loadFactor: Double? = null,            // with progression_variant: load = factor × the base key's load while the variant has no state of its own
+    val ramp: List<RampStep>? = null,                                     // explicit warm-up ladder (replaces the WU-02 percentages)
+    val note: String? = null,                                             // cue shown with the block ("left leg first", "1-count pause on the chest")
+)
+
+/** One step of an explicit warm-up ladder: `pct` of the first working load (0 = the empty bar) for `reps` reps. */
+@Serializable
+data class RampStep(val pct: Double, val reps: Int)
+
+/** A drill of a personal template's mobility block or stretch list with its own dose. */
+@Serializable
+data class DrillDose(
+    @SerialName("drill_id") val drillId: String,
+    val sets: Int = 1,
+    val reps: Band? = null,
+    val seconds: Band? = null,
+    val note: String? = null,
 )
 
 @Serializable
-data class SessionTemplate(val id: String, val name: String, val slots: List<SlotTemplate>)
+data class SessionTemplate(
+    val id: String,
+    val name: String,
+    val slots: List<SlotTemplate>,
+    // ---- §3.4.1 personal-template fields (Phase 2, all optional) ----
+    val minutes: Int? = null,                                             // session length of this template (replaces Profile.sessionMinutes for it)
+    @SerialName("raise_minutes") val raiseMinutes: Int? = null,           // WU-01 raise length (easy cardio first)
+    @SerialName("raise_exercise_ids") val raiseExerciseIds: List<String>? = null,   // preferred raise modalities, first available wins
+    @SerialName("warmup_drills") val warmupDrills: List<DrillDose>? = null,         // replaces the automatic MOB-01 drill pick
+    @SerialName("cooldown_drills") val cooldownDrills: List<DrillDose>? = null,     // post-workout stretches (prepended to the MOB-02 cool-down)
+    val lower: Boolean? = null,                                           // lower-body day (raise on the bike) — informational
+)
 
 @Serializable
 data class SplitTemplate(
@@ -232,6 +267,12 @@ data class SplitTemplate(
     @SerialName("default_weekdays") val defaultWeekdays: List<Int>,            // ISO 1=Mon..7=Sun
     @SerialName("for_goals") val forGoals: List<Goal> = emptyList(),           // empty = any
     @SerialName("for_training_ages") val forTrainingAges: List<TrainingAge> = emptyList(),
+    // ---- §3.4.1 personal split rows (Phase 2, kind = custom; never chosen by the generic row walk) ----
+    val id: String? = null,                                               // chosen through Profile.splitId
+    @SerialName("drop_order") val dropOrder: List<String>? = null,       // templates dropped first when fewer days are scheduled (e.g. arms day first)
+    @SerialName("accumulation_weeks") val accumulationWeeks: Int? = null, // DLD-01 override: weeks before the closing (test) week
+    @SerialName("closing_week") val closingWeek: String? = null,          // "test": the week after the accumulation weeks is a test week (deload-dosed, singles on the lift closest to its target)
+    @SerialName("min_days_squat_to_hinge") val minDaysSquatToHinge: Int? = null,   // heavy squat and heavy hinge days at least this many days apart
 )
 
 @Serializable

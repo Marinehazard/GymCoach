@@ -104,8 +104,8 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         }
 
         val modifiers = ArrayList<Explanation>()
-        val sessionMinutes = sessionMinutes(week, inputs, today, gym, n)
         val template = kb.templates[planned.templateId]
+        val sessionMinutes = sessionMinutes(week, inputs, today, gym, n, planned)
         val bodyWeight = inputs.bodyMetrics.filter { it.weight != null }.maxByOrNull { it.date }?.weight?.kg ?: 0.0
         val works = ArrayList<WorkBlock>()
         for (s in planned.slots) {
@@ -114,7 +114,7 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
             val ex = kb.exercise(s.exerciseId) ?: continue
             val opt = ex.equipmentOptions.getOrNull(s.optionIndex)
             works.add(WorkBlock(s.slotId, s.role, s.heavy, ts?.required ?: false, ex, s.optionIndex, opt?.loadType ?: ex.loadType, s.sets, s.sets, s.supersetGroup,
-                ts?.backoffOf, power = ex.repProfile == POWER_PROFILE))
+                ts?.backoffOf, power = ex.repProfile == POWER_PROFILE, personal = ts?.takeIf { isPersonal(it) }))
         }
 
         // 1. Today-scope overrides, then equipment.
@@ -215,14 +215,15 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
             modifiers.add(Explanations.of(listOf(RuleIds.AGE_02, RuleIds.VOL_02), "First ${c.age.age02SingleSetStartWeeks} weeks: one working set per exercise (one hard set is already an effective dose).", mapOf("week" to week.index.toString()), Confidence.MODERATE))
         }
 
-        // 5. Time budget (TIME-01, L1..L7).
+        // 5. Time budget (TIME-01, L1..L7). A §3.4.1 routine's warm-up follows the template's own minutes (as planned).
         val wu06 = warmups.wu06(today, n.age)
-        val warm = time.warmupMinutes(sessionMinutes, wu06)
+        val warmBasis = if (today.minutesOverride == null) template?.minutes?.takeIf { week.mode != WeekMode.TRAVEL_MAINTENANCE } ?: sessionMinutes else sessionMinutes
+        val warm = time.warmupMinutes(warmBasis, wu06)
         val finisher = week.cardio.firstOrNull { it.weekday == weekday && it.placement == CardioPlacement.FINISHER }
         val finisherMinutes = if (finisher != null && inputs.profile.cardioInsideSessionMinutes) finisher.minutes + FINISHER_TRANSITION_MIN else 0
         val priority = works.filter { it.active && it.role == SlotRole.PRIMARY }.take(2).map { it.slotId }.toSet()
         val credit = weekCompoundCredit(week, planned)
-        val tc = concessions.apply(works, sessionMinutes, warm, finisherMinutes, sessionMinutes <= c.wu.wu05TrimAtOrBelowMinutes, credit, priority)
+        val tc = concessions.apply(works, sessionMinutes, warm, finisherMinutes, warmBasis <= c.wu.wu05TrimAtOrBelowMinutes, credit, priority)
         modifiers.addAll(tc.applied)
         // §4.13 step 2: deficits left by this week's substituted or trimmed sessions are absorbed where the budget allows (Green, NORMAL days only).
         if (effect.band == ReadinessBand.GREEN && week.mode == WeekMode.NORMAL) {
@@ -249,21 +250,29 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
             }
             // WU-02 ramp sets (find-load blocks carry their own RAMP sets).
             val firstWorking = sets.firstOrNull { it.kind != SetKind.RAMP }?.loadKg
-            val ramps = if (sets.any { it.kind == SetKind.RAMP }) emptyList()
-            else warmups.rampSets(w.exercise, w.loadType, firstWorking, built.zone, order == 0, w.exercise.primaryMuscles.any { it in warmMuscles }, wu06, params)
+            val ladder = w.personal?.ramp
+            val ramps = when {
+                sets.any { it.kind == SetKind.RAMP } -> emptyList()
+                ladder != null -> warmups.ladderSets(w.exercise, w.loadType, firstWorking, ladder, params)
+                // §3.4.1: back-off sets follow their own top set — the bar is already warm.
+                w.personal?.progressionVariant != null && activeWorks.take(order).any { it.exercise.id == w.exercise.id } -> emptyList()
+                else -> warmups.rampSets(w.exercise, w.loadType, firstWorking, built.zone, order == 0, w.exercise.primaryMuscles.any { it in warmMuscles }, wu06, params)
+            }
             val all = (ramps + sets).mapIndexed { i, s -> s.copy(index = i + 1) }
             for (m in w.exercise.muscles) if (m.weight >= 0.5) warmMuscles.add(m.muscle)
             zones[built.blockId] = built.zone
             blocks.add(ExerciseBlock(built.blockId, w.slotId, w.exercise.id, w.optionIndex, w.loadType, w.substitutedFor, w.role, order, all, w.group?.takeIf { g -> activeWorks.count { it.group == g } == 2 },
-                ProgressionKey.forExercise(w.exercise.id, w.loadType, gym.id), w.warnings + built.warnings, built.explanation))
+                keyOf(w, gym), w.warnings + built.warnings, built.explanation))
         }
 
         // 8. Warm-up.
-        var warmup = warmups.generate(blocks, if (tc.warmupMinutes < warm) minOf(sessionMinutes, c.wu.wu05TrimAtOrBelowMinutes) else sessionMinutes, today, n.age, limitations, equipment, params, zones)
+        var warmup = (if (template != null && tc.warmupMinutes >= warm) warmups.personal(template, tc.warmupMinutes, equipment, zones.isNotEmpty()) else null)
+            ?: warmups.generate(blocks, if (tc.warmupMinutes < warm) minOf(warmBasis, c.wu.wu05TrimAtOrBelowMinutes) else warmBasis, today, n.age, limitations, equipment, params, zones)
         if (warmup.totalMinutes != tc.warmupMinutes) warmup = warmup.copy(totalMinutes = tc.warmupMinutes)
 
         // 9./10. Cardio finisher and cool-down (+ AGE-02 balance block on the first two sessions of the week).
         val cooldown = ArrayList<DrillPrescription>()
+        template?.cooldownDrills?.let { cooldown.addAll(mobility.personalCooldown(it)) }
         cooldown.addAll(mobility.cooldown(limitations, blocks.mapNotNull { kb.exercise(it.exerciseId)?.pattern }.distinct(), finisher?.kind?.let { it != CardioKind.ZONE2 && it != CardioKind.WALK } ?: false))
         if (n.over60) {
             val firstTwo = week.sessions.map { it.weekday }.distinct().sorted().take(c.age.age02BalanceDaysPerWeek)
@@ -298,15 +307,17 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         params: GymParams, effect: ReadinessEffect, lay: LayoffModifier?, level: Int, bodyWeight: Double, modifiers: MutableList<Explanation>, all: List<WorkBlock>,
     ): Built {
         val ex = w.exercise
-        val key = ProgressionKey.forExercise(ex.id, w.loadType, gym.id)
+        val key = keyOf(w, gym)
         val state = states.firstOrNull { it.key == key }
         val prescription = kb.prescription(ex, n.goal)
         val warnings = ArrayList<Explanation>()
         val rules = LinkedHashSet<String>()
         rules.add(RuleIds.LOAD_03)
+        val personal = w.personal
 
         // Rep band.
         var band: Band = prescription.range
+        personal?.reps?.let { band = it; rules.add(RuleIds.OVERRIDE) }
         val repOverride = n.activeOverrides.mapNotNull { it.mutation as? PlanMutation.ChangeRepRange }.lastOrNull { it.exerciseId == ex.id && it.scope != MutationScope.TODAY }
         if (repOverride != null && repOverride.repLo < repOverride.repHi) { band = Band(repOverride.repLo, repOverride.repHi); rules.add(RuleIds.OVERRIDE) }
         val aged = agePolicy.repBand(n.age, ex, band)
@@ -322,7 +333,9 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         val noviceGate = n.firstMesocycle && n.trainingAge == TrainingAge.NOVICE && week.index <= c.prog.prog05NoviceWeeks
         val base: Int
         val weekOffset: Int
+        val personalRir = personal?.rir
         when {
+            personalRir != null -> { base = personalRir; weekOffset = 0; rules.add(RuleIds.OVERRIDE) }
             noviceGate -> { base = ceil((c.prog.prog05NoviceRir.lo + c.prog.prog05NoviceRir.hi) / 2.0).toInt(); weekOffset = 0; rules.add(RuleIds.PROG_05) }
             lastWeek -> { base = RirStack.lastWeekTargetRir(prescription); weekOffset = 0 }
             else -> { base = RirStack.profileTargetRir(prescription); weekOffset = week.rirOffset }
@@ -332,6 +345,8 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         var floor = if (ex.flags.compound) c.rir.rir04LastWeekCompoundFloor else c.rir.rir04LastWeekIsolationFloor
         if (cls == ExerciseClass.LOWER_BARBELL) floor = maxOf(floor, c.rir.rir03LowerBarbellFloor)
         if (cls == ExerciseClass.UPPER_BARBELL) floor = maxOf(floor, c.rir.rir03UpperBarbellFloor)
+        val userFloor = inputs.profile.barbellRirFloor
+        if (userFloor != null && (cls == ExerciseClass.LOWER_BARBELL || cls == ExerciseClass.UPPER_BARBELL) && userFloor > floor) { floor = userFloor; rules.add(RuleIds.OVERRIDE) }
         val noRack = ex.flags.requiresSpotterOrSafeties && !resolver.resolve(ex, SessionEquipment(gym, today.extraItems, today.removedEquipmentIds.toSet(), today.spotter)).safetiesOrSpotter
         if (noRack) {
             floor = maxOf(floor, c.rir.rir03SpWithoutRackFloor)
@@ -380,6 +395,7 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         if (n.over60) rest = agePolicy.restSec(n.age, rest)
         if (week.mode == WeekMode.TRAVEL_MAINTENANCE) rest = rest.coerceIn(TRAVEL_REST_LO, TRAVEL_REST_HI)
         if (mainLift && level >= 4) rest = maxOf(rest, c.rest.rest04MainLiftFloorSec)
+        personal?.restSeconds?.let { if (level < 4 || mainLift) { rest = it; rules.add(RuleIds.OVERRIDE) } }
         val firstOfPair = w.group != null && all.count { it.group == w.group } == 2 && all.first { it.group == w.group } === w
         if (firstOfPair) { rest = c.rest.rest03SupersetTransitionSec; rules.add(RuleIds.REST_03) }
 
@@ -399,6 +415,7 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
             val achievable = rounder.achievableMaxKg(ex, w.loadType, params)
             if (load != null) {
                 if (w.backoffOf != null) load *= c.prog.load03BackoffFactor
+                if (variantFallback(w, states, gym)) { load *= personal?.loadFactor ?: c.prog.load03BackoffFactor; rules.add(RuleIds.PROG_03) }
                 if (week.mode == WeekMode.DELOAD && ex.flags.compound && w.loadType != LoadType.MACHINE && w.loadType != LoadType.CABLE) load *= c.plat.dld02CompoundLoadFactor
                 if (week.mode == WeekMode.REENTRY) load *= c.plat.dld04LoadFactor
                 if (lay != null) load *= lay.loadFactor
@@ -443,7 +460,11 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         if (w.substitutedFor != null) inputsMap["substituted_for"] = w.substitutedFor ?: ""
         val first = sets.firstOrNull { it.kind != SetKind.RAMP }
         val loadText = first?.loadLabel ?: "find load"
-        val explanation = Explanations.of(rules.toList(), "${w.sets} × ${if (unit == RepUnit.SECONDS) "${band.lo}–${band.hi} s" else "${band.lo}–${band.hi}"} @ $loadText, RIR $rir (≈ RPE ${RPE_AT_ZERO_RIR - rir}), rest $rest s (${zone.name.lowercase().replace('_', ' ')}); full range, controlled 1–3 s lowering.", inputsMap, Confidence.MODERATE)
+        personal?.note?.let { inputsMap["note"] = it }
+        personal?.progressionVariant?.let { inputsMap["progression_variant"] = it }
+        val reps = if (unit == RepUnit.SECONDS) "${band.lo}–${band.hi} s" else if (band.lo == band.hi) "${band.lo}" else "${band.lo}–${band.hi}"
+        val explanation = Explanations.of(rules.toList(), "${w.sets} × $reps @ $loadText, RIR $rir (≈ RPE ${RPE_AT_ZERO_RIR - rir}), rest $rest s (${zone.name.lowercase().replace('_', ' ')}); full range, controlled 1–3 s lowering." +
+            (personal?.note?.let { " $it" } ?: ""), inputsMap, Confidence.MODERATE)
         return Built(w.slotId + ":" + ex.id, sets, zone, warnings, explanation)
     }
 
@@ -461,13 +482,29 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         return LoadZones.of(b, rir ?: RirStack.profileTargetRir(p), w.heavy, w.power, state?.history?.firstOrNull { it.e1rm != null }?.e1rm, c)
     }
 
-    /** State working load, else the onboarding known load (not for gym-scoped keys at another gym). */
+    /**
+     * State working load, else the onboarding known load (not for gym-scoped keys at another gym). A §3.4.1 variant track
+     * (back-off sets) without a state of its own falls back to the main track's load; the caller scales it ([variantFallback]).
+     */
     private fun workingLoad(w: WorkBlock, states: List<ProgressionState>, inputs: PlanInputs, gym: GymSet): Double? {
-        val key = ProgressionKey.forExercise(w.exercise.id, w.loadType, gym.id)
+        val key = keyOf(w, gym)
         states.firstOrNull { it.key == key }?.workingLoadKg?.let { return it }
+        val main = key.copy(variant = null)
+        if (key.variant != null) states.firstOrNull { it.key == main }?.workingLoadKg?.let { return it }
         if (key.gymScope == null) inputs.profile.knownLoadsKg[w.exercise.id]?.let { return it }
         return null
     }
+
+    /** True when a variant block's load comes from the main track (no variant state yet) and must be scaled by `load_factor`. */
+    private fun variantFallback(w: WorkBlock, states: List<ProgressionState>, gym: GymSet): Boolean {
+        val key = keyOf(w, gym)
+        if (key.variant == null) return false
+        return states.firstOrNull { it.key == key }?.workingLoadKg == null
+    }
+
+    /** ProgressionKey of a block: per exercise (+ gym for gym-scoped loads) + the §3.4.1 variant of a personal slot. */
+    private fun keyOf(w: WorkBlock, gym: GymSet): ProgressionKey =
+        ProgressionKey.forExercise(w.exercise.id, w.loadType, gym.id).let { k -> w.personal?.progressionVariant?.let { k.copy(variant = it) } ?: k }
 
     /** Find-load / substitution starting load: from the replaced block's load, else the Appendix C seed. */
     private fun seedLoad(w: WorkBlock, states: List<ProgressionState>, inputs: PlanInputs, n: Normalized, gym: GymSet, bodyWeight: Double): Double? {
@@ -610,13 +647,24 @@ class SessionRealizer(private val kb: KnowledgeBase, private val c: PlannerConst
         inputs.gyms.firstOrNull { it.id == today.gymId } ?: inputs.gyms.firstOrNull { it.id == inputs.defaultGymId } ?: checkNotNull(inputs.gyms.firstOrNull()) { "PlanInputs.gyms is empty" }
 
     /** today.minutesOverride, else the plan's minutes at the plan gym, else the gym's default (hotel 45), clamped by TRV-01 in travel weeks. */
-    fun sessionMinutes(week: MesoWeek, inputs: PlanInputs, today: TodayContext, gym: GymSet, n: Normalized): Int {
+    fun sessionMinutes(week: MesoWeek, inputs: PlanInputs, today: TodayContext, gym: GymSet, n: Normalized, planned: PlannedSession? = null): Int {
         today.minutesOverride?.let { return it }
+        // §3.4.1 personal template: its own minutes, or the plan's estimate when the user's routine is longer (never trimmed unasked).
+        val template = planned?.let { kb.templates[it.templateId] }
+        val templateMinutes = template?.minutes
+        if (planned != null && template != null && templateMinutes != null && week.mode != WeekMode.TRAVEL_MAINTENANCE) {
+            val allFixed = planned.slots.isNotEmpty() && planned.slots.all { p -> template.slots.firstOrNull { it.slotId == p.slotId }?.sets != null }
+            return if (allFixed) maxOf(templateMinutes, ceil(planned.estimatedMinutes - EPS).toInt()) else templateMinutes
+        }
         val base = if (gym.id == inputs.defaultGymId) n.sessionMinutes else gym.defaultSessionMinutes ?: n.sessionMinutes
         return if (week.mode == WeekMode.TRAVEL_MAINTENANCE) minOf(n.sessionMinutes, base).coerceIn(c.trv.trv01Minutes.lo, c.trv.trv01Minutes.hi) else base
     }
 
     companion object {
+        /** A §3.4.1 personal-template slot: it carries at least one of the personal fields. */
+        fun isPersonal(t: com.gymcoach.core.model.SlotTemplate): Boolean =
+            t.exerciseIds != null || t.sets != null || t.reps != null || t.rir != null || t.restSeconds != null || t.progressionVariant != null || t.ramp != null || t.note != null
+
         const val FREE: String = "free"
         const val REST_TEMPLATE: String = "REST"
         const val POWER_PROFILE: String = "power"

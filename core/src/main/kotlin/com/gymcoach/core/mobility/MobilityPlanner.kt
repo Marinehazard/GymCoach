@@ -42,6 +42,15 @@ class MobilityPlanner(private val kb: KnowledgeBase, @Suppress("unused") private
         return out
     }
 
+    /** §3.4.1 personal template stretches (after the session, so static holds are fine — MOB-04). Unknown drill ids are skipped. */
+    fun personalCooldown(doses: List<com.gymcoach.core.model.DrillDose>): List<DrillPrescription> = doses.mapNotNull { dose ->
+        val d = kb.drills.firstOrNull { it.id == dose.drillId } ?: return@mapNotNull null
+        val seconds = dose.seconds ?: if (dose.reps == null) d.doseSeconds ?: HOLD_SECONDS else null
+        DrillPrescription(d.id, dose.sets, dose.reps, seconds,
+            Explanations.of(listOf(RuleIds.MOB_04, RuleIds.OVERRIDE), "${d.name}: ${dose.sets} × " + (seconds?.let { if (it.lo == it.hi) "${it.lo} s" else "${it.lo}–${it.hi} s" } ?: dose.reps?.let { "${it.lo}–${it.hi}" } ?: "") +
+                (dose.note?.let { " ($it)" } ?: "") + " — your post-workout stretch.", mapOf("drill_id" to d.id), Confidence.WEAK))
+    }
+
     fun restDayCard(limitations: List<Limitation>): List<DrillPrescription> {
         val out = ArrayList<DrillPrescription>()
         for (joint in chronicJoints(limitations)) {

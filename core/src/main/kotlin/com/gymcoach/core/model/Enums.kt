@@ -145,7 +145,9 @@ enum class SplitKind {
     @SerialName("full_body_1") FULL_BODY_1, @SerialName("full_body_2") FULL_BODY_2, @SerialName("full_body_3") FULL_BODY_3,
     @SerialName("upper_lower_full_3") UPPER_LOWER_FULL_3, @SerialName("upper_lower_4") UPPER_LOWER_4,
     @SerialName("ul_ppl_5") UL_PPL_5, @SerialName("ppl_6") PPL_6, @SerialName("ul_6") UL_6,
-    @SerialName("travel_2") TRAVEL_2
+    @SerialName("travel_2") TRAVEL_2,
+    /** §3.4.1 personal split row (templates.json row with an `id`), chosen only through Profile.splitId. */
+    @SerialName("custom") CUSTOM
 }
 
 @Serializable

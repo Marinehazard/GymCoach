@@ -64,7 +64,7 @@ class SplitSelector(private val kb: KnowledgeBase) {
         when (row.kind) {
             SplitKind.FULL_BODY_1 -> notes.add(Explanations.of(RuleIds.FRQ_01, "One session per week: ≥ 2 days per week are recommended.", "days" to "1", confidence = Confidence.MODERATE))
             SplitKind.FULL_BODY_2, SplitKind.FULL_BODY_3, SplitKind.UPPER_LOWER_FULL_3, SplitKind.UPPER_LOWER_4,
-            SplitKind.UL_PPL_5, SplitKind.PPL_6, SplitKind.UL_6, SplitKind.TRAVEL_2 -> Unit
+            SplitKind.UL_PPL_5, SplitKind.PPL_6, SplitKind.UL_6, SplitKind.TRAVEL_2, SplitKind.CUSTOM -> Unit
         }
         var best: List<ScheduledTemplate>? = null
         for (rot in templates.indices) {
@@ -84,6 +84,72 @@ class SplitSelector(private val kb: KnowledgeBase) {
         return SplitChoice(row, chosen, notes)
     }
 
+    /**
+     * §3.4.1 personal row for [days] scheduled days: with fewer days than the row has, the `drop_order` templates go first
+     * (Joe: the optional arms day), then templates from the end of the week; each kept template keeps its own weekday.
+     */
+    fun personalRow(row: SplitTemplate, days: Int): SplitTemplate {
+        if (days >= row.daysPerWeek) return row
+        val kept = row.sessionTemplateIds.zip(row.defaultWeekdays).toMutableList()
+        val order = (row.dropOrder ?: emptyList()) + row.sessionTemplateIds.reversed()
+        for (id in order) {
+            if (kept.size <= maxOf(1, days)) break
+            val i = kept.indexOfLast { it.first == id }
+            if (i >= 0) kept.removeAt(i)
+        }
+        return row.copy(daysPerWeek = kept.size, sessionTemplateIds = kept.map { it.first }, defaultWeekdays = kept.map { it.second })
+    }
+
+    /**
+     * §3.4.1: a personal row keeps its template order (no SPLIT-02 rotation: the user's own week). Weekdays: `preferredWeekdays`
+     * when their count equals the days, else the row defaults. The heavy squat and heavy hinge days are checked against
+     * `min_days_squat_to_hinge` (circular week); a shortfall is explained, never silently reordered.
+     */
+    fun choosePersonal(row: SplitTemplate, full: SplitTemplate, preferredWeekdays: List<Int>): SplitChoice {
+        val notes = ArrayList<Explanation>()
+        val templates = SessionTemplates.templatesOf(kb, row)
+        val preferred = preferredWeekdays.filter { it in 1..7 }.distinct().sorted()
+        val weekdays = if (preferred.size == row.daysPerWeek) preferred else row.defaultWeekdays
+        val schedule = weekdays.indices.map { ScheduledTemplate(weekdays[it], templates[it]) }
+        notes.add(
+            Explanations.of(
+                listOf(RuleIds.SPLIT_01, RuleIds.OVERRIDE),
+                "Your split ${row.id ?: "custom"}: " + schedule.joinToString(", ") { "${WEEKDAY_NAMES[it.weekday - 1]} ${it.template.name}" } + ".",
+                mapOf("split" to (row.id ?: "custom"), "weekdays" to weekdays.joinToString(",")),
+                Confidence.WEAK,
+            ),
+        )
+        val dropped = full.sessionTemplateIds.filter { it !in row.sessionTemplateIds }
+        if (dropped.isNotEmpty()) {
+            notes.add(Explanations.of(listOf(RuleIds.SPLIT_01, RuleIds.FRQ_03, RuleIds.OVERRIDE),
+                "${row.daysPerWeek} training days this week: ${dropped.joinToString(", ") { kb.templates[it]?.name ?: it }} dropped first (work days count as training load).",
+                mapOf("dropped" to dropped.joinToString(","), "days" to row.daysPerWeek.toString()), Confidence.WEAK))
+        }
+        val minDays = row.minDaysSquatToHinge
+        if (minDays != null) {
+            val gap = squatHingeGap(schedule)
+            if (gap != null && gap < minDays) {
+                notes.add(Explanations.of(listOf(RuleIds.SPLIT_02, RuleIds.OVERRIDE), "Heavy squat and heavy deadlift days are only $gap day(s) apart (your rule: at least $minDays).",
+                    mapOf("gap_days" to gap.toString(), "min_days" to minDays.toString()), Confidence.WEAK))
+            }
+        }
+        return SplitChoice(row, schedule, notes)
+    }
+
+    /** Smallest circular distance in days between a heavy SQUAT session and a heavy HINGE session of the week; null if one is missing. */
+    fun squatHingeGap(schedule: List<ScheduledTemplate>): Int? {
+        fun days(p: MovementPattern) = schedule.filter { st -> st.template.slots.any { it.heavy && it.patterns.firstOrNull() == p } }.map { it.weekday }
+        val squat = days(MovementPattern.SQUAT)
+        val hinge = days(MovementPattern.HINGE)
+        if (squat.isEmpty() || hinge.isEmpty()) return null
+        var best = Int.MAX_VALUE
+        for (a in squat) for (b in hinge) {
+            val d = Math.floorMod(b - a, 7)
+            best = minOf(best, d, 7 - d)
+        }
+        return best
+    }
+
     /** Consecutive-day pairs (incl. Sunday → Monday) whose templates share a heavy-slot muscle group (SPLIT-02). */
     fun conflicts(schedule: List<ScheduledTemplate>): List<String> {
         val out = ArrayList<String>()
@@ -98,6 +164,8 @@ class SplitSelector(private val kb: KnowledgeBase) {
     }
 
     companion object {
+        val WEEKDAY_NAMES: List<String> = listOf("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+
         /** SPLIT-02 muscle groups of a heavy slot's patterns. */
         fun groupOf(p: MovementPattern): String? = when (p) {
             MovementPattern.SQUAT, MovementPattern.LUNGE_SPLIT, MovementPattern.HINGE -> "legs"

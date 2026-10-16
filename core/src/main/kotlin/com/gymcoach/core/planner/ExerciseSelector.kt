@@ -103,6 +103,7 @@ class ExerciseSelector(private val kb: KnowledgeBase, private val c: PlannerCons
                         } else pickFor(ctx, si, st, ii, slot, ledger, sessionPicks.filterNotNull(), chosen, cache, prePass = false)
                     }
                     else -> pinnedPick(ctx, si, st, ii, slot, pinUsed, cache)
+                        ?: preferredPick(ctx, si, st, ii, slot, cache)
                         ?: pickFor(ctx, si, st, ii, slot, ledger, sessionPicks.filterNotNull(), chosen, cache, prePass = false)
                 }
                 val final = pick?.let { applySwap(ctx, it, cache) }
@@ -282,6 +283,28 @@ class ExerciseSelector(private val kb: KnowledgeBase, private val c: PlannerCons
         pinUsed.add(id)
         return SlotPick(si, st.weekday, st.template.id, ii, slot, e, cand.optionIndex, cand.loadType,
             Explanations.of(listOf(RuleIds.SEL, RuleIds.OVERRIDE), "${e.name} pinned by you.", mapOf("exercise_id" to e.id, "pinned" to "true"), Confidence.WEAK))
+    }
+
+    /** §3.4.1 `exercise_ids`: the first listed exercise that is available here, not excluded and inside the slot's patterns. */
+    private fun preferredPick(ctx: SelectionContext, si: Int, st: ScheduledTemplate, ii: Int, slot: SlotTemplate, cache: HashMap<String, Candidate?>): SlotPick? {
+        val ids = slot.exerciseIds ?: return null
+        for ((rank, id) in ids.withIndex()) {
+            val e = kb.exercise(id) ?: continue
+            if (e.pattern !in slot.patterns || e.id in ctx.normalized.excludedExerciseIds) continue
+            val cand = candidateOf(e, ctx, cache) ?: continue
+            val skipped = ids.take(rank)
+            val rules = ArrayList<String>()
+            rules.add(RuleIds.SEL)
+            rules.add(RuleIds.OVERRIDE)
+            if (e.id in ctx.normalized.penalizedExerciseIds) rules.add(RuleIds.INJ_00)
+            val inputs = LinkedHashMap<String, String>()
+            inputs["exercise_id"] = e.id
+            inputs["personal_template"] = "true"
+            if (skipped.isNotEmpty()) inputs["unavailable_first_choices"] = skipped.joinToString(",")
+            val why = if (skipped.isEmpty()) "${e.name}: your template's exercise." else "${e.name}: your template's choice here (${skipped.joinToString(", ") { kb.exercise(it)?.name ?: it }} not available or excluded)."
+            return SlotPick(si, st.weekday, st.template.id, ii, slot, e, cand.optionIndex, cand.loadType, Explanations.of(rules, why, inputs, Confidence.WEAK))
+        }
+        return null
     }
 
     private fun applySwap(ctx: SelectionContext, pick: SlotPick, cache: HashMap<String, Candidate?>): SlotPick {

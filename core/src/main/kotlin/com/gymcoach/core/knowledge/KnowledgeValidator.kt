@@ -12,6 +12,8 @@ import com.gymcoach.core.model.GymSet
 import com.gymcoach.core.model.LoadType
 import com.gymcoach.core.model.MovementPattern
 import com.gymcoach.core.model.SessionEquipment
+import com.gymcoach.core.model.SessionTemplate
+import com.gymcoach.core.model.SplitKind
 import java.time.Instant
 
 /**
@@ -193,8 +195,17 @@ class KnowledgeValidator(private val kb: KnowledgeBase, private val frozenIds: L
                 }
             }
         }
+        for (t in kb.templates.values) personalTemplate(t, out)
+        val personalIds = kb.splits.filter { it.kind == SplitKind.CUSTOM }.map { it.id }
+        if (personalIds.any { it == null || !ID.matches(it) }) out += "R10 every custom split row needs an id matching ${ID.pattern}"
+        if (personalIds.toSet().size != personalIds.size) out += "R10 duplicate custom split row ids"
         for ((index, split) in kb.splits.withIndex()) {
             val row = "split[$index] ${split.kind}"
+            if (split.kind != SplitKind.CUSTOM && (split.id != null || split.dropOrder != null || split.accumulationWeeks != null || split.closingWeek != null || split.minDaysSquatToHinge != null))
+                out += "R10 $row: personal-row fields on a generic row"
+            split.dropOrder?.forEach { if (it !in split.sessionTemplateIds) out += "R10 $row: drop_order names $it, which is not in the row" }
+            split.accumulationWeeks?.let { if (it !in 1..12) out += "R10 $row: accumulation_weeks $it outside 1..12" }
+            split.closingWeek?.let { if (it != "test") out += "R10 $row: unknown closing_week '$it'" }
             if (split.sessionTemplateIds.size != split.daysPerWeek) out += "R10 $row: ${split.sessionTemplateIds.size} templates for ${split.daysPerWeek} days"
             if (split.defaultWeekdays.size != split.daysPerWeek) out += "R10 $row: ${split.defaultWeekdays.size} weekdays for ${split.daysPerWeek} days"
             if (split.defaultWeekdays.any { it !in 1..7 } || split.defaultWeekdays != split.defaultWeekdays.sorted().distinct()) out += "R10 $row: weekdays must be ascending, distinct ISO 1..7"
@@ -207,6 +218,39 @@ class KnowledgeValidator(private val kb: KnowledgeBase, private val frozenIds: L
                 }
             }
         }
+    }
+
+    /** §3.4.1 personal-template fields: listed exercises exist and fit the slot, doses are sane, drills and raise modalities exist. */
+    private fun personalTemplate(t: SessionTemplate, out: MutableList<String>) {
+        for (s in t.slots) {
+            val at = "R10 ${t.id}.${s.slotId}"
+            s.exerciseIds?.let { ids ->
+                if (ids.isEmpty()) out += "$at: empty exercise_ids"
+                for (id in ids) {
+                    val e = kb.exercise(id)
+                    if (e == null) out += "$at: unknown exercise $id"
+                    else if (e.pattern !in s.patterns) out += "$at: $id (${e.pattern}) is outside the slot patterns"
+                }
+            }
+            s.sets?.let { if (it !in 1..10) out += "$at: sets $it outside 1..10" }
+            s.reps?.let { if (it.lo < 1 || it.hi > 50) out += "$at: reps ${it.lo}-${it.hi} outside 1..50" }
+            s.rir?.let { if (it !in 0..4) out += "$at: rir $it outside 0..4" }
+            s.restSeconds?.let { if (it !in 0..600) out += "$at: rest_seconds $it outside 0..600" }
+            s.loadFactor?.let { if (it <= 0.0 || it > 1.0) out += "$at: load_factor $it outside (0, 1]" }
+            if (s.loadFactor != null && s.progressionVariant == null) out += "$at: load_factor without progression_variant"
+            s.progressionVariant?.let { if (!ID.matches(it)) out += "$at: progression_variant '$it' does not match ${ID.pattern}" }
+            s.ramp?.let { steps ->
+                if (steps.zipWithNext().any { (a, b) -> b.pct <= a.pct }) out += "$at: ramp percentages must increase"
+                if (steps.any { it.pct < 0.0 || it.pct >= 1.0 || it.reps < 1 }) out += "$at: ramp step outside pct 0..<1 / reps ≥ 1"
+            }
+        }
+        for (dose in t.warmupDrills.orEmpty() + t.cooldownDrills.orEmpty()) {
+            if (kb.drills.none { it.id == dose.drillId }) out += "R10 ${t.id}: unknown drill ${dose.drillId}"
+            if (dose.sets < 1) out += "R10 ${t.id}: drill ${dose.drillId} with ${dose.sets} sets"
+        }
+        for (id in t.raiseExerciseIds.orEmpty()) if (kb.exercise(id)?.pattern != MovementPattern.CARDIO) out += "R10 ${t.id}: raise exercise $id is not a cardio exercise"
+        t.minutes?.let { if (it !in 20..180) out += "R10 ${t.id}: minutes $it outside 20..180" }
+        t.raiseMinutes?.let { if (it !in 0..20) out += "R10 ${t.id}: raise_minutes $it outside 0..20" }
     }
 
     private fun rule11Rules(out: MutableList<String>) {

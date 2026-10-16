@@ -2030,6 +2030,1497 @@
           "required": false
         }
       ]
+    },
+    {
+      "id": "JOE_A",
+      "name": "A — Squat day",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "heavy": true,
+          "required": true,
+          "exercise_ids": [
+            "back_squat"
+          ],
+          "sets": 1,
+          "reps": [
+            3,
+            3
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "ramp": [
+            {
+              "pct": 0.0,
+              "reps": 10
+            },
+            {
+              "pct": 0.45,
+              "reps": 8
+            },
+            {
+              "pct": 0.65,
+              "reps": 5
+            },
+            {
+              "pct": 0.78,
+              "reps": 3
+            },
+            {
+              "pct": 0.89,
+              "reps": 2
+            }
+          ],
+          "note": "Top set: one triple at RPE 8 (2 reps left); +5 kg only when it feels like RPE 7. Goblet squat 2×8 before the ladder. Setup under 10 s; spread the floor; chest up, knees forward."
+        },
+        {
+          "slot_id": "s1b",
+          "role": "primary",
+          "patterns": [
+            "squat"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "back_squat"
+          ],
+          "sets": 3,
+          "reps": [
+            5,
+            7
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "progression_variant": "backoff",
+          "load_factor": 0.875,
+          "note": "Back-off sets: 5 → 6 → 7 reps, then +5 kg and back to 5s. Pause squats are a valid swap when the hips rise first."
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "squat"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "hack_squat",
+            "leg_press_45",
+            "leg_press_horizontal",
+            "smith_machine_squat"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 120,
+          "note": "Hack squat (or leg press): quad strength for the hips-rise-first pattern."
+        },
+        {
+          "slot_id": "s3",
+          "role": "accessory",
+          "patterns": [
+            "lunge_split"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "bulgarian_split_squat"
+          ],
+          "sets": 2,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 90,
+          "note": "Left leg first. 12 kg per hand until the left knee tracks clean, then 14 kg."
+        },
+        {
+          "slot_id": "s4",
+          "role": "accessory",
+          "patterns": [
+            "hip_extension_isolation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "machine_hip_thrust",
+            "hip_thrust"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 60,
+          "note": "Left-knee work: glutes keep the knee over the toes."
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "hip_abduction"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "hip_abduction_machine",
+            "band_lateral_walk"
+          ],
+          "sets": 2,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 45,
+          "note": "Abductor (banded lateral walks where there is no machine): left-knee valgus fix."
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "knee_extension_isolation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "leg_extension",
+            "spanish_squat"
+          ],
+          "sets": 2,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "calf"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "standing_calf_raise",
+            "leg_press_calf_raise",
+            "single_leg_calf_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 45
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_anti_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "pallof_press"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 30,
+          "note": "12 per side, 2 s hold."
+        },
+        {
+          "slot_id": "s9",
+          "role": "core",
+          "patterns": [
+            "core_anti_extension"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "dead_bug"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 30,
+          "note": "10 per side."
+        }
+      ],
+      "minutes": 75,
+      "raise_minutes": 5,
+      "raise_exercise_ids": [
+        "stationary_bike",
+        "rowing_erg"
+      ],
+      "lower": true,
+      "warmup_drills": [
+        {
+          "drill_id": "knee_to_wall_pulses",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ],
+          "note": "10 per side"
+        },
+        {
+          "drill_id": "hip_90_90",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ],
+          "note": "10 switches, then a 30 s hold per side"
+        },
+        {
+          "drill_id": "half_kneeling_hip_flexor_stretch",
+          "sets": 1,
+          "seconds": [
+            45,
+            45
+          ],
+          "note": "per side; holds ≤ 45 s before lifting"
+        },
+        {
+          "drill_id": "goblet_squat_pry",
+          "sets": 1,
+          "seconds": [
+            45,
+            45
+          ]
+        },
+        {
+          "drill_id": "cat_cow",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ]
+        },
+        {
+          "drill_id": "squat_bottom_breathing",
+          "sets": 1,
+          "reps": [
+            5,
+            5
+          ],
+          "note": "5 breaths in the bottom position"
+        },
+        {
+          "drill_id": "band_lateral_walk",
+          "sets": 2,
+          "reps": [
+            12,
+            12
+          ],
+          "note": "each way, +5 toward the left; last, right before the bar"
+        }
+      ],
+      "cooldown_drills": [
+        {
+          "drill_id": "couch_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "figure_four_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "wall_calf_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "straight knee"
+        },
+        {
+          "drill_id": "bent_knee_calf_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "frog_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JOE_B",
+      "name": "B — Bench day",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "heavy": true,
+          "required": true,
+          "exercise_ids": [
+            "barbell_bench_press"
+          ],
+          "sets": 1,
+          "reps": [
+            3,
+            3
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "ramp": [
+            {
+              "pct": 0.0,
+              "reps": 12
+            },
+            {
+              "pct": 0.5,
+              "reps": 8
+            },
+            {
+              "pct": 0.625,
+              "reps": 5
+            },
+            {
+              "pct": 0.75,
+              "reps": 3
+            },
+            {
+              "pct": 0.875,
+              "reps": 2
+            }
+          ],
+          "note": "Top set: one triple at RPE 8; +5 kg only when it feels like RPE 7. Blades pinned, bar to the lower sternum, leg drive; safeties 2–3 cm below the chest."
+        },
+        {
+          "slot_id": "s1b",
+          "role": "primary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "barbell_bench_press"
+          ],
+          "sets": 3,
+          "reps": [
+            5,
+            7
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "progression_variant": "backoff",
+          "load_factor": 0.875,
+          "note": "Paused back-offs: 1-count pause on the chest; 5 → 6 → 7 reps, then +5 kg and back to 5s."
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_push"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "close_grip_bench_press"
+          ],
+          "sets": 3,
+          "reps": [
+            8,
+            8
+          ],
+          "rest_seconds": 120
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "incline_push"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "incline_dumbbell_press"
+          ],
+          "sets": 3,
+          "reps": [
+            8,
+            10
+          ],
+          "rest_seconds": 90,
+          "note": "30° bench. 24 kg dumbbells until 3×10, then 26 kg."
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "chest_fly"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "pec_deck_fly",
+            "low_to_high_cable_fly",
+            "cable_fly"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 60,
+          "note": "Fly machine or low-to-high cable."
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_triceps_pushdown"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 60,
+          "note": "Rope."
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "face_pull"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60,
+          "note": "Pulley at face height or above, elbows high, pull the rope apart."
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "hanging_leg_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            12
+          ],
+          "rest_seconds": 45,
+          "note": "Hanging knee raise."
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_flexion",
+            "core_anti_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_crunch",
+            "pallof_press"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 45,
+          "note": "Kneeling cable crunch (or Pallof press 3×12 per side)."
+        }
+      ],
+      "minutes": 70,
+      "raise_minutes": 5,
+      "raise_exercise_ids": [
+        "rowing_erg",
+        "stationary_bike"
+      ],
+      "lower": false,
+      "warmup_drills": [
+        {
+          "drill_id": "foam_roller_thoracic_extension",
+          "sets": 1,
+          "reps": [
+            3,
+            3
+          ],
+          "note": "3 spots × 5 breaths"
+        },
+        {
+          "drill_id": "band_pull_apart",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ]
+        },
+        {
+          "drill_id": "shoulder_pass_through",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ],
+          "note": "shoulder dislocates"
+        },
+        {
+          "drill_id": "doorway_pec_stretch",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ],
+          "note": "pec stretch on an upright, 10 per side"
+        },
+        {
+          "drill_id": "lat_stretch_rack",
+          "sets": 1,
+          "seconds": [
+            30,
+            30
+          ],
+          "note": "per side"
+        },
+        {
+          "drill_id": "scapular_push_up",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ]
+        },
+        {
+          "drill_id": "band_external_rotation",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ],
+          "note": "per side"
+        },
+        {
+          "drill_id": "wrist_circles",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ]
+        }
+      ],
+      "cooldown_drills": [
+        {
+          "drill_id": "doorway_pec_stretch",
+          "sets": 2,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "second time with the elbows higher"
+        },
+        {
+          "drill_id": "cross_body_shoulder_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "overhead_triceps_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "lat_stretch_rack",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "foam_roller_thoracic_extension",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "thoracic extension breathing"
+        }
+      ]
+    },
+    {
+      "id": "JOE_C",
+      "name": "C — Deadlift / pull day",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "heavy": true,
+          "required": true,
+          "exercise_ids": [
+            "conventional_deadlift"
+          ],
+          "sets": 1,
+          "reps": [
+            3,
+            3
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "note": "Work up to a triple at RPE 8 (about 140 kg on the first heavy pull since September). Never within 4 days of a squat test."
+        },
+        {
+          "slot_id": "s1b",
+          "role": "primary",
+          "patterns": [
+            "hinge"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "conventional_deadlift"
+          ],
+          "sets": 2,
+          "reps": [
+            5,
+            7
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "progression_variant": "backoff",
+          "load_factor": 0.85,
+          "note": "Back-off sets at about 85 %: 5 → 6 → 7 reps, then +5 kg."
+        },
+        {
+          "slot_id": "s2",
+          "role": "primary",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "pull_up",
+            "lat_pulldown"
+          ],
+          "sets": 4,
+          "reps": [
+            6,
+            10
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "note": "Pull-ups at RPE 8; lat pulldown 4×8 instead when fewer than 6 reps."
+        },
+        {
+          "slot_id": "s3",
+          "role": "secondary",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "machine_row",
+            "chest_supported_dumbbell_row"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 120,
+          "note": "Chest-supported (machine, or dumbbells on a 30° bench)."
+        },
+        {
+          "slot_id": "s4",
+          "role": "accessory",
+          "patterns": [
+            "horizontal_pull"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "seated_cable_row"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            12
+          ],
+          "rest_seconds": 90,
+          "note": "Single-arm cable row, per side (catalogue has no single-arm row entry yet)."
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "vertical_pull"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "straight_arm_pulldown"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 60,
+          "note": "Face the stack, stand back so the cable angles, sweep to the thighs."
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "knee_flexion_isolation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "lying_leg_curl",
+            "seated_leg_curl",
+            "slider_leg_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "face_pull"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s8",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "hammer_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s9",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_crunch"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "Abs pump circuit: 3 rounds, 30 s between exercises, 60 s between rounds, last round to failure — 1/3 kneeling cable crunch"
+        },
+        {
+          "slot_id": "s10",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "lying_leg_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "2/3 reverse crunch, 3 s down (catalogue has no reverse-crunch row yet: lying leg raise is the closest entry)"
+        },
+        {
+          "slot_id": "s11",
+          "role": "core",
+          "patterns": [
+            "core_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_woodchop"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 60,
+          "note": "3/3 bicycle crunch 10/side (catalogue has no bicycle-crunch row yet: cable woodchop is the closest entry)"
+        }
+      ],
+      "minutes": 70,
+      "raise_minutes": 5,
+      "raise_exercise_ids": [
+        "stationary_bike",
+        "rowing_erg"
+      ],
+      "lower": true,
+      "warmup_drills": [
+        {
+          "drill_id": "band_pull_apart",
+          "sets": 2,
+          "reps": [
+            15,
+            15
+          ]
+        },
+        {
+          "drill_id": "scapular_pull_up",
+          "sets": 1,
+          "reps": [
+            10,
+            10
+          ]
+        },
+        {
+          "drill_id": "open_book_rotation",
+          "sets": 1,
+          "reps": [
+            8,
+            8
+          ],
+          "note": "per side"
+        },
+        {
+          "drill_id": "dead_hang",
+          "sets": 2,
+          "seconds": [
+            20,
+            20
+          ]
+        },
+        {
+          "drill_id": "lat_stretch_rack",
+          "sets": 1,
+          "seconds": [
+            20,
+            20
+          ],
+          "note": "per side"
+        }
+      ],
+      "cooldown_drills": [
+        {
+          "drill_id": "kneeling_lat_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "cross_body_shoulder_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "rear delt"
+        },
+        {
+          "drill_id": "biceps_wall_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "forearm_flexor_extensor_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "flexors"
+        },
+        {
+          "drill_id": "upper_trap_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JOE_D",
+      "name": "D — Press day",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "primary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "heavy": true,
+          "required": true,
+          "exercise_ids": [
+            "overhead_press_barbell"
+          ],
+          "sets": 4,
+          "reps": [
+            6,
+            6
+          ],
+          "rir": 2,
+          "rest_seconds": 180,
+          "ramp": [
+            {
+              "pct": 0.0,
+              "reps": 10
+            },
+            {
+              "pct": 0.67,
+              "reps": 6
+            },
+            {
+              "pct": 0.89,
+              "reps": 3
+            }
+          ],
+          "note": "Standing, 4×6 at RPE 8 (all four sets at the same load). Bar on the collarbones, glutes squeezed, ribs down; head through at the top."
+        },
+        {
+          "slot_id": "s2",
+          "role": "secondary",
+          "patterns": [
+            "vertical_push"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "machine_shoulder_press",
+            "seated_dumbbell_shoulder_press"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 90
+        },
+        {
+          "slot_id": "s3",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_abduction"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "machine_lateral_raise",
+            "dumbbell_lateral_raise",
+            "cable_lateral_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "reverse_pec_deck",
+            "cable_rear_delt_fly",
+            "dumbbell_rear_delt_fly"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "shoulder_er_rear_delt"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "face_pull"
+          ],
+          "sets": 2,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 60
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "barbell_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 90,
+          "note": "EZ bar."
+        },
+        {
+          "slot_id": "s7",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "incline_dumbbell_curl"
+          ],
+          "sets": 2,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 60,
+          "note": "45° bench."
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_crunch"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "Abs pump circuit: 3 rounds, 30 s between exercises, 60 s between rounds, last round to failure — 1/3 kneeling cable crunch"
+        },
+        {
+          "slot_id": "s9",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "lying_leg_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "2/3 reverse crunch, 3 s down (catalogue has no reverse-crunch row yet: lying leg raise is the closest entry)"
+        },
+        {
+          "slot_id": "s10",
+          "role": "core",
+          "patterns": [
+            "core_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_woodchop"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 60,
+          "note": "3/3 bicycle crunch 10/side (catalogue has no bicycle-crunch row yet: cable woodchop is the closest entry)"
+        },
+        {
+          "slot_id": "s11",
+          "role": "core",
+          "patterns": [
+            "core_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_woodchop"
+          ],
+          "sets": 2,
+          "reps": [
+            12,
+            12
+          ],
+          "rest_seconds": 45,
+          "note": "Oblique machine 2×12 per side (no catalogue entry for the machine yet: cable woodchop is the closest)."
+        }
+      ],
+      "minutes": 60,
+      "raise_minutes": 5,
+      "raise_exercise_ids": [
+        "rowing_erg",
+        "stationary_bike"
+      ],
+      "lower": false,
+      "warmup_drills": [
+        {
+          "drill_id": "band_pull_apart",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ]
+        },
+        {
+          "drill_id": "shoulder_pass_through",
+          "sets": 1,
+          "reps": [
+            15,
+            15
+          ],
+          "note": "shoulder dislocates"
+        },
+        {
+          "drill_id": "band_external_rotation",
+          "sets": 1,
+          "reps": [
+            12,
+            12
+          ],
+          "note": "per side"
+        }
+      ],
+      "cooldown_drills": [
+        {
+          "drill_id": "doorway_pec_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "cross_body_shoulder_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "overhead_triceps_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "biceps_wall_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "lat_stretch_rack",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "JOE_E",
+      "name": "E — Arms day (optional)",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "superset_with": "s2",
+          "exercise_ids": [
+            "barbell_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            8,
+            10
+          ],
+          "rest_seconds": 30,
+          "note": "Pair 1 (heavy): EZ-bar curl."
+        },
+        {
+          "slot_id": "s2",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "required": true,
+          "superset_with": "s1",
+          "exercise_ids": [
+            "lying_triceps_extension"
+          ],
+          "sets": 3,
+          "reps": [
+            8,
+            10
+          ],
+          "rest_seconds": 75,
+          "note": "Pair 1: EZ-bar skull crusher, bar behind the head."
+        },
+        {
+          "slot_id": "s3",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "superset_with": "s4",
+          "exercise_ids": [
+            "incline_dumbbell_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            12
+          ],
+          "rest_seconds": 30,
+          "note": "Pair 2 (stretch): incline dumbbell curl, 45°."
+        },
+        {
+          "slot_id": "s4",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "required": true,
+          "superset_with": "s3",
+          "exercise_ids": [
+            "overhead_cable_triceps_extension"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            12
+          ],
+          "rest_seconds": 75,
+          "note": "Pair 2: cable overhead rope extension."
+        },
+        {
+          "slot_id": "s5",
+          "role": "isolation",
+          "patterns": [
+            "elbow_flexion"
+          ],
+          "required": true,
+          "superset_with": "s6",
+          "exercise_ids": [
+            "hammer_curl"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "Pair 3 (pump): dumbbell hammer curl. Optional finisher: cable curl / pushdown drop set or EZ-bar 21s."
+        },
+        {
+          "slot_id": "s6",
+          "role": "isolation",
+          "patterns": [
+            "elbow_extension"
+          ],
+          "required": true,
+          "superset_with": "s5",
+          "exercise_ids": [
+            "cable_triceps_pushdown"
+          ],
+          "sets": 3,
+          "reps": [
+            12,
+            15
+          ],
+          "rest_seconds": 75,
+          "note": "Pair 3: rope pushdown."
+        },
+        {
+          "slot_id": "s7",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_crunch"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "Abs pump circuit: 3 rounds, 30 s between exercises, 60 s between rounds, last round to failure — 1/3 kneeling cable crunch"
+        },
+        {
+          "slot_id": "s8",
+          "role": "core",
+          "patterns": [
+            "core_flexion"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "lying_leg_raise"
+          ],
+          "sets": 3,
+          "reps": [
+            15,
+            15
+          ],
+          "rest_seconds": 30,
+          "note": "2/3 reverse crunch, 3 s down (catalogue has no reverse-crunch row yet: lying leg raise is the closest entry)"
+        },
+        {
+          "slot_id": "s9",
+          "role": "core",
+          "patterns": [
+            "core_rotation"
+          ],
+          "required": true,
+          "exercise_ids": [
+            "cable_woodchop"
+          ],
+          "sets": 3,
+          "reps": [
+            10,
+            10
+          ],
+          "rest_seconds": 60,
+          "note": "3/3 bicycle crunch 10/side (catalogue has no bicycle-crunch row yet: cable woodchop is the closest entry)"
+        }
+      ],
+      "minutes": 40,
+      "raise_minutes": 5,
+      "raise_exercise_ids": [
+        "rowing_erg",
+        "stationary_bike"
+      ],
+      "lower": false,
+      "cooldown_drills": [
+        {
+          "drill_id": "biceps_wall_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "overhead_triceps_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ]
+        },
+        {
+          "drill_id": "forearm_flexor_extensor_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "flexors"
+        },
+        {
+          "drill_id": "forearm_flexor_extensor_stretch",
+          "sets": 1,
+          "seconds": [
+            60,
+            60
+          ],
+          "note": "extensors"
+        }
+      ]
     }
   ],
   "splits": [
@@ -2294,6 +3785,33 @@
       ],
       "for_goals": [],
       "for_training_ages": []
+    },
+    {
+      "kind": "custom",
+      "days_per_week": 5,
+      "session_template_ids": [
+        "JOE_A",
+        "JOE_B",
+        "JOE_C",
+        "JOE_D",
+        "JOE_E"
+      ],
+      "default_weekdays": [
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "for_goals": [],
+      "for_training_ages": [],
+      "id": "joe_5day",
+      "drop_order": [
+        "JOE_E"
+      ],
+      "accumulation_weeks": 6,
+      "closing_week": "test",
+      "min_days_squat_to_hinge": 2
     }
   ]
 }

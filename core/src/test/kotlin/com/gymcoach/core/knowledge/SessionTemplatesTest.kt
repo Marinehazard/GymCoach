@@ -36,7 +36,7 @@ class SessionTemplatesTest {
         assertEquals(SplitKind.FULL_BODY_1 to listOf("FULL_A"), rows[0])
         assertEquals(listOf(SplitKind.FULL_BODY_1, SplitKind.FULL_BODY_2, SplitKind.FULL_BODY_3, SplitKind.FULL_BODY_3, SplitKind.UPPER_LOWER_FULL_3,
             SplitKind.UPPER_LOWER_FULL_3, SplitKind.UPPER_LOWER_4, SplitKind.UPPER_LOWER_4, SplitKind.UL_PPL_5, SplitKind.UL_PPL_5, SplitKind.PPL_6,
-            SplitKind.UL_6, SplitKind.TRAVEL_2), kb.splits.map { it.kind })
+            SplitKind.UL_6, SplitKind.TRAVEL_2, SplitKind.CUSTOM), kb.splits.map { it.kind })   // + the §3.4.1 personal row (Phase 2)
         val four = listOf(Goal.HYPERTROPHY, Goal.GENERAL_FITNESS, Goal.FAT_LOSS, Goal.ENDURANCE_SUPPORT)
         for (s in kb.splits.filter { it.kind in setOf(SplitKind.UPPER_LOWER_4, SplitKind.UL_PPL_5, SplitKind.UPPER_LOWER_FULL_3) }) {
             assertTrue(s.forGoals == four || s.forGoals == listOf(Goal.STRENGTH), "${s.kind} ${s.forGoals}")

@@ -45,11 +45,13 @@ class MesocycleBuilder(private val c: PlannerConstants) {
         TrainingAge.ADVANCED -> c.plat.dld01AdvancedWeeks to c.plat.dld01AdvancedWeeks + 1
     }
 
-    fun build(inputs: PlanInputs, n: Normalized, today: LocalDate): Skeleton {
+    /** [accumulationOverride] (§3.4.1 personal split row `accumulation_weeks`): that many accumulation weeks, then the closing (test) week. */
+    fun build(inputs: PlanInputs, n: Normalized, today: LocalDate, accumulationOverride: Int? = null): Skeleton {
         val monday = inputs.weekStartsOnMonday
         val todayWeek = Weeks.weekStart(today, monday)
         val notes = ArrayList<Explanation>()
-        var (accumulation, deload) = accumulationWeeks(n.trainingAge, n.firstMesocycle)
+        var (accumulation, deload) = if (accumulationOverride != null && accumulationOverride >= 1) accumulationOverride to accumulationOverride + 1
+            else accumulationWeeks(n.trainingAge, n.firstMesocycle)
         var anchor = inputs.mesocycleAnchor?.let { Weeks.weekStart(it, monday) } ?: todayWeek
         if (anchor.isAfter(todayWeek)) anchor = todayWeek
         var travel = travelStarts(inputs, anchor, monday)
@@ -79,6 +81,7 @@ class MesocycleBuilder(private val c: PlannerConstants) {
             }
         }
         if (deload == null) notes.add(Explanations.of(RuleIds.DLD_01, "First mesocycle as a novice: $accumulation weeks, no scheduled deload (reactive only).", "weeks" to accumulation.toString(), confidence = Confidence.MODERATE))
+        else if (reactiveIndex == null && accumulationOverride != null && accumulationOverride >= 1) notes.add(Explanations.of(listOf(RuleIds.DLD_01, RuleIds.OVERRIDE), "$accumulation-week cycle (your split), then a test week (week $deload) with deload-dosed sessions.", mapOf("weeks" to accumulation.toString(), "test_week" to deload.toString()), Confidence.WEAK))
         else if (reactiveIndex == null) notes.add(Explanations.of(RuleIds.DLD_01, "$accumulation accumulation weeks, deload in week $deload.", "weeks" to accumulation.toString(), "deload_week" to deload.toString(), confidence = Confidence.MODERATE))
 
         val reentry = inputs.lastDeloadWeekStart?.let { Weeks.weekStart(it, monday) == anchor.minusDays(7) } ?: false

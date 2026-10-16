@@ -53,6 +53,11 @@ data class Profile(
     @SerialName("usual_session_time") val usualSessionTime: String = "evening",          // "morning" | "midday" | "evening" (SLP-03)
     @SerialName("cardio_inside_session_minutes") val cardioInsideSessionMinutes: Boolean = false,
     @SerialName("updated_at") val updatedAt: Instant,
+    // ---- Phase 2 personal fields (nullable: omitted from stored JSON while unset, so existing hashes are unchanged) ----
+    @SerialName("split_id") val splitId: String? = null,                                 // §3.4.1 personal split row of templates.json (e.g. "joe_5day")
+    @SerialName("strength_targets_kg") val strengthTargetsKg: Map<String, Double>? = null,   // exerciseId -> target 1RM (coach context, test-week choice)
+    @SerialName("barbell_rir_floor") val barbellRirFloor: Int? = null,                   // user cap: barbell/Smith working sets never below this RIR (2 = never above RPE 8)
+    @SerialName("coach_notes") val coachNotes: List<String>? = null,                     // standing facts for the coach (recovery rules, habits to watch)
 ) {
     fun ageOn(date: LocalDate): Int = date.year - birthYear
 }

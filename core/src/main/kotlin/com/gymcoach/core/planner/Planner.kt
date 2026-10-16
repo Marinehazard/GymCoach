@@ -67,11 +67,13 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
     /** Stages 0–5. Pure; same inputs → same output. */
     fun plan(inputs: PlanInputs, today: LocalDate): PlanOutput {
         val n = normalize(inputs, today)
-        val skel = builder.build(inputs, n, today)
+        val personal = personalSplit(inputs)
+        val skel = builder.build(inputs, n, today, personal?.accumulationWeeks)
         val hash = inputsHash(inputs)
         val mesoId = "meso-" + hash.take(16)
         val gym = planGym(inputs)
-        val chain = splits.chain(n.daysPerWeek, n.goal, n.trainingAge)
+        // §3.4.1: a personal split row (Profile.splitId) is tried first; the generic chain stays as the fallback.
+        val chain = (if (personal != null) listOf(splits.personalRow(personal, n.daysPerWeek)) else emptyList()) + splits.chain(n.daysPerWeek, n.goal, n.trainingAge)
         val failures = ArrayList<String>()
         val fallbackNotes = ArrayList<Explanation>()
         var firstValid: Pair<Built, List<String>>? = null
@@ -80,6 +82,13 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
             val hard = validator.validate(built.mesocycle, inputs, n, today)
             val soft = frq03(built)
             if (hard.isEmpty() && soft.isEmpty()) return PlanOutput(built.mesocycle, skel.currentWeekIndex, built.mesocycle.explanations, built.proposals)
+            // The user's own split ships whenever it is valid; an FRQ-03 shortfall is explained, not "fixed" by another row.
+            if (hard.isEmpty() && row.kind == SplitKind.CUSTOM) {
+                val note = Explanations.of(listOf(RuleIds.FRQ_03, RuleIds.OVERRIDE), "Your split trains these muscles once a week: " + soft.joinToString("; ") { it.substringAfter(": ") } + ".",
+                    mapOf("split" to (row.id ?: "custom")), Confidence.WEAK)
+                val meso = built.mesocycle.copy(explanations = built.mesocycle.explanations + note)
+                return PlanOutput(meso, skel.currentWeekIndex, meso.explanations, built.proposals)
+            }
             if (hard.isEmpty() && firstValid == null) firstValid = built to soft
             val violations = hard + soft
             failures.add("${row.kind.name.lowercase()}: " + violations.joinToString(" | "))
@@ -87,7 +96,7 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
             fallbackNotes.add(
                 Explanations.of(
                     listOf(RuleIds.SPLIT_01, RuleIds.FRQ_03),
-                    "${row.kind.name.lowercase()} (${row.daysPerWeek} days) did not validate; using ${next.kind.name.lowercase()} (${next.daysPerWeek} days)" +
+                    "${row.id ?: row.kind.name.lowercase()} (${row.daysPerWeek} days) did not validate; using ${next.kind.name.lowercase()} (${next.daysPerWeek} days)" +
                         (if (next.daysPerWeek < row.daysPerWeek) " — the dropped day becomes a rest/cardio day." else "."),
                     mapOf("from" to row.kind.name.lowercase(), "to" to next.kind.name.lowercase(), "reason" to violations.first()),
                     Confidence.WEAK,
@@ -114,7 +123,7 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
     /** Week rollover: VOL-08 gating, travel mode and the PLAT-02 ladder ONLY (§4.11). Pure; deloadTriggers is always empty. */
     fun rollWeek(inputs: PlanInputs, weekStart: LocalDate): WeekRollResult {
         val n = normalize(inputs, weekStart)
-        val skel = builder.build(inputs, n, weekStart)
+        val skel = builder.build(inputs, n, weekStart, personalSplit(inputs)?.accumulationWeeks)
         val week = skel.weekAt(weekStart)
         val nextMode = week?.mode ?: WeekMode.NORMAL
         val holds = holds(inputs, n, weekStart)
@@ -198,7 +207,7 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
         inputs: PlanInputs, n: Normalized, skel: Skeleton, row: SplitTemplate, gym: GymSet, mesoId: String, hash: String,
         today: LocalDate, fallbackNotes: List<Explanation>,
     ): Built {
-        val choice = splits.choose(row, n.preferredWeekdays)
+        val choice = if (row.kind == SplitKind.CUSTOM) splits.choosePersonal(row, personalSplit(inputs) ?: row, n.preferredWeekdays) else splits.choose(row, n.preferredWeekdays)
         val equipment = SessionEquipment(gym)
         val profile = inputs.profile
         val accustomed = if (n.goal == Goal.FAT_LOSS) accustomed(inputs, skel.anchor) else null
@@ -244,7 +253,10 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
             val alloc = weekVolume(sessions)
             val notes = ArrayList<Explanation>()
             when (ws.mode) {
-                WeekMode.DELOAD -> notes.add(Explanations.of(listOf(RuleIds.DLD_02), "Deload week: sets halved, compound loads × ${fmt(c.plat.dld02CompoundLoadFactor)}, RIR ${c.rir.rir04DeloadRir}.", mapOf("week" to ws.index.toString()), Confidence.MODERATE))
+                WeekMode.DELOAD -> {
+                    notes.add(Explanations.of(listOf(RuleIds.DLD_02), "Deload week: sets halved, compound loads × ${fmt(c.plat.dld02CompoundLoadFactor)}, RIR ${c.rir.rir04DeloadRir}.", mapOf("week" to ws.index.toString()), Confidence.MODERATE))
+                    if (row.closingWeek == TEST_WEEK) testWeekNote(inputs, ws.index)?.let { notes.add(it) }
+                }
                 WeekMode.REENTRY -> notes.add(Explanations.of(listOf(RuleIds.DLD_04), "Re-entry week: loads × ${fmt(c.plat.dld04LoadFactor)}, lower-bound sets.", mapOf("week" to ws.index.toString()), Confidence.WEAK))
                 WeekMode.NORMAL, WeekMode.TRAVEL_MAINTENANCE -> Unit
             }
@@ -267,7 +279,10 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
         if (n.goal == Goal.STRENGTH && row.kind in NO_STRENGTH_VARIANT || row.kind == SplitKind.FULL_BODY_1 || row.kind == SplitKind.FULL_BODY_2) {
             explanations.add(Explanations.of(listOf(RuleIds.FRQ_02), "${row.kind.name.lowercase()} has no strength variant: one exposure per main lift per week.", mapOf("split" to row.kind.name.lowercase()), Confidence.MODERATE))
         }
-        explanations.add(Explanations.of(listOf(RuleIds.SESS_01, RuleIds.SESS_02, RuleIds.VOL_06, RuleIds.VOL_07, RuleIds.DEF_05, RuleIds.VOL_03, RuleIds.TIME_02),
+        if (row.kind == SplitKind.CUSTOM) explanations.add(Explanations.of(listOf(RuleIds.SESS_01, RuleIds.SESS_02, RuleIds.VOL_06, RuleIds.VOL_07, RuleIds.OVERRIDE),
+            "Sets, reps, rest and exercises are your templates'; where they exceed the session-length, set-count or per-muscle guides the week notes say so — nothing is trimmed unasked.",
+            mapOf("split" to (row.id ?: "custom")), Confidence.WEAK))
+        else explanations.add(Explanations.of(listOf(RuleIds.SESS_01, RuleIds.SESS_02, RuleIds.VOL_06, RuleIds.VOL_07, RuleIds.DEF_05, RuleIds.VOL_03, RuleIds.TIME_02),
             "Sets are fitted into ${n.sessionMinutes}-minute sessions (≈ 1.75–4 min per set incl. rest), ≤ ${allocator.sessCap(n.trainingAge)} sets per session, ≤ ${c.vol.vol06PerSessionCap} sets per muscle per session and ≥ ${c.vol.vol07MinSetsPerAppearance} sets per exercise; a prime mover earns 1 set, a synergist 0.5.",
             mapOf("session_minutes" to n.sessionMinutes.toString(), "session_cap" to allocator.sessCap(n.trainingAge).toString()), Confidence.WEAK))
         weeks.firstOrNull { it.startDate == skel.currentWeekStart && it.mode != WeekMode.TRAVEL_MAINTENANCE }?.let { cw ->
@@ -332,7 +347,7 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
         val warmups = IntArray(schedule.size)
         val finishers = IntArray(schedule.size)
         for ((si, st) in schedule.withIndex()) {
-            val minutes = minutesOverride ?: n.sessionMinutes
+            val minutes = minutesOverride ?: st.template.minutes ?: n.sessionMinutes
             val warm = time.warmupMinutes(minutes, n.age >= c.wu.wu06AgeThreshold)
             val fin = if (profile.cardioInsideSessionMinutes) cardioWeek.filter { it.weekday == st.weekday && it.placement == CardioPlacement.FINISHER }.sumOf { it.minutes + FINISHER_TRANSITION_MIN } else 0
             warmups[si] = warm
@@ -340,6 +355,12 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
             val slots = ArrayList<AllocSlot>()
             for ((ii, pick) in picks[si].withIndex()) {
                 if (pick == null) continue
+                val fixed = pick.slot.sets
+                if (fixed != null && fixed > 0 && !travel) {
+                    // §3.4.1: a personal template's set count is the user's routine — neither filled, rebalanced nor trimmed here.
+                    slots.add(AllocSlot(si, ii, pick.slot, pick.exercise, pick.optionIndex, pick.loadType, fixed, fixed, sets = fixed, frozen = true, fixed = true))
+                    continue
+                }
                 val band = setsBand(pick, n, travel)
                 slots.add(AllocSlot(si, ii, pick.slot, pick.exercise, pick.optionIndex, pick.loadType, band.lo, band.hi))
             }
@@ -394,7 +415,26 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
                     Explanations.of(rules.toList(), msg, inputs, base.confidence))
             }
             val minutes = TimeModel.round2(allocator.minutes(s) + warmups[si] + finishers[si])
-            val notes = result.explanations.filter { it.inputs["template_id"] == st.template.id || (it.inputs["slot_id"] != null && it.inputs["template_id"] == null && s.slots.any { a -> a.slot.slotId == it.inputs["slot_id"] && a.exercise.id in listOf(it.inputs["to"], it.inputs["exercise_id"]) }) }
+            val notes = ArrayList(result.explanations.filter { it.inputs["template_id"] == st.template.id || (it.inputs["slot_id"] != null && it.inputs["template_id"] == null && s.slots.any { a -> a.slot.slotId == it.inputs["slot_id"] && a.exercise.id in listOf(it.inputs["to"], it.inputs["exercise_id"]) }) })
+            val templateMinutes = st.template.minutes
+            val ownRoutine = s.slots.isNotEmpty() && s.slots.all { it.fixed }
+            if (ownRoutine) {
+                val perMuscle = allocator.sessionFractional(s)
+                val over = com.gymcoach.core.model.Muscle.entries.filter { perMuscle[it.ordinal] > c.vol.vol06PerSessionCap + SetAllocator.EPS }
+                if (over.isNotEmpty()) notes.add(Explanations.of(listOf(RuleIds.VOL_06, RuleIds.OVERRIDE),
+                    "${st.template.name}: " + over.joinToString(", ") { "${TargetPolicy.muscleName(it)} ${fmt(perMuscle[it.ordinal])} sets" } +
+                        " in one session — above VOL-06's ${c.vol.vol06PerSessionCap}; sets past that add little, the isolation work for that muscle is the first to trim.",
+                    mapOf("template_id" to st.template.id, "muscles" to over.joinToString(",") { TargetPolicy.muscleKey(it) }), Confidence.WEAK))
+                val total = s.slots.sumOf { it.sets }
+                val cap = allocator.sessCap(n.trainingAge)
+                if (total > cap) notes.add(Explanations.of(listOf(RuleIds.SESS_02, RuleIds.OVERRIDE), "${st.template.name}: $total working sets — above the SESS-02 guide of $cap per session.",
+                    mapOf("template_id" to st.template.id, "sets" to total.toString()), Confidence.WEAK))
+            }
+            if (templateMinutes != null && ownRoutine && minutes > templateMinutes + c.sess.sess01BudgetToleranceMin) {
+                notes.add(Explanations.of(listOf(RuleIds.SESS_01, RuleIds.TIME_01, RuleIds.OVERRIDE),
+                    "${st.template.name}: about ${Math.round(minutes)} min by the SESS-01 set costs for your ~$templateMinutes-min session; nothing is trimmed in advance — enter the time you have on a short day and the session is cut in TIME-01 order.",
+                    mapOf("template_id" to st.template.id, "estimated_min" to TimeModel.round2(minutes).toString(), "template_min" to templateMinutes.toString()), Confidence.WEAK))
+            }
             out.add(PlannedSessionDraft(st.weekday, st.template.id, st.template.name, slots, minutes, notes, kb))
         }
         return out
@@ -465,6 +505,34 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
             ?: inputs.gyms.filter { !it.archived }.firstOrNull { it.presetOrigin == "hotel_gym" }
             ?: planGym(inputs)
     }
+
+    /** §3.4.1 personal split row named by Profile.splitId (null when unset or unknown). */
+    fun personalSplit(inputs: PlanInputs): SplitTemplate? = com.gymcoach.core.knowledge.SessionTemplates.personalSplit(kb, inputs.profile.splitId)
+
+    /**
+     * §3.4.1 closing test week: the lift closest to its target (Profile.strengthTargetsKg, best e1RM of its main progression
+     * state) gets the week's only heavy single; targets already reached are skipped while another is open (USER_PROFILE §2 rule).
+     */
+    fun testWeekNote(inputs: PlanInputs, weekIndex: Int): Explanation? {
+        val targets = inputs.profile.strengthTargetsKg ?: return null
+        val rows = targets.entries.sortedBy { it.key }.mapNotNull { (id, target) ->
+            if (target <= 0.0) return@mapNotNull null
+            val best = bestE1rm(inputs, id) ?: return@mapNotNull null
+            Triple(id, best, best / target)
+        }
+        if (rows.isEmpty()) return null
+        val open = rows.filter { it.third < 1.0 }
+        val pick = (open.ifEmpty { rows }).maxWithOrNull(compareBy<Triple<String, Double, Double>> { it.third }.thenByDescending { it.first }) ?: return null
+        val name = kb.exercise(pick.first)?.name ?: pick.first
+        val target = targets.getValue(pick.first)
+        return Explanations.of(listOf(RuleIds.DLD_01, RuleIds.LOAD_02, RuleIds.OVERRIDE),
+            "Test week: sessions at deload dose; $name — closest to its target (e1RM ${fmt(pick.second)} of ${fmt(target)} kg, ${Math.round(pick.third * 100)} %) — works up to a single. No other max singles.",
+            mapOf("exercise_id" to pick.first, "e1rm_kg" to fmt(pick.second), "target_kg" to fmt(target), "week" to weekIndex.toString()), Confidence.WEAK)
+    }
+
+    private fun bestE1rm(inputs: PlanInputs, exerciseId: String): Double? =
+        inputs.progressionStates.filter { it.key.exerciseId == exerciseId && it.key.variant == null }
+            .flatMap { s -> listOfNotNull(s.bestE1rm14d) + s.history.mapNotNull { h -> h.e1rm?.kg } }.maxOrNull()
 
     fun planGym(inputs: PlanInputs): GymSet =
         inputs.gyms.firstOrNull { it.id == inputs.defaultGymId } ?: inputs.gyms.firstOrNull { it.isDefault } ?: checkNotNull(inputs.gyms.firstOrNull()) { "PlanInputs.gyms is empty" }
@@ -592,6 +660,7 @@ class Planner(private val kb: KnowledgeBase, private val c: PlannerConstants) {
         const val FINISHER_TRANSITION_MIN: Int = 3
         const val FRQ03_TARGET: Double = 10.0
         const val UNDER_TARGET_EPS: Double = 0.005
+        const val TEST_WEEK: String = "test"
         const val AGE_POWER_SLOT: String = "age_power"
         const val AGE_POWER_INDEX: Int = -1
         const val POWER_PROFILE: String = "power"

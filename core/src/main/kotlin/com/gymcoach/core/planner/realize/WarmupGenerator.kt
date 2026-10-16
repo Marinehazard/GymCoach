@@ -69,6 +69,59 @@ class WarmupGenerator(private val kb: KnowledgeBase, private val c: PlannerConst
             Explanations.of(rules, msg, mapOf("total_min" to total.toString(), "wu05" to trimmed.toString(), "wu06" to wu06.toString()), Confidence.MODERATE))
     }
 
+    /**
+     * §3.4.1 personal template warm-up: `raise_minutes` of easy cardio on the first available `raise_exercise_ids` entry
+     * (else the RAISE_ORDER fallback, else calisthenics), then the template's own mobility block with its doses. Null when the
+     * template defines neither. Total minutes stay the time model's warm-up allowance ([totalMinutes]).
+     */
+    fun personal(template: com.gymcoach.core.model.SessionTemplate, totalMinutes: Int, equipment: SessionEquipment, ramps: Boolean): Warmup? {
+        val drills = template.warmupDrills
+        val raiseMin = template.raiseMinutes
+        if (drills == null && raiseMin == null) return null
+        val raise = (raiseMin ?: (totalMinutes - ACTIVATE_MINUTES)).coerceIn(0, totalMinutes)
+        val preferred = template.raiseExerciseIds.orEmpty().firstOrNull { id -> kb.exercise(id)?.let { resolver.resolve(it, equipment).available } == true }
+        val raiseEx = if (raise > 0) preferred ?: raiseExercise(equipment) else null
+        val prescriptions = drills.orEmpty().mapNotNull { dose ->
+            val d = kb.drills.firstOrNull { it.id == dose.drillId } ?: return@mapNotNull null
+            val text = dose.reps?.let { if (it.lo == it.hi) "${it.lo}" else "${it.lo}–${it.hi}" } ?: dose.seconds?.let { if (it.lo == it.hi) "${it.lo} s" else "${it.lo}–${it.hi} s" } ?: "8–10"
+            DrillPrescription(d.id, dose.sets, dose.reps ?: if (dose.seconds == null) d.doseReps ?: DEFAULT_REPS else null, dose.seconds,
+                Explanations.of(listOf(RuleIds.MOB_01, RuleIds.OVERRIDE), "${d.name}: ${dose.sets} × $text" + (dose.note?.let { " ($it)" } ?: "") + ".",
+                    mapOf("drill_id" to d.id, "joint" to d.joint.name.lowercase()), Confidence.WEAK))
+        }
+        val rules = ArrayList<String>()
+        rules.add(RuleIds.WU_01)
+        rules.add(RuleIds.MOB_01)
+        rules.add(RuleIds.WU_04)
+        rules.add(RuleIds.OVERRIDE)
+        if (ramps) {
+            rules.add(RuleIds.WU_02)
+            rules.add(RuleIds.WU_03)
+        }
+        val exName = raiseEx?.let { kb.exercise(it)?.name } ?: "calisthenics (2 min brisk march + 20 squats + 10 push-ups)"
+        val block = if (prescriptions.isEmpty()) "" else "your mobility block (${prescriptions.size} drills; holds ≤ 30–45 s before lifting), then "
+        val msg = (if (raise > 0) "$raise min easy $exName first; " else "") + block + "ramp sets before the first lift (they do not count as working sets)."
+        return Warmup(raise, raiseEx, prescriptions, totalMinutes,
+            Explanations.of(rules, msg, mapOf("total_min" to totalMinutes.toString(), "raise_min" to raise.toString(), "template_id" to template.id), Confidence.MODERATE))
+    }
+
+    /**
+     * §3.4.1 explicit ladder (`ramp`): each step's `pct` × the first working load (0 = the empty bar), rounded by LoadRounder,
+     * strictly increasing and below the working load; RAMP sets never count (WU-03). Rest 60 s.
+     */
+    fun ladderSets(exercise: Exercise, loadType: LoadType, workingLoadKg: Double?, ladder: List<com.gymcoach.core.model.RampStep>, params: GymParams): List<SetPrescription> {
+        if (workingLoadKg == null || workingLoadKg <= 0.0) return emptyList()
+        val out = ArrayList<SetPrescription>()
+        var lastKg = -1.0
+        for (step in ladder) {
+            val r = rounder.round(workingLoadKg * step.pct, exercise, loadType, params)
+            if (r.kg >= workingLoadKg - 1e-9) continue
+            if (r.kg <= lastKg + 1e-9) continue
+            lastKg = r.kg
+            out.add(SetPrescription(0, SetKind.RAMP, Band(step.reps, step.reps), null, null, r.kg, r.label, r.perHand, null, c.wu.wu02RampRestSec, LoadSource.PROGRESSION_STATE))
+        }
+        return out
+    }
+
     fun raiseExercise(equipment: SessionEquipment): String? {
         for (id in RAISE_ORDER) {
             val e = kb.exercise(id) ?: continue

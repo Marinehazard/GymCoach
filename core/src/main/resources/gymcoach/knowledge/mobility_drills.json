@@ -977,6 +977,200 @@
       "sources": [
         "R3 MOB-03"
       ]
+    },
+    {
+      "id": "goblet_squat_pry",
+      "name": "Goblet squat pry (hold the bottom, elbows push the knees out, shift side to side)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "squat_bottom_breathing",
+      "name": "Bottom-position breathing (deep squat hold, 5 slow breaths)",
+      "joint": "hips",
+      "kind": "dynamic",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "scapular_pull_up",
+      "name": "Scapular pull-up (dead hang, pull the shoulder blades down without bending the elbows)",
+      "joint": "shoulders",
+      "kind": "dynamic",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "open_book_rotation",
+      "name": "Open-book rotation (side lying, knees stacked, rotate the top arm open)",
+      "joint": "t_spine",
+      "kind": "dynamic",
+      "limitation_regions": [
+        "low_back",
+        "shoulder"
+      ],
+      "dose_reps": [
+        8,
+        10
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "figure_four_stretch",
+      "name": "Figure-4 stretch (supine, ankle over the opposite knee)",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "frog_stretch",
+      "name": "Frog stretch (knees wide on the floor, rock the hips back)",
+      "joint": "hips",
+      "kind": "static",
+      "limitation_regions": [
+        "hip"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "bent_knee_calf_stretch",
+      "name": "Bent-knee calf stretch (soleus, wall)",
+      "joint": "ankles",
+      "kind": "static",
+      "limitation_regions": [
+        "ankle"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "cross_body_shoulder_stretch",
+      "name": "Cross-body shoulder / rear-delt stretch",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "overhead_triceps_stretch",
+      "name": "Overhead triceps stretch",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "biceps_wall_stretch",
+      "name": "Biceps wall stretch (palm on the wall behind you, turn away)",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder",
+        "elbow_wrist"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "kneeling_lat_stretch",
+      "name": "Kneeling lat stretch (elbows on a bench, sit back)",
+      "joint": "shoulders",
+      "kind": "static",
+      "limitation_regions": [
+        "shoulder"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
+    },
+    {
+      "id": "upper_trap_stretch",
+      "name": "Upper-trap stretch (ear to shoulder, opposite hand down)",
+      "joint": "t_spine",
+      "kind": "static",
+      "limitation_regions": [
+        "neck"
+      ],
+      "dose_seconds": [
+        60,
+        60
+      ],
+      "sources": [
+        "USER_PROFILE §8 (Joe's routine)"
+      ]
     }
   ]
 }

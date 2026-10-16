@@ -60,20 +60,25 @@ class PlanValidator(private val kb: KnowledgeBase, private val c: PlannerConstan
             val equipment = gym?.let { SessionEquipment(it) }
             val minutes = if (w.mode == WeekMode.TRAVEL_MAINTENANCE) minOf(n.sessionMinutes, gym?.defaultSessionMinutes ?: n.sessionMinutes).coerceIn(c.trv.trv01Minutes.lo, c.trv.trv01Minutes.hi) else n.sessionMinutes
             for (s in w.sessions) {
-                // 2. minutes; 3. SESS-02 and VOL-06.
-                if (s.estimatedMinutes > minutes + c.sess.sess01BudgetToleranceMin + EPS) out.add("INV-2: ${s.id} ${fmt(s.estimatedMinutes)} min > $minutes")
-                val sets = s.slots.sumOf { it.sets }
-                if (sets > sessCap) out.add("INV-3: ${s.id} $sets sets > SESS-02 cap $sessCap")
-                for ((mu, v) in s.volumeFractional) if (v > c.vol.vol06PerSessionCap + EPS) out.add("INV-3: ${s.id} ${mu.name.lowercase()} ${fmt(v)} > VOL-06 ${c.vol.vol06PerSessionCap}")
                 val template = kb.templates[s.templateId]
+                // §3.4.1: a session whose every slot has a template-fixed set count is the user's own routine — its length, set
+                // total (SESS-02) and per-muscle sets (VOL-06) are explained with planner notes (Planner.allocateWeek), not enforced.
+                val ownRoutine = template != null && s.slots.isNotEmpty() && s.slots.all { p -> template.slots.firstOrNull { it.slotId == p.slotId }?.sets != null }
+                val sessionBudget = if (w.mode == WeekMode.TRAVEL_MAINTENANCE) minutes else template?.minutes ?: minutes
+                // 2. minutes; 3. SESS-02 and VOL-06.
+                if (!ownRoutine && s.estimatedMinutes > sessionBudget + c.sess.sess01BudgetToleranceMin + EPS) out.add("INV-2: ${s.id} ${fmt(s.estimatedMinutes)} min > $sessionBudget")
+                val sets = s.slots.sumOf { it.sets }
+                if (!ownRoutine && sets > sessCap) out.add("INV-3: ${s.id} $sets sets > SESS-02 cap $sessCap")
+                if (!ownRoutine) for ((mu, v) in s.volumeFractional) if (v > c.vol.vol06PerSessionCap + EPS) out.add("INV-3: ${s.id} ${mu.name.lowercase()} ${fmt(v)} > VOL-06 ${c.vol.vol06PerSessionCap}")
                 for (slot in s.slots) {
                     val e = kb.exercise(slot.exerciseId)
                     if (e == null) { out.add("INV-4: ${s.id}/${slot.slotId} unknown exercise ${slot.exerciseId}"); continue }
                     // 4. availability and exclusions.
                     if (equipment != null && !resolver.resolve(e, equipment).available) out.add("INV-4: ${s.id}/${slot.slotId} ${e.id} unavailable at ${gym?.id}")
                     if (e.id in n.excludedExerciseIds) out.add("INV-4: ${s.id}/${slot.slotId} ${e.id} is excluded")
-                    // 13. VOL-07.
-                    if (slot.sets in 1 until c.vol.vol07MinSetsPerAppearance) out.add("INV-13: ${s.id}/${slot.slotId} ${slot.sets} set(s) < VOL-07 ${c.vol.vol07MinSetsPerAppearance}")
+                    // 13. VOL-07 — per exercise per session appearance (a §3.4.1 top set + its back-off slot are one appearance).
+                    val appearance = s.slots.filter { it.exerciseId == slot.exerciseId }.sumOf { it.sets }
+                    if (slot.sets >= 1 && appearance < c.vol.vol07MinSetsPerAppearance) out.add("INV-13: ${s.id}/${slot.slotId} ${slot.sets} set(s) < VOL-07 ${c.vol.vol07MinSetsPerAppearance}")
                     // 14. difficulty gate.
                     if (n.beginnerOnly && e.difficulty != Difficulty.BEGINNER) out.add("INV-14: ${s.id}/${slot.slotId} ${e.id} is ${e.difficulty.name.lowercase()} in a beginner-only plan")
                     if (e.difficulty == Difficulty.ADVANCED && !inputs.profile.allowAdvancedExercises) out.add("INV-14: ${s.id}/${slot.slotId} ${e.id} is advanced")

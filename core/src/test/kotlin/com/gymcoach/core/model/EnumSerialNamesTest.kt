@@ -44,7 +44,7 @@ class EnumSerialNamesTest {
     @Test fun side() = check(Side.serializer(), Side.entries, 3)
     @Test fun medicalFlag() = check(MedicalFlag.serializer(), MedicalFlag.entries, 8)
     @Test fun muscleTier() = check(MuscleTier.serializer(), MuscleTier.entries, 3)
-    @Test fun splitKind() = check(SplitKind.serializer(), SplitKind.entries, 9)
+    @Test fun splitKind() = check(SplitKind.serializer(), SplitKind.entries, 10)   // + CUSTOM (§3.4.1, Phase 2)
     @Test fun weekMode() = check(WeekMode.serializer(), WeekMode.entries, 4)
     @Test fun slotRole() = check(SlotRole.serializer(), SlotRole.entries, 6)
     @Test fun sessionMode() = check(SessionMode.serializer(), SessionMode.entries, 6)

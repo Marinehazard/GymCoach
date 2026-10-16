@@ -37,9 +37,16 @@ object SessionTemplates {
             (split.forGoals.isEmpty() || goal in split.forGoals) &&
             (split.forTrainingAges.isEmpty() || trainingAge in split.forTrainingAges)
 
-    /** Every applicable row in file order (the travel_2 row is excluded: it is chosen by week mode, never by the row walk). */
+    /**
+     * Every applicable row in file order. Excluded: the travel_2 row (chosen by week mode, never by the row walk) and the
+     * §3.4.1 personal `custom` rows (chosen only through Profile.splitId, see [personalSplit]).
+     */
     fun applicableSplits(kb: KnowledgeBase, daysPerWeek: Int, goal: Goal, trainingAge: TrainingAge): List<SplitTemplate> =
-        kb.splits.filter { it.kind != com.gymcoach.core.model.SplitKind.TRAVEL_2 && applies(it, daysPerWeek, goal, trainingAge) }
+        kb.splits.filter { it.kind != com.gymcoach.core.model.SplitKind.TRAVEL_2 && it.kind != com.gymcoach.core.model.SplitKind.CUSTOM && applies(it, daysPerWeek, goal, trainingAge) }
+
+    /** §3.4.1: the personal split row with this id (kind `custom`), or null. */
+    fun personalSplit(kb: KnowledgeBase, splitId: String?): SplitTemplate? =
+        splitId?.let { id -> kb.splits.firstOrNull { it.kind == com.gymcoach.core.model.SplitKind.CUSTOM && it.id == id } }
 
     /** The templates of a split row, in weekly order. */
     fun templatesOf(kb: KnowledgeBase, split: SplitTemplate): List<SessionTemplate> = split.sessionTemplateIds.map { requireTemplate(kb, it) }

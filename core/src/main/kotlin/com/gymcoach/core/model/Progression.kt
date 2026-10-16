@@ -15,8 +15,13 @@ import kotlinx.serialization.UseSerializers
  * (E1RM-04, TRV-04; decision record H6). gymScope is the GymSet id or null.
  */
 @Serializable
-data class ProgressionKey(@SerialName("exercise_id") val exerciseId: String, @SerialName("gym_scope") val gymScope: String? = null) {
-    val id: String get() = if (gymScope == null) exerciseId else "$exerciseId@$gymScope"
+data class ProgressionKey(
+    @SerialName("exercise_id") val exerciseId: String,
+    @SerialName("gym_scope") val gymScope: String? = null,
+    /** §3.4.1: a second track of the same exercise, e.g. "backoff" for the back-off sets after a top set (null = the main track). */
+    val variant: String? = null,
+) {
+    val id: String get() = (if (variant == null) exerciseId else "$exerciseId#$variant") + (if (gymScope == null) "" else "@$gymScope")
     companion object {
         fun forExercise(exerciseId: String, effectiveLoadType: LoadType, gymId: String): ProgressionKey =
             ProgressionKey(exerciseId, if (effectiveLoadType.isGymScoped) gymId else null)

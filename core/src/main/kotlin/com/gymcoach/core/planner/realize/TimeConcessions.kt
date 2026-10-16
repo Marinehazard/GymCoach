@@ -24,6 +24,7 @@ class WorkBlock(
     var group: String?,
     val backoffOf: String? = null,
     val power: Boolean = false,
+    val personal: com.gymcoach.core.model.SlotTemplate? = null,   // §3.4.1 personal-template slot (fixed reps/RIR/rest, ramp, variant, note); null for generic slots
 ) {
     var substitutedFor: String? = null
     var droppedBy: String? = null

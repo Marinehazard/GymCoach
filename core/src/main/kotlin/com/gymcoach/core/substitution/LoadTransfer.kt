@@ -59,9 +59,11 @@ class LoadTransfer(private val kb: KnowledgeBase) {
         val src = Source(from, fromLoadKg, "replaced")
         file.seeds.firstOrNull { it.fromExerciseId == from.id && it.toExerciseId == to.id }?.let { return direct(it, src, to, effectiveLoadType) }
         generic(src, to, effectiveLoadType)?.let { return it }
-        // The closest sibling (highest muscle-vector cosine with `to`; file order on ties) carries the seed.
+        // The closest sibling (highest muscle-vector cosine with `to`; file order on ties) carries the seed. A machine/sled sibling
+        // never carries a free-weight target and vice versa: its factor is on the machine's own scale (back squat → leg press
+        // × 2.0 "sled load" must not seed a Smith squat at 180 kg).
         val mids = file.seeds.filter { it.fromExerciseId == from.id }.mapNotNull { sd -> kb.exercise(sd.toExerciseId)?.let { sd to it } }
-            .filter { (_, mid) -> mid.pattern == to.pattern && mid.id != to.id }
+            .filter { (_, mid) -> mid.pattern == to.pattern && mid.id != to.id && machineScale(mid.loadType) == machineScale(effectiveLoadType) }
         val best = mids.withIndex().maxWithOrNull(compareBy<IndexedValue<Pair<LoadTransferSeed, Exercise>>>({ SubstitutionEngine.cosine(it.value.second, to) }, { -it.index }))?.value
         if (best != null) {
             val (seed, mid) = best
@@ -75,6 +77,8 @@ class LoadTransfer(private val kb: KnowledgeBase) {
         }
         return null
     }
+
+    private fun machineScale(lt: LoadType): Boolean = lt == LoadType.MACHINE || lt == LoadType.CABLE || lt == LoadType.SLED
 
     /** R4 body-weight-fraction seed (male novice basis; female × 0.6, intermediate × 1.4, advanced × 1.7). */
     fun bodyweight(to: Exercise, effectiveLoadType: LoadType, profile: Profile, trainingAge: TrainingAge, bodyWeightKg: Double): Pair<Double, Explanation>? {

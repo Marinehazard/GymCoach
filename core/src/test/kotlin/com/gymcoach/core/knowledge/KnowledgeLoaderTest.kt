@@ -46,7 +46,7 @@ class KnowledgeLoaderTest {
         assertEquals(listOf("base_gym", "home_gym", "hotel_gym", "travel_kit"), kb.presets.keys.toList())
         assertEquals(15, kb.checkinQuestions.size)
         assertEquals(14, kb.rpLandmarks.size)
-        assertTrue(kb.splits.size == 13)
+        assertTrue(kb.splits.size == 14)   // 13 generic rows + the Phase-2 personal row joe_5day (§3.4.1)
         assertTrue(kb.drills.isNotEmpty())
         assertTrue(kb.nutritionTips.isNotEmpty())
     }

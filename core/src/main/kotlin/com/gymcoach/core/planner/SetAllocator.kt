@@ -33,6 +33,7 @@ class AllocSlot(
     var group: String? = null,
     val extraRules: LinkedHashSet<String> = LinkedHashSet(),
     val notes: MutableList<String> = ArrayList(),
+    val fixed: Boolean = false,                       // §3.4.1 personal-template set count: never filled, rebalanced or trimmed
 ) {
     val required: Boolean get() = slot.required
     val heavy: Boolean get() = slot.heavy
@@ -67,6 +68,7 @@ class SetAllocator(private val kb: KnowledgeBase, private val c: PlannerConstant
         val sessCap = sessCap(trainingAge)
         for (s in sessions) {
             for (a in s.slots) if (a.required && a.sets == 0 && !a.frozen) a.sets = a.lo
+            if (s.slots.isNotEmpty() && s.slots.all { it.fixed }) continue   // the user's own routine (§3.4.1)
             fitMinimum(s, notes)
             while (setsOf(s) > sessCap) if (!dropOneSet(s)) break
         }
@@ -95,11 +97,12 @@ class SetAllocator(private val kb: KnowledgeBase, private val c: PlannerConstant
         if (minutes(s) <= s.budget + EPS) return
         val byPriority = s.slots.withIndex().sortedWith(compareBy<IndexedValue<AllocSlot>>({ rolePriority(it.value.slot.role) }, { -it.index })).map { it.value }
         for (a in byPriority) {
+            if (a.fixed) continue
             while (a.sets > c.vol.vol07MinSetsPerAppearance && minutes(s) > s.budget + EPS) a.sets--
             if (minutes(s) <= s.budget + EPS) return
         }
         for (a in byPriority) {
-            if (a.slot.role == SlotRole.PRIMARY) continue
+            if (a.slot.role == SlotRole.PRIMARY || a.fixed) continue
             if (a.sets == 0) continue
             a.sets = 0
             a.frozen = true
@@ -112,7 +115,7 @@ class SetAllocator(private val kb: KnowledgeBase, private val c: PlannerConstant
     }
 
     private fun dropOneSet(s: AllocSession): Boolean {
-        val a = s.slots.withIndex().filter { it.value.sets > c.vol.vol07MinSetsPerAppearance }
+        val a = s.slots.withIndex().filter { it.value.sets > c.vol.vol07MinSetsPerAppearance && !it.value.fixed }
             .sortedWith(compareBy<IndexedValue<AllocSlot>>({ rolePriority(it.value.slot.role) }, { -it.index })).firstOrNull()?.value ?: return false
         a.sets--
         return true
