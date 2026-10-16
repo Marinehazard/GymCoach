@@ -30,7 +30,7 @@ class EquipmentResolver(private val kb: KnowledgeBase) {
         val params = GymParams(kb, equipment)
         val safeties = satisfied(RACK_OR_SPOTTER, equipment, params)
         exercise.equipmentOptions.forEachIndexed { index, option ->
-            if (option.allOf.all { satisfied(it, equipment, params) }) {
+            if (option.allOf.all { satisfied(it, equipment, params) } && modeOk(exercise.id, option.allOf, params)) {
                 return Availability(true, index, option.loadType ?: exercise.loadType, safeties, emptyList())
             }
         }
@@ -42,7 +42,7 @@ class EquipmentResolver(private val kb: KnowledgeBase) {
         val out = LinkedHashSet<String>()
         for (id in kb.exerciseOrder) {
             val e = kb.exercises[id] ?: continue
-            if (e.equipmentOptions.any { o -> o.allOf.all { satisfied(it, equipment, params) } }) out.add(id)
+            if (e.equipmentOptions.any { o -> o.allOf.all { satisfied(it, equipment, params) } && modeOk(e.id, o.allOf, params) }) out.add(id)
         }
         return out
     }
@@ -76,6 +76,17 @@ class EquipmentResolver(private val kb: KnowledgeBase) {
         return equipment.items.any { (kb.renamedEquipmentIds[it.equipmentId] ?: it.equipmentId) == id }
     }
 
+    /**
+     * Machine modes declared as boolean params (R4 §2.6, default true): an exercise listed in [MODE_GATES] needs the mode on
+     * the machine its option names — `reverse_pec_deck` needs `pec_deck_machine.has_rear_delt_mode` (a fly machine without
+     * the rear-delt setting does not serve it).
+     */
+    private fun modeOk(exerciseId: String, items: List<String>, params: GymParams): Boolean {
+        val (equipmentId, param) = MODE_GATES[exerciseId] ?: return true
+        if (equipmentId !in items) return true
+        return params.bool(equipmentId, param) ?: true
+    }
+
     /** Missing items of the option with the fewest unsatisfied items (first option on a tie). */
     private fun bestMissing(options: List<EquipmentOption>, equipment: SessionEquipment, params: GymParams): List<String> {
         var best: List<String>? = null
@@ -92,5 +103,8 @@ class EquipmentResolver(private val kb: KnowledgeBase) {
         const val POWER_RACK: String = "power_rack"
         const val HALF_RACK: String = "half_rack"
         const val SPOTTER: String = "spotter"
+
+        /** exerciseId -> (equipmentId, boolean mode param that must not be false). */
+        val MODE_GATES: Map<String, Pair<String, String>> = mapOf("reverse_pec_deck" to ("pec_deck_machine" to "has_rear_delt_mode"))
     }
 }

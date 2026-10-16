@@ -1,0 +1,285 @@
+{
+  "schema_version": 1,
+  "id": "joe_v1",
+  "display_name": "Joe",
+  "source": "docs/USER_PROFILE.md (last updated 15 Oct 2026)",
+  "units": "metric",
+  "profile": {
+    "sex": "male",
+    "birth_year": 1978,
+    "height": {
+      "entered": 180.0,
+      "unit": "cm",
+      "cm": 180.0
+    },
+    "training_months_consistent": 120,
+    "goal": "hypertrophy",
+    "days_per_week": 5,
+    "session_minutes": 75,
+    "preferred_weekdays": [
+      1,
+      2,
+      4,
+      5,
+      6
+    ],
+    "limitations": [
+      {
+        "id": "lim-left-knee-valgus",
+        "region": "knee",
+        "side": "left",
+        "pain_0_10": 0,
+        "since": "2026-10-03",
+        "active": true,
+        "limited_range": false,
+        "notes": "Left knee drifts in under heavy squats (no injury). Fix: banded lateral walks before the bar (+5 toward the left), Bulgarian split squats left leg first, abductor, hip thrust; cue \"spread the floor\"."
+      },
+      {
+        "id": "lim-hips-rise-first",
+        "region": "other",
+        "side": "both",
+        "pain_0_10": 0,
+        "since": "2026-09-29",
+        "active": true,
+        "limited_range": false,
+        "notes": "Hips rise first out of the hole (slow middle third). Fix: pause squats, hack squat for quad strength, cue \"chest up, knees forward\"; setup under 10 s."
+      },
+      {
+        "id": "lim-overshooting",
+        "region": "other",
+        "side": "both",
+        "pain_0_10": 0,
+        "since": "2026-10-04",
+        "active": true,
+        "limited_range": false,
+        "notes": "Habit: overshooting — turning working sets into max attempts, adding reps beyond the plan. Barbell lifts capped at RPE 8 (RIR 2); the top set is the set; no max singles outside test weeks."
+      }
+    ],
+    "priority_muscles": [
+      "biceps",
+      "triceps",
+      "side_delts"
+    ],
+    "known_loads_kg": {
+      "back_squat": 90.0,
+      "barbell_bench_press": 80.0,
+      "overhead_press_barbell": 45.0,
+      "conventional_deadlift": 140.0,
+      "close_grip_bench_press": 65.0,
+      "bulgarian_split_squat": 12.0,
+      "incline_dumbbell_press": 48.0
+    },
+    "physical_job": true,
+    "updated_at": "2026-10-15T00:00:00Z",
+    "split_id": "joe_5day",
+    "strength_targets_kg": {
+      "overhead_press_barbell": 60.0,
+      "barbell_bench_press": 100.0,
+      "back_squat": 140.0,
+      "conventional_deadlift": 180.0
+    },
+    "barbell_rir_floor": 2,
+    "coach_notes": [
+      "Goal #1 is to look good (muscle, arms, abs, shoulders); the 1-2-3-4 plate strength targets (OHP 60, bench 100, squat 140, deadlift 180 kg) are the vehicle.",
+      "Field service technician: physical shifts up to 12 h. Work days count as training load: in heavy work weeks train 4 days and drop the arms day first; tired after a hard work day → rest, don't force it.",
+      "Top set = one triple at RPE 8 (2 reps left); increase only when it feels like RPE 7. Back-offs: 3 sets, 5 → 6 → 7 reps, then +5 kg and back to 5s. Accessories: double progression.",
+      "Barbell lifts never above RPE 8; no max singles outside test weeks; failure only on the last set of isolation / machine work. Known habit to watch: overshooting (maxing instead of working sets, extra reps).",
+      "6-week cycle, then a test week on the lift closest to its target. When a target falls, lock it (hit twice, clean), then shift effort to the lift furthest away. No heavy deadlifts within 4 days of a squat test.",
+      "Logs 3 numbers per session: top set, last back-off set, one accessory pushed that cycle; everything else on feel.",
+      "Tight grip / elbows after arm work → forearm flexor and extensor stretches.",
+      "Recovery: protein 1.6–2 g/kg/day; sleep is the biggest lever; long work days are the main threat. Pre-workout coffee 30–45 min before (max 2 cups), carbs 60–90 min before; protein within 1–2 h after."
+    ]
+  },
+  "body_metrics": [],
+  "gyms": [
+    {
+      "id": "gym-joe-home",
+      "name": "Home gym",
+      "preset_origin": "home_gym",
+      "items": [
+        {
+          "equipment_id": "barbell",
+          "params": {
+            "bar_kg": 20
+          }
+        },
+        {
+          "equipment_id": "plates",
+          "params": {
+            "smallest_plate_kg": 2.5,
+            "has_microplates": false
+          }
+        },
+        {
+          "equipment_id": "ez_bar"
+        },
+        {
+          "equipment_id": "dumbbells"
+        },
+        {
+          "equipment_id": "adjustable_bench"
+        },
+        {
+          "equipment_id": "power_rack",
+          "params": {
+            "has_safeties": true,
+            "has_pullup_bar": false
+          }
+        },
+        {
+          "equipment_id": "smith_machine"
+        },
+        {
+          "equipment_id": "cable_single"
+        },
+        {
+          "equipment_id": "cable_rope"
+        },
+        {
+          "equipment_id": "pec_deck_machine",
+          "params": {
+            "has_rear_delt_mode": false
+          }
+        },
+        {
+          "equipment_id": "pull_up_bar"
+        },
+        {
+          "equipment_id": "hip_thrust_machine"
+        },
+        {
+          "equipment_id": "resistance_bands"
+        },
+        {
+          "equipment_id": "foam_roller"
+        },
+        {
+          "equipment_id": "rower"
+        },
+        {
+          "equipment_id": "stationary_bike"
+        }
+      ],
+      "color_index": 0,
+      "travel_kit_merged": false,
+      "notes": "USER_PROFILE §11: barbell + rack, bench with safety arms, Smith machine, dumbbells, EZ bar, cable station, fly machine, chin-up bar, hip thrust machine, oblique machine. No 1.25 kg plates (smallest plate 2.5 kg → 5 kg barbell jumps). The oblique machine has no equipment-catalogue entry (the plan uses a cable woodchop). Added from the §8 routine, not listed in §11 — remove them here if the home gym lacks them: resistance bands, foam roller, rower, stationary bike, rope attachment.",
+      "is_default": true,
+      "archived": false,
+      "created_at": "2026-10-15T00:00:00Z",
+      "schema_version": 1
+    },
+    {
+      "id": "gym-joe-bigger",
+      "name": "Bigger gym",
+      "preset_origin": "base_gym",
+      "items": [
+        {
+          "equipment_id": "barbell",
+          "params": {
+            "bar_kg": 20
+          }
+        },
+        {
+          "equipment_id": "plates",
+          "params": {
+            "smallest_plate_kg": 1.25,
+            "has_microplates": false
+          }
+        },
+        {
+          "equipment_id": "ez_bar"
+        },
+        {
+          "equipment_id": "dumbbells"
+        },
+        {
+          "equipment_id": "adjustable_bench"
+        },
+        {
+          "equipment_id": "power_rack",
+          "params": {
+            "has_safeties": true,
+            "has_pullup_bar": false
+          }
+        },
+        {
+          "equipment_id": "smith_machine"
+        },
+        {
+          "equipment_id": "cable_single"
+        },
+        {
+          "equipment_id": "cable_rope"
+        },
+        {
+          "equipment_id": "pec_deck_machine",
+          "params": {
+            "has_rear_delt_mode": true
+          }
+        },
+        {
+          "equipment_id": "pull_up_bar"
+        },
+        {
+          "equipment_id": "hip_thrust_machine"
+        },
+        {
+          "equipment_id": "resistance_bands"
+        },
+        {
+          "equipment_id": "foam_roller"
+        },
+        {
+          "equipment_id": "rower"
+        },
+        {
+          "equipment_id": "stationary_bike"
+        },
+        {
+          "equipment_id": "hack_squat_machine"
+        },
+        {
+          "equipment_id": "leg_press_45"
+        },
+        {
+          "equipment_id": "leg_extension_machine"
+        },
+        {
+          "equipment_id": "lying_leg_curl_machine"
+        },
+        {
+          "equipment_id": "hip_abduction_machine"
+        },
+        {
+          "equipment_id": "standing_calf_raise_machine"
+        },
+        {
+          "equipment_id": "shoulder_press_machine"
+        },
+        {
+          "equipment_id": "lateral_raise_machine"
+        }
+      ],
+      "color_index": 1,
+      "travel_kit_merged": false,
+      "notes": "USER_PROFILE §11: the home set plus hack squat, leg press, leg extension, lying leg curl, abductor, standing calf raise, shoulder press machine, lateral raise machine and reverse pec-deck; 1.25 kg plates available (2.5 kg barbell jumps). Available from 6 Oct 2026 for about three weeks.",
+      "is_default": false,
+      "archived": false,
+      "created_at": "2026-10-15T00:00:00Z",
+      "schema_version": 1
+    }
+  ],
+  "default_gym_id": "gym-joe-home",
+  "history": {
+    "sessions": [],
+    "sets": []
+  },
+  "progression_seeds": [],
+  "placeholders": [
+    "profile.height (180 cm is a placeholder: not in USER_PROFILE.md)",
+    "body weight (not in USER_PROFILE.md: enter it on the first morning)"
+  ],
+  "notes": [
+    "Generated from docs/USER_PROFILE.md; every logged number is copied verbatim (RPE 8 = RIR 2; the logged RPE text is kept in the set note)."
+  ]
+}
