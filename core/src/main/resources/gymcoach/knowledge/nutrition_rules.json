@@ -88,6 +88,30 @@
       "body": "Alcohol on the road follows NUT-13.",
       "confidence": "weak",
       "citation": "convention (R3 NUT-14)"
+    },
+    {
+      "id": "user_pre_workout_coffee",
+      "rule_id": "NUT-12",
+      "title": "Your pre-workout: coffee",
+      "body": "Coffee 30–45 min before the session, 2 cups at most (your own routine).",
+      "confidence": "weak",
+      "citation": "user note (docs/USER_PROFILE.md §12)"
+    },
+    {
+      "id": "user_pre_workout_carbs",
+      "rule_id": "NUT-12",
+      "title": "Your pre-workout: carbs",
+      "body": "Carbs 60–90 min before, low in fat (e.g. pancakes with jam, honey or banana); within the last 30 min only a banana or toast.",
+      "confidence": "weak",
+      "citation": "user note (docs/USER_PROFILE.md §12)"
+    },
+    {
+      "id": "user_post_workout_protein",
+      "rule_id": "NUT-12",
+      "title": "Your post-workout: protein",
+      "body": "A protein meal within 1–2 h after the session (fits NUT-12: a protein meal within about 2 h either side).",
+      "confidence": "weak",
+      "citation": "user note (docs/USER_PROFILE.md §12)"
     }
   ]
 }
