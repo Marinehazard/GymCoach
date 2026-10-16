@@ -159,6 +159,42 @@ Contract additions and corrections found while integrating WP-02…WP-05 (code o
    places listed by WP-03 (Stage 3–5 allocation tie-breaks, E3 DB-bench ramp 16 kg, E2 glute bridge 0.511, E2 warm-up
    drills `cat_cow`/`bodyweight_squat`, G5 travel session 40 min); the golden files under `core/src/test` are normative.
 
+### 0.7 Phase 2 (2026-10-16, `phase2/profile`: the app fits the real user, as data)
+
+Contract extensions. Every new field is optional: nullable or defaulted, and nulls are omitted from stored JSON. So
+Phase-1 documents, input hashes and the twelve generic golden plans are byte-identical.
+1. §3.4.1 personal templates and split rows:
+   - `SlotTemplate` gains `exercise_ids`, `sets`, `reps`, `rir`, `rest_seconds`, `progression_variant`, `load_factor`,
+     `ramp`, `note`.
+   - `SessionTemplate` gains `minutes`, `raise_minutes`, `raise_exercise_ids`, `warmup_drills`, `cooldown_drills`,
+     `lower`.
+   - `SplitTemplate` gains `id`, `drop_order`, `accumulation_weeks`, `closing_week`, `min_days_squat_to_hinge`.
+   - New `RampStep` and `DrillDose`; `SplitKind.CUSTOM` (`"custom"`).
+2. `ProgressionKey.variant` (nullable): `id` = `exerciseId` + `#variant` + `@gymScope`. The back-off sets after a top
+   set progress on their own track (`back_squat#backoff`).
+3. `Profile` gains `split_id`, `strength_targets_kg`, `barbell_rir_floor` (user RPE cap: barbell/Smith compound working
+   sets never below this RIR) and `coach_notes`.
+4. §3.11 seed profiles (`gymcoach/profiles/<id>.json`, `seed/SeedProfile.kt`, `SeedProfiles`).
+5. §6.5: additive profile keys `split`, `strength_targets`, `barbell_rir_floor`, `barbell_rpe_cap`, `physical_job`,
+   `notes`, plus per-limitation `notes`. They are present only when set, so the pinned key order of generic profiles is
+   unchanged. The system prompt is unchanged.
+
+Behaviour changes:
+6. §4.16:
+   - INV-13 (VOL-07) counts sets per exercise per session appearance. A top-set slot and its back-off slot form one
+     appearance.
+   - For a session whose every slot has a template-fixed set count (the user's own routine), INV-2 (minutes), INV-3
+     SESS-02 (sets) and INV-3 VOL-06 (per muscle) are reported as week notes (`SESS-01`/`TIME-01`, `SESS-02`, `VOL-06`
+     with `OVERRIDE`) instead of failing the plan. Nothing in the routine is trimmed unasked: realization uses
+     max(template minutes, planned estimate) unless a shorter time is entered for the day.
+7. §4.12 `LoadTransfer.fromReplaced`: the closest-sibling chain never crosses the machine/sled scale. A 90 kg back squat
+   used to seed a 180 kg Smith squat through `leg_press_45` × 2.0 ("sled load"); now `front_squat` × 0.8 gives 72 kg.
+8. R4 §2.6 machine modes: `reverse_pec_deck` needs `pec_deck_machine.has_rear_delt_mode` (default true, so existing gyms
+   are unchanged).
+9. Expectation updates for new rows/values, not weakened tests: 14 split rows (was 13), SplitKind has 10 values (was 9).
+   Twelve new drills are appended to `mobility_drills.json` with empty `patterns`, so the generic warm-up picks and the
+   chronic-dose holds are unchanged.
+
 ---
 
 ## 1. Architecture, module layout, house rules, build files
@@ -3800,6 +3836,30 @@ rows are listed in this file order and `SplitSelector` takes the first applicabl
 at 3 days always lands on `full_body_3`, at 6 days on `ppl_6`; a NOVICE with goal STRENGTH at 3 days
 lands on `full_body_3` and gets the FRQ-02 note). `SplitSelectorTest` asserts this exhaustively.
 
+#### 3.4.1 Personal templates and split rows (Phase 2)
+
+A personal split row has `kind: "custom"` and an `id`. The generic row walk never chooses it
+(`SessionTemplates.applicableSplits` excludes it); `Profile.split_id` names it, and `Planner.plan` tries it first, with the
+generic chain as the fallback. Its templates are normal session templates plus optional fields:
+
+| Field | Effect |
+|---|---|
+| slot `exercise_ids` | Preference list: the first listed exercise that is available, not excluded and inside the slot patterns takes the slot (`SEL` + `OVERRIDE`). User pins win over it, and permanent swaps still apply. With none available, normal SEL scoring runs. |
+| slot `sets` | Fixed working sets: the allocator never fills, rebalances or trims them. `AllocSlot.fixed`. |
+| slot `reps` / `rir` / `rest_seconds` | Replace the rep-profile band, the RIR-04 week offsets (floors, readiness, deload and layoff still apply) and the REST-0x rest. |
+| slot `progression_variant` + `load_factor` | The block's `ProgressionKey.variant`. With no state of its own, the load is `load_factor` × the main track's load. |
+| slot `ramp` | Explicit warm-up ladder `[{pct, reps}]` (0 = the empty bar) instead of the WU-02 percentages; back-off blocks after their own top set get no second ramp. |
+| slot `note` | A cue appended to the block explanation (`inputs.note`). |
+| template `minutes` | The template's session length (budget, warm-up basis). |
+| template `raise_minutes` / `raise_exercise_ids` | The WU-01 raise: the first available modality, else the RAISE_ORDER fallback. |
+| template `warmup_drills` / `cooldown_drills` | `DrillDose {drill_id, sets, reps?, seconds?, note?}`: the template's own mobility block (replaces the automatic MOB-01 pick) and its stretch list (prepended to the MOB-02 cool-down). |
+| row `drop_order` | With fewer scheduled days than the row has, these templates are dropped first (then from the end of the week). Kept templates keep their weekdays. |
+| row `accumulation_weeks` + `closing_week: "test"` | DLD-01 override: N accumulation weeks, then a test week (deload-dosed). Its note names the lift closest to its `strength_targets_kg` target (best e1RM of the main track; targets already reached are skipped while another is open). |
+| row `min_days_squat_to_hinge` | The heavy squat and heavy hinge days are checked on the circular week. A shortfall is explained (SPLIT-02), never silently reordered; personal rows are never rotated. |
+
+The shipped personal row is `joe_5day` (templates `JOE_A`…`JOE_E`, USER_PROFILE §3/§8). `KnowledgeValidator` rule 10
+checks every field above.
+
 ### 3.5 `rules.json` — every rule with provenance; constants = `PlannerConstants` defaults
 
 One `RuleEntry` per R3 §10 row (statement verbatim from the R3 table, `confidence` = the R3 tag
@@ -4136,7 +4196,26 @@ to the block's `warnings`/`SessionPlan.modifiers` (and the session ViewModel rec
 `Adjustment(kind = AdjustmentKind.ROUNDING)`). `ROUNDING` is a planner-convention rule id present
 in `rules.json` (§3.5), so invariant 10 accepts it.
 
+### 3.11 Seed profiles (`gymcoach/profiles/<id>.json`, Phase 2; §3.10 is not used)
+
+A seed profile is a shipped starting point for one real user (`SeedProfile`: `schema_version`, `id`, `display_name`,
+`source`, `units`, `profile`, `body_metrics`, `gyms`, `default_gym_id`, `history {sessions, sets}`,
+`progression_seeds [{exercise_id, variant?, working_load_kg, reps, target_rir, source}]`, `placeholders`, `notes`;
+decoded strictly with `CoreJson.assets`).
+- History is the user's own log copied verbatim. RPE is converted to RIR (RPE 8 = RIR 2) and the logged RPE text is
+  kept in `SetLog.note`. Set `block_id` `<session>:top|:backoff|:acc` names the set's role.
+- `SeedProfiles.validate(seed, kb)` checks ids, equipment params, the split id, exercise references and the
+  logged-number invariant (entered = kg for kg entries).
+- `SeedProfiles.progressionStates` builds PROGRESSING states from the progression seeds, with history summaries and
+  e1RM taken from the log. `planInputs` assembles PlanInputs.
+- Onboarding (§8.5) prefills every page from `SeedProfiles.classpath()` on the first run, creates all seed gyms and
+  imports history and states idempotently. "Start from scratch" keeps the generic path.
+- `placeholders` lists the facts the source does not contain; onboarding asks for them.
+
+Shipped: `joe_v1` (from `docs/USER_PROFILE.md`). The golden case `joe_home_5day` (§10.4) plans it at the Home gym.
+
 ---
+
 ## 4. Planner and progression (WP-01 owns §4.1 `PlannerConstants.kt` and §4.10 `E1rm.kt`; WP-03 §4.2–4.8, 4.12–4.16; WP-04 §4.9, 4.11)
 
 The plan is a **pure function**: `Mesocycle = Planner.plan(inputs, today)`. Nothing edits a plan in
