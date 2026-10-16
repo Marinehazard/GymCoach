@@ -52,6 +52,10 @@ androidx-room-compiler = { module = "androidx.room:room-compiler", version.ref =
 # Network
 okhttp = { module = "com.squareup.okhttp3:okhttp", version.ref = "okhttp" }
 
+# Android Gradle plugin as a buildscript classpath entry (root build.gradle.kts adds it only when
+# :app is included; the plugin id com.android.application is then applied in app/build.gradle.kts).
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+
 # Optional (not applied by default)
 desugar-jdk-libs = { module = "com.android.tools:desugar_jdk_libs", version.ref = "desugar" }
 

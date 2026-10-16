@@ -14,3 +14,5 @@ gradlew text eol=lf
 *.xml text eol=lf
 *.pro text eol=lf
 *.js text eol=lf
+# This fixture exists to test CRLF line endings: never normalise it.
+core/src/test/resources/sse/crlf_comments.sse -text

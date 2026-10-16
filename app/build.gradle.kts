@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
-    alias(libs.plugins.android.application)
+    id("com.android.application")   // on the root classpath via libs.android.gradle.plugin (root build.gradle.kts)
     // NOTE: no org.jetbrains.kotlin.android — AGP 9 has built-in Kotlin (R2 G2).
     alias(libs.plugins.kotlin.compose)          // Compose compiler; version == Kotlin version
     alias(libs.plugins.kotlin.serialization)    // @Serializable route classes in :app (R2 G4)
