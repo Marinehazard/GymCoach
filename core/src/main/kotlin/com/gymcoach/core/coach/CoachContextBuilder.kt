@@ -152,7 +152,7 @@ class CoachContextBuilder(private val kb: KnowledgeBase, private val tokens: Tok
 
     private fun profileJson(inp: ContextInputs): JsonObject {
         val p = inp.profile
-        return JsonObject(linkedMapOf(
+        val m = linkedMapOf<String, JsonElement>(
             "sex" to JsonPrimitive(lower(p.sex.name)),
             "age" to JsonPrimitive(p.ageOn(inp.today.date)),
             "height_cm" to num(p.height.cm),
@@ -162,14 +162,36 @@ class CoachContextBuilder(private val kb: KnowledgeBase, private val tokens: Tok
             "days" to JsonPrimitive(p.daysPerWeek),
             "minutes" to JsonPrimitive(p.sessionMinutes),
             "limitations" to JsonArray(p.limitations.filter { it.active }.map { l ->
-                JsonObject(linkedMapOf(
+                val lm = linkedMapOf<String, JsonElement>(
                     "region" to JsonPrimitive(lower(l.region.name)), "side" to JsonPrimitive(lower(l.side.name)),
                     "pain" to JsonPrimitive(l.pain0to10), "since" to JsonPrimitive(l.since.toString()),
-                ))
+                )
+                if (l.notes.isNotBlank()) lm["notes"] = JsonPrimitive(l.notes)          // known issue + its fix (Phase 2)
+                JsonObject(lm)
             }),
             "medical_gate" to JsonPrimitive(p.medicalFlags.isNotEmpty() && p.clearanceConfirmedOn == null),
             "priority_muscles" to JsonArray(p.priorityMuscles.map { JsonPrimitive(lower(it.name)) }),
-        ))
+        )
+        // Phase 2 personal facts (§6.5 additive keys, present only when set): the split, strength targets with the best
+        // e1RM of the main track, the user's RPE cap for barbell work, the physical job and the standing coach notes.
+        p.splitId?.let { m["split"] = JsonPrimitive(it) }
+        p.strengthTargetsKg?.takeIf { it.isNotEmpty() }?.let { targets ->
+            m["strength_targets"] = JsonArray(targets.entries.sortedBy { it.key }.map { (id, kg) ->
+                val best = inp.states.filter { it.key.exerciseId == id && it.key.variant == null }
+                    .flatMap { s -> listOfNotNull(s.bestE1rm14d) + s.history.mapNotNull { h -> h.e1rm?.kg } }.maxOrNull()
+                val t = linkedMapOf<String, JsonElement>("ex" to JsonPrimitive(id), "target_kg" to num(kg))
+                t["e1rm_kg"] = numOrNull(best)
+                if (best != null && kg > 0.0) t["pct"] = JsonPrimitive(Math.round(best / kg * 100.0).toInt())
+                JsonObject(t)
+            })
+        }
+        p.barbellRirFloor?.let {
+            m["barbell_rir_floor"] = JsonPrimitive(it)
+            m["barbell_rpe_cap"] = JsonPrimitive(10 - it)
+        }
+        if (p.physicalJob) m["physical_job"] = JsonPrimitive(true)
+        p.coachNotes?.takeIf { it.isNotEmpty() }?.let { notes -> m["notes"] = JsonArray(notes.map { JsonPrimitive(it) }) }
+        return JsonObject(m)
     }
 
     private fun gymJson(inp: ContextInputs): JsonObject {
